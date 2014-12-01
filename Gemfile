@@ -41,7 +41,7 @@ gem 'spring',        group: :development
 #
 gem 'blacklight'
 
-gem 'mysql'
+gem 'mysql2'
 
 # Use Capistrano for deployment
 gem 'capistrano', '~> 3.3.3'
