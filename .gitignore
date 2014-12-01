@@ -19,7 +19,7 @@
 jetty/*
 
 # Ignore the database
-database.yml
+config/database.yml
 
 # ignore compiled assets and bundled gems
 public/assets
