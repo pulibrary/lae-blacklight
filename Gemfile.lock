@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.9)
     blacklight (5.7.2)
       bootstrap-sass (~> 3.2)
       deprecation
@@ -50,6 +51,8 @@ GEM
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-stats (1.0.3)
+    childprocess (0.5.5)
+      ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -60,13 +63,28 @@ GEM
     colorize (0.7.3)
     deprecation (0.1.0)
       activesupport
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    devise-guests (0.3.3)
+      devise
     erubis (2.7.0)
     execjs (2.2.2)
+    ffi (1.9.6)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (2.2.5)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jettywrapper (1.8.3)
+      activesupport (>= 3.0.0)
+      childprocess
+      i18n
+      logger
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -74,6 +92,7 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    logger (1.2.8)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
@@ -85,6 +104,7 @@ GEM
     net-ssh (2.9.1)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
+    orm_adapter (0.5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -106,6 +126,8 @@ GEM
     rake (10.4.0)
     rdoc (4.1.2)
       json (~> 1.4)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     rsolr (1.0.10)
       builder (>= 2.1.2)
     sass (3.2.19)
@@ -142,6 +164,8 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -152,7 +176,10 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   coffee-rails (~> 4.0.0)
+  devise
+  devise-guests (~> 0.3)
   jbuilder (~> 2.0)
+  jettywrapper (~> 1.7)
   jquery-rails
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
