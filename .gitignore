@@ -14,3 +14,13 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore jetty server, solr, fedora, associated data directories
+jetty/*
+
+# Ignore the database
+database.yml
+
+# ignore compiled assets and bundled gems
+public/assets
+vendor/bundle
