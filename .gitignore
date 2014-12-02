@@ -18,8 +18,10 @@
 # Ignore jetty server, solr, fedora, associated data directories
 jetty/*
 
-# Ignore the database
+# Ignore the private conf files
 config/database.yml
+config/secrets.yml
+config/solr.yml
 
 # ignore compiled assets and bundled gems
 public/assets
