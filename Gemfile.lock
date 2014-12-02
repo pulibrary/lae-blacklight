@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/kevinreiss/openseadragon-rails.git
+  revision: 4c6c8e2ee658d35339ec3e5d8a9139d5bd413685
+  specs:
+    openseadragon (0.0.8)
+      rails (> 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -183,6 +190,7 @@ DEPENDENCIES
   jettywrapper (~> 1.7)
   jquery-rails
   mysql2
+  openseadragon!
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
