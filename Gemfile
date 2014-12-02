@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -48,6 +48,7 @@ gem 'mysql2'
 gem 'capistrano', '~> 3.3.3'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
+gem 'capistrano-passenger'
 
 gem "jettywrapper", "~> 1.7"
 gem "devise"
