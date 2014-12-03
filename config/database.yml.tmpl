@@ -1,0 +1,32 @@
+development:
+  adapter: mysql2
+  collation: utf8_bin
+  encoding: utf8
+  database: lae_blacklight_dev
+  username: root
+  password: Gr33nHa11
+  pool: 5
+  timeout: 5000
+  host: localhost
+
+test:
+  adapter: mysql2
+  collation: utf8_bin
+  encoding: utf8
+  database: lae_blacklight_test
+  pool: 5
+  username: root
+  password: Gr33nHa11
+  timeout: 5000
+  host: localhost
+
+production:
+  adapter: mysql2
+  collation: utf8_bin
+  encoding: utf8
+  database: lae_blacklight_prod
+  pool: 5
+  username: root
+  password: 
+  timeout: 5000
+  host: localhost
