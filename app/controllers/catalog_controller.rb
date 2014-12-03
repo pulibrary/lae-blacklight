@@ -59,7 +59,8 @@ class CatalogController < ApplicationController
     config.add_facet_field 'category', :label => 'Category'
     config.add_facet_field 'subject_label', :label => 'Subject'
     config.add_facet_field 'language_label', :label => 'Language'
-    config.add_facet_field 'geographic_subject_label', :label => 'Geo Subject'
+    config.add_facet_field 'geographic_subject_label', :label => 'Country'
+    config.add_facet_field 'geographic_origin_label', :label => 'Origin'
     # config.add_facet_field 'pub_date', :label => 'Publication Year', :single => true
     # config.add_facet_field 'subject_topic_facet', :label => 'Topic', :limit => 20 
     # config.add_facet_field 'language_facet', :label => 'Language', :limit => true 
@@ -88,6 +89,8 @@ class CatalogController < ApplicationController
     # config.add_index_field 'author_display', :label => 'Author'
     # config.add_index_field 'author_vern_display', :label => 'Author'
     config.add_index_field 'genre_pul_label', :label => 'Genre'
+    config.add_index_field 'language_label', :label => 'Language'
+    #config.add_index_field 'geographic_origin_label', :label => 'Origin'
     # config.add_index_field 'language_facet', :label => 'Language'
     # config.add_index_field 'published_display', :label => 'Published'
     # config.add_index_field 'published_vern_display', :label => 'Published'
@@ -96,7 +99,18 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 
     config.add_show_field 'title', :label => 'Title'
-    config.add_show_field 'manifest', :label => 'Manifest'
+    config.add_show_field 'creator', :label => 'Creator'
+    config.add_show_field 'contributor', :label => 'Contributor'
+    # config.add_index_field 'author_display', :label => 'Author'
+    # config.add_index_field 'author_vern_display', :label => 'Author'
+    config.add_show_field 'publisher', :label => 'Publisher'
+    config.add_show_field 'genre_pul_label', :label => 'Genre'
+    config.add_show_field 'language_label', :label => 'Language'
+    config.add_show_field 'category', :label => 'Category'
+    config.add_show_field 'subject_label', :label => 'Subject'
+    config.add_show_field 'geographic_subject_label', :label => 'Country'
+    config.add_show_field 'geographic_origin_label', :label => 'Origin'
+    #config.add_show_field 'manifest', :label => 'Manifest'
     # config.add_show_field 'title_vern_display', :label => 'Title'
     # config.add_show_field 'subtitle_display', :label => 'Subtitle'
     # config.add_show_field 'subtitle_vern_display', :label => 'Subtitle'
