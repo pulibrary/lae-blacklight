@@ -184,6 +184,7 @@
          subject_t^50
          subject_addl_unstem_search^10
          subject_addl_t
+         subject_label
        </str>
        <str name="subject_pf">
          subject_topic_unstem_search^2000
@@ -192,6 +193,7 @@
          subject_topic_facet^500
          subject_addl_unstem_search^100
          subject_addl_t^10
+         subject_label
        </str>
        
        <int name="ps">3</int>
@@ -221,7 +223,12 @@
          url_fulltext_display,
          url_suppl_display,
          title,
-         creator
+         creator,
+         genre_pul_label,
+         subject_label,
+         language_label,
+         manifest,
+         ttl
        </str>
 
        <str name="facet">true</str>
