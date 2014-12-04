@@ -1,10 +1,17 @@
 # -*- encoding : utf-8 -*-
 #
 class CatalogController < ApplicationController  
-
+  
   include Blacklight::Catalog
+  helper Openseadragon::OpenseadragonHelper
 
-  configure_blacklight do |config|
+  configure_blacklight do |config|          
+    config.view.gallery.partials = [:index_header, :index]
+    config.view.slideshow.partials = [:index]
+
+    config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
+    #config.show.partials.insert(0, :openseadragon)
+
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = { 
       :qt => 'search',
@@ -15,7 +22,7 @@ class CatalogController < ApplicationController
     #config.solr_path = 'select' 
     
     # items to show per page, each number in the array represent another option to choose from.
-    #config.per_page = [10,20,50,100]
+    config.per_page = [10,20,50,100]
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or 
     ## parameters included in the Blacklight-jetty document requestHandler.
@@ -56,8 +63,8 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
     config.add_facet_field 'genre_pul_label', :label => 'Genre'
-    config.add_facet_field 'category', :label => 'Category'
-    config.add_facet_field 'subject_label', :label => 'Subject'
+    config.add_facet_field 'category', :label => 'Category', :show => false
+    config.add_facet_field 'subject_label', :label => 'Subject', :show => false
     config.add_facet_field 'language_label', :label => 'Language'
     config.add_facet_field 'geographic_subject_label', :label => 'Country'
     config.add_facet_field 'geographic_origin_label', :label => 'Origin'
@@ -68,7 +75,7 @@ class CatalogController < ApplicationController
     # config.add_facet_field 'subject_geo_facet', :label => 'Region' 
     # config.add_facet_field 'subject_era_facet', :label => 'Era'  
 
-    config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['category', 'subject_label']
+    config.add_facet_field 'example_pivot_field', :label => 'Category', :pivot => ['category', 'subject_label']
 
     # config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
     #    :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
@@ -84,7 +91,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
-    config.add_index_field 'title', :label => 'Title'
+    #config.add_index_field 'title', :label => 'Title'
     config.add_index_field 'creator', :label => 'Creator'
     # config.add_index_field 'author_display', :label => 'Author'
     # config.add_index_field 'author_vern_display', :label => 'Author'
@@ -98,7 +105,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 
-    config.add_show_field 'title', :label => 'Title'
+    #config.add_show_field 'title', :label => 'Title'
     config.add_show_field 'creator', :label => 'Creator'
     config.add_show_field 'contributor', :label => 'Contributor'
     # config.add_index_field 'author_display', :label => 'Author'
@@ -110,7 +117,12 @@ class CatalogController < ApplicationController
     config.add_show_field 'subject_label', :label => 'Subject'
     config.add_show_field 'geographic_subject_label', :label => 'Country'
     config.add_show_field 'geographic_origin_label', :label => 'Origin'
-    #config.add_show_field 'manifest', :label => 'Manifest'
+    config.add_show_field 'rights', :label => 'Rights'
+    config.add_show_field 'page_count', :label => 'Pages'
+    config.add_show_field 'width_in_cm', :label => 'Width'
+    config.add_show_field 'height_in_cm', :label => 'Height'
+    config.add_show_field 'manifest', :label => 'Images'
+    
     # config.add_show_field 'title_vern_display', :label => 'Title'
     # config.add_show_field 'subtitle_display', :label => 'Subtitle'
     # config.add_show_field 'subtitle_vern_display', :label => 'Subtitle'

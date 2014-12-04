@@ -3,3 +3,13 @@
 @import 'bootstrap';
 
 @import 'blacklight/blacklight';
+
+#header-navbar {
+  border-top: 5px solid #e87511;
+
+  .navbar-brand {
+    width: 338px;
+  }
+}
+
+

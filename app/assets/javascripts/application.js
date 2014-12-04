@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require openseadragon/rails.js
 //= require turbolinks
 //
 // Required by Blacklight
