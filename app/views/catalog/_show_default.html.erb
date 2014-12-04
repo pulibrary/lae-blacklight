@@ -1,0 +1,23 @@
+<%# default partial to display solr document fields in catalog show view -%>
+<% 
+
+  osd_config = {
+    crossOriginPolicy: true,
+    preserveViewport: true, 
+    visibilityRatio: 1
+  }
+%>
+<dl class="dl-horizontal  dl-invert">
+  <% document_show_fields(document).each do |solr_fname, field| -%>
+    <% if should_render_show_field? document, field %>
+	    <dt class="blacklight-<%= solr_fname.parameterize %>"><%= render_document_show_field_label document, :field => solr_fname %></dt>
+	    <dd class="blacklight-<%= solr_fname.parameterize %>">
+      <% if solr_fname == 'manifest' %>
+        <% images = iiif_image_list document %>
+        <%= openseadragon_picture_tag images, class: 'osd-image row', data: { openseadragon: osd_config } %>
+      <% else %>
+        <%= render_document_show_field_value document, :field => solr_fname %></dd>
+      <% end %>
+    <% end -%>
+  <% end -%>
+</dl>

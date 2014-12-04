@@ -2,3 +2,7 @@ en:
   blacklight:
     application_name: 'LAE Project'
     welcome: 'Latin American Ephemera Project'
+
+    search:
+      facets:
+        title: 'Filter your search'

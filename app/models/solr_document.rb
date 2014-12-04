@@ -2,7 +2,7 @@
 class SolrDocument 
 
   include Blacklight::Solr::Document
-  include Blacklight::Gallery::OpenseadragonSolrDocument
+  #include Blacklight::Gallery::OpenseadragonSolrDocument
 
 
   # self.unique_key = 'id'

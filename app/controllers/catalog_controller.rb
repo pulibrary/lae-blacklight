@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 #
 class CatalogController < ApplicationController  
-
+  
   include Blacklight::Catalog
   helper Openseadragon::OpenseadragonHelper
 
@@ -118,7 +118,11 @@ class CatalogController < ApplicationController
     config.add_show_field 'geographic_subject_label', :label => 'Country'
     config.add_show_field 'geographic_origin_label', :label => 'Origin'
     config.add_show_field 'rights', :label => 'Rights'
-    #config.add_show_field 'manifest', :label => 'Manifest'
+    config.add_show_field 'page_count', :label => 'Pages'
+    config.add_show_field 'width_in_cm', :label => 'Width'
+    config.add_show_field 'height_in_cm', :label => 'Height'
+    config.add_show_field 'manifest', :label => 'Images'
+    
     # config.add_show_field 'title_vern_display', :label => 'Title'
     # config.add_show_field 'subtitle_display', :label => 'Subtitle'
     # config.add_show_field 'subtitle_vern_display', :label => 'Subtitle'
