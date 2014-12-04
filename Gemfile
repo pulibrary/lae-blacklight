@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 #
 gem 'blacklight'
+gem 'blacklight-gallery', git: 'git://github.com/projectblacklight/blacklight-gallery'
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
 
 gem 'mysql2'
