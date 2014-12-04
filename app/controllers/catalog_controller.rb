@@ -10,7 +10,7 @@ class CatalogController < ApplicationController
     config.view.slideshow.partials = [:index]
 
     config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
-    config.show.partials.insert(1, :openseadragon)
+    #config.show.partials.insert(0, :openseadragon)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = { 
@@ -91,7 +91,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
-    config.add_index_field 'title', :label => 'Title'
+    #config.add_index_field 'title', :label => 'Title'
     config.add_index_field 'creator', :label => 'Creator'
     # config.add_index_field 'author_display', :label => 'Author'
     # config.add_index_field 'author_vern_display', :label => 'Author'
@@ -105,7 +105,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 
-    config.add_show_field 'title', :label => 'Title'
+    #config.add_show_field 'title', :label => 'Title'
     config.add_show_field 'creator', :label => 'Creator'
     config.add_show_field 'contributor', :label => 'Contributor'
     # config.add_index_field 'author_display', :label => 'Author'
@@ -117,6 +117,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'subject_label', :label => 'Subject'
     config.add_show_field 'geographic_subject_label', :label => 'Country'
     config.add_show_field 'geographic_origin_label', :label => 'Origin'
+    config.add_show_field 'rights', :label => 'Rights'
     #config.add_show_field 'manifest', :label => 'Manifest'
     # config.add_show_field 'title_vern_display', :label => 'Title'
     # config.add_show_field 'subtitle_display', :label => 'Subtitle'
