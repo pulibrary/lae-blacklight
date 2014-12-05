@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<add>
+  <doc>
+    <field name="id">004kr</field>
+    <field name="pulstore_pid">puls:004kr</field>
+    <field name="barcode">32101093681300</field>
+    <field name="date_uploaded">2014-03-25T20:01:55Z</field>
+    <field name="date_modified">2014-07-23T18:44:15Z</field>
+    <field name="physical_number">131</field>
+    <field name="project_label">Latin American Ephemera</field>
+    <field name="date_created">1990</field>
+    <field name="sort_title">workforce of puerto rico: fringe benefits.</field>
+    <field name="title">The Workforce of Puerto Rico: Fringe Benefits.</field>
+    <field name="height_in_cm">22</field>
+    <field name="width_in_cm">14</field>
+    <field name="page_count">17</field>
+    <field name="publisher">Commonwealth of Puerto Rico - Economic Development Administration</field>
+    <field name="rights">This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions.</field>
+    <field name="category">Labor</field>
+    <field name="category">Economics</field>
+    <field name="geographic_subject_label">Puerto Rico</field>
+    <field name="geographic_subject_iso_3166_2_code">pr</field>
+    <field name="geographic_subject_gac_code">nwpr</field>
+    <field name="geographic_subject_geoname_id">4566966</field>
+    <field name="subject_label">Labor economics</field>
+    <field name="subject_label">Industries</field>
+    <field name="genre_pul_label">Pamphlets</field>
+    <field name="language_label">English</field>
+    <field name="geographic_origin_label">Puerto Rico</field>
+    <field name="geographic_origin_iso_3166_2_code">pr</field>
+    <field name="geographic_origin_gac_code">nwpr</field>
+    <field name="geographic_origin_geoname_id">4566966</field>
+    <field name="box_barcode">32101081556985</field>
+    <field name="box_physical_location">rcpxr</field>
+    <field name="box_physical_number">1</field>
+    <field name="project_label">Latin American Ephemera</field>
+    <field name="ttl">@prefix dc: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dctype: &lt;http://purl.org/dc/dcmitype/&gt; .
+@prefix geonames: &lt;http://sws.geonames.org/&gt; .
+@prefix lae: &lt;http://lae.princeton.edu/&gt; .
+@prefix lang: &lt;http://id.loc.gov/vocabulary/iso639-2/&gt; .
+@prefix lcco: &lt;http://id.loc.gov/vocabulary/countries/&gt; .
+@prefix lcsh: &lt;http://id.loc.gov/authorities/subjects/&gt; .
+@prefix marcrel: &lt;http://id.loc.gov/vocabulary/relators/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix pulterms: &lt;http://princeton.edu/pulstore/terms/&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix tgm: &lt;http://id.loc.gov/vocabulary/graphicMaterials/&gt; .
+@prefix unit: &lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+lae:004kr a lae:Folder;
+   dc:title "The Workforce of Puerto Rico: Fringe Benefits."@en;
+   marcrel:mfp lcco:pr;
+   pulterms:height "22"^^&lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#centimeter&gt;;
+   pulterms:pageCount "17"^^xsd:int;
+   pulterms:width "14"^^&lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#centimeter&gt;;
+   dc:coverage geonames:4566966;
+   dc:created "1990"^^xsd:gYear;
+   dc:format tgm:tgm007415;
+   dc:language lang:eng;
+   dc:publisher "Commonwealth of Puerto Rico - Economic Development Administration";
+   dc:rights "This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions."@en;
+   dc:subject lcsh:sh85073687,
+     lcsh:sh85065960;
+   owl:sameAs &lt;http://pulstore.princeton.edu/lae/folders/puls:004kr&gt; .
+
+pulterms:height rdfs:subPropertyOf dc:extent .
+
+pulterms:pageCount rdfs:subPropertyOf dc:extent .
+
+pulterms:width rdfs:subPropertyOf dc:extent .
+
+lae:Folder rdfs:subClassOf dctype:Text .
+</field>
+    <field name="manifest">{"@context":"http://iiif.io/api/presentation/2/context.json","@id":"http://lae.princeton.edu/catalog/puls:00014","@type":"sc:Manifest","label":"The Workforce of Puerto Rico: Fringe Benefits.","viewingHint":"individuals","metadata":[{"label":"Title","value":"The Workforce of Puerto Rico: Fringe Benefits."},{"label":"Origin","value":"Puerto Rico"},{"label":"Publisher","value":"Commonwealth of Puerto Rico - Economic Development Administration"},{"label":"Date","value":"1990"},{"label":"Item Type","value":"Pamphlets"},{"label":"Page Count","value":"17"},{"label":"Dimensions","value":"14 cm. &#xD7; 22 cm."},{"label":"Geographic Subject","value":"Puerto Rico"},{"label":"Categories","value":["Labor","Economics"]},{"label":"Subjects","value":["Labor economics","Industries"]},{"label":"Language","value":"English"},{"label":"Container","value":"Box 1, Folder 131"},{"label":"Rights","value":"This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions."}],"sequences":[{"@type":"sc:Sequence","canvases":[{"@id":"http://lae.princeton.edu/pages/puls:043w5","@type":"sc:Canvas","width":2275,"height":3504,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F3%2Fw%2F5.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":2275,"height":3504,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F3%2Fw%2F5.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:043x9","@type":"sc:Canvas","width":4481,"height":3508,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F3%2Fx%2F9.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4481,"height":3508,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F3%2Fx%2F9.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:043zf","@type":"sc:Canvas","width":4482,"height":3517,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F3%2Fz%2Ff.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4482,"height":3517,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F3%2Fz%2Ff.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0440p","@type":"sc:Canvas","width":4480,"height":3515,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F0%2Fp.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4480,"height":3515,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F0%2Fp.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0441t","@type":"sc:Canvas","width":4476,"height":3517,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F1%2Ft.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4476,"height":3517,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F1%2Ft.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0442z","@type":"sc:Canvas","width":4473,"height":3512,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F2%2Fz.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4473,"height":3512,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F2%2Fz.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04433","@type":"sc:Canvas","width":4468,"height":3511,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F3%2F3.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4468,"height":3511,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F3%2F3.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04447","@type":"sc:Canvas","width":4464,"height":3513,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F4%2F7.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4464,"height":3513,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F4%2F7.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0445c","@type":"sc:Canvas","width":4469,"height":3518,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F5%2Fc.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4469,"height":3518,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F5%2Fc.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0446h","@type":"sc:Canvas","width":4484,"height":3527,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F6%2Fh.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4484,"height":3527,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F6%2Fh.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0447n","@type":"sc:Canvas","width":2285,"height":3519,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F7%2Fn.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":2285,"height":3519,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2F4%2F7%2Fn.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]}]}]}</field>
+  </doc>
+  <doc>
+    <field name="id">006tx</field>
+    <field name="pulstore_pid">puls:006tx</field>
+    <field name="barcode">32101093681953</field>
+    <field name="date_uploaded">2014-03-31T14:23:48Z</field>
+    <field name="date_modified">2014-07-23T18:52:26Z</field>
+    <field name="physical_number">196</field>
+    <field name="project_label">Latin American Ephemera</field>
+    <field name="date_created">2006</field>
+    <field name="sort_title">equidad. no al tlc!!! octubre 2006.</field>
+    <field name="title">Equidad. No al TLC!!! Octubre 2006.</field>
+    <field name="height_in_cm">28</field>
+    <field name="width_in_cm">22</field>
+    <field name="page_count">8</field>
+    <field name="publisher">Sindicato Empleados del Banco Nacional de Costa Rica</field>
+    <field name="rights">This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions.</field>
+    <field name="series">No. 30</field>
+    <field name="category">Labor</field>
+    <field name="geographic_subject_label">Costa Rica</field>
+    <field name="geographic_subject_iso_3166_2_code">cr</field>
+    <field name="geographic_subject_gac_code">nccr</field>
+    <field name="geographic_subject_geoname_id">3624060</field>
+    <field name="subject_label">Labor unions--Political activity</field>
+    <field name="subject_label">Labor and globalization</field>
+    <field name="genre_pul_label">Pamphlets</field>
+    <field name="language_label">Spanish</field>
+    <field name="geographic_origin_label">Costa Rica</field>
+    <field name="geographic_origin_iso_3166_2_code">cr</field>
+    <field name="geographic_origin_gac_code">nccr</field>
+    <field name="geographic_origin_geoname_id">3624060</field>
+    <field name="box_barcode">32101081556985</field>
+    <field name="box_physical_location">rcpxr</field>
+    <field name="box_physical_number">1</field>
+    <field name="project_label">Latin American Ephemera</field>
+    <field name="ttl">@prefix dc: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dctype: &lt;http://purl.org/dc/dcmitype/&gt; .
+@prefix geonames: &lt;http://sws.geonames.org/&gt; .
+@prefix lae: &lt;http://lae.princeton.edu/&gt; .
+@prefix lang: &lt;http://id.loc.gov/vocabulary/iso639-2/&gt; .
+@prefix lcco: &lt;http://id.loc.gov/vocabulary/countries/&gt; .
+@prefix lcsh: &lt;http://id.loc.gov/authorities/subjects/&gt; .
+@prefix marcrel: &lt;http://id.loc.gov/vocabulary/relators/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix pulterms: &lt;http://princeton.edu/pulstore/terms/&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix tgm: &lt;http://id.loc.gov/vocabulary/graphicMaterials/&gt; .
+@prefix unit: &lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+lae:006tx a lae:Folder;
+   dc:title "Equidad. No al TLC!!! Octubre 2006."@es;
+   marcrel:mfp lcco:cr;
+   pulterms:height "28"^^&lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#centimeter&gt;;
+   pulterms:pageCount "8"^^xsd:int;
+   pulterms:width "22"^^&lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#centimeter&gt;;
+   dc:coverage geonames:3624060;
+   dc:created "2006"^^xsd:gYear;
+   dc:format tgm:tgm007415;
+   dc:language lang:spa;
+   dc:publisher "Sindicato Empleados del Banco Nacional de Costa Rica";
+   dc:rights "This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions."@en;
+   dc:subject lcsh:sh85136669,
+     lcsh:sh2012000571;
+   owl:sameAs &lt;http://pulstore.princeton.edu/lae/folders/puls:006tx&gt; .
+
+pulterms:height rdfs:subPropertyOf dc:extent .
+
+pulterms:pageCount rdfs:subPropertyOf dc:extent .
+
+pulterms:width rdfs:subPropertyOf dc:extent .
+
+lae:Folder rdfs:subClassOf dctype:Text .
+</field>
+    <field name="manifest">{"@context":"http://iiif.io/api/presentation/2/context.json","@id":"http://lae.princeton.edu/catalog/puls:00014","@type":"sc:Manifest","label":"Equidad. No al TLC!!! Octubre 2006.","viewingHint":"individuals","metadata":[{"label":"Title","value":"Equidad. No al TLC!!! Octubre 2006."},{"label":"Series","value":"No. 30"},{"label":"Origin","value":"Costa Rica"},{"label":"Publisher","value":"Sindicato Empleados del Banco Nacional de Costa Rica"},{"label":"Date","value":"2006"},{"label":"Item Type","value":"Pamphlets"},{"label":"Page Count","value":"8"},{"label":"Dimensions","value":"22 cm. &#xD7; 28 cm."},{"label":"Geographic Subject","value":"Costa Rica"},{"label":"Category","value":"Labor"},{"label":"Subjects","value":["Labor unions--Political activity","Labor and globalization"]},{"label":"Language","value":"Spanish"},{"label":"Container","value":"Box 1, Folder 196"},{"label":"Rights","value":"This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions."}],"sequences":[{"@type":"sc:Sequence","canvases":[{"@id":"http://lae.princeton.edu/pages/puls:04fzg","@type":"sc:Canvas","width":3464,"height":4495,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Ff%2Fz%2Fg.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3464,"height":4495,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Ff%2Fz%2Fg.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04g0q","@type":"sc:Canvas","width":3478,"height":4484,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F0%2Fq.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3478,"height":4484,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F0%2Fq.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04g1v","@type":"sc:Canvas","width":3476,"height":4484,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F1%2Fv.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3476,"height":4484,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F1%2Fv.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04g20","@type":"sc:Canvas","width":3472,"height":4488,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F2%2F0.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3472,"height":4488,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F2%2F0.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04g34","@type":"sc:Canvas","width":3470,"height":4488,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F3%2F4.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3470,"height":4488,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F3%2F4.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04g48","@type":"sc:Canvas","width":3465,"height":4488,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F4%2F8.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3465,"height":4488,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F4%2F8.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04g5d","@type":"sc:Canvas","width":3463,"height":4488,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F5%2Fd.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3463,"height":4488,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F5%2Fd.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:04g6j","@type":"sc:Canvas","width":3462,"height":4489,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F6%2Fj.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":3462,"height":4489,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F4%2Fg%2F6%2Fj.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]}]}]}</field>
+  </doc>
+  <doc>
+    <field name="id">00b84</field>
+    <field name="pulstore_pid">puls:00b84</field>
+    <field name="barcode">32101093682944</field>
+    <field name="date_uploaded">2014-04-01T16:00:49Z</field>
+    <field name="date_modified">2014-07-23T19:02:19Z</field>
+    <field name="physical_number">296</field>
+    <field name="project_label">Latin American Ephemera</field>
+    <field name="date_created">2003</field>
+    <field name="sort_title">memoria 2003.</field>
+    <field name="title">Memoria 2003.</field>
+    <field name="height_in_cm">21</field>
+    <field name="width_in_cm">15</field>
+    <field name="page_count">15</field>
+    <field name="publisher">  Asociaci&#xF3;n para la Cooperaci&#xF3;n en el Sur (ACSUR)-Las Segovias</field>
+    <field name="rights">This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions.</field>
+    <field name="category">Socioeconomic conditions and development</field>
+    <field name="category">Economics</field>
+    <field name="category">Politics and government</field>
+    <field name="geographic_subject_label">Latin America</field>
+    <field name="geographic_subject_iso_3166_2_code"/>
+    <field name="geographic_subject_gac_code">cl</field>
+    <field name="geographic_subject_geoname_id"/>
+    <field name="subject_label">Economic development projects</field>
+    <field name="subject_label">Economic policy--Social aspects</field>
+    <field name="subject_label">Economics--Political aspects</field>
+    <field name="subject_label">International cooperation</field>
+    <field name="genre_pul_label">Pamphlets</field>
+    <field name="language_label">Spanish</field>
+    <field name="geographic_origin_label">Latin America</field>
+    <field name="geographic_origin_iso_3166_2_code"/>
+    <field name="geographic_origin_gac_code">cl</field>
+    <field name="geographic_origin_geoname_id"/>
+    <field name="box_barcode">32101081556985</field>
+    <field name="box_physical_location">rcpxr</field>
+    <field name="box_physical_number">1</field>
+    <field name="project_label">Latin American Ephemera</field>
+    <field name="ttl">@prefix dc: &lt;http://purl.org/dc/terms/&gt; .
+@prefix dctype: &lt;http://purl.org/dc/dcmitype/&gt; .
+@prefix geonames: &lt;http://sws.geonames.org/&gt; .
+@prefix lae: &lt;http://lae.princeton.edu/&gt; .
+@prefix lang: &lt;http://id.loc.gov/vocabulary/iso639-2/&gt; .
+@prefix lcga: &lt;http://id.loc.gov/vocabulary/geographicAreas/&gt; .
+@prefix lcsh: &lt;http://id.loc.gov/authorities/subjects/&gt; .
+@prefix marcrel: &lt;http://id.loc.gov/vocabulary/relators/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix pulterms: &lt;http://princeton.edu/pulstore/terms/&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix tgm: &lt;http://id.loc.gov/vocabulary/graphicMaterials/&gt; .
+@prefix unit: &lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+lae:00b84 a lae:Folder;
+   dc:title "Memoria 2003."@es;
+   marcrel:mfp lcga:cl;
+   pulterms:height "21"^^&lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#centimeter&gt;;
+   pulterms:pageCount "15"^^xsd:int;
+   pulterms:width "15"^^&lt;http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl#centimeter&gt;;
+   dc:coverage geonames:;
+   dc:created "2003"^^xsd:gYear;
+   dc:format tgm:tgm007415;
+   dc:language lang:spa;
+   dc:publisher "  Asociaci&#xF3;n para la Cooperaci&#xF3;n en el Sur (ACSUR)-Las Segovias";
+   dc:rights "This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions."@en;
+   dc:subject lcsh:sh85040810,
+     "Economic policy--Social aspects"@en,
+     "Economics--Political aspects"@en,
+     lcsh:sh85067385;
+   owl:sameAs &lt;http://pulstore.princeton.edu/lae/folders/puls:00b84&gt; .
+
+pulterms:height rdfs:subPropertyOf dc:extent .
+
+pulterms:pageCount rdfs:subPropertyOf dc:extent .
+
+pulterms:width rdfs:subPropertyOf dc:extent .
+
+lae:Folder rdfs:subClassOf dctype:Text .
+</field>
+    <field name="manifest">{"@context":"http://iiif.io/api/presentation/2/context.json","@id":"http://lae.princeton.edu/catalog/puls:00014","@type":"sc:Manifest","label":"Memoria 2003.","viewingHint":"individuals","metadata":[{"label":"Title","value":"Memoria 2003."},{"label":"Origin","value":"Latin America"},{"label":"Publisher","value":"  Asociaci&#xF3;n para la Cooperaci&#xF3;n en el Sur (ACSUR)-Las Segovias"},{"label":"Date","value":"2003"},{"label":"Item Type","value":"Pamphlets"},{"label":"Page Count","value":"15"},{"label":"Dimensions","value":"15 cm. &#xD7; 21 cm."},{"label":"Geographic Subject","value":"Latin America"},{"label":"Categories","value":["Socioeconomic conditions and development","Economics","Politics and government"]},{"label":"Subjects","value":["Economic development projects","Economic policy--Social aspects","Economics--Political aspects","International cooperation"]},{"label":"Language","value":"Spanish"},{"label":"Container","value":"Box 1, Folder 296"},{"label":"Rights","value":"This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions."}],"sequences":[{"@type":"sc:Sequence","canvases":[{"@id":"http://lae.princeton.edu/pages/puls:0593p","@type":"sc:Canvas","width":2428,"height":3403,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F3%2Fp.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":2428,"height":3403,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F3%2Fp.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0594t","@type":"sc:Canvas","width":4753,"height":3394,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F4%2Ft.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4753,"height":3394,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F4%2Ft.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0595z","@type":"sc:Canvas","width":4754,"height":3394,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F5%2Fz.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4754,"height":3394,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F5%2Fz.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:05963","@type":"sc:Canvas","width":4752,"height":3398,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F6%2F3.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4752,"height":3398,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F6%2F3.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:05977","@type":"sc:Canvas","width":4753,"height":3398,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F7%2F7.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4753,"height":3398,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F7%2F7.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0598c","@type":"sc:Canvas","width":4753,"height":3396,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F8%2Fc.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4753,"height":3396,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F8%2Fc.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:0599h","@type":"sc:Canvas","width":4753,"height":3395,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F9%2Fh.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4753,"height":3395,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2F9%2Fh.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:059bn","@type":"sc:Canvas","width":4754,"height":3397,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2Fb%2Fn.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":4754,"height":3397,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2Fb%2Fn.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]},{"@id":"http://lae.princeton.edu/pages/puls:059cs","@type":"sc:Canvas","width":2430,"height":3397,"images":[{"@type":"oa:Annotation","motivation":"sc:painting","resource":{"@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2Fc%2Fs.jp2/full/!200,200/0/default.jpg","@type":"dcterms:Image","format":"image/jpeg","width":2430,"height":3397,"service":{"@context":"http://iiif.io/api/image/2/context.json","@id":"http://libimages.princeton.edu/loris2/puls%2F0%2F5%2F9%2Fc%2Fs.jp2","profile":"http://iiif.io/api/image/2/level2.json"}}}]}]}]}</field>
+  </doc>
+</add>

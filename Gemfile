@@ -55,3 +55,13 @@ gem 'capistrano-passenger'
 gem "jettywrapper", "~> 1.7"
 gem "devise"
 gem "devise-guests", "~> 0.3"
+
+gem 'rsolr', '~> 1.0.10'
+gem 'faraday', '~> 0.9.0'
+
+group :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'nokogiri', '~> 1.6.5'
+  gem 'vcr', '~> 2.9.3'
+  gem 'webmock'
+end

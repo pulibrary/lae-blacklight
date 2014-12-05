@@ -1,0 +1,6 @@
+development:
+  url: 'http://pulstoredemo.princeton.edu/lae'
+test:
+  url: 'http://pulstoredemo.princeton.edu/lae'
+production:
+  url: 'http://pulstore.princeton.edu/lae'
