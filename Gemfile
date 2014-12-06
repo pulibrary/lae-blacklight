@@ -59,9 +59,13 @@ gem "devise-guests", "~> 0.3"
 gem 'rsolr', '~> 1.0.10'
 gem 'faraday', '~> 0.9.0'
 
-group :test do
+group :test, :development do
   gem 'rspec-rails', '~> 3.0'
+end
+
+group :test do
   gem 'nokogiri', '~> 1.6.5'
   gem 'vcr', '~> 2.9.3'
   gem 'webmock'
 end
+
