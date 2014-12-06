@@ -12,4 +12,35 @@
   }
 }
 
+#folder_images {
+  clear: both;
+  margin: 0 auto;
+}
 
+.md_val_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.md_thumbnails {
+  width: 100%;
+  li {
+      padding: 10px;
+      margin: 10px;
+      height: 220px;
+      width: 220px;
+      float: left;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      border: 1px solid #DDD;
+    a {
+      vertical-align: middle;
+      display: block;
+      text-decoration: none;
+      img {
+      }
+    }
+  }
+}

@@ -1,23 +1,34 @@
 <%# default partial to display solr document fields in catalog show view -%>
-<% 
 
-  osd_config = {
-    crossOriginPolicy: true,
-    preserveViewport: true, 
-    visibilityRatio: 1
-  }
-%>
-<dl class="dl-horizontal  dl-invert">
-  <% document_show_fields(document).each do |solr_fname, field| -%>
-    <% if should_render_show_field? document, field %>
-	    <dt class="blacklight-<%= solr_fname.parameterize %>"><%= render_document_show_field_label document, :field => solr_fname %></dt>
-	    <dd class="blacklight-<%= solr_fname.parameterize %>">
-      <% if solr_fname == 'manifest' %>
-        <% images = iiif_image_list document %>
-        <%= openseadragon_picture_tag images, class: 'osd-image row', data: { openseadragon: osd_config } %>
+<dl class="dl-horizontal dl-invert">
+  <% @manifest.metadata.each do |entry| -%>
+    <dt class="blacklight-<%= entry['label'].parameterize %>"><%= entry['label'] %>:</dt>
+    <dd class="blacklight-<%= entry['label'].parameterize %>">
+      <% if entry['value'].kind_of?(Array) %>
+        <ul class="md_val_list">
+          <% entry['value'].each do |value| -%>
+            <li class="blacklight-<%= entry['label'].parameterize %>">
+              <% if label_has_facet?(entry['label']) %>
+                <a href="<%= facet_query_for_label_and_value(entry['label'],value) %>">
+                  <%= value %>
+                </a>
+              <% else %>
+                <%= value %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
       <% else %>
-        <%= render_document_show_field_value document, :field => solr_fname %></dd>
+        <% if label_has_facet?(entry['label']) %>
+          <a href="<%= facet_query_for_label_and_value(entry['label'],entry['value']) %>">
+            <%= entry['value'] %>
+          </a>
+        <% else %>
+          <%= entry['value'] %>
+        <% end %>
       <% end %>
-    <% end -%>
+    </dd>
   <% end -%>
 </dl>
+
+

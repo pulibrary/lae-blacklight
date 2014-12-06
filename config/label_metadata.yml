@@ -1,0 +1,23 @@
+---
+Title:
+  :schema: name
+Item Type:
+  :schema: genre
+  :facet_field: genre_pul_label
+Description:
+  :schema: description
+Date:
+  :schema: dateCreated
+Publisher:
+  :schema: publisher
+Language:
+  :schema: inLanguage
+  :facet_field: language_label
+Origin:
+  :facet_field: geographic_origin_label
+Geographic Subject:
+  :facet_field: geographic_subject_label
+Category:
+  :facet_field: category
+Subject:
+  :facet_field: subject_label
