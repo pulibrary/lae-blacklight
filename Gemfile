@@ -52,14 +52,18 @@ gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 
-gem "jettywrapper", "~> 1.7"
 gem "devise"
 gem "devise-guests", "~> 0.3"
 
 gem 'rsolr', '~> 1.0.10'
 gem 'faraday', '~> 0.9.0'
 
+gem 'rdf-rdfxml', '~> 1.1.3'
+gem 'rdf-turtle', '~> 1.1.4'
+
+
 group :test, :development do
+  gem "jettywrapper", "~> 1.7"
   gem 'rspec-rails', '~> 3.0'
 end
 
