@@ -1,0 +1,9 @@
+<ol class="list-inline md_thumbnails">
+  <% image_ids_labels_from_manifest(@manifest).each_with_index do |id_label,idx| %>
+  <% # see initialPage here: https://openseadragon.github.io/docs/OpenSeadragon.html 
+  %>
+  <a href="" data-idx="<%= idx %>">
+    <li><img src="<%= id_label[0] %>/full/!200,200/0/default.png" alt="<%= id_label[1] %>"/></li>
+    </a>
+  <% end -%>
+</ol>

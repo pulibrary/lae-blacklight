@@ -3,18 +3,45 @@ require 'iiif/presentation'
 
 module ApplicationHelper
 
-  def iiif_image_list(document)  
-    obj = IIIF::Service.parse(document[:manifest])
-    
-    self.extract_iiif_ids(obj)
-  end
-
-  def extract_iiif_ids(obj)
-    ids = []
-    obj.sequences.first.canvases.each do |canvas|
-      ids << canvas.images.first.resource.service['@id']
+  def image_ids_labels_from_manifest(manifest)
+    ids_labels = []
+    manifest.sequences.first.canvases.each do |canvas|
+      id = canvas.images.first.resource.service['@id']
+      ids_labels << [id, canvas['label']]
     end
-    return ids
+    ids_labels
   end
 
+  def facet_for_label(label)
+    label = label.singularize
+    LABEL_METADATA[label][:facet_field]
+  end
+
+  def schema_prop_for_label(label)
+    label = label.singularize
+    LABEL_METADATA[label][:schema]
+  end
+
+  def label_has_facet?(label)
+    label = label.singularize
+    if LABEL_METADATA.has_key?(label)
+      return LABEL_METADATA[label].has_key?(:facet_field)
+    else
+      return false
+    end
+  end
+
+  def label_has_schema_prop?(label)
+    label = label.singularize
+    if LABEL_METADATA.has_key?(label)
+      return LABEL_METADATA[label].has_key?(:schema)
+    else
+      return false
+    end
+  end
+
+  def facet_query_for_label_and_value(label,value)
+    query={"f[#{facet_for_label(label)}][]" => value }.to_param
+    "#{request.protocol}#{request.host_with_port}?#{query}"
+  end
 end
