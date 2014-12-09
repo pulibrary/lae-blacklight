@@ -1,0 +1,6 @@
+test:
+  adapter: mysql2
+  collation: utf8_bin
+  database: lae_blacklight_test
+  username: travis
+  encoding: utf8

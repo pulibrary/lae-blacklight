@@ -63,6 +63,7 @@ gem 'rdf-turtle', '~> 1.1.4'
 
 
 group :test, :development do
+  gem 'coveralls', require: false
   gem "jettywrapper", "~> 1.7"
   gem 'rspec-rails', '~> 3.0'
 end

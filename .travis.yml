@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+  - 2.1.2
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - cp config/solr.yml.tmpl config/solr.yml
+  - cp config/secrets.yml.tmpl config/secrets.yml
+  - mysql -e 'create database lae_blacklight_test;'
+
+script: bundle exec rake ci
+
+branches:
+  only:
+    - master
+notifications:
+  email:
+    recipients:
+      - "jstroop@princeton.edu"
+      - "kr2@princeton.edu"
+    on_success: "change"
+    on_failure: "always"
+    template:
+      - "%{repository}//%{branch}@%{commit} by %{author}: %{message} - %{build_url}"
