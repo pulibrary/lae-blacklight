@@ -16,6 +16,9 @@
 /log/*.log
 /tmp
 
+# Ignore coveralls /coverage
+/coverage
+
 # Ignore jetty server, solr, fedora, associated data directories
 jetty/*
 
