@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'blacklight'
 gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-gallery'
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
-gem 'osullivan', :github => 'jpstroop/osullivan', :tag => 'v0.0.1'
+gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
 
 gem 'mysql2'
 
@@ -45,9 +45,12 @@ gem 'faraday', '~> 0.9.0'
 gem 'rdf-rdfxml', '~> 1.1.3'
 gem 'rdf-turtle', '~> 1.1.4'
 
+# Rails engine for static pages.
+gem 'high_voltage', '~> 2.2.1'
+
 group :test, :development do
   gem 'coveralls', require: false
-  gem "jettywrapper", "~> 1.7"
+  gem 'jettywrapper', '~> 1.7'
   gem 'rspec-rails', '~> 3.0'
 end
 

@@ -1,16 +1,25 @@
-require 'spec_helper'
 require 'rails_helper'
 require 'rdf/turtle'
 require 'iiif/presentation'
 
 # Request specs for testing the LaeExportExtension
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+  c.preserve_exact_body_bytes do |http_message|
+    http_message.body.encoding.name == 'ASCII-8BIT' ||
+    !http_message.body.valid_encoding?
+  end
+end
+
 vcr_options = {
-  record: :new_episodes,
+  record: :new_episodes, # See https://www.relishapp.com/vcr/vcr/v/1-6-0/docs/record-modes
   serialize_with: :json
 }
 
 RSpec.describe CatalogController, type: :request, vcr: vcr_options do
-
 
   let(:fixture_box_id) { 'puls:00014' }
   let(:doc_ids) { ['004kr', '006tx', '00b84'] }
@@ -83,16 +92,12 @@ RSpec.describe CatalogController, type: :request, vcr: vcr_options do
       expect(IIIF::Service.parse(response.body).class).to be IIIF::Presentation::Manifest
       expect(response.headers['Content-Type']).to eq 'application/ld+json; charset=utf-8'
     end
+
     it 'has the correct content-type' do
       get catalog_path(doc_ids[2], :jsonld)
       expect(response.headers['Content-Type']).to eq 'application/ld+json; charset=utf-8'
     end
+
   end
 
 end
-
-
-
-
-
-

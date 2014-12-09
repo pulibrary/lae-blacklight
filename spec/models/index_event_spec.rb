@@ -1,18 +1,29 @@
 require 'rails_helper'
 require 'nokogiri'
 
-RSpec.describe IndexEvent, type: :model do
-  vcr_options = {
-    record: :new_episodes, # See https://www.relishapp.com/vcr/vcr/v/1-6-0/docs/record-modes
-    serialize_with: :json
-  }
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+  c.preserve_exact_body_bytes do |http_message|
+    http_message.body.encoding.name == 'ASCII-8BIT' ||
+    !http_message.body.valid_encoding?
+  end
+end
+
+vcr_options = {
+  record: :new_episodes, # See https://www.relishapp.com/vcr/vcr/v/1-6-0/docs/record-modes
+  serialize_with: :json
+}
+
+RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
 
   let(:fixture_box_id) { 'puls:00014' }
   let(:doc_ids) { ['004kr', '006tx', '00b84'] }
   let(:solr_xml_string) { IO.read(File.join(Rails.root, 'spec/fixtures/files/solr.xml')) }
   let(:solr) { RSolr.connect(url: described_class.send(:solr_url)) }
 
-  describe 'IndexEvent.get_boxes_data', vcr: vcr_options do
+  describe 'IndexEvent.get_boxes_data' do
 
     it 'gets a an Array of Hashes' do
       boxes = described_class.get_boxes_data
@@ -27,7 +38,7 @@ RSpec.describe IndexEvent, type: :model do
 
   end
 
-  describe 'IndexEvent.get_solr_xml', vcr: vcr_options do
+  describe 'IndexEvent.get_solr_xml' do
 
     it 'gets solr-flavored XML' do
       # use #send to test this protected method
@@ -43,7 +54,7 @@ RSpec.describe IndexEvent, type: :model do
 
   end
 
-  describe 'IndexEvent.post_to_solr', vcr: vcr_options do
+  describe 'IndexEvent.post_to_solr' do
     # You may find these helpful as well to double check that your Solr is working.
     # curl -v -X POST -H "Content-Type:application/xml" --data-binary @spec/fixtures/files/solr.xml "http://localhost:8983/solr/blacklight-core/update"
     # curl -v -X POST -H "Content-Type:application/xml" --data '<commit/>' "http://localhost:8983/solr/blacklight-core/update"
@@ -127,8 +138,6 @@ RSpec.describe IndexEvent, type: :model do
       described_class.post_to_solr('<delete><query>*:*</query></delete>')
       described_class.post_to_solr(solr_xml_string)
     end
-
-    
 
     describe 'IndexEvent.delete_one' do
       it 'does' do
