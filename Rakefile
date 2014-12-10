@@ -10,12 +10,14 @@ Rails.application.load_tasks
 
 ZIP_URL = 'https://github.com/projectblacklight/blacklight-jetty/archive/v4.10.0.zip'
 
-Rake::Task['jetty:clean'].enhance do
-  Rake::Task['lae:solr2jetty'].invoke
-end
+
 
 task :ci do
 
+  Rake::Task['jetty:clean'].enhance do
+    Rake::Task['lae:solr2jetty'].invoke
+  end
+  
   jetty_params = Jettywrapper.load_config.merge({
     jetty_home: File.expand_path(File.dirname(__FILE__) + '/jetty'),
     startup_wait: 180,
