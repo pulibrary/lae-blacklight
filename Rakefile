@@ -34,7 +34,7 @@ task :ci do
 end
 
 # Rake::Task[:default].prerequisites.clear
-task default: []
-Rake::Task[:default].clear
-task default: [:ci]
+#task default: []
+#Rake::Task[:default].clear
+#task default: [:ci]
 
