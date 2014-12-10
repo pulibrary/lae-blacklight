@@ -42,6 +42,6 @@ module ApplicationHelper
 
   def facet_query_for_label_and_value(label,value)
     query={"f[#{facet_for_label(label)}][]" => value }.to_param
-    "#{request.protocol}#{request.host_with_port}?#{query}"
+    "#{request.protocol}#{request.host_with_port}/catalog?#{query}"
   end
 end

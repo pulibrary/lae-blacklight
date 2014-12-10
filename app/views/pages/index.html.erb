@@ -1,0 +1,8 @@
+<%= render 'shared/header_navbar' %>
+<%= content_for :page_title, 'Home' %>
+<div id="main-container" class="container">
+
+  <h2>This is the home page</h2>
+  <p>What's the difference between this and <%= link_to '/about', page_path('about') %>?</p>
+
+</div>
