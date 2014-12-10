@@ -92,12 +92,13 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
     #config.add_index_field 'title', label: 'Title'
-    config.add_index_field 'creator', label: 'Creator'
+    # config.add_index_field 'creator', label: 'Creator'
     # config.add_index_field 'author_display', label: 'Author'
     # config.add_index_field 'author_vern_display', label: 'Author'
-    config.add_index_field 'genre_pul_label', label: 'Genre'
-    config.add_index_field 'language_label', label: 'Language'
-    #config.add_index_field 'geographic_origin_label', label: 'Origin'
+    # config.add_index_field 'genre_pul_label', label: 'Genre'
+    # config.add_index_field 'language_label', label: 'Language'
+    config.add_index_field 'geographic_origin_label', label: 'Geographic Origin'
+    config.add_index_field 'publisher', label: 'Publisher'
     # config.add_index_field 'language_facet', label: 'Language'
     # config.add_index_field 'published_display', label: 'Published'
     # config.add_index_field 'published_vern_display', label: 'Published'

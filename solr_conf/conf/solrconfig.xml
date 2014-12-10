@@ -224,6 +224,8 @@
          url_suppl_display,
          title,
          creator,
+         geographic_origin_label,
+         publisher,
          genre_pul_label,
          subject_label,
          language_label,
