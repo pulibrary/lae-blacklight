@@ -3,6 +3,8 @@ en:
     application_name: 'Latin American Ephemera'
     welcome: 'Latin American Ephemera Project'
 
+    tools:
+      title: 'Options'
     search:
       facets:
         title: 'Filter your search'

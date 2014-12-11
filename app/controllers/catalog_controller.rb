@@ -8,8 +8,8 @@ class CatalogController < ApplicationController
   configure_blacklight do |config|          
     config.view.gallery.partials = [:index_header, :index]
     config.view.slideshow.partials = [:index]
-
-    config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
+    config.index.thumbnail_method = :thumbnail_from_manifest
+    #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     #config.show.partials.insert(0, :openseadragon)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -212,6 +212,5 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
-
 
 end 

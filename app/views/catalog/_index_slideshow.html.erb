@@ -1,0 +1,23 @@
+   <% 
+      osd_config = {
+        crossOriginPolicy: true,
+        preserveViewport: true, 
+        visibilityRatio: 1,
+        showNavigator:  false,
+      }
+    %>
+<div class="item<%= ' active' if document_counter == 0 %>">
+  <div class="frame">
+      <% first_id = first_id_from_manfiest(document) %>
+      <!--
+      <%= thumbnail_from_manifest(document) %>
+      -->
+        <%= openseadragon_picture_tag [ first_id ], class: 'osd-image', data: { openseadragon: osd_config } %>
+      <div class="caption">
+        <%= render_document_index_label document, label: document_show_link_field(document) %>
+      </div>
+      <span class="counter">
+        <%= t :'blacklight_gallery.catalog.modal_slideshow.counter', counter: document_counter + 1, count: count %>
+      </span>
+  </div>
+</div>

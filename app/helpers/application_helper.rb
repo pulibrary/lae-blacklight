@@ -12,6 +12,15 @@ module ApplicationHelper
     ids_labels
   end
 
+  def all_image_ids_from_from_manifest(manifest)
+    ids = []
+    manifest.sequences.first.canvases.each do |canvas|
+      id = canvas.images.first.resource.service['@id']
+      ids << id
+    end
+    ids
+  end
+
   def facet_for_label(label)
     label = label.singularize
     LABEL_METADATA[label][:facet_field]
@@ -43,5 +52,17 @@ module ApplicationHelper
   def facet_query_for_label_and_value(label,value)
     query={"f[#{facet_for_label(label)}][]" => value }.to_param
     "#{request.protocol}#{request.host_with_port}/catalog?#{query}"
+  end
+
+  def thumbnail_from_manifest document, image_options = {}
+    manifest = IIIF::Service.parse(document['manifest'])
+    image_tag manifest.thumbnail
+  end
+
+  def first_id_from_manfiest document, image_options = {}
+    manifest = IIIF::Service.parse(document['manifest'])
+    canvas = manifest.sequences.first.canvases.first
+    id = canvas.images.first.resource.service['@id']
+    id
   end
 end
