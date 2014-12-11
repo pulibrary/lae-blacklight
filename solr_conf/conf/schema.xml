@@ -579,6 +579,9 @@
    <field name="ttl" type="string" indexed="false" stored="true" multiValued="false"/>
    <field name="manifest" type="string" indexed="false" stored="true" multiValued="false"/>
 
+   <!-- thumbnails -->
+   <field name="thumbnail_base" type="string" indexed="false" stored="true" multiValued="false"/>
+
 
    <!-- Dynamic field definitions.  If a field name is not found, dynamicFields
         will be used if the name matches any of the patterns.
