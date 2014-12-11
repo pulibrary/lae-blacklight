@@ -1,9 +1,39 @@
 <ol class="list-inline md_thumbnails">
+  <% ids = all_image_ids_from_from_manifest(@manifest) %>
   <% image_ids_labels_from_manifest(@manifest).each_with_index do |id_label,idx| %>
   <% # see initialPage here: https://openseadragon.github.io/docs/OpenSeadragon.html 
   %>
-  <a href="" data-idx="<%= idx %>">
-    <li><img src="<%= id_label[0] %>/full/!200,200/0/default.png" alt="<%= id_label[1] %>"/></li>
-    </a>
+    <% 
+      osd_config = {
+        crossOriginPolicy: true,
+        preserveViewport: true, 
+        visibilityRatio: 1,
+        showNavigator:  true,
+        initialPage: idx
+      }
+    %>
+    <li>
+      <a class="btn btn-link" data-toggle="modal" data-target="<%= "\#seq#{idx}" %>" href="#" data-idx="<%= idx %>">
+        <img src="<%= id_label[0] %>/full/!200,200/0/default.png" alt="<%= id_label[1] %>"/>
+      </a>
+      <div class="modal osd-modal" id="<%= "seq#{idx}" %>" tabindex="-1" role="dialog" aria-labelledby="<%= id_label[1] %>" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                  <%= id_label[1] %>
+                </h4>
+              </div>
+              <div class="modal-body">
+                <%= openseadragon_picture_tag ids, class: 'osd-image row', data: { openseadragon: osd_config } %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
   <% end -%>
 </ol>
