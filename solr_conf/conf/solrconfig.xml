@@ -230,7 +230,8 @@
          subject_label,
          language_label,
          manifest,
-         ttl
+         ttl,
+         thumbnail_base
        </str>
 
        <str name="facet">true</str>
@@ -424,7 +425,7 @@
         subtitle_display,
         subtitle_vern_display,
         url_fulltext_display,
-        url_suppl_display,
+        url_suppl_display
       </str>
       
       <str name="facet">true</str>
