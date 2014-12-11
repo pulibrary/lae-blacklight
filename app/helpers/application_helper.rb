@@ -55,14 +55,10 @@ module ApplicationHelper
   end
 
   def thumbnail_from_manifest document, image_options = {}
-    manifest = IIIF::Service.parse(document['manifest'])
     image_tag "#{document['thumbnail_base']}/full/!200,200/0/default.png"
   end
 
   def first_id_from_manfiest document, image_options = {}
-    #manifest = IIIF::Service.parse(document['manifest'])
-    #canvas = manifest.sequences.first.canvases.first
-    #id = canvas.images.first.resource.service['@id']
     document['thumbnail_base']
   end
 end
