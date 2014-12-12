@@ -88,14 +88,26 @@
 
        <str name="qf">
           title^100000
+          title_en^100000
+          title_es^100000
+          title_pt^100000
           alternative_title^50000
+          alternative_title_en^50000
+          alternative_title_es^50000
+          alternative_title_pt^50000
           series^2500
+          series_en^2500
+          series_es^2500
+          series_pt^2500
           subject_label^1000
           geographic_subject_label^1000
           geographic_origin_label^1000
           genre_pul_label^1000
           creator^750
           publisher^750
+          publisher_en^750
+          publisher_es^750
+          publisher_pt^750
           contributor^750
           category^500
           description^250
@@ -109,14 +121,26 @@
        </str>
        <str name="pf">
           title^100000
+          title_en^100000
+          title_es^100000
+          title_pt^100000
           alternative_title^50000
+          alternative_title_en^50000
+          alternative_title_es^50000
+          alternative_title_pt^50000
           series^2500
+          series_en^2500
+          series_es^2500
+          series_pt^2500
+          publisher^750
+          publisher_en^750
+          publisher_es^750
+          publisher_pt^750
           subject_label^1000
           geographic_subject_label^1000
           geographic_origin_label^1000
           genre_pul_label^1000
           creator^750
-          publisher^750
           contributor^750
           category^500
           description^250
@@ -132,21 +156,45 @@
           creator^1000
           contributor^1000
           publisher^750
+          publisher_en^750
+          publisher_es^750
+          publisher_pt^750
        </str>
        <str name="creator_pf">
           creator^1000
           contributor^1000
           publisher^750
+          publisher_en^750
+          publisher_es^750
+          publisher_pt^750
        </str>
        <str name="title_qf">
           title^100000
+          title_en^100000
+          title_es^100000
+          title_pt^100000
           alternative_title^50000
+          alternative_title_en^50000
+          alternative_title_es^50000
+          alternative_title_pt^50000
           series^2500
+          series_en^2500
+          series_es^2500
+          series_pt^2500
        </str>
        <str name="title_pf">
           title^100000
+          title_en^100000
+          title_es^100000
+          title_pt^100000
           alternative_title^50000
+          alternative_title_en^50000
+          alternative_title_es^50000
+          alternative_title_pt^50000
           series^2500
+          series_en^2500
+          series_es^2500
+          series_pt^2500
        </str>
        <str name="subject_qf">
           subject_label^1000
@@ -186,7 +234,9 @@
        <str name="facet.field">subject_label_facet</str>
        <str name="facet.pivot">category_facet,subject_label_facet</str>
        
-       <!-- See https://wiki.apache.org/solr/MoreLikeThis -->
+       <!-- See https://wiki.apache.org/solr/MoreLikeThis 
+       Don't do this here or we get a much bigger doc for search results; set
+       in CatalogController config.default_document_solr_params instead
        <str name="mlt">true</str>
        <str name="mlt.fl">
         title,
@@ -196,7 +246,7 @@
         description,
         publisher,
         series
-       </str>
+       </str> -->
 
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
@@ -271,6 +321,51 @@
       <str name="fl">*</str>
       <str name="rows">1</str>
       <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
+      <str name="mlt">true</str>
+      <str name="mlt.fl">
+        title,
+        title_en,
+        title_es,
+        title_pt,
+        alternative_title,
+        alternative_title_en,
+        alternative_title_es,
+        alternative_title_pt,
+        publisher,
+        publisher_en,
+        publisher_es,
+        publisher_pt,
+        series,
+        series_en,
+        series_es,
+        series_pt,
+        contributor,
+        creator'
+      </str>
+      <str name="mlt.qf">
+        title^100000
+        title_en^100000
+        title_es^100000
+        title_pt^10000
+        alternative_title^10000
+        alternative_title_en^1000
+        alternative_title_es^10000
+        alternative_title_pt^1000
+        publisher^10000
+        publisher_en^10000
+        publisher_es^1000
+        publisher_pt^1000
+        series^2500
+        series_en^2500
+        series_es^2500
+        series_pt^250
+        contributor^100
+        creator^10
+      </str>
+      <str name="mlt.mintf">2</str>
+      <str name="mlt.mindf">5</str>
+      <str name="mlt.minwl">5</str>
+      <str name="mlt.boost">true</str>
     </lst>
   </requestHandler>
 

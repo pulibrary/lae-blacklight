@@ -4,6 +4,10 @@ require 'yaml'
 
 namespace :lae do
 
+  # TODO: we need an optimize task when we have spellcheck going; that's when 
+  # the spellcheck index is built (recommended, can be changed to index time but
+  # takes a while and we may not want to do it every time.)
+
   desc 'Do a complete reindex of the site (dumps the current index and starts over)'
   task index: :environment do
     data = IndexEvent.get_boxes_data
@@ -56,6 +60,12 @@ namespace :lae do
     cp Rails.root.join('solr_conf','solr.xml'), Rails.root.join('jetty','solr')
     cp Rails.root.join('solr_conf','conf','schema.xml'), Rails.root.join('jetty','solr','blacklight-core','conf')
     cp Rails.root.join('solr_conf','conf','solrconfig.xml'), Rails.root.join('jetty','solr','blacklight-core','conf')
+    unless File.exists?(Rails.root.join('jetty','solr','blacklight-core','conf','lang'))
+      Dir.mkdir(Rails.root.join('jetty','solr','blacklight-core','conf','lang'))
+    end
+    Dir.glob(Rails.root.join('solr_conf','conf','lang','*')).each do |lang_file|
+      cp lang_file, Rails.root.join('jetty','solr','blacklight-core','conf', 'lang')
+    end
   end
 
 end
