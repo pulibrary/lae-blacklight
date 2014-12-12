@@ -1,5 +1,4 @@
 <%# default partial to display solr document fields in catalog show view -%>
-
 <dl class="dl-horizontal dl-invert">
   <% @manifest.metadata.each do |entry| -%>
     <dt class="blacklight-<%= entry['label'].parameterize %>"><%= entry['label'] %>:</dt>
