@@ -22,18 +22,17 @@ class CatalogController < ApplicationController
     #config.solr_path = 'select'
 
     # items to show per page, each number in the array represent another option to choose from.
-    config.per_page = [10,20,50,100]
+    config.per_page = [10,20,50]
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
-    #
-    #config.default_document_solr_params = {
-    #  :qt => 'document',
-    #  ## These are hard-coded in the blacklight 'document' requestHandler
-    #  # :fl => '*',
-    #  # :rows => 1
-    #  # :q => '{!raw f=id v=$id}'
-    #}
+    # config.default_document_solr_params = {
+    #   :qt => 'document',
+    #   # These are hard-coded in the blacklight 'document' requestHandler
+    #   :fl => '*',
+    #   :rows => 1,
+    #   :q => '{!raw f=id v=$id}'
+    # }
 
     # solr field configuration for search results/index views
     config.index.title_field = 'title'
@@ -90,10 +89,10 @@ class CatalogController < ApplicationController
 
     # Solr fields to be displayed in the show (single result) view
     # The ordering of the field names is the order of the display
+
+    # None! All are drawn from the Manifest
+
     # config.add_show_field 'creator', label: 'Creator'
-
-    ### None! All are drawn from the Manifest ###
-
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -113,7 +112,7 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
 
-    config.add_search_field 'all_fields', label: 'All Fields' 
+    config.add_search_field 'all_fields', label: 'All Fields'
 
 
     # Now we see how to over-ride Solr request handler defaults, in this
@@ -176,5 +175,6 @@ class CatalogController < ApplicationController
   end
 
 end
+
 
 

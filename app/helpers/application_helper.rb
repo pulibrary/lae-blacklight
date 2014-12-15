@@ -61,4 +61,14 @@ module ApplicationHelper
   def first_id_from_manfiest document, image_options = {}
     document['thumbnail_base']
   end
+
+
+  ##
+  # Render the sidebar partial for a document
+  #
+  # @param [SolrDocument]
+  # @return [String]
+  def render_lae_document_sidebar_partial(document = @document)
+    render partial: 'show_sidebar'
+  end
 end

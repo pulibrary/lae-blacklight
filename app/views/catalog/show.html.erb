@@ -19,8 +19,6 @@
 </div>
 
 
-
-
   <% if @document.respond_to?(:export_as_openurl_ctx_kev) %>
     <!-- 
          // COinS, for Zotero among others. 
@@ -33,7 +31,15 @@
 </div>
 
 <div id="sidebar" class="col-md-3 col-sm-4">
-   <%= render_document_sidebar_partial %>
+   <% # Start here when customizing the sizebar.
+      # Implement LAE's version of 
+      # Blacklight::CatalogHelperBehavior#render_document_sidebar_partial
+      # (and the cascade of partials and helpers that follows) in
+      # ApplicationHelper#render_lae_document_sidebar_partial (latter is 
+      # currently just a copy of the former.)
+      # Should show: Image, Bookmark, More Like This, RDF? Manifest?
+    %>
+   <%= render_lae_document_sidebar_partial %>
 </div>
 
 <div id="folder_images">
