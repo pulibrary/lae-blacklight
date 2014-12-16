@@ -50,6 +50,14 @@ class IndexEvent < ActiveRecord::Base
       end
     end
 
+    def optimize
+      IndexEvent.record do
+        puts 'Optimizing index' if defined?(Rake)
+        solr = RSolr.connect(url: solr_url)
+        solr.optimize
+      end
+    end
+
     # Options
     #  * box_id
     #  * folder_id

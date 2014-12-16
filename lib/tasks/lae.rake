@@ -4,7 +4,7 @@ require 'yaml'
 
 namespace :lae do
 
-  # TODO: we need an optimize task when we have spellcheck going; that's when 
+  # TODO: we need an optimize task when we have spellcheck going; that's when
   # the spellcheck index is built (recommended, can be changed to index time but
   # takes a while and we may not want to do it every time.)
 
@@ -15,6 +15,7 @@ namespace :lae do
     data.select{ |box| !box['last_mod_prod_folder'].nil? }.each do |box|
       IndexEvent.index_resource(box_id: box['id'])
     end
+    IndexEvent.optimize
   end
 
   desc 'Index a Box (`box_id=puls:00014 rake lae:index_box`)'
@@ -39,6 +40,7 @@ namespace :lae do
     else
       boxes.each { |box| IndexEvent.index_resource(box_id: box['id']) }
     end
+    IndexEvent.optimize
   end
 
   desc 'Delete the ENTIRE existing index'
@@ -55,7 +57,7 @@ namespace :lae do
     end
   end
 
-  desc "Copy solr config files to Jetty wrapper"
+  desc 'Copy solr config files to Jetty wrapper'
   task solr2jetty: :environment do
     cp Rails.root.join('solr_conf','solr.xml'), Rails.root.join('jetty','solr')
     cp Rails.root.join('solr_conf','conf','schema.xml'), Rails.root.join('jetty','solr','blacklight-core','conf')
@@ -68,7 +70,38 @@ namespace :lae do
     end
   end
 
+  desc 'Clear the index and load development fixtures into Solr'
+  task load_fixtures: :environment do
+    if Rails.env.development?
+      begin
+        fp = Rails.root.join('spec','fixtures', 'files', '208_solr_docs.xml.gz')
+        solr_url = "#{Blacklight.solr_yml[Rails.env]['url']}"
+        solr = RSolr.connect(url: solr_url)
+        solr.delete_by_query(['*:*'])
+
+        File.open(fp) do |f|
+          gz = Zlib::GzipReader.new(f)
+          content = gz.read
+          solr.update(data: content)
+          solr.commit
+          gz.close
+        end
+
+      rescue Exception => e
+        solr.rollback
+        puts '***Rolled back Solr***'
+        raise e
+      end
+      solr.commit
+      solr.optimize
+    else
+      STDERR.puts 'This task is only available in the development environment'
+    end
+  end
+
 end
+
+
 
 
 
