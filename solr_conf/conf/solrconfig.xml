@@ -214,10 +214,10 @@
        <str name="fl">
          id, 
          score,
-         title,
+         title_display,
          date_display,
          geographic_origin_label,
-         publisher,
+         publisher_display,
          manifest,
          ttl,
          thumbnail_base
