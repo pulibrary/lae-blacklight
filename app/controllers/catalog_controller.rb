@@ -35,11 +35,11 @@ class CatalogController < ApplicationController
     # }
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title'
+    config.index.title_field = 'title_display'
     # config.index.display_type_field = 'genre_pul_label'
 
     # solr field configuration for document/show views
-    config.show.title_field = 'title'
+    config.show.title_field = 'title_display'
     # config.show.display_type_field = 'genre_pul_label'
 
     # solr fields that will be treated as facets by the blacklight application
@@ -84,7 +84,7 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
     config.add_index_field 'geographic_origin_label', label: 'Geographic Origin'
-    config.add_index_field 'publisher', label: 'Publisher'
+    config.add_index_field 'publisher_display', label: 'Publisher'
     config.add_index_field 'date_display', label: 'Date'
 
     # Solr fields to be displayed in the show (single result) view
