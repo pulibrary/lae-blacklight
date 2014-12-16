@@ -274,7 +274,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blacklight
+  blacklight (~> 5.7.2)
   blacklight-gallery
   capistrano (~> 3.3.3)
   capistrano-bundler
