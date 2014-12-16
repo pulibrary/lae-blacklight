@@ -3,7 +3,7 @@ Title:
   :schema: name
 Item Type:
   :schema: genre
-  :facet_field: genre_pul_label
+  :facet_field: genre_pul_label_facet
 Description:
   :schema: description
 Date:
@@ -12,12 +12,12 @@ Publisher:
   :schema: publisher
 Language:
   :schema: inLanguage
-  :facet_field: language_label
+  :facet_field: language_label_facet
 Origin:
-  :facet_field: geographic_origin_label
+  :facet_field: geographic_origin_label_facet
 Geographic Subject:
-  :facet_field: geographic_subject_label
+  :facet_field: geographic_subject_label_facet
 Category:
-  :facet_field: category
+  :facet_field: category_facet
 Subject:
-  :facet_field: subject_label
+  :facet_field: subject_label_facet
