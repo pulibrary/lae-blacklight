@@ -12,6 +12,20 @@ module ApplicationHelper
     ids_labels
   end
 
+  def image_ids_labels_from_manifest_as_hash(manifest)
+    ids_labels = []
+    manifest.sequences.first.canvases.each do |canvas|
+      id = canvas.images.first.resource.service['@id']
+      ids_labels << {'id' => strip_iiif_server_base_from_id(id), 'label' => canvas['label']}
+    end
+    ids_labels
+  end
+
+  def strip_iiif_server_base_from_id(id)
+    base_url = "http://libimages.princeton.edu/loris2/"
+    id.gsub("#{base_url}", '')
+  end
+
   def all_image_ids_from_from_manifest(manifest)
     ids = []
     manifest.sequences.first.canvases.each do |canvas|

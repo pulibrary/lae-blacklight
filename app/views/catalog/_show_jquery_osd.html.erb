@@ -1,0 +1,11 @@
+<div class="viewer">
+  <% ids = image_ids_labels_from_manifest_as_hash(@manifest) %>
+  <script>
+      $('.viewer').iiifOsdViewer({
+        data: [{
+          iiifServer: 'http://libimages.princeton.edu/loris2',
+          images: <%= raw ids.to_json %> }
+        ]
+      });
+    </script>
+</div>

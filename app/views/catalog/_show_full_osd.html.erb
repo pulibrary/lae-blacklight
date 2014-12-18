@@ -1,0 +1,17 @@
+<h3>Full View</h3>
+
+
+<div id="full-document" class="lae-viewer">
+  <% 
+
+  osd_config = {
+    crossOriginPolicy: false,
+    preserveViewport: true, 
+    visibilityRatio: 1,
+    showNavigator:  true,
+    showReferenceStrip: true,
+  }
+%>
+  <% ids = all_image_ids_from_from_manifest(@manifest) %>
+  <%= openseadragon_picture_tag ids, class: 'osd-image row', data: { openseadragon: osd_config } %>
+</div>

@@ -5,7 +5,9 @@ app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
 <div class="panel panel-default show-tools">
   
 
-  <div class="panel-heading centered"><a href="#">View Images (<%= @manifest.sequences[0].canvases.length %>)</a></div>
+  <div class="panel-heading centered"><a class="btn btn-link"
+  data-toggle="modal" data-target="#osd-full-modal"
+    href="#">View Images (<%= @manifest.sequences[0].canvases.length %>)</a></div>
   <div class="panel-body">
     <div class="panel-image">
       <img width="230" src="<%= "#{@document['thumbnail_base']}/full/230,/0/default.png" %>" alt="preview" />
@@ -21,6 +23,34 @@ app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
         </li>
       <% end %>
     </ul>
+    <div class="modal osd-modal" id="osd-full-modal" tabindex="-1" role="dialog" aria-labelledby="<%= document_show_html_title %>" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="osdModalLabel">
+                  <%= document_show_html_title %>
+                </h4>
+              </div>
+              <div class="modal-body">
+                <div class="viewer">
+  <% ids = image_ids_labels_from_manifest_as_hash(@manifest) %>
+  <script>
+      $('.viewer').iiifOsdViewer({
+        data: [{
+          iiifServer: 'http://libimages.princeton.edu/loris2',
+          images: <%= raw ids.to_json %> }
+        ]
+      });
+    </script>
+</div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
   </div>
 </div>
   

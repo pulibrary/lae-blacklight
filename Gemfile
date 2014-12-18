@@ -27,6 +27,7 @@ gem 'blacklight', '~> 5.7.2'
 gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-gallery'
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
+gem "font-awesome-rails"
 
 gem 'mysql2'
 
