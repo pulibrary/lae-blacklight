@@ -388,7 +388,8 @@
             zoomInButton:   'iov-list-zoom-in',
             zoomOutButton:  'iov-list-zoom-out',
             homeButton:     'iov-list-home',
-            showFullPageControl: false
+            showFullPageControl: false,
+            showNavigator: true
           });
         }
       }

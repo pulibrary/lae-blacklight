@@ -2,11 +2,13 @@
 Collapses Blacklight's app/views/catalog/_show_sidebar.html.erba and
 app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
 %>
+<% ids = image_ids_labels_from_manifest_as_hash(@manifest) %>
 <div class="panel panel-default show-tools">
   
 
-  <div class="panel-heading centered"><a class="btn btn-link"
+  <div class="panel-heading centered"><a class="btn btn-link btn-osd-trigger"
   data-toggle="modal" data-target="#osd-full-modal"
+    data-iiif-images="<%= ids.to_json %>"
     href="#">View Images (<%= @manifest.sequences[0].canvases.length %>)</a></div>
   <div class="panel-body">
     <div class="panel-image">
@@ -34,13 +36,18 @@ app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
               </div>
               <div class="modal-body">
                 <div class="viewer">
-  <% ids = image_ids_labels_from_manifest_as_hash(@manifest) %>
   <script>
-      $('.viewer').iiifOsdViewer({
-        data: [{
-          iiifServer: 'http://libimages.princeton.edu/loris2',
-          images: <%= raw ids.to_json %> }
-        ]
+    $('#osd-full-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var iiif_images = button.data('iiif-images'); // Extract info from 
+        var modal = $(this);
+        var viewer = modal.find('.viewer');
+        viewer.iiifOsdViewer({
+          data: [{
+            iiifServer: 'http://libimages.princeton.edu/loris2',
+            images: <%= raw ids.to_json %> }
+          ]
+        });
       });
     </script>
 </div>
