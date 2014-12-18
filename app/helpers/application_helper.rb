@@ -12,11 +12,21 @@ module ApplicationHelper
     ids_labels
   end
 
+  ## This is rather lame, but it gives returns a JSON
+  ## structure with images and labels for the iiiF 
+  ## Jquery plugin 
   def image_ids_labels_from_manifest_as_hash(manifest)
     ids_labels = []
+    page_number = 0
     manifest.sequences.first.canvases.each do |canvas|
+      page_number = page_number + 1
       id = canvas.images.first.resource.service['@id']
-      ids_labels << {'id' => strip_iiif_server_base_from_id(id), 'label' => canvas['label']}
+      if canvas['label'].nil? 
+        label = "Page #{page_number}"
+      else 
+        label = canvas['label']
+      end
+      ids_labels << {'id' => strip_iiif_server_base_from_id(id), 'label' => label}
     end
     ids_labels
   end

@@ -32,7 +32,7 @@ gem "font-awesome-rails"
 gem 'mysql2'
 
 # Use Capistrano for deployment
-gem 'capistrano', '~> 3.3.3'
+gem 'capistrano', '~> 3.3.5'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-passenger'

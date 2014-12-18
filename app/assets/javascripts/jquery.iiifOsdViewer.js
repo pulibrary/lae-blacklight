@@ -276,12 +276,12 @@
       function loadListViewThumbs() {
         $.each(config.data, function(index, collection) {
           $.each(collection.images, function(index, image) {
-            var imgUrl = getIiifImageUrl(collection.iiifServer, image.id, config.listView.thumbsWidth, null),
-                infoUrl = getIiifInfoUrl(collection.iiifServer, image.id),
-                $imgItem = $('<li data-alt="' + image.label + '">'),
-                $img = $('<img>'),
-                imgHeight = Math.round((image.height / image.width) * config.listView.thumbsWidth);
-
+            var imgUrl = getIiifImageUrl(collection.iiifServer, image.id, config.listView.thumbsWidth, null);
+            var infoUrl = getIiifInfoUrl(collection.iiifServer, image.id);
+            $imgItem = $('<li data-alt="' + image.label + '">');
+            $img = $('<img>');
+            var imgHeight = Math.round((image.height / image.width) * config.listView.thumbsWidth);
+            console.log(imgUrl);
             $imgItem
               .addClass('iov-list-view-id-' + hashCode(image.id))
               .data({
