@@ -143,6 +143,9 @@ GEM
     logger (1.2.8)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mail_form (1.5.0)
+      actionmailer (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     mime-types (2.4.3)
     mini_portile (0.6.1)
     minitest (5.5.0)
@@ -231,6 +234,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     simplecov (0.9.1)
       docile (~> 1.1.0)
       multi_json (~> 1.0)
@@ -294,6 +300,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jettywrapper (~> 1.7)
   jquery-rails
+  mail_form
   mysql2
   nokogiri (~> 1.6.5)
   openseadragon!
@@ -305,6 +312,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  simple_form
   spring
   therubyracer
   turbolinks
