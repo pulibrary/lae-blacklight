@@ -1,0 +1,116 @@
+@import "bourbon";
+
+.search_field.btn {
+    cursor: pointer;
+    height: 34px;
+    min-height: 0px;
+    position: relative;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    background: rgb(255, 255, 255) none repeat;
+    border: solid 1px #ccc;
+    border-radius: none;
+
+    option {
+        border-radius: 0;
+    }
+}
+
+#search-navbar {
+    background: #f5f4f1;
+    padding: 1em 0;
+    margin-bottom: 0;
+}
+
+#search-navbar .col-sm-8 {
+    background: white;
+    border-radius: 4px;
+    border: 1px #ccc solid;
+    padding: 0;
+}
+
+#search-navbar .input-group {
+    width: 100%;
+}
+
+#search-navbar .search-query-form {
+    width: 100%;
+    padding-right: 0;
+    margin: 0;
+}
+
+#search-navbar .input-group-btn.search-panel {
+    width: 95px;
+}
+
+#search-navbar .input-group-btn.search-button {
+    width: 90px;
+    border: 0;
+    padding: 0;
+    background: #0e5a86;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &:hover {
+        background: lighten(#0e5a86, 10);
+    }
+
+    button {
+        margin: 0;
+        width: 100%;
+        border-top-right-radius: 4px;
+        background: #0e5a86;
+        border: 0;
+    }
+
+    button:hover {
+        background: lighten(#0e5a86, 10);
+    }
+}
+
+#search-navbar select {
+    border: 0;
+}
+
+.search_q {
+    box-shadow: none;
+    border-top: 0;
+    border-bottom: 0;
+}
+#search-navbar .navbar-nav {
+    float: right;
+
+    .glyphicon {
+        display: inline-block;
+        margin-left: 1em;
+        color: black;
+    }
+}
+#search-navbar .navbar-nav > li {
+    margin: 0;
+    background: none; //#0e5a86;
+    color: black;
+    border-radius: 4px;
+
+    a {
+        margin: 0;
+        background: none; //#0e5a86;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding-left: 0.2em;
+        color: black;
+        display: inline-block;
+
+        &:hover {
+            color: #0e5a86;
+        }
+    }
+}
+
+.search--label {
+    line-height: 34px;
+    // font-size: 1.5em;
+    // vertical-align: middle;
+    font-style: italic;
+}

@@ -1,0 +1,19 @@
+@import "bourbon";
+
+body {
+    background: #f5f4f1;
+    font-family: $lucida-grande;
+}
+
+main {
+    background: white;
+    padding: 2em 0 2em 0;
+}
+
+.front {
+    // background: #ccc;
+}
+
+h1.site-logo {
+    margin: 0;
+}
