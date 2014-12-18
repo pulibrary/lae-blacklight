@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :request do
 
-  %w(about contact).each do |page|
+  %w(about).each do |page|
 
     describe "should get to /#{page}" do
       subject { get(page) }
