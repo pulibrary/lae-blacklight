@@ -12,6 +12,10 @@ class CatalogController < ApplicationController
     #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     #config.show.partials.insert(0, :openseadragon)
 
+    add_show_tools_partial(:sms, if: false)
+    add_show_tools_partial(:citation, if: false)
+    add_show_tools_partial(:email, if: false)
+
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       :qt => 'search',
@@ -43,6 +47,9 @@ class CatalogController < ApplicationController
 
     # solr field configuration for document/show views
     config.show.title_field = 'title_display'
+
+    # config.show.document_actions.sms_action 
+
     # config.show.display_type_field = 'genre_pul_label'
 
     # solr fields that will be treated as facets by the blacklight application
