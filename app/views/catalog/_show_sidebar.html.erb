@@ -4,7 +4,6 @@ app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
 %>
 <% ids = image_ids_labels_from_manifest_as_hash(@manifest) %>
 <div class="panel panel-default show-tools">
-  
 
   <div class="panel-heading centered"><a class="btn btn-link btn-osd-trigger"
   data-toggle="modal" data-target="#osd-full-modal"
@@ -12,7 +11,10 @@ app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
     href="#">View Images (<%= @manifest.sequences[0].canvases.length %>)</a></div>
   <div class="panel-body">
     <div class="panel-image">
-      <img width="230" src="<%= "#{@document['thumbnail_base']}/full/230,/0/default.png" %>" alt="preview" />
+      <a class="btn btn-link btn-osd-trigger"
+                  data-toggle="modal" data-target="#osd-full-modal">
+        <img width="230" src="<%= "#{@document['thumbnail_base']}/full/230,/0/default.png" %>" alt="preview" />
+      </a>
     </div>
     <ul class="nav">
       <li>
@@ -35,6 +37,7 @@ app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
                 </h4>
               </div>
               <div class="modal-body">
+                
                 <div class="viewer">
   <script>
     $('#osd-full-modal').on('show.bs.modal', function (event) {

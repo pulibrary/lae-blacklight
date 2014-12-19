@@ -1,0 +1,32 @@
+header {
+    background: #494f57;
+    // height: 100px;
+
+    // .navbar {
+    //     margin: 0;
+    // }
+}
+
+.navbar + .navbar {
+    margin-top: 0;
+}
+
+// .navbar > .container .navbar-brand, 
+// .navbar > .container-fluid .navbar-brand {
+//     margin-left: 0;
+// }
+
+#header-navbar {
+    border-top: #e87511 5px solid;
+
+    .navbar-brand {
+        background: transparent url(/assets/blacklight/logo.svg) no-repeat top left;
+        width: 200px;
+        height: 80px;
+    }
+}
+
+#header-navbar.navbar {
+    margin-bottom: 0;
+    padding: 1em 0;
+}

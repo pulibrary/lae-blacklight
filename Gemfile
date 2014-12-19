@@ -14,6 +14,12 @@ gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+# Mixins grids etc for Front-End
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -23,7 +29,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'blacklight'#, '~> 5.7.2'
+gem 'blacklight'
 gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-gallery'
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
@@ -32,6 +38,7 @@ gem "mail_form"
 gem "simple_form"
 
 gem 'mysql2'
+gem 'sqlite3'
 
 # Use Capistrano for deployment
 gem 'capistrano', '~> 3.3.5'

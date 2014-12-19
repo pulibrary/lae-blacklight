@@ -4,6 +4,7 @@
 
 @import 'blacklight/blacklight';
 
+
 #header-navbar {
   border-top: 5px solid #e87511;
 
@@ -97,3 +98,7 @@
         margin: 40px 0 0 40px;
         width: 1000px;
       }
+
+.btn-osd-trigger {
+  padding: 6px 0;
+}

@@ -1,0 +1,19 @@
+<div class="cards">
+  <% documents = get_recent_documents %>
+  <% documents.each do |doc| %>
+  <div class="card">
+    <%= link_to "/catalog/#{doc['id']}" do %>
+    <div class="card-image">
+      <%= render_square_thumbnail(doc) %>
+    </div>
+    <div class="card-header">
+      <%= render_doc_title(doc) %>
+    </div>
+    <div class="card-copy">
+      <%= render_brief_doc_metadata(doc) %>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+

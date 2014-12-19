@@ -1,8 +1,20 @@
 <%= render 'shared/header_navbar' %>
 <%= content_for :page_title, 'Home' %>
-<div id="main-container" class="container">
-
-  <h2>This is the home page</h2>
-  <p>What's the difference between this and <%= link_to '/about', page_path('about') %>?</p>
-
-</div>
+<main class="front" role="main">
+    <div class="container">
+        <div class="device-background row">
+          <div class="device-text">
+            <h2>Latin American Ephemera</h2>
+            <p>This growing collection contains thousands of digitized pamphlets, brochures, flyers, posters, placards and other printed items created by a wide variety of social activists, non-governmental organizations, government agencies, political parties, public policy think tanks, and other types of organizations across Latin America, in order to publicize their views, positions, agendas, policies, events, and activities. Most items are rare and often unique primary sources that document numerous political and social movements, and a wide variety of socioeconomic and cultural developments from recent decades.</p>
+            <%= link_to 'Read More', 'about', class: 'btn btn-primary' %>
+          </div>
+          <div class="device">
+            <div class="screen"></div>
+          </div>
+        </div>
+        <div class="other-content row">
+          <h3>Recent Additions</h3>
+          <%= render 'recent_documents' %>
+        </div>
+    </div>
+</main>

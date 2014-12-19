@@ -1,0 +1,20 @@
+.navbar-nav {
+    a {
+        color: white;
+    }
+}
+
+.navbar-nav > li > a {
+    padding: 0.5em .8em;
+    margin: 0.5em;
+}
+
+.nav > li > a:hover {
+    background: white;
+    border-radius: 4px;
+    color: black;
+}
+
+.navbar-right {
+    margin-top: 15px;
+}
