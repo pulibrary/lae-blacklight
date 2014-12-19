@@ -14,6 +14,12 @@ gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+# Mixins grids etc for Front-End
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -32,6 +38,7 @@ gem "mail_form"
 gem "simple_form"
 
 gem 'mysql2'
+gem 'sqlite3'
 
 # Use Capistrano for deployment
 gem 'capistrano', '~> 3.3.5'
