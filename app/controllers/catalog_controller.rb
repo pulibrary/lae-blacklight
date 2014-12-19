@@ -38,6 +38,9 @@ class CatalogController < ApplicationController
     config.index.title_field = 'title_display'
     # config.index.display_type_field = 'genre_pul_label'
 
+    # Change the order or the partials for results on the index page
+    # config.index.partials = [:thumbnail, :index_header, :index]
+
     # solr field configuration for document/show views
     config.show.title_field = 'title_display'
     # config.show.display_type_field = 'genre_pul_label'
