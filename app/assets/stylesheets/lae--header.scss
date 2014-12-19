@@ -20,7 +20,7 @@ header {
     border-top: #e87511 5px solid;
 
     .navbar-brand {
-        background: transparent url(/assets/blacklight/logo.svg) no-repeat top left;
+        background: transparent image-url('blacklight/logo.svg') no-repeat top left;
         width: 200px;
         height: 80px;
     }
