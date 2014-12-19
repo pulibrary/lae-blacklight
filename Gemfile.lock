@@ -47,6 +47,10 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
+    bitters (0.10.1)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
     blacklight (5.8.1)
       bootstrap-sass (~> 3.2)
       deprecation
@@ -60,6 +64,9 @@ GEM
       rails
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     capistrano (3.3.5)
       capistrano-stats (~> 1.1.0)
@@ -152,6 +159,9 @@ GEM
     multi_json (1.10.1)
     multipart-post (2.0.0)
     mysql2 (0.3.17)
+    neat (1.5.1)
+      bourbon (>= 3.1)
+      sass (~> 3.2.19)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
@@ -252,6 +262,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    sqlite3 (1.3.10)
     sshkit (1.6.1)
       colorize (>= 0.7.0)
       net-scp (>= 1.1.2)
@@ -284,8 +295,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitters
   blacklight
   blacklight-gallery
+  bourbon
   capistrano (~> 3.3.5)
   capistrano-bundler
   capistrano-passenger
@@ -302,6 +315,7 @@ DEPENDENCIES
   jquery-rails
   mail_form
   mysql2
+  neat
   nokogiri (~> 1.6.5)
   openseadragon!
   osullivan!
@@ -314,6 +328,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   simple_form
   spring
+  sqlite3
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
