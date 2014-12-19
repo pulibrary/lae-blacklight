@@ -1,8 +1,71 @@
 <%= render 'shared/header_navbar' %>
 <%= content_for :page_title, 'Home' %>
-<div id="main-container" class="container">
+<main class="front" role="main">
+    <div class="container">
+        <div class="device-background row">
+          <div class="device-text">
+            <h2>This is the Home Page</h2>
+            <p>What's the difference between this and <%= link_to '/about', page_path('about') %>? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto nulla odit excepturi culpa doloremque quod veniam. Laborum atque at facere aspernatur sunt, sint. Maiores tempora impedit voluptas!</p>
+            <button>Read More</button>
+          </div>
+          <div class="device">
+            <div class="screen"></div>
+          </div>
+        </div>
 
-  <h2>This is the home page</h2>
-  <p>What's the difference between this and <%= link_to '/about', page_path('about') %>?</p>
+        <div class="other-content row">
+            <h3>Recent Additions</h3>
+            <div class="cards">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+                </div>
+                <div class="card-header">
+                  Title of Object
+                </div>
+                <div class="card-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+                </div>
+              </div>
 
-</div>
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+                </div>
+                <div class="card-header">
+                 Title of Object
+                </div>
+                <div class="card-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+                </div>
+                <div class="card-header">
+                  Title of Object
+                </div>
+                <div class="card-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+                </div>
+                <div class="card-header">
+                  Title of Object
+                </div>
+                <div class="card-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+    </div>
+</main>
