@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
+  include Blacklight::SolrHelper
 
   layout :layout_for_page
 

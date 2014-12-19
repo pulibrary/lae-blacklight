@@ -4,68 +4,17 @@
     <div class="container">
         <div class="device-background row">
           <div class="device-text">
-            <h2>This is the Home Page</h2>
-            <p>What's the difference between this and <%= link_to '/about', page_path('about') %>? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto nulla odit excepturi culpa doloremque quod veniam. Laborum atque at facere aspernatur sunt, sint. Maiores tempora impedit voluptas!</p>
-            <button>Read More</button>
+            <h2>Latin American Ephemera</h2>
+            <p>This growing collection contains thousands of digitized pamphlets, brochures, flyers, posters, placards and other printed items created by a wide variety of social activists, non-governmental organizations, government agencies, political parties, public policy think tanks, and other types of organizations across Latin America, in order to publicize their views, positions, agendas, policies, events, and activities. Most items are rare and often unique primary sources that document numerous political and social movements, and a wide variety of socioeconomic and cultural developments from recent decades.</p>
+            <%= link_to 'Read More', 'about', class: 'btn btn-primary' %>
           </div>
           <div class="device">
             <div class="screen"></div>
           </div>
         </div>
-
         <div class="other-content row">
-            <h3>Recent Additions</h3>
-            <div class="cards">
-              <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
-                </div>
-                <div class="card-header">
-                  Title of Object
-                </div>
-                <div class="card-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
-                </div>
-                <div class="card-header">
-                 Title of Object
-                </div>
-                <div class="card-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
-                </div>
-                <div class="card-header">
-                  Title of Object
-                </div>
-                <div class="card-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
-                </div>
-                <div class="card-header">
-                  Title of Object
-                </div>
-                <div class="card-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-                </div>
-              </div>
-            </div>
-
-
+          <h3>Recent Additions</h3>
+          <%= render 'recent_documents' %>
         </div>
     </div>
 </main>

@@ -82,6 +82,10 @@ module ApplicationHelper
     image_tag "#{document['thumbnail_base']}/full/!200,200/0/default.png"
   end
 
+  def render_square_thumbnail document, image_options = {}
+    image_tag "#{document['thumbnail_base']}/full/!400,400/0/default.png"
+  end
+
   def first_id_from_manfiest document, image_options = {}
     document['thumbnail_base']
   end
@@ -94,5 +98,28 @@ module ApplicationHelper
   # @return [String]
   def render_lae_document_sidebar_partial(document = @document)
     render partial: 'show_sidebar'
+  end
+
+  def get_recent_documents
+    solr = RSolr.connect(Blacklight.solr_config)
+    solr_response = solr.get 'select', :params => {:qt => "search", 
+                                                   :start => 0, 
+                                                   :rows => 10, 
+                                                   :wt => :ruby, 
+                                                   :index => true,
+                                                   :sort => 'date_uploaded asc' }
+      solr_response['response']['docs']
+  end
+
+  def render_doc_title(document)
+    document['title_display'][0]
+  end
+
+  def render_brief_doc_metadata(document)
+    bf = Hash.new
+    bf[:date] ||= document['date_display'] 
+    bf[:publisher] = document['publisher_display'].first if document.has_key?('publisher_display')
+    bf[:origin] ||= document['geographic_origin_label'].first 
+    render partial: 'brief_document_metadata', :locals => { :bf => bf } 
   end
 end
