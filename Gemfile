@@ -38,7 +38,6 @@ gem "mail_form"
 gem "simple_form"
 
 gem 'mysql2'
-gem 'sqlite3'
 
 # Use Capistrano for deployment
 gem 'capistrano', '~> 3.3.5'
@@ -62,6 +61,7 @@ group :test, :development do
   gem 'coveralls', require: false
   gem 'jettywrapper', '~> 1.7'
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara', '~> 2.4.4'
 end
 
 group :development do

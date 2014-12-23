@@ -10,7 +10,8 @@
     <field name="project_label">Latin American Ephemera</field>
     <field name="date_created">1990</field>
     <field name="sort_title">workforce of puerto rico: fringe benefits.</field>
-    <field name="title">The Workforce of Puerto Rico: Fringe Benefits.</field>
+    <field name="title_en">The Workforce of Puerto Rico: Fringe Benefits.</field>
+    <field name="title_display">The Workforce of Puerto Rico: Fringe Benefits.</field>
     <field name="height_in_cm">22</field>
     <field name="width_in_cm">14</field>
     <field name="page_count">17</field>
@@ -86,7 +87,8 @@ lae:Folder rdfs:subClassOf dctype:Text .
     <field name="project_label">Latin American Ephemera</field>
     <field name="date_created">2006</field>
     <field name="sort_title">equidad. no al tlc!!! octubre 2006.</field>
-    <field name="title">Equidad. No al TLC!!! Octubre 2006.</field>
+    <field name="title_es">Equidad. No al TLC!!! Octubre 2006.</field>
+    <field name="title_display">Equidad. No al TLC!!! Octubre 2006.</field>
     <field name="height_in_cm">28</field>
     <field name="width_in_cm">22</field>
     <field name="page_count">8</field>
@@ -162,11 +164,12 @@ lae:Folder rdfs:subClassOf dctype:Text .
     <field name="project_label">Latin American Ephemera</field>
     <field name="date_created">2003</field>
     <field name="sort_title">memoria 2003.</field>
-    <field name="title">Memoria 2003.</field>
+    <field name="title_es">Memoria 2003.</field>
+    <field name="title_display">Memoria 2003.</field>
     <field name="height_in_cm">21</field>
     <field name="width_in_cm">15</field>
     <field name="page_count">15</field>
-    <field name="publisher">  Asociaci&#xF3;n para la Cooperaci&#xF3;n en el Sur (ACSUR)-Las Segovias</field>
+    <field name="publisher">Asociaci&#xF3;n para la Cooperaci&#xF3;n en el Sur (ACSUR)-Las Segovias</field>
     <field name="rights">This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions.</field>
     <field name="category">Socioeconomic conditions and development</field>
     <field name="category">Economics</field>
