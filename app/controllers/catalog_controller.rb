@@ -12,9 +12,10 @@ class CatalogController < ApplicationController
     #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     #config.show.partials.insert(0, :openseadragon)
 
-    add_show_tools_partial(:sms, if: false)
-    add_show_tools_partial(:citation, if: false)
-    add_show_tools_partial(:email, if: false)
+    # Get rid of sms, citation and email features
+    config.show.document_actions.delete(:sms)
+    config.show.document_actions.delete(:citation)
+    config.show.document_actions.delete(:email)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
