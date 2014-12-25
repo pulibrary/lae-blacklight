@@ -7,7 +7,7 @@ RSpec.describe PagesController, type: :request do
     it 'should respond with 200' do
       expect(subject).to be(200)
     end
-    it 'should render the expected template' do
+    it 'should render the \'about\' template' do
       expect(subject).to render_template('about')
     end
   end
@@ -18,7 +18,7 @@ RSpec.describe PagesController, type: :request do
     it 'should respond with 200' do
       expect(subject).to be(200)
     end
-    it 'should render the expected template' do
+    it 'should render the index template' do
       expect(subject).to render_template('index')
     end
   end
