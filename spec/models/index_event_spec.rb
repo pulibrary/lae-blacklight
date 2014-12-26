@@ -1,16 +1,6 @@
 require 'rails_helper'
 require 'nokogiri'
 
-VCR.configure do |c|
-  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  c.hook_into :webmock
-  c.configure_rspec_metadata!
-  c.preserve_exact_body_bytes do |http_message|
-    http_message.body.encoding.name == 'ASCII-8BIT' ||
-    !http_message.body.valid_encoding?
-  end
-end
-
 vcr_options = {
   record: :new_episodes, # See https://www.relishapp.com/vcr/vcr/v/1-6-0/docs/record-modes
   serialize_with: :json
@@ -85,14 +75,6 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
       IndexEvent.record { raise msg }
       expect(IndexEvent.last.error_text).to eq "RuntimeError: #{msg}"
     end
-
-    # Can't get this to work...
-    # it 'records the name of the Rake task when called as part of one' do
-    #   task_name = 'lae:do_nothing'
-    #   Rake.application.rake_require '../../lib/tasks/lae'
-    #   Rake::Task[task_name].invoke
-    #   expect(IndexEvent.last.task).to eq task_name
-    # end
 
     describe 'success' do
       it 'assumes success' do

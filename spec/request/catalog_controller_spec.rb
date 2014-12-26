@@ -2,25 +2,7 @@ require 'rails_helper'
 require 'rdf/turtle'
 require 'iiif/presentation'
 
-# Request specs for testing the LaeExportExtension
-
-VCR.configure do |c|
-  c.allow_http_connections_when_no_cassette = true
-  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  c.hook_into :webmock
-  c.configure_rspec_metadata!
-  c.preserve_exact_body_bytes do |http_message|
-    http_message.body.encoding.name == 'ASCII-8BIT' ||
-    !http_message.body.valid_encoding?
-  end
-end
-
-vcr_options = {
-  record: :new_episodes, # See https://www.relishapp.com/vcr/vcr/v/1-6-0/docs/record-modes
-  serialize_with: :json
-}
-
-RSpec.describe CatalogController, type: :request, vcr: vcr_options do
+RSpec.describe CatalogController, type: :request do
 
   let(:fixture_box_id) { 'puls:00014' }
   let(:doc_ids) { ['004kr', '006tx', '00b84'] }
