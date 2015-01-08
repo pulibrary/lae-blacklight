@@ -7,6 +7,7 @@ $base-accent-color: #eee;
 // $base-border-radius: 4px;
 $base-spacing: 1.4em;
 $gutter: 2em;
+$card-background-color: #f5f4f1;
 
 .front h3 {
   margin-bottom: 1em;
@@ -17,14 +18,13 @@ $gutter: 2em;
 }
 
 .card {
-  $card-border-color: #eee;
+  $card-border-color: #ddd;
   $card-border: 1px solid $card-border-color;
-  $card-background: lighten($card-border-color, 10);
+  $card-background: lighten($card-background-color,2);
   $card-header-background: $card-background;
   $card-hover-background: lighten($card-background, 5);
   $card-image-background: #DBD199;
   $card-image-hover-background: lighten($card-image-background, 5);
-  $card-stats-color: lighten(blue, 10);
 
   @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
@@ -38,6 +38,15 @@ $gutter: 2em;
   @media(min-width: 1200px) {
     @include span-columns(3);  
     @include omega(4n);
+  }
+
+  a {
+    text-decoration: none;
+    color: #23527c;
+
+    &:hover {
+      color: #337ab7;
+    }
   }
 
   .card-image {
@@ -83,36 +92,31 @@ $gutter: 2em;
     background-color: $card-header-background;
     // border-bottom: $card-border;
     // border-radius: $base-border-radius $base-border-radius 0 0;
-    font-weight: bold;
+    // font-weight: bold;
     padding: $base-spacing/3 $gutter/2;
-  }
-
-  .card-copy {
-    padding: $base-spacing/2 $gutter/2;
-    font-size: .9em;
-    line-height: 1.5em;
   }
 
   .card-stats {
     padding: $base-spacing/2 $gutter/2;
     overflow: auto;
 
+    ul {
+      padding-left: 0;
+    }
+
     ul li {
       display: inline;
-      color: $card-stats-color;
-      font-weight: 800;
-      font-size: 1.2em;
+      color: #333;
+      // font-weight: 800;
+      font-size: 1em;
       float: left;
-      border-right: 1px solid transparentize($base-font-color, .8);
+      // border-right: 1px solid transparentize($base-font-color, .8);
       line-height: 1.1em;
       padding: 0 .7em 0 .7em;
 
       &:first-child {
         padding-left: 0;
-      }
-
-      &:last-child {
-        border-right: 0;
+        border-right: 1px solid transparentize($base-font-color, .8);
       }
 
       span {
