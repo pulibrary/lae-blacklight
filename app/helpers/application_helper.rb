@@ -104,7 +104,7 @@ module ApplicationHelper
     solr = RSolr.connect(Blacklight.solr_config)
     solr_response = solr.get 'select', :params => {:qt => "search", 
                                                    :start => 0, 
-                                                   :rows => 10, 
+                                                   :rows => 8, 
                                                    :wt => :ruby, 
                                                    :index => true,
                                                    :sort => 'date_uploaded asc' }

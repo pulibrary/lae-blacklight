@@ -40,7 +40,8 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2F
     float: left;
   }
 
-  h4 {
+  h2 {
+    margin-top: 0;
     margin-bottom: .5em;
     padding-bottom: .5em;
     border-bottom: 1px solid transparentize($device-text-color, .7);
@@ -48,6 +49,7 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2F
 
   p {
     margin-bottom: 1.5em;
+    font-size: 0.8em;
   }
 }
 
