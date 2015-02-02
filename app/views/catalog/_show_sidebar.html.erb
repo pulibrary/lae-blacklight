@@ -44,13 +44,15 @@ app/views/catalog/_show_tools.html.erb into one, since we have less to show :-)
         var button = $(event.relatedTarget); // Button that triggered the modal
         var iiif_images = button.data('iiif-images'); // Extract info from 
         var modal = $(this);
-        var viewer = modal.find('.viewer');
-        viewer.iiifOsdViewer({
-          data: [{
-            iiifServer: 'http://libimages.princeton.edu/loris2',
-            images: <%= raw ids.to_json %> }
-          ]
-        });
+        if ($('div.iov').length == 0) {
+          var viewer = modal.find('.viewer');
+          viewer.iiifOsdViewer({
+            data: [{
+              iiifServer: 'http://libimages.princeton.edu/loris2',
+              images: <%= raw ids.to_json %> }
+            ]
+          });
+        }
       });
     </script>
 </div>
