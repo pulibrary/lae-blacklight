@@ -231,6 +231,7 @@
        <str name="facet.field">geographic_subject_label_facet</str>
        <str name="facet.field">language_label_facet</str>
        <str name="facet.field">category_facet</str>
+       <str name="facet.field">date_created_facet</str>
        <str name="facet.field">subject_label_facet</str>
        <str name="facet.pivot">category_facet,subject_label_facet</str>
        

@@ -66,6 +66,10 @@ GEM
       bootstrap-sass (~> 3.0)
       openseadragon (>= 0.0.9)
       rails
+    blacklight_range_limit (5.0.3)
+      blacklight (>= 5.0.0.pre4, < 6)
+      jquery-rails
+      rails (>= 3.0, < 5.0)
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
@@ -310,6 +314,7 @@ DEPENDENCIES
   bitters
   blacklight
   blacklight-gallery
+  blacklight_range_limit
   bourbon
   capistrano (~> 3.3.5)
   capistrano-bundler

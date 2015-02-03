@@ -389,6 +389,8 @@
    <copyField source="genre_pul_label" dest="genre_pul_label_facet"/>
    <copyField source="geographic_origin_label" dest="geographic_origin_label_facet"/>
    <copyField source="geographic_subject_label" dest="geographic_subject_label_facet"/>
+   <copyField source="date_created" dest="date_created_facet" />
+   <copyField source="earliest_created" dest="date_created_facet" />
    <copyField source="language_label" dest="language_label_facet"/>
    <copyField source="subject_label" dest="subject_label_facet"/>
 
