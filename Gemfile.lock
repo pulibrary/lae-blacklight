@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/kevinreiss/openseadragon-rails.git
-  revision: 12c12edd321f0f7d169d0dab9b751b319843c1e8
+  revision: 072cd829eb80b1aa180c02ccd7cecf5260181b78
   specs:
     openseadragon (0.0.9)
       rails (> 3.2.0)
@@ -46,7 +46,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (5.1.1)
+    autoprefixer-rails (5.1.3)
       execjs
       json
     bcrypt (3.1.10)
