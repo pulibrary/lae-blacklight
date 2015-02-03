@@ -1,5 +1,5 @@
 development:
-  url: 'http://pulstoredemo.princeton.edu/lae'
+  url: 'http://pulstore.princeton.edu/lae'
 test:
   url: 'http://pulstoredemo.princeton.edu/lae'
 production:

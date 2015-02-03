@@ -7,7 +7,7 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     config.view.gallery.partials = [:index_header, :index]
-    config.view.slideshow.partials = [:index]
+    #config.view.slideshow.partials = [:index]
     config.index.thumbnail_method = :thumbnail_from_manifest
     #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     #config.show.partials.insert(0, :openseadragon)
@@ -78,7 +78,9 @@ class CatalogController < ApplicationController
     config.add_facet_field 'language_label_facet', label: 'Language'
     config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
     config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
+    config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
     config.add_facet_field 'category_subject_facet', label: 'Category', :pivot => ['category_facet', 'subject_label_facet']
+
 
 
     # config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
@@ -179,7 +181,8 @@ class CatalogController < ApplicationController
     config.add_sort_field 'score desc, sort_title asc', label: 'Relevance'
     config.add_sort_field 'sort_title asc', label: 'Title'
     config.add_sort_field 'date_uploaded asc', label: 'Date Added'
-
+    config.add_sort_field 'date_numsort asc, sort_title asc', label: 'Date Created - Oldest'
+    config.add_sort_field 'date_numsort desc, sort_title asc', label: 'Date Created - Newest'
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5

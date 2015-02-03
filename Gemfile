@@ -31,6 +31,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'blacklight'
 gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-gallery'
+gem "blacklight_range_limit"
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
 gem "font-awesome-rails"
