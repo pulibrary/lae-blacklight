@@ -365,6 +365,7 @@
    <dynamicField name="*_label" type="text_en" indexed="true" stored="true" multiValued="true" />
    <dynamicField name="*_display" type="string" indexed="false" stored="true" multiValued="true" />
    <dynamicField name="*_facet" type="string" indexed="true" stored="true" multiValued="true" />
+   <dynamicField name="*_numsort" type="tint" indexed="true" stored="true" multiValued="false" />
 
    <dynamicField name="*spell" type="textSpell" indexed="true" stored="false" multiValued="true" />
    <!-- ignored -->
@@ -391,6 +392,8 @@
    <copyField source="geographic_subject_label" dest="geographic_subject_label_facet"/>
    <copyField source="date_created" dest="date_created_facet" />
    <copyField source="earliest_created" dest="date_created_facet" />
+   <copyField source="date_created" dest="date_numsort" />
+   <copyField source="earliest_created" dest="date_numsort" />
    <copyField source="language_label" dest="language_label_facet"/>
    <copyField source="subject_label" dest="subject_label_facet"/>
 

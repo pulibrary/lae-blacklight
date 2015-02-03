@@ -181,7 +181,8 @@ class CatalogController < ApplicationController
     config.add_sort_field 'score desc, sort_title asc', label: 'Relevance'
     config.add_sort_field 'sort_title asc', label: 'Title'
     config.add_sort_field 'date_uploaded asc', label: 'Date Added'
-
+    config.add_sort_field 'date_numsort asc, sort_title asc', label: 'Date Created - Oldest'
+    config.add_sort_field 'date_numsort desc, sort_title asc', label: 'Date Created - Newest'
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
