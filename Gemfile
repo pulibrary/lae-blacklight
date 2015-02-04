@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.1.9'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -34,7 +34,7 @@ gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-
 gem "blacklight_range_limit"
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
-gem "font-awesome-rails"
+#gem "font-awesome-rails"
 gem "mail_form"
 gem "simple_form"
 
