@@ -79,7 +79,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
     config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
     config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
-    config.add_facet_field 'category_subject_facet', label: 'Category', :pivot => ['category_facet', 'subject_label_facet']
+    config.add_facet_field 'category_subject_facet', label: 'Subjects', :pivot => ['category_facet', 'subject_label_facet']
 
 
 
@@ -180,7 +180,7 @@ class CatalogController < ApplicationController
     # except in the relevancy case).
     config.add_sort_field 'score desc, sort_title asc', label: 'Relevance'
     config.add_sort_field 'sort_title asc', label: 'Title'
-    config.add_sort_field 'date_uploaded asc', label: 'Date Added'
+    config.add_sort_field 'date_uploaded asc', label: 'Date Added', show: false
     config.add_sort_field 'date_numsort asc, sort_title asc', label: 'Date Created - Oldest'
     config.add_sort_field 'date_numsort desc, sort_title asc', label: 'Date Created - Newest'
     # If there are more than this many search results, no spelling ("did you
