@@ -1,7 +1,7 @@
 en:
   blacklight:
-    application_name: 'Latin American Ephemera'
-    welcome: 'Latin American Ephemera Project'
+    application_name: 'The Latin American Ephemera Digital Archive'
+    welcome: 'Enter a search or filter by the facets at left to get started.'
 
     tools:
       title: 'Options'
