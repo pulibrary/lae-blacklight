@@ -224,8 +224,8 @@
        </str>
 
        <str name="facet">true</str>
-       <str name="facet.mincount">1</str>
-       <str name="facet.limit">10</str>
+<!--        <str name="facet.mincount">0</str>
+       <str name="facet.limit">100</str> -->
        <str name="facet.field">genre_pul_label_facet</str>
        <str name="facet.field">geographic_origin_label_facet</str>
        <str name="facet.field">geographic_subject_label_facet</str>
