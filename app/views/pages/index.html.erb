@@ -7,7 +7,7 @@
             <h2>The Latin American Ephemera Digital Archive</h2>
             <p>This growing collection contains thousands of digitized pamphlets, brochures, flyers, posters, placards and other printed items created by a wide variety of social activists, non-governmental organizations, government agencies, political parties, public policy think tanks, and other types of organizations across Latin America, in order to publicize their views, positions, agendas, policies, events, and activities. Most items are rare and often unique primary sources that document numerous political and social movements, and a wide variety of socioeconomic and cultural developments from recent decades.</p>
             <%= link_to 'Read More', 'about', class: 'btn btn-primary' %>
-            <%= link_to 'Browse Archive', page_path('catalog', sort: 'date_uploaded asc', search_field:'all_fields'), class: 'btn btn-primary' %>
+            <%= link_to 'Browse Archive', page_path('catalog', sort: 'date_modified desc', search_field:'all_fields'), class: 'btn btn-primary' %>
           </div>
           <div class="device">
             <div class="screen"></div>
