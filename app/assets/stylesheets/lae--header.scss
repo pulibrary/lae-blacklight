@@ -9,6 +9,7 @@ header {
 
 .navbar + .navbar {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 // .navbar > .container .navbar-brand, 
@@ -19,10 +20,19 @@ header {
 #header-navbar {
     border-top: #e87511 5px solid;
 
-    .navbar-brand {
-        background: transparent image-url('blacklight/logo.svg') no-repeat top left;
-        width: 200px;
-        height: 80px;
+    .l-navbar-brand {
+        //background: transparent image-url('library_full_logo.svg') no-repeat top left;
+        display: inline-block;
+      //text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding-right:0;
+      margin-right:20px;
+      padding-left: 0;
+    }
+
+    .site-title {
+      display: none;
     }
 }
 

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'bundler', '>= 1.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
@@ -34,7 +34,12 @@ gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-
 gem "blacklight_range_limit"
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
-#gem "font-awesome-rails"
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-font-awesome'
+  gem 'rails-assets-modernizr'
+end
+
 gem "mail_form"
 gem "simple_form"
 

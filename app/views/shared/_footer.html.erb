@@ -1,22 +1,32 @@
 <footer class="l-footer" role="contentinfo">
-    <div class="container">
-        <div class="col-lg-3 pu-footer-logo">
-            <a href="http://www.princeton.edu">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <p>© <%= Date.current.year %> The Trustees of Princeton University. All rights reserved.</p>
+        
+        <p>The Princeton University <em>Digital Archive of Latin American and Caribbean Ephemera</em> is made possible with generous grants from The Council on Library and Information Resources and The Latin Americanist Research Resources Project.</p>
+      </div>
+      <div class="col-sm-4">
+        <p class="pu-footer-logo">
+          <a href="http://www.princeton.edu">
             <%= image_tag('pu_logo_trans.png') %>
-            </a>
-        </div>
-        <!-- pu-footer-logo end -->
-        <div class="cold-lg-9 university-copyright-footer">
-            <ul>
-                <li>CLIR</li>
-                <li>
-                <li><a href="http://library.princeton.edu">Princeton University Library</a></li>
-            </ul>
-            <p>
-            © <%= Date.current.year %> The Trustees of Princeton University. All
-            rights reserved.
-            <p>
-        </div>
-        <!-- university-copyright-footer end -->
+          </a>
+        </p>
+        <p>
+          <a href="http://www.clir.org/">
+            <%= image_tag('CLIR_logo.gif') %>
+          </a>
+          <a href="http://www.crl.edu/programs/larrp">
+            <%= image_tag('larrp.gif') %>
+          </a>
+        </p>
+      </div>
+<!-- university-copyright-footer end -->
+<!-- URLs to link 
+    http://www.clir.org/ CLIR_logo.gif
+    http://www.crl.edu/programs/larrp larrp.gif
+-->
+
     </div>
+  </div>
 </footer>

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require openseadragon/rails.js
 //= require jquery.iiifOsdViewer
+//= require modernizr
 //= require turbolinks
 //
 // Required by Blacklight
