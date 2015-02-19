@@ -35,6 +35,11 @@ gem "blacklight_range_limit"
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
 #gem "font-awesome-rails"
+source 'https://rails-assets.org' do
+  gem 'rails-assets-font-awesome'
+  gem 'rails-assets-modernizr'
+end
+
 gem "mail_form"
 gem "simple_form"
 
