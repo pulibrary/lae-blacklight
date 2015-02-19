@@ -1,4 +1,7 @@
 language: ruby
+install:
+  gem uninstall bundler
+  gem install bundler --version '1.7.6'
 rvm:
   - 2.1.2
 
@@ -7,7 +10,6 @@ before_script:
   - cp config/solr.yml.tmpl config/solr.yml
   - cp config/secrets.yml.tmpl config/secrets.yml
   - mysql -e 'create database lae_blacklight_test;'
-  - RAILS_ENV=production bundle exec rake assets:precompile
 
 script: bundle exec rake ci
 
