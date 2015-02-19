@@ -349,6 +349,7 @@ DEPENDENCIES
   blacklight-gallery
   blacklight_range_limit
   bourbon
+  bundler (>= 1.7.0)
   capistrano (~> 3.3.5)
   capistrano-bundler
   capistrano-passenger

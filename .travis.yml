@@ -1,5 +1,5 @@
 language: ruby
-install: rvm @global do gem uninstall bundler -x && gem install bundler -v '~> 1.7.4' && bundle install
+#install: rvm @global do gem uninstall bundler -x && gem install bundler -v '~> 1.7.4' && bundle install
 rvm:
   - 2.1.5
 
