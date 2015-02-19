@@ -1,9 +1,7 @@
 language: ruby
-install:
-  - gem uninstall bundler
-  - gem install bundler --version '1.7.6'
+install: rvm @global do gem uninstall bundler -x && gem install bundler -v '~> 1.7.4' && bundle install
 rvm:
-  - 2.1.2
+  - 2.1.5
 
 before_script:
   - cp config/database.yml.travis config/database.yml
