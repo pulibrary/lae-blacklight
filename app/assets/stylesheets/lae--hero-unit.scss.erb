@@ -1,3 +1,5 @@
+<% environment.context_class.instance_eval { include ApplicationHelper } %>
+
 @import "bourbon";
 
 $device-padding-vertical: 1em;
@@ -14,6 +16,8 @@ $device-image: 'http://subtlepatterns.com/patterns/lightpaperfibers.png';
 $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fb%2F5%2Fn%2Ft.jp2/full/!480,480/0/default.png';
 */
 $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2Fh%2Fw.jp2/full/!480,480/0/default.jpg';
+// This needs work
+//$device-screen-image: 'http://libimages.princeton.edu/loris2/<%= random_sample_graphic %>.jp2/full/!480,480/0/default.jpg';
 .other-content {
   clear: both;
   margin-top: 8em;

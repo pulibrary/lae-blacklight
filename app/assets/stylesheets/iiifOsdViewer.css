@@ -28,9 +28,16 @@
   height: 100%;
 }
 
-.iov-menu-bar .iov-controls, .iov-menu-bar .iov-view-options {
+.iov-menu-bar .iov-controls {
   float: right;
   margin: 6px 10px 0 0;
+}
+
+.iov-menu-bar .iov-view-options {
+  float: right;
+  margin: 6px 10px 0 0;
+  height: 20px;
+  font-size: 14px;
 }
 
 .iov-menu-bar .iov-controls a, .iov-menu-bar .iov-controls a:hover {
@@ -77,7 +84,8 @@
 .iov-list-view .iov-list-view-thumbs-viewport li {
   cursor: pointer;
   list-style-type: none;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 10px 5px 10px;
+  color: white;
 }
 
 .iov-list-view .iov-list-view-thumbs-viewport li img {
@@ -120,7 +128,7 @@
 }
 
 .iov-list-view-thumb-selected {
-  background-color: #999;
+  background-color: #666;
 }
 
 .iov-list-view-controls {

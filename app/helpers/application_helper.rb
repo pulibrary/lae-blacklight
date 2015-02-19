@@ -122,4 +122,20 @@ module ApplicationHelper
     bf[:origin] ||= document['geographic_origin_label'].first 
     render partial: 'brief_document_metadata', :locals => { :bf => bf } 
   end
+
+  def random_sample_graphic
+    image_pids = ['puls:00995', 'puls:009dk', 'puls:07953', 'puls:078z5',
+      'puls:077ws','puls:07q1s','puls:07gfq','puls:07crn','puls:07cb0']
+    sample_pid = image_pids.shuffle[0]
+    self.pid_to_iiif_id(sample_pid)
+  end 
+
+  def pid_to_iiif_id(pid)
+    path = []
+    ns, noid = pid.split(':')
+    path << ns
+    noid.split(//).each { |c| path << c }
+    path.join('%2F')
+  end
+
 end

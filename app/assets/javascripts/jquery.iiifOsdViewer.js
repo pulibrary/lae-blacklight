@@ -1,3 +1,28 @@
+/*
+ * jQuery IIIF OSD Viewer
+ * https://github.com/IIIF/iiif-osd-viewer
+ *
+ * Author: Chris Jesudurai (Stanford.edu)
+ * https://github.com/jchristo4
+ *
+ *
+ * Copyright © 2015 The Board of Trustees of the Leland Stanford Junior University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
+ * this file except in compliance with the License. You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software distributed under 
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
+ * KIND, either express or implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
+ *
+ * Image Rotation options added on 12/31/2014 and
+ * ToolTip Icon swapped on 1/15/2015
+ * by Shaun Ellis (Princeton.edu)
+ * 
+ *
+ */
 (function($) {
 
   $.fn.iiifOsdViewer = function(options) {
@@ -6,7 +31,9 @@
         config;
 
     config = $.extend({
-      availableViews: ['list', 'gallery', 'horizontal'],
+      availableViews: ['list', 'gallery'],
+      // horizontal doesn't seem to work
+      //availableViews: ['list', 'gallery', 'horizontal'],
       listView: {
         thumbsWidth: 75
       },
@@ -190,10 +217,11 @@
       return str.split("").reduce(function(a,b) { a = ((a << 5) - a) + b.charCodeAt(0); return a & a}, 0);
     }
 
-    function getIiifImageUrl(server, id, width, height) {
+    function getIiifImageUrl(server, id, width, height, api) {
       width = width || '';
       height = height || '';
-      return [server, id, 'full/' + width + ',' + height, '0/default.jpg'].join('/');
+      filename = (api === '1.1') ? 'native' : 'default';
+      return [server, id, 'full/' + width + ',' + height, '0/' + filename + '.jpg'].join('/');
     }
 
     function setViewHeight($view) {
@@ -257,7 +285,7 @@
           '<div class="iov-list-view-controls">',
             '<a href="javascript:;" class="fa fa-plus-circle" id="iov-list-zoom-in"></a>',
             '<a href="javascript:;" class="fa fa-minus-circle" id="iov-list-zoom-out"></a>',
-            '<a href="javascript:;" class="fa fa-repeat" id="iov-list-home"></a>',
+            '<a href="javascript:;" class="fa fa-picture-o" id="iov-list-home"></a>',
           '</div>'
         ].join(''));
 
@@ -276,12 +304,13 @@
       function loadListViewThumbs() {
         $.each(config.data, function(index, collection) {
           $.each(collection.images, function(index, image) {
-            var imgUrl = getIiifImageUrl(collection.iiifServer, image.id, config.listView.thumbsWidth, null);
-            var infoUrl = getIiifInfoUrl(collection.iiifServer, image.id);
-            $imgItem = $('<li data-alt="' + image.label + '">');
-            $img = $('<img>');
-            var imgHeight = Math.round((image.height / image.width) * config.listView.thumbsWidth);
-            console.log(imgUrl);
+            
+            var imgUrl = getIiifImageUrl(collection.iiifServer, image.id, config.listView.thumbsWidth, null, collection.iiifImageAPI),
+                infoUrl = getIiifInfoUrl(collection.iiifServer, image.id),
+                $imgItem = $('<li data-alt="' + image.label + '">'),
+                $img = $('<img>'),
+                imgHeight = Math.round((image.height / image.width) * config.listView.thumbsWidth);
+
             $imgItem
               .addClass('iov-list-view-id-' + hashCode(image.id))
               .data({
@@ -290,6 +319,7 @@
                 'iov-height': image.height,
                 'iov-width': image.width,
                 'iov-label': image.label,
+                'iov-rotation': image.rotation,
                 'iov-stanford-only': image.stanford_only,
                 'iov-tooltip-text': image.tooltip_text,
                 'iiif-info-url': infoUrl
@@ -372,26 +402,32 @@
       }
 
       function updateView($imgItem) {
-        loadOsdInstance($imgItem.data('iiif-info-url'));
+        loadOsdInstance($imgItem.data('iiif-info-url'),$imgItem.data('iov-rotation'));
         $rightNav.show();
         $leftNav.show();
         scrollThumbsViewport($imgItem);
       }
 
-      function loadOsdInstance(infoUrl) {
+      function loadOsdInstance(infoUrl,rotation) {
+        
         if (typeof osd !== 'undefined') {
+          osd.viewport.setRotation(rotation);
           osd.open(infoUrl);
+  
         } else {
+          OpenSeadragon.setString("Tooltips.Home","Fit to frame");
           osd = OpenSeadragon({
             id:             'iov-list-view-osd',
             tileSources:    infoUrl,
             zoomInButton:   'iov-list-zoom-in',
             zoomOutButton:  'iov-list-zoom-out',
             homeButton:     'iov-list-home',
-            showFullPageControl: false,
-            showNavigator: true
+            degrees:        rotation,
+            showFullPageControl: false
           });
+          
         }
+        
       }
 
       function scrollThumbsViewport($imgItem) {
@@ -474,7 +510,7 @@
         $.each(config.data, function(index, collection) {
           $.each(collection.images, function(index, image) {
             var imgWidth = Math.round((image.width / image.height) * config.galleryView.thumbsHeight);
-                imgUrl = getIiifImageUrl(collection.iiifServer, image.id, imgWidth, config.galleryView.thumbsHeight),
+                imgUrl = getIiifImageUrl(collection.iiifServer, image.id, imgWidth, config.galleryView.thumbsHeight, collection.iiifImageAPI),
                 $img = $('<img>'),
                 $imgItem = $('<li data-alt="' + image.label + '">');
 
@@ -559,6 +595,7 @@
               .data('iov-height', image.height)
               .data('iov-width', image.width)
               .data('iov-iiif-server', collection.iiifServer)
+              .data('iov-iiif-image-api', collection.iiifImageAPI)
               .data('iov-iiif-image-id', image.id);
 
             $imgsList.append($imgItem.append('<a href="javascript:;"><img alt="' + image.label + '" src=""></a>'));
@@ -591,10 +628,11 @@
         $.each(imgsList, function(index, imgItem) {
           var $imgItem = $(imgItem),
               iiifServer = $imgItem.data('iov-iiif-server'),
+              iiifImageAPI = $imgItem.data('iov-iiif-image-api'),
               id = $imgItem.data('iov-iiif-image-id'),
               $img = $imgItem.find('img'),
               imgWidth =  Math.round(($imgItem.data('iov-width') * height) / $imgItem.data('iov-height')),
-              imgUrl = getIiifImageUrl(iiifServer, id, imgWidth, height);
+              imgUrl = getIiifImageUrl(iiifServer, id, imgWidth, height, iiifImageAPI);
 
           $img
             .height(height)
@@ -671,15 +709,17 @@
 
 
 // source: http://stackoverflow.com/questions/14035083/jquery-bind-event-on-scroll-stops
-jQuery.fn.scrollStop = function(callback) {
-  $(this).scroll(function() {
-    var self  = this,
-    $this = $(self);
+(function($) {
+  $.fn.scrollStop = function(callback) {
+    $(this).scroll(function() {
+      var self  = this,
+      $this = $(self);
 
-    if ($this.data('scrollTimeout')) {
-      clearTimeout($this.data('scrollTimeout'));
-    }
+      if ($this.data('scrollTimeout')) {
+        clearTimeout($this.data('scrollTimeout'));
+      }
 
-    $this.data('scrollTimeout', setTimeout(callback, 250, self));
-  });
-};
+      $this.data('scrollTimeout', setTimeout(callback, 250, self));
+    });
+  };
+}(jQuery));
