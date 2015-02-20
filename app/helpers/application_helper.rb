@@ -88,8 +88,12 @@ module ApplicationHelper
 
   def render_fullsize_thumbnail document, image_options = {}
     unless document.nil?
-      image_tag "#{document['thumbnail_base']}/pct:20,20,80,40/,400/0/default.jpg"
+      image_tag "#{document['thumbnail_base']}/pct:0,0,100,40/!500,500/0/default.jpg"
     end
+  end
+
+  def doc_path(document)
+    "/catalog/#{document['id']}"
   end
 
   def first_id_from_manfiest document, image_options = {}

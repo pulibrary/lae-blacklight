@@ -22,13 +22,13 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fb%2F5%2F
 
 .device-background {
   width: 100%;
-  height: 23em;
+  height: 26em;
 
   position: relative;
-  top: 50px;
+  //top: 50px;
 
-  background: #f5f4f1;
-  border: 1px solid #eee;
+  //background: #f5f4f1;
+  //border: 1px solid #eee;
 }
 
 .device-text {
@@ -41,11 +41,17 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fb%2F5%2F
     float: left;
   }
 
-  h2 {
+
+
+  h1, h2 {
     margin-top: 0;
     margin-bottom: .5em;
     padding-bottom: .5em;
     border-bottom: 1px solid transparentize($device-text-color, .7);
+  }
+
+  h1 {
+    font-size: 48px; 
   }
 
   p {

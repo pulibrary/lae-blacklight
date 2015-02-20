@@ -12,7 +12,7 @@
               </div>
               <div class="device-text col-sm-6">
                 <% # change application_name in config/locales/blacklight.en.yml %>
-                <h1><%= application_name %></h1>
+                <h1 class="title__hero"><%= application_name %></h1>
                 <p><em>The Digital Archive of Latin American and Caribbean Ephemera</em> is a steadily growing repository containing a previously unavailable subset of Princeton’s <a href="http://libguides.princeton.edu/laec">Latin American Ephemera Collection</a> as well as newly acquired materials being digitized and added on an ongoing basis. </p>
                 <%= link_to 'Browse', page_path('catalog', sort: 'date_modified desc', search_field:'all_fields'), class: 'btn btn-primary' %>
                 <%= link_to 'Learn More', 'about', class: 'btn btn-primary' %>

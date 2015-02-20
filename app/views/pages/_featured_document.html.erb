@@ -1,1 +1,4 @@
-<%= render_fullsize_thumbnail(get_featured_document) %>
+<% doc = get_featured_document %>
+<%= link_to doc_path(doc), :class => '' do %>
+  <%= render_fullsize_thumbnail(doc) %>
+<% end %>
