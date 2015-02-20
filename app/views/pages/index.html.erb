@@ -3,32 +3,28 @@
 <main class="front" role="main">
     <div class="container-fluid">
         <div class="device-background row">
-          <div class="device">
-            <div class="screen"></div>
+          <div class="col-sm-9 col-sm-offset-1">
+            <div class="row">
+              <div class="device col-sm-6">
+                <div class="screen">
+                  <%= render 'featured_document' %>
+                </div>
+              </div>
+              <div class="device-text col-sm-6">
+                <% # change application_name in config/locales/blacklight.en.yml %>
+                <h1><%= application_name %></h1>
+                <p><em>The Digital Archive of Latin American and Caribbean Ephemera</em> is a steadily growing repository containing a previously unavailable subset of Princeton’s <a href="http://libguides.princeton.edu/laec">Latin American Ephemera Collection</a> as well as newly acquired materials being digitized and added on an ongoing basis. </p>
+                <%= link_to 'Browse', page_path('catalog', sort: 'date_modified desc', search_field:'all_fields'), class: 'btn btn-primary' %>
+                <%= link_to 'Learn More', 'about', class: 'btn btn-primary' %>
+              </div>
+            </div>
           </div>
-          <div class="device-text">
-            <% # change application_name in config/locales/blacklight.en.yml %>
-            <h1><%= application_name %></h1>
-            <p><em>The Digital Archive of Latin American and Caribbean Ephemera</em> is a steadily growing repository containing a previously unavailable subset of Princeton’s <a href="http://libguides.princeton.edu/laec">Latin American Ephemera Collection</a> as well as newly acquired materials being digitized and added on an ongoing basis. </p>
-            <%= link_to 'Browse', page_path('catalog', sort: 'date_modified desc', search_field:'all_fields'), class: 'btn btn-primary' %>
-            <%= link_to 'Learn More', 'about', class: 'btn btn-primary' %>
-          </div>
         </div>
-        <!--
-        <div class="home-search-box row">
-            <nav id="search-navbar" class="navbar-search navbar navbar-static-top" role="navigation">
-        <div class="col-sm-2 search--label">
-          Search for
-        </div> 
-        <div class="col-sm-8 col-sm-offset-2">
-          <%= render_search_bar  %>
-        </div>
-        </nav>
-        </div>
-        -->
         <div class="other-content row">
-          <h3>Recent Additions</h3>
-          <%= render 'recent_documents' %>
+          <div class="col-sm-9 col-sm-offset-1">
+            <h3>Recent Additions</h3>
+            <%= render 'recent_documents' %>
+          </div>
         </div>
     </div>
 </main>
