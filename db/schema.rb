@@ -13,50 +13,50 @@
 
 ActiveRecord::Schema.define(version: 20141203210809) do
 
-  create_table "bookmarks", force: true do |t|
-    t.integer  "user_id",       null: false
-    t.string   "user_type"
-    t.string   "document_id"
-    t.string   "title"
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer  "user_id",       limit: 4,   null: false
+    t.string   "user_type",     limit: 255
+    t.string   "document_id",   limit: 255
+    t.string   "title",         limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "document_type"
+    t.string   "document_type", limit: 255
   end
 
   add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
 
-  create_table "index_events", force: true do |t|
+  create_table "index_events", force: :cascade do |t|
     t.datetime "start"
     t.datetime "finish"
-    t.boolean  "success"
-    t.text     "error_text"
-    t.string   "task"
+    t.boolean  "success",    limit: 1
+    t.text     "error_text", limit: 65535
+    t.string   "task",       limit: 255
   end
 
-  create_table "searches", force: true do |t|
-    t.text     "query_params"
-    t.integer  "user_id"
-    t.string   "user_type"
+  create_table "searches", force: :cascade do |t|
+    t.text     "query_params", limit: 65535
+    t.integer  "user_id",      limit: 4
+    t.string   "user_type",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "searches", ["user_id"], name: "index_searches_on_user_id", using: :btree
 
-  create_table "users", force: true do |t|
-    t.string   "email",                  default: "",    null: false
-    t.string   "encrypted_password",     default: "",    null: false
-    t.string   "reset_password_token"
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "",    null: false
+    t.string   "encrypted_password",     limit: 255, default: "",    null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "guest",                  default: false
+    t.boolean  "guest",                  limit: 1,   default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -86,6 +86,16 @@ module ApplicationHelper
     image_tag "#{document['thumbnail_base']}/full/!400,400/0/default.png"
   end
 
+  def render_fullsize_thumbnail document, image_options = {}
+    unless document.nil?
+      image_tag "#{document['thumbnail_base']}/pct:0,0,100,40/!500,500/0/default.jpg"
+    end
+  end
+
+  def doc_path(document)
+    "/catalog/#{document['id']}"
+  end
+
   def first_id_from_manfiest document, image_options = {}
     document['thumbnail_base']
   end
@@ -108,7 +118,21 @@ module ApplicationHelper
                                                    :wt => :ruby, 
                                                    :index => true,
                                                    :sort => 'date_uploaded asc' }
-      solr_response['response']['docs']
+    solr_response['response']['docs']
+  end
+
+  def get_featured_document
+    doc_id = self.random_sample_graphic
+    solr = RSolr.connect(Blacklight.solr_config)
+    solr_response = solr.get 'select', :params => {:qt => "search",
+                                                   :q => doc_id,
+                                                   :start => 0, 
+                                                   :rows => 1, 
+                                                   :wt => :ruby, 
+                                                   :index => true,
+                                                   }
+    logger.error("#{solr_response}")
+    solr_response['response']['docs'][0]
   end
 
   def render_doc_title(document)
@@ -124,18 +148,10 @@ module ApplicationHelper
   end
 
   def random_sample_graphic
-    image_pids = ['puls:00995', 'puls:009dk', 'puls:07953', 'puls:078z5',
-      'puls:077ws','puls:07q1s','puls:07gfq','puls:07crn','puls:07cb0']
+    image_pids = ['00995'] #,'009dk', '07953', '078z5',
+    #'077ws','07q1s','07gfq','07crn','07cb0']
     sample_pid = image_pids.shuffle[0]
-    self.pid_to_iiif_id(sample_pid)
+    sample_pid
   end 
-
-  def pid_to_iiif_id(pid)
-    path = []
-    ns, noid = pid.split(':')
-    path << ns
-    noid.split(//).each { |c| path << c }
-    path.join('%2F')
-  end
 
 end

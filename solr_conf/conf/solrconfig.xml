@@ -118,6 +118,7 @@
           earliest_created
           language_label
           latest_created
+          id
        </str>
        <str name="pf">
           title^100000
@@ -151,6 +152,7 @@
           earliest_created
           language_label
           latest_created
+          id
        </str>
        <str name="creator_qf">
           creator^1000

@@ -1,4 +1,3 @@
-<% environment.context_class.instance_eval { include ApplicationHelper } %>
 
 @import "bourbon";
 
@@ -11,13 +10,11 @@ $device-text-color: black;
 $device-background-top: yellow; 
 $device-background-bottom: green;
 $gradient-angle: 10deg;
-$device-image: 'http://subtlepatterns.com/patterns/lightpaperfibers.png';
+//$device-image: 'http://subtlepatterns.com/patterns/lightpaperfibers.png';
 /*
 $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fb%2F5%2Fn%2Ft.jp2/full/!480,480/0/default.png';
 */
-$device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2Fh%2Fw.jp2/full/!480,480/0/default.jpg';
-// This needs work
-//$device-screen-image: 'http://libimages.princeton.edu/loris2/<%= random_sample_graphic %>.jp2/full/!480,480/0/default.jpg';
+//$device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2Fh%2Fw.jp2/full/!480,480/0/default.jpg';
 .other-content {
   clear: both;
   margin-top: 8em;
@@ -25,13 +22,13 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2F
 
 .device-background {
   width: 100%;
-  height: 23em;
+  height: 26em;
 
   position: relative;
-  top: 50px;
+  //top: 50px;
 
-  background: #f5f4f1;
-  border: 1px solid #eee;
+  //background: #f5f4f1;
+  //border: 1px solid #eee;
 }
 
 .device-text {
@@ -44,11 +41,17 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2F
     float: left;
   }
 
-  h2 {
+
+
+  h1, h2 {
     margin-top: 0;
     margin-bottom: .5em;
     padding-bottom: .5em;
     border-bottom: 1px solid transparentize($device-text-color, .7);
+  }
+
+  h1 {
+    font-size: 48px; 
   }
 
   p {
@@ -80,7 +83,7 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fc%2Fp%2F
 
     .screen {
       @include size($device-screen-width $device-screen-height);
-      background-image: url($device-screen-image);
+      //background-image: url($device-screen-image);
       background-position: center;
       background-size: cover;
       // box-shadow: 0 1px 8px transparentize(black, .5);
