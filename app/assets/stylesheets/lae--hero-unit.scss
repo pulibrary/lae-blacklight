@@ -20,6 +20,11 @@ $device-screen-image: 'http://libimages.princeton.edu/loris2/puls%2F0%2Fb%2F5%2F
   margin-top: 8em;
 }
 
+.featured-image {
+  overflow: hidden;
+  max-height: 480px;
+}
+
 .device-background {
   width: 100%;
   height: 26em;
