@@ -1,20 +1,26 @@
-<div align="center">
-  <h1>Contact the Latin American Ephemera Project</h1>
-
-  <div class="row">
-  <%= simple_form_for @contact, :html => {:class => 'form-horizontal form-lae-contact' } do |f| %>
-
-    <%= f.input :name, :required => true, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-9', size: 50 }, wrapper_html: { class: 'row' } %>
-    <%= f.input :email, :required => true, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-9', size: 50 }, wrapper_html: { class: 'row' } %>
-     
-    <%= f.input :message, :as => :text, :required => true, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-9', rows: 4, cols: 40 }, wrapper_html: { class: 'row' } %>
-    <div class= "hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+<main role="main">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-1">
+        <h1>Contact the Latin American Ephemera Project</h1>
+      </div>
     </div>
-    <div>
-      </br>
-      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-1">
+        <%= simple_form_for @contact, :html => {:class => 'form-horizontal form-lae-contact' } do |f| %>
+
+          <%= f.input :name, :required => true, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-9', size: 50 }, wrapper_html: { class: 'row' } %>
+          <%= f.input :email, :required => true, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-9', size: 50 }, wrapper_html: { class: 'row' } %>
+           
+          <%= f.input :message, :as => :text, :required => true, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-9', rows: 4, cols: 40 }, wrapper_html: { class: 'row' } %>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          <div class="col-md-3 col-md-offset-3">
+            <%= f.button :submit, 'Send message', :class=> "btn-lg btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
   </div>
-</div>
+</main>

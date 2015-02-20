@@ -1,8 +1,10 @@
 <% doc = get_featured_document %>
-<% if doc.nil? %>
-  <span>Placeholder</span>
-<% else %>
-  <%= link_to doc_path(doc), :class => '' do %>
-    <%= render_fullsize_thumbnail(doc) %>
+<div class="featured-image">
+  <% if doc.nil? %>
+    <span>Placeholder</span>
+  <% else %>
+    <%= link_to doc_path(doc), :class => '' do %>
+      <%= render_fullsize_thumbnail(doc) %>
+    <% end %>
   <% end %>
-<% end %>
+</div>

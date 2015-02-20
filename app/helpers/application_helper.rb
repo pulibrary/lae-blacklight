@@ -88,7 +88,7 @@ module ApplicationHelper
 
   def render_fullsize_thumbnail document, image_options = {}
     unless document.nil?
-      image_tag "#{document['thumbnail_base']}/pct:0,0,100,40/!500,500/0/default.jpg"
+      image_tag "#{document['thumbnail_base']}/full/!600,600/0/default.jpg"
     end
   end
 
@@ -117,7 +117,7 @@ module ApplicationHelper
                                                    :rows => 8, 
                                                    :wt => :ruby, 
                                                    :index => true,
-                                                   :sort => 'date_uploaded asc' }
+                                                   :sort => 'date_modified desc' }
     solr_response['response']['docs']
   end
 
@@ -148,8 +148,7 @@ module ApplicationHelper
   end
 
   def random_sample_graphic
-    image_pids = ['00995'] #,'009dk', '07953', '078z5',
-    #'077ws','07q1s','07gfq','07crn','07cb0']
+    image_pids = LAE_CONFIG['featured_objects']
     sample_pid = image_pids.shuffle[0]
     sample_pid
   end 
