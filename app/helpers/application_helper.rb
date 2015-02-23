@@ -79,7 +79,7 @@ module ApplicationHelper
   end
 
   def thumbnail_from_manifest document, image_options = {}
-    image_tag "#{document['thumbnail_base']}/full/!200,200/0/default.png"
+    image_tag "#{document['thumbnail_base']}/full/!400,400/0/default.png"
   end
 
   def render_square_thumbnail document, image_options = {}

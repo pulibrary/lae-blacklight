@@ -7,3 +7,6 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( openseadragon.js )
+Rails.application.config.assets.precompile += %w( masonry.js )
+Rails.application.config.assets.precompile += %w( imagesloaded.js )
+Rails.application.config.assets.precompile += %w( masonry_grid.js )

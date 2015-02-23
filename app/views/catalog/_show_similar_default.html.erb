@@ -1,0 +1,7 @@
+<% unless @document.more_like_this.empty? %>
+
+<h3>Similar Items</h3>
+    <div class="cards">
+    	<%= render collection: @document.more_like_this, partial: 'show_more_like_this', as: :document %>
+    </div>
+<% end %>

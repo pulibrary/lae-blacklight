@@ -1,6 +1,7 @@
+@import "bourbon";
 .navbar-nav {
     a {
-        color: white;
+        color: black;
     }
 }
 
@@ -17,4 +18,8 @@
 
 .navbar-right {
     margin-top: 15px;
+}
+
+.site-links .nav.navbar-nav {
+	float: right;
 }

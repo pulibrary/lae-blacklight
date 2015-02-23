@@ -4,7 +4,13 @@ gem 'bundler', '>= 1.7.0'
 gem 'rails', '4.2.0'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
+gem 'compass-rails'
+gem 'breakpoint'
+gem 'singularitygs'
+gem 'bourbon'
+gem 'bitters'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -14,11 +20,6 @@ gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
-# Mixins grids etc for Front-End
-gem 'bourbon'
-gem 'neat'
-gem 'bitters'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -38,6 +39,8 @@ gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
 source 'https://rails-assets.org' do
   gem 'rails-assets-font-awesome'
   gem 'rails-assets-modernizr'
+  gem 'rails-assets-masonry'
+  gem 'rails-assets-imagesloaded'
 end
 
 gem "mail_form"

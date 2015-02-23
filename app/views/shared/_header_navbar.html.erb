@@ -1,53 +1,39 @@
-<header role="banner">
-  
+<header role="banner" class="wrapper--branding">
+  <div  class="l-branding__pul">
+    <div class="wrapper">
+       <a href="http://library.princeton.edu" title="Princeton University Library" rel="home" class="logo__pul">
+        <%= image_tag("library_full_logo.svg", class: "logo-svg") %>
+        <%= image_tag("library_full_logo.png", class: "logo-no-svg") %>
+      </a>
+    </div>
+  </div>
+  <div class="l-branding__site">
+    <div class="wrapper">
+      <%= link_to(root_path) do %>
+        <%= image_tag("dalace_logo.png", class: "logo__site logo-no-svg") %>
+        <%= image_tag("dalace_logo.png", class: "logo__site logo-svg") %>
+      <% end %>
+      <h2>
+        <%= link_to(root_path) do %>
+          <%= application_name %>
+        <% end %>
+      </h2>
 
-  <nav id="header-navbar" class="navbar navbar-static-top" role="navigation">
-    <div class="l-region l-region--branding container-fluid">
-      <div class="row">
-        <div class="col-sm-7 col-sm-offset-1">
-          <h2 class="site-logo">
-            <%= link_to(root_path, class: "l-navbar-brand" ) do %>
-              <%= image_tag("library_full_logo.svg", class: "logo-svg") %>
-              <%= image_tag("library_full_logo.png", class: "logo-no-svg") %>
-              <span class="site-title"><%= application_name %></span>
-            <% end %>
-          </h2>
-        </div>
+      <div id="user-util-collapse" class="site-links">
+        <%= render partial: '/shared/lae_search_pages' %>
+      </div>
+
+      <div class="browse">
+        <%= link_to 'Browse', page_path('catalog', sort: 'date_modified desc', search_field:'all_fields') %>
+       </div>
+        
+      <div class="search-bar">
+        <%= render_search_bar  %> 
+      </div>
+
+      <div id="user-util-collapse" class="search-links">
+        <%= render partial: '/user_util_links' %>
       </div>
     </div>
-  </nav>
-  <nav id="menu-navigation" class="l-region--navigation navbar navbar-static-top navbar-inverse" role="navigation">
-    <div class="container-fluid">
-      <div class="row"> 
-        <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#user-util-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      </div>
-        <div class="col-sm-8 col-sm-offset-1">
-          <div class="collapse navbar-collapse" id="user-util-collapse">
-            <%= render partial: '/user_util_links' %>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-          
-      </div>
-    </div>
-  </nav>
-  <nav id="search-navbar" class="navbar navbar-static-top" role="navigation">
-    <div class="container-fluid">
-      <div class="row">  
-        <!-- <div class="col-sm-2 search--label">
-          Search for
-        </div> -->  
-        <div class="col-sm-6 col-sm-offset-3">
-          <%= render_search_bar  %>
-        </div>
-      </div>
-    </div>
-  </nav>
+  </div>
 </header>

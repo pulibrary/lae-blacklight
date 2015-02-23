@@ -1,0 +1,12 @@
+@import "singularitygs";
+@import "bourbon";
+
+* { @include box-sizing('border-box'); }
+
+.wrapper {
+  // @include background-grid;
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 1140px;
+  @include clearfix;
+}

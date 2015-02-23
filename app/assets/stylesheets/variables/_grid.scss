@@ -1,0 +1,16 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "bourbon";
+
+/* Variables */
+$grids: 12;
+$gutters: 1/3;
+
+// Set consistent vertical and horizontal spacing units.
+$vert-spacing-unit: 18px;
+$horz-spacing-unit: 1em;
+
+$tab: 44em;
+$tab-desk: 54em;
+$desk: 70em;

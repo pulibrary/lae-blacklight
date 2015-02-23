@@ -18,3 +18,13 @@
  *= require  'blacklight_range_limit'
  *
 */
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "bourbon";
+
+@import url(http://fonts.googleapis.com/css?family=Sail|EB+Garamond);
+
+body {
+	font-family: 'EB Garamond', serif;
+}
