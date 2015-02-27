@@ -78,8 +78,8 @@ module ApplicationHelper
     "#{request.protocol}#{request.host_with_port}/catalog?#{query}"
   end
 
-  def thumbnail_from_manifest document, image_options = {}
-    image_tag "#{document['thumbnail_base']}/full/!400,400/0/default.png"
+  def thumbnail_from_manifest document, image_options = {:height => '400', :width => '400'}
+    image_tag "#{document['thumbnail_base']}/full/!#{image_options[:height]},#{image_options[:width]}/0/default.png"
   end
 
   def render_square_thumbnail document, image_options = {}
