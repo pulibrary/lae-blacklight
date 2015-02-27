@@ -1,5 +1,5 @@
 <div class="card">
-	<%= render_thumbnail_tag(document, {}, :counter => document_counter_with_offset(document_counter)) %>
+	<%= render_thumbnail_tag(document, {:height => '400', :width => '400'}, :counter => document_counter_with_offset(document_counter)) %>
 	<div class="card-header">
 	  <%= render_document_partials document, blacklight_config.view_config(:gallery).partials, :document_counter => document_counter %>
 	</div>
