@@ -1,37 +1,30 @@
+@import "singularitygs";
+
 footer {
     padding: 2em 0;
+}
 
-    li a {
-        text-decoration: none;
+.copyright {
+    @include grid-span(10,3);
 
-        &:hover {
-            text-decoration: none;
-            border-bottom: 1px #999 dotted;
-        }
+    p:first-child {
+        margin-bottom: 25px;
     }
 }
 
 .pu-footer-logo {
-    padding-left: 0;
-}
+    > a img {
+        height: 40px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    @include grid-span(2,1);
 
-.university-copyright-footer {
-    font-size: 0.7em;
-    padding-top: 0.3em;
-
-    ul {
-        margin: 0;
-        margin-bottom: 0.2em;
-        list-style-type: none;
-        font-size: 1.3em;
-
-        li {
-            display: inline;
-            margin-right: 1em;
-        }
-
-        a {
-            color: black;
+    .logo__sponsor {
+        height: 40px;
+        display: inline-block;
+        &:first-child {
+            margin-right: 10px;
         }
     }
 }

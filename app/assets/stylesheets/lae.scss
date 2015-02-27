@@ -1,13 +1,17 @@
 @import "bourbon";
+@import "compass";
 @import "font-awesome";
+@import "variables/colors";
+
 body {
-    background: #f5f4f1;
+    background: $gray-lighter;
     font-family: $lucida-grande;
 }
 
 main {
     background: white;
-    padding: 2em 0 2em 0;
+    padding: 1em 0 2em 0;
+    @include clearfix;
 }
 
 .front {
@@ -16,4 +20,40 @@ main {
 
 h1.site-logo {
     margin: 0;
+}
+
+.bookmark_toggle {
+	display: inline-block;
+}
+
+// .metadata, .image {
+// 	width: 48%;
+// 	display: inline-block;
+// }
+.metadata {
+    width: 60%;
+    margin: 0 auto;
+    .blacklight-title {
+        display: none;
+    }
+    dt {
+        width: 100px;
+    }
+    dd {
+        margin-left: 130px;
+    }
+}
+// .image {
+// 	float: right;
+// }
+h1 {
+    font-size: 1.7em;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.8em;
+    margin-bottom: 1em;
+}
+main {
+    font-size: 1.1em;
 }

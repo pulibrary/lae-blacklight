@@ -11,6 +11,8 @@ class CatalogController < ApplicationController
     config.index.thumbnail_method = :thumbnail_from_manifest
     #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     #config.show.partials.insert(0, :openseadragon)
+    config.index.display_type_field = 'genre_pul_label_facet'
+    config.show.partials = [:show_header, :show_viewer, :show, :show_similar] 
 
     # Get rid of sms, citation and email features
     config.show.document_actions.delete(:sms)
@@ -20,14 +22,14 @@ class CatalogController < ApplicationController
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       :qt => 'search',
-      :rows => 10
+      :rows => 12
     }
 
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
 
     # items to show per page, each number in the array represent another option to choose from.
-    config.per_page = [10,20,50]
+    config.per_page = [12,24,48]
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.

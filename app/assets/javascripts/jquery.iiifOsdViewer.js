@@ -61,11 +61,11 @@
 
       $viewer = $([
         '<div class="iov">',
-          '<div class="iov-header">',
-            '<div class="iov-menu-bar">',
-              '<h2 class="iov-item-count"></h2>',
+          // '<div class="iov-header">',
+            '<div class="iov-thumb-nav">',
+              // '<h2 class="iov-item-count"></h2>',
             '</div>',
-          '</div>',
+          // '</div>',
         '</div>'
       ].join(''));
 
@@ -97,12 +97,13 @@
 
         $.subscribe('iov-jump-to-list-view', jumpTo('list'));
 
-        addMenuBar();
-        attachEvents();
+        // addMenuBar();
+        // attachEvents();
         $parent.append($viewer);
         initializeViews();
         views[config.currentView].load();
         $selectViews.val(config.currentView);
+        attachEvents();
       }
 
       function addMenuBar() {
@@ -144,13 +145,13 @@
       }
 
       function attachEvents() {
-        $menuBar.find('.iov-full-screen').on('click', function() {
+        $('.iov-list-view-controls').find('#iov-list-full-screen').on('click', function() {
           fullscreenElement() ? exitFullscreen() : launchFullscreen($viewer[0]);
         });
 
         $(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenChange', function() {
           var $fullscreen = $(fullscreenElement()),
-              $ctrlFullScreen = $menuBar.find('.iov-full-screen');
+              $ctrlFullScreen = $('.iov-list-view-controls').find('#iov-list-full-screen');
 
           if ($fullscreen.length && $fullscreen.hasClass('iov')) {
             $ctrlFullScreen.removeClass('fa-expand').addClass('fa-compress');
@@ -286,6 +287,7 @@
             '<a href="javascript:;" class="fa fa-plus-circle" id="iov-list-zoom-in"></a>',
             '<a href="javascript:;" class="fa fa-minus-circle" id="iov-list-zoom-out"></a>',
             '<a href="javascript:;" class="fa fa-picture-o" id="iov-list-home"></a>',
+            '<a href="javascript:;" class="fa fa-expand" id="iov-list-full-screen"></a>',
           '</div>'
         ].join(''));
 
@@ -374,7 +376,7 @@
 
       function addImageNavBehavior(){
         if (config.totalImages > 1) {
-          $viewer.find('.iov-menu-bar').after($rightNav).after($leftNav);
+          $viewer.find('.iov-thumb-nav').after($rightNav).after($leftNav);
 
           $.each([$leftNav, $rightNav], function() {
 

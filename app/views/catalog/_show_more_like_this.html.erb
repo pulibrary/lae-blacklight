@@ -1,0 +1,13 @@
+
+
+<div class="card">
+    <%= link_to "/catalog/#{document['id']}" do %>
+    <div class="card-image">
+      <%= render_square_thumbnail(document) %>
+    </div>
+    <div class="card-header">
+      <%= render_doc_title(document) %>
+    </div>
+
+    <% end %>
+  </div>

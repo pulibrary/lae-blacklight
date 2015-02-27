@@ -1,0 +1,28 @@
+.cards {
+    // -moz-column-count: 4;
+    // -moz-column-gap: 10px;
+    // -webkit-column-count: 4;
+    // -webkit-column-gap: 10px;
+    // column-count: 4;
+    // column-gap: 10px;
+    width: 100%;
+}
+// .card {
+//     display: inline-block;
+//     // Display inline-block, and absolutely NO FLOATS!
+    
+//     margin-bottom: 20px;
+//     width: 30%;
+//     float: left;
+// }
+
+.card {
+  background: white;
+  cursor: pointer;
+  // -webkit-box-shadow: 0 4px 4px -5px #c8c8c8;
+  // box-shadow: 0 4px 4px -5px #c8c8c8;
+  width: calc(25% - 15px);
+  // margin-bottom: 40px;
+  // padding: 0 10px;
+  display: inline-block;
+}

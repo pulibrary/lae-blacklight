@@ -1,25 +1,21 @@
-/*.iov {
+.iov {
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
   width: 100%;
-}*/
+}
 
 .iov a, .iov a:hover {
   color: #000;
 }
 
 .iov-header {
-  background: white;
-  /*height: 30px;*/
-  /*width: 100%;*/
-}
-.iov-list-view-controls {
-  top: 0;
+  background: #5a5d69;
+  height: 30px;
+  width: 100%;
 }
 
-
-/*.iov-menu-bar {
+.iov-menu-bar {
   overflow: auto;
   z-index: 1000;
 }
@@ -42,16 +38,16 @@
   margin: 6px 10px 0 0;
   height: 20px;
   font-size: 14px;
-}*/
-
-.iov-menu-bar .iov-controls a, .iov-menu-bar .iov-controls a:hover {
-  color: black;
-  /*cursor: pointer;
-  font-size: 15px;
-  margin-top: 2px;*/
 }
 
- /*.iov-list-view {
+.iov-menu-bar .iov-controls a, .iov-menu-bar .iov-controls a:hover {
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+ .iov-list-view {
   float: right;
   height: 100%;
   width: 100%;
@@ -249,17 +245,17 @@
 }
 
 :full-screen .iov { /*pre-spec */
- /* height: 100%;
+  height: 100%;
   left: 0;
   margin: 0;
   top: 0;
   width: 100%;
-}*/
+}
 
-/*:fullscreen .iov { /* spec */
- /* height: 100%;
+:fullscreen .iov { /* spec */
+  height: 100%;
   left: 0;
   margin: 0;
   top: 0;
   width: 100%;
-}*/
+}

@@ -1,5 +1,11 @@
 @import "bourbon";
+@import "compass";
+@import "variables/colors";
 
+.search .input-group {
+    border: solid 1px $blue;
+    @include border-radius(5px);
+}
 .search_field.btn {
     cursor: pointer;
     height: 34px;
@@ -9,7 +15,6 @@
     vertical-align: middle;
     white-space: nowrap;
     background: rgb(255, 255, 255) none repeat;
-    border: solid 1px #ccc;
     border-radius: none;
 
     option {

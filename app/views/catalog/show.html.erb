@@ -1,43 +1,30 @@
-<div id="content" class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-1 show-document">
+  <div id="content" class="wrapper show-document">
 
-  <%= render 'previous_next_doc' %>
-
-   
-<% @page_title = t('blacklight.search.show.title', :document_title => document_show_html_title, :application_name => application_name).html_safe -%>
-<% content_for(:head) { render_link_rel_alternates } -%>
-<%# this should be in a partial -%>
-
-<% @manifest = IIIF::Service.parse(@document['manifest']) %>
-
-<div id="document" class="document <%= render_document_class %>" itemscope  itemtype="<%= @document.itemtype %>">
+    <%= render 'previous_next_doc' %>
+     
+  <% @page_title = t('blacklight.search.show.title', :document_title => document_show_html_title, :application_name => application_name).html_safe -%>
+  <% content_for(:head) { render_link_rel_alternates } -%>
+  <%# this should be in a partial -%>
+  <% @manifest = IIIF::Service.parse(@document['manifest']) %>
 
 
-  <div id="doc_<%= @document.id.to_s.parameterize %>">
-    <% # bookmark/folder functions -%>
-    <%= render_document_partials @document, blacklight_config.view_config(:show).partials %>
+  <div id="document" class="document <%= render_document_class %>" itemscope  itemtype="<%= @document.itemtype %>">
+
+
+    <div id="doc_<%= @document.id.to_s.parameterize %>">
+      
+      <%= render_document_partials @document, blacklight_config.view_config(:show).partials %>
+    </div>
   </div>
-</div>
 
 
-  <% if @document.respond_to?(:export_as_openurl_ctx_kev) %>
-    <!-- 
-         // COinS, for Zotero among others. 
-         // This document_partial_name(@document) business is not quite right,
-         // but has been there for a while. 
-    -->
-    <span class="Z3988" title="<%= @document.export_as_openurl_ctx_kev(document_partial_name(@document)) %>"></span>
-  <% end %>
+    <% if @document.respond_to?(:export_as_openurl_ctx_kev) %>
+      <!-- 
+           // COinS, for Zotero among others. 
+           // This document_partial_name(@document) business is not quite right,
+           // but has been there for a while. 
+      -->
+      <span class="Z3988" title="<%= @document.export_as_openurl_ctx_kev(document_partial_name(@document)) %>"></span>
+    <% end %>
 
-</div>
-
-<div id="sidebar" class="col-md-3 col-sm-4">
-   <% # Start here when customizing the sizebar.
-      # Implement LAE's version of 
-      # Blacklight::CatalogHelperBehavior#render_document_sidebar_partial
-      # (and the cascade of partials and helpers that follows) in
-      # ApplicationHelper#render_lae_document_sidebar_partial (latter is 
-      # currently just a copy of the former.)
-      # Should show: Image, Bookmark, More Like This, RDF? Manifest?
-    %>
-   <%= render_lae_document_sidebar_partial %>
-</div>
+  </div>

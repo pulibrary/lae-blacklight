@@ -1,32 +1,25 @@
 <footer class="l-footer" role="contentinfo">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-7 col-sm-offset-1">
-        <p>© <%= Date.current.year %> The Trustees of Princeton University. All rights reserved.</p>
-        
-        <p>The Princeton University <em>Digital Archive of Latin American and Caribbean Ephemera</em> is made possible with generous grants from The Council on Library and Information Resources and The Latin Americanist Research Resources Project.</p>
-      </div>
-      <div class="col-sm-4">
-        <p class="pu-footer-logo">
-          <a href="http://www.princeton.edu">
-            <%= image_tag('pu_logo_trans.png') %>
-          </a>
-        </p>
-        <p>
-          <a href="http://www.clir.org/">
-            <%= image_tag('CLIR_logo.gif') %>
-          </a>
-          <a href="http://www.crl.edu/programs/larrp">
-            <%= image_tag('larrp.gif') %>
-          </a>
-        </p>
-      </div>
-<!-- university-copyright-footer end -->
-<!-- URLs to link 
-    http://www.clir.org/ CLIR_logo.gif
-    http://www.crl.edu/programs/larrp larrp.gif
--->
-
+  <div class="wrapper">
+    <div class="copyright">
+      <p>© <%= Date.current.year %> The Trustees of Princeton University. All rights reserved.</p>
+  
+      <p>The Princeton University <em>Digital Archive of Latin American and Caribbean Ephemera</em> is made possible with generous grants from The Council on Library and Information Resources and The Latin Americanist Research Resources Project.</p>
     </div>
-  </div>
+
+    <p class="pu-footer-logo">
+      <a href="http://www.princeton.edu">
+        <%= image_tag('pu_logo_trans.png') %>
+      </a>
+      <a href="http://www.clir.org/">
+        <%= image_tag('CLIR_logo.gif', :class=> 'logo__sponsor') %>
+      </a>
+      <a href="http://www.crl.edu/programs/larrp">
+        <%= image_tag('larrp.gif', :class=> 'logo__sponsor') %>
+      </a>
+    </p>  
+  </div>     
 </footer>
+
+<%= javascript_include_tag "masonry" %>
+<%= javascript_include_tag "imagesloaded" %>
+ <%= javascript_include_tag "masonry_grid" %>
