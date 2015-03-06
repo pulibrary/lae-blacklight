@@ -1,31 +1,48 @@
 @import "singularitygs";
 @import "compass";
+@import "breakpoint";
+@import "variables/grid";
 @import "abstraction/mixins";
 
+.featured-block {
+  margin: 0 1em;
+}
+
 .featured-image {
-  width: 350px;
-  height: 350px;
-  text-align: center;
+   text-align: center;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  @include grid-span(6, 7);
+
+  @include breakpoint($tab){
+    width: 350px;
+    height: 350px;
+    @include grid-span(6, 7);
+  }
 }
 .featured-image img {
   max-width: 100%;
   max-height: 100%;
   height: auto;
   width: auto; /* For IE8 */
-  @include vertical-align;
+  @include breakpoint($tab){ 
+    @include vertical-align;
+  }
+  
 }
 
 .featured-text-block {
-  @include grid-span(6, 1);
-  height: 350px;
+  @include breakpoint($tab){
+    @include grid-span(6, 1);
+    height: 350px;
+  }
 }
 .featured-text {
-  @include vertical-align;
+  @include breakpoint($tab){
+    @include vertical-align;
   top: 45%;
+  }
+  
 
   h1 {
     // font-family: 'Sail', cursive;

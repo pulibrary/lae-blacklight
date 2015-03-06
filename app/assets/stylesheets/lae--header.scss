@@ -1,8 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic);
+
 @import "compass";
 @import "bourbon";
+@import "breakpoint";
+@import "variables/grid";
 @import "variables/colors";
 
 header {
+	font-size: 13px;
 	background: url(http://subtlepatterns.com/patterns/symphony.png);
 	position: relative;
 	-webkit-box-shadow: 0 5px 6px -6px #ccc;
@@ -19,11 +24,19 @@ header {
 	}
 	// border-bottom: 1px solid #eee;
   h2 {
-    margin: 16px 0 16px 105px;
+  	margin: 16px 0 0 105px;
     display: inline-block;
-    font-family: 'Sail', cursive;
+    // font-family: 'Sail', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.45em;
     position: relative;
+    @include breakpoint(768px){
+    	margin-bottom: 10px;
+    }
+  	@include breakpoint($tab-desk){
+  		margin: 16px 0 16px 105px;
+  	}
+    
     a {
     	color: black;
     	text-decoration: none;
@@ -38,35 +51,105 @@ header {
 }
 
 .site-links {
-	display: inline;
-	position: relative;
-	top: 8px;
+	display: inline-block;
+	margin-left: 1.5em;
+	@include breakpoint(768px){
+		margin-left: 0.5em;
+	}
+	@include breakpoint(864px){
+		margin-left: 1em;
+		position: relative;
+		top: -10px;
+	}
+	@include breakpoint(888px){
+		margin-left: 115px;
+	}
+	@include breakpoint(1060px){
+		position: relative;
+		top: 8px;
+		float: right;
+		margin-left: 0;
+	}
+	
 	a {
 		background: white;
 		@include border-radius(4px);
 	}
+	.nav > li {
+		display: inline-block;
+	}
 }
 
-.browse a {
-	margin: 0 1.2em 0 115px;
-	padding: 0.5em .8em;
-	background: $blue;
-	color: white;
-	@include border-radius(4px);
-	float: left;
-	text-decoration: none;
-}
-
-.search-bar {
-	width: 60%;
+.browse {
 	display: inline-block;
-	margin: 0 0 1em 1em;
+	height: 48px;
+	a {
+		margin-left: 1.5em;
+		padding: 0.5em .8em;
+		background: white;
+		color: black;
+		@include border-radius(4px);
+		float: left;
+		text-decoration: none;
+	}
+	@include breakpoint(768px){
+		height: 38px;
+		a {
+			margin-left: 0.2em;
+		}
+	}
+	@include breakpoint(864px){
+		// height: auto;
+		// position: relative;
+		// top: -16px;
+		a {
+			margin-left: 0.2em;
+			position: relative;
+			top: -10px;
+		}
+	}
+}
+
+@include breakpoint(1060px){
+	.browse {
+		height: 48px;
+		clear: both;
+		float: left;
+		margin-left: 115px;
+		margin-top: 10px;
+	}
+	.browse a {
+		background: $blue;
+		color: white;
+		
+	}
+}
+
+
+.search-bar {	
+	display: inline-block;
+	margin: 0 1em;
+	@include breakpoint($tab-desk){
+		width: 60%;
+		margin-right: 0;
+		margin-bottom: 1em;
+	}
 }
 
 .search-links {
-	display: inline;
-	float: right;
+	display: inline-block;
+	margin-left: 1em;
+	@include breakpoint(768px){
+		margin-left: 0;
+	}
+	@include breakpoint($tab-desk){
+		float: right;
+		margin-left: 0;
+	}
 	.navbar-nav > li > a {
 		margin: 0 0.5em;
+	}
+	.nav > li {
+		display: inline-block;
 	}
 }

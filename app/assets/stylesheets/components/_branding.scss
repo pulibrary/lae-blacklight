@@ -4,43 +4,18 @@
 @import "variables/grid";
 @import "variables/colors";
 
-.l-branding__pul {
-    background: $gray-dark;
-    border-top: 3px solid $orange;
-    min-height: 30px;
-    @include clearfix;
-}
-.logo__pul {
-    line-height: 21px;
-    height: 30px;
-    margin-left: -0.7em;
-    @include grid-span(12);
-    clear: both;
-    @include breakpoint($tab) {
-        @include grid-span(6, 1);
-    }
-    &:before {
-        content: ' ';
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%;
-    }
-    img {
-        padding: 0 1em;
-        margin: 0 auto;
-        display: inline-block;
-        vertical-align: middle;
-        height: 18px;
-        @include breakpoint($desk) {
-            padding: 0;
-            margin: 0;
-        }
-    }
-}
 .logo__site {
-	height: 100px;
-	position: absolute;
-	top: 12px;
+    position: absolute;
+    top: 12px;
+    margin-left: 0.5em;
+    height: 100px;
+    @include breakpoint(550px){
+        height: 75px;
+    }
+    @include breakpoint(900px){
+        height: 100px;
+        margin-left: 0;
+    }	
 }
 
 // Non-SVG logo
