@@ -1,3 +1,18 @@
+.viewer {
+        // border: 1px solid #ccc;
+        height: 520px;
+        //margin: 40px 0 0 40px;
+        width: 650px;
+        margin: 2em auto;
+      }
+
+.viewer-full {
+        // border: 1px solid #ccc;
+        height: 800px;
+        margin: 40px 0 0 40px;
+        width: 1000px;
+      }
+
 .iov {
   box-sizing: border-box;
   overflow: hidden;
@@ -258,4 +273,57 @@
   margin: 0;
   top: 0;
   width: 100%;
+}
+
+//overrides
+// overrides
+.iov a, .iov a:hover {
+  color: #000;
+}
+
+.iov-header {
+  background: white;
+}
+.iov-list-view-controls {
+  top: 16px;
+  font-size: 16px;
+}
+
+.iov-list-view-controls, .iov .iov-list-view-right-nav, .iov .iov-list-view-left-nav {
+  display: none;
+}
+
+.iov .iov-list-view-right-nav, .iov .iov-list-view-left-nav {
+  color: #000;
+  margin: 0 16px;
+}
+
+.viewer:hover .iov-list-view-controls,
+.viewer:hover .iov .iov-list-view-right-nav,
+.viewer:hover .iov .iov-list-view-left-nav {
+  display: inline-block;
+}
+
+.iov-list-view .iov-list-view-thumbs-viewport ul {
+  margin: 1em 1em 0 0;
+}
+
+.iov-list-view-thumb-selected {
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 1em;
+  }
+
+.iov-list-view .iov-list-view-thumbs-viewport li {
+  padding: 10px 10px 5px 10px;
+  color: #000;
+}
+
+.iov-list-view-thumbs li:hover {
+  background: #477dca;
+  border-radius: 4px;
+}
+
+.iov-menu-bar .iov-controls a, .iov-menu-bar .iov-controls a:hover {
+  color: black;
 }

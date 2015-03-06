@@ -1,0 +1,39 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "abstraction/mixins";
+@import "variables/grid";
+@import "variables/base";
+
+.l-branding__pul {
+    background: $dark-gray;
+    border-top: 3px solid $orange;
+    min-height: 30px;
+    @include clearfix;
+}
+
+.logo__pul {
+    @include grid-span(12);
+    line-height: 21px;
+    height: 30px;
+    margin-left: -0.7em;
+    text-align: center;
+    clear: both;
+    @include breakpoint($tab) {
+        @include grid-span(6, 1);
+        text-align: left;
+    }
+    img {
+        padding: 0 1em;
+        height: 18px;
+        @include vertical-align;
+        @include breakpoint($desk) {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+//cancel blacklight css
+img {
+    vertical-align: top;
+}

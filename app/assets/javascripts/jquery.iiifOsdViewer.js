@@ -405,8 +405,8 @@
 
       function updateView($imgItem) {
         loadOsdInstance($imgItem.data('iiif-info-url'),$imgItem.data('iov-rotation'));
-        $rightNav.show();
-        $leftNav.show();
+        // $rightNav.show();
+        // $leftNav.show();
         scrollThumbsViewport($imgItem);
       }
 
@@ -464,22 +464,22 @@
         },
 
         hide: function() {
-          $listViewControls.hide();
+          // $listViewControls.hide();
           $listView.hide();
         },
 
         show: function() {
-          $listViewControls.show();
+          // $listViewControls.show();
           $listView.show();
         },
 
         load: function() {
-          $listViewControls.show();
+          // $listViewControls.show();
           $listView.show();
           $thumbsList.find('li[data-iov-list-view-id!=""]')[0].click();
           $thumbsViewport.trigger('scroll');
-          $leftNav.show();
-          $rightNav.show();
+          // $leftNav.show();
+          // $rightNav.show();
         },
 
         jumpToImg: function(hashCode) {

@@ -1,3 +1,4 @@
+function masonryGrid(){
   var container = document.querySelector('.cards');
   var containerWidth = container.offsetWidth;
   var msnry;
@@ -8,3 +9,5 @@
       itemSelector: '.card'
     });
   });
+}  
+window.onload = masonryGrid;

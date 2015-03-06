@@ -1,0 +1,49 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "variables/grid";
+
+footer {
+    padding: 2.5em 0 0.75em;
+}
+
+.copyright {
+    p {
+        padding: 0 1em;
+        &:first-child {
+            margin-bottom: 1.25em;
+        }
+    }
+
+    @include breakpoint($tab-desk){
+        @include grid-span(10,3);
+
+        p:first-child {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.pu-footer-logo {
+    text-align: center;
+    > a img {
+        height: 40px;
+        display: inline-block;
+        margin: 16px;
+
+        @include breakpoint($tab-desk){
+            display: block;
+            margin: 0 0 16px;
+        }
+    }
+    @include breakpoint($tab-desk){
+        @include grid-span(2,1);
+
+        .logo__sponsor {
+            height: 40px;
+            display: inline-block;
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+}
