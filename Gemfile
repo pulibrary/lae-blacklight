@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'blacklight'
+gem 'blacklight', '~> 5.9.3'
 gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-gallery'
 gem "blacklight_range_limit"
 gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
