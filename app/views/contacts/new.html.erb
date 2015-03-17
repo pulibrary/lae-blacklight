@@ -1,18 +1,17 @@
-<main role="main">
   <div class="wrapper">
     <h1>Contact the Latin American Ephemera Project</h1>
+    <span class="req"><abbr title="required">*</abbr> Indicates required field</span>
     <%= simple_form_for @contact, :html => {:class => 'form-horizontal form-lae-contact' } do |f| %>
 
-      <%= f.input :name, :required => true, label_html: { class: 'col-md-1' }, input_html: { size: 50 }, wrapper_html: { class: 'row' } %>
-      <%= f.input :email, :required => true, label_html: { class: 'col-md-1' }, input_html: { size: 50 }, wrapper_html: { class: 'row' } %>
+      <%= f.input :name, :required => true, label_html: { class: '' }, wrapper_html: { class: '' } %>
+      <%= f.input :email, :required => true, label_html: { class: '' }, wrapper_html: { class: '' } %>
        
-      <%= f.input :message, :as => :text, :required => true, label_html: { class: 'col-md-1' }, input_html: { rows: 4, cols: 50 }, wrapper_html: { class: 'row' } %>
+      <%= f.input :message, :as => :text, :required => true, label_html: { class: '' }, wrapper_html: { class: '' } %>
       <div class= "hidden">
         <%= f.input :nickname, :hint => 'Leave this field blank!' %>
       </div>
-      <div class="col-md-3 col-md-offset-3">
-        <%= f.button :submit, 'Send message', :class=> "btn-lg btn btn-primary" %>
+      <div class="send-button">
+        <%= f.button :submit, 'Send message', :class=> "submit-button" %>
       </div>
     <% end %>
   </div>
-</main>

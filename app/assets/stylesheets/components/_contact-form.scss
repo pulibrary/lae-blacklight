@@ -1,0 +1,59 @@
+@import "compass";
+@import "breakpoint";
+@import "variables/base";
+@import "variables/grid";
+
+.req {
+	font-style: italic;
+	margin-bottom: 1.5em;
+	display: block;
+	abbr {
+		color: $orange;
+	}
+}
+
+.form-lae-contact abbr {
+	color: $orange;
+}
+
+.form-lae-contact label {
+	display: block;
+	margin: 0.5em 0;
+	font-weight: bold;
+}
+
+.form-lae-contact input[type="text"], 
+.form-lae-contact input[type="email"],
+.form-lae-contact textarea {
+	border: 1px solid #ccc;
+	@include border-radius(4px);
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	@include breakpoint($tab-desk){
+		width: 50%;
+	}
+}
+
+.form-lae-contact {
+	input[type="text"],
+	input[type="email"] {
+		height: 2em;
+	}
+	textarea {
+		height: 8em;
+	}
+}
+
+//bootstrap overrride
+.form-horizontal .control-label {
+	text-align: inherit;
+	padding-bottom: 7px;
+	padding-top: 0;
+}
+.form-horizontal .form-group {
+	margin: 0;
+}

@@ -1,8 +1,14 @@
 @import "singularitygs";
 @import "compass";
 @import "breakpoint";
+@import "variables/base";
 @import "variables/grid";
 @import "abstraction/mixins";
+
+.hero button {
+  margin-right: 1em;
+  font-weight: normal;
+}
 
 .featured-block {
   margin: 0 1em;
@@ -15,9 +21,9 @@
   transform-style: preserve-3d;
 
   @include breakpoint($tab){
-    width: 350px;
+    width: 40%;
     height: 350px;
-    @include grid-span(6, 7);
+    @include grid-span(5, 8);
   }
 }
 .featured-image img {
@@ -33,7 +39,7 @@
 
 .featured-text-block {
   @include breakpoint($tab){
-    @include grid-span(6, 1);
+    @include grid-span(7, 1);
     height: 350px;
   }
 }
@@ -42,10 +48,27 @@
     @include vertical-align;
   top: 45%;
   }
-  
-
-  h1 {
-    // font-family: 'Sail', cursive;
+  p {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 1.4em;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: $dark-gray;
+      color: transparent;
+      text-shadow: 0 0 $dark-gray, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
+      /*  gradient background allows us to use css only & re-position it  */
+      background: -webkit-linear-gradient($medium-gray, $medium-gray) center 1.2em no-repeat;
+      background: linear-gradient($medium-gray, $medium-gray) center 1.2em no-repeat;
+      /*  can precisely control size in relation to the text  */
+      background-size: 100% 1px;
+      &:hover {
+        color: $blue;
+      }
+    }
+    
   }
 }
 

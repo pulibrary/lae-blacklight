@@ -50,6 +50,13 @@
     width: 95px;
 }
 
+.input-group-btn:last-child > .btn {
+    position: relative;
+    right: -1px;
+    margin-left: -1px;
+}
+
+
 #search-navbar .input-group-btn.search-button {
     width: 90px;
     border: 0;

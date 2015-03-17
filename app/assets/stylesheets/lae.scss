@@ -1,7 +1,10 @@
 @import "bourbon";
 @import "compass";
+@import "breakpoint";
 @import "font-awesome";
 @import "variables/colors";
+@import "variables/base";
+@import "variables/grid";
 
 body {
     background: $gray-lighter;
@@ -14,8 +17,27 @@ main {
     @include clearfix;
 }
 
-.front {
-    // background: #ccc;
+main h2 {
+    font-family: $slab;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: $blue;
+  margin: 1.5em 0;
+}
+main h1 {
+    font-family: $slab;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: $blue;
+  margin: 1.2em 0;
+}
+main h3 {
+    font-family: $slab;
+    margin-left: 0.5em;
+}
+
+p {
+  margin: 0 0 1.5em;
 }
 
 h1.site-logo {
@@ -26,26 +48,24 @@ h1.site-logo {
 	display: inline-block;
 }
 
-// .metadata, .image {
-// 	width: 48%;
-// 	display: inline-block;
-// }
 .metadata {
-    width: 60%;
-    margin: 0 auto;
-    .blacklight-title {
-        display: none;
+    width: 100%;
+    @include breakpoint($tab-desk){
+        width: 60%;
+        margin: 0 auto;
+        .blacklight-title {
+            display: none;
+        }
+        dt {
+            width: 100px;
+        }
+        dd {
+            margin-left: 130px;
+        }
     }
-    dt {
-        width: 100px;
-    }
-    dd {
-        margin-left: 130px;
-    }
+    
 }
-// .image {
-// 	float: right;
-// }
+
 h1 {
     font-size: 1.7em;
 }
@@ -56,10 +76,7 @@ h3 {
 }
 main {
     font-size: 1.1em;
-}
-
-.featured-block .btn {
-    margin-right: 1em;
+    padding: 1em;
 }
 
 #sort-dropdown .dropdown-toggle, #per_page-dropdown .dropdown-toggle {
