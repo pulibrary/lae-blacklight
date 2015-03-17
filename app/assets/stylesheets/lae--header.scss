@@ -4,6 +4,7 @@
 @import "bourbon";
 @import "breakpoint";
 @import "variables/grid";
+@import "variables/base";
 @import "variables/colors";
 
 header {
@@ -27,14 +28,29 @@ header {
   	margin: 16px 0 0 105px;
     display: inline-block;
     // font-family: 'Sail', cursive;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2.45em;
+    font-family: 'Bitter', 'Source Sans Pro', sans-serif;
+    font-size: 2.15em;
     position: relative;
+    @include breakpoint(550px){
+    	font-size: 2.1em;
+    	margin-bottom: 10px;
+    }
     @include breakpoint(768px){
     	margin-bottom: 10px;
     }
   	@include breakpoint($tab-desk){
   		margin: 16px 0 16px 105px;
+  	}
+  	@include breakpoint(864px){
+  		font-size: 1.3em;
+  		margin-left: 90px;
+  	}
+  	@include breakpoint(896px){
+  		font-size: 1.5em;
+  	}
+  	@include breakpoint(1060px){
+  		font-size: 1.9em;
+  		margin-left: 115px;
   	}
     
     a {
@@ -57,17 +73,15 @@ header {
 		margin-left: 0.5em;
 	}
 	@include breakpoint(864px){
+		float: right;
+	}
+	@include breakpoint(896px){
 		margin-left: 1em;
 		position: relative;
-		top: -10px;
-	}
-	@include breakpoint(888px){
-		margin-left: 115px;
+		top: 2px;
 	}
 	@include breakpoint(1060px){
-		position: relative;
-		top: 8px;
-		float: right;
+		top: 4px;
 		margin-left: 0;
 	}
 	
@@ -80,59 +94,21 @@ header {
 	}
 }
 
-.browse {
-	display: inline-block;
-	height: 48px;
-	a {
-		margin-left: 1.5em;
-		padding: 0.5em .8em;
-		background: white;
-		color: black;
-		@include border-radius(4px);
-		float: left;
-		text-decoration: none;
-	}
-	@include breakpoint(768px){
-		height: 38px;
-		a {
-			margin-left: 0.2em;
-		}
-	}
-	@include breakpoint(864px){
-		// height: auto;
-		// position: relative;
-		// top: -16px;
-		a {
-			margin-left: 0.2em;
-			position: relative;
-			top: -10px;
-		}
-	}
-}
-
-@include breakpoint(1060px){
-	.browse {
-		height: 48px;
-		clear: both;
-		float: left;
-		margin-left: 115px;
-		margin-top: 10px;
-	}
-	.browse a {
-		background: $blue;
-		color: white;
-		
-	}
-}
-
-
 .search-bar {	
 	display: inline-block;
 	margin: 0 1em;
 	@include breakpoint($tab-desk){
 		width: 60%;
 		margin-right: 0;
+	}
+	@include breakpoint(864px){
+		margin-left: 90px;
+	}
+	@include breakpoint(896px){
 		margin-bottom: 1em;
+	}
+	@include breakpoint(1060px){
+		margin-left: 115px;
 	}
 }
 

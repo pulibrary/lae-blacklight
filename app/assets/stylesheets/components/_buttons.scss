@@ -1,0 +1,41 @@
+@import "bourbon";
+@import "variables/base";
+
+button, .submit-button {
+  @include button(flat, $blue);
+  color: white;
+  font-family: $slab;
+
+  &:hover {
+    background: darken($blue, 10);
+    color: white;
+  }
+}
+
+.about p {
+	a {
+      text-decoration: none;
+      cursor: pointer;
+      color: $dark-gray;
+      color: transparent;
+      text-shadow: 0 0 $dark-gray, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
+      /*  gradient background allows us to use css only & re-position it  */
+      background: -webkit-linear-gradient($light-gray, $light-gray) center 1.2em no-repeat;
+      background: linear-gradient($light-gray, $light-gray) center 1.2em no-repeat;
+      /*  can precisely control size in relation to the text  */
+      background-size: 100% 1px;
+      &:hover {
+          color: $blue;
+      }
+    }
+    // a::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   display: inline-block;
+    //   height: 1em;
+    //   width: 100%;
+    //   border-bottom: 1px solid lighten($medium-gray,60);
+    //   margin-top: 4px;
+    // }
+}

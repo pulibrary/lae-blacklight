@@ -7,10 +7,10 @@
 	background-color: rgba(255, 255, 255, 1);
 }
 
-button {
-  @include button(flat, #0e5a86);
+// button {
+//   @include button(flat, #0e5a86);
 
-  &:hover {
-    background: lighten(#0e5a86, 10);
-  }
-}
+//   &:hover {
+//     background: lighten(#0e5a86, 10);
+//   }
+// }

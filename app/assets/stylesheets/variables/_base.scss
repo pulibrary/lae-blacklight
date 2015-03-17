@@ -1,9 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 
 // Typography
-$helvetica: 'Source Sans Pro', sans-serif;
-$base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$sans-serif: 'Open Sans', sans-serif;
+$slab: 'Bitter', serif;
+$base-font-family: $sans-serif;
+$heading-font-family: $slab;
 
 // Font Sizes
 $base-font-size: 1em;
