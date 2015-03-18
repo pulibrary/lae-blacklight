@@ -31,9 +31,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'blacklight', '~> 5.9.3'
-gem 'blacklight-gallery' #, git: 'git://github.com/projectblacklight/blacklight-gallery'
+gem 'blacklight-gallery'
 gem "blacklight_range_limit"
-gem 'openseadragon', git: 'git://github.com/kevinreiss/openseadragon-rails.git'
+gem 'openseadragon'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
 
 source 'https://rails-assets.org' do
