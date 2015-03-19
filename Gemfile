@@ -33,11 +33,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'blacklight', '~> 5.9.3'
 gem 'blacklight-gallery'
 gem "blacklight_range_limit"
-#gem 'openseadragon'
+gem 'openseadragon'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-openseadragon'
+  #gem 'rails-assets-openseadragon'
   gem 'rails-assets-font-awesome'
   gem 'rails-assets-modernizr'
   gem 'rails-assets-masonry'
