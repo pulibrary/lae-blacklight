@@ -15,3 +15,26 @@ en:
       bookmarks: 'Bookmarks'
       saved_searches: 'Saved Searches'
       search_history: 'Search History'
+    email:
+      form:
+        title: 'Email This'
+        to: 'Email:'
+        message: 'Message:'
+        submit: 'Send'
+      text:
+        title: 'Title: %{value}'
+        author: 'Author: %{value}'
+        format: 'Format: %{value}'
+        language: 'Language: %{value}'
+        subject:
+          one: 'LAE Document: %{title}'
+          other: 'LAE Documents'
+        url: 'Document Link: %{url}'
+        message: 'Message: %{message}'
+
+      success: "Email Sent"
+
+      errors:
+        to:
+          invalid: 'You must enter a valid email address'
+          blank: 'You must enter a recipient in order to send this message'
