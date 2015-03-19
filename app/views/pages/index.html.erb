@@ -5,6 +5,9 @@
 		<div class="featured-block">
 			<%= render 'featured_document' %>
 	     	<div class="featured-text-block">
+	     		<h1 class="visually-hidden">
+	     			Digital Archive of Latin American and Caribbean Ephemera
+	     		</h1>
 	     		<div class="featured-text">
 				  <p>The Digital Archive of Latin American and Caribbean Ephemera is a steadily growing repository containing a previously unavailable subset of Princeton’s <a href="http://libguides.princeton.edu/laec">Latin American Ephemera Collection</a> as well as newly acquired materials being digitized and added on an ongoing basis. </p>
 				  <%= link_to '<button>Browse</button>'.html_safe, page_path('catalog', sort: 'date_modified desc', search_field:'all_fields') %>
