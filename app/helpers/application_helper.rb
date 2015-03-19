@@ -131,7 +131,6 @@ module ApplicationHelper
                                                    :wt => :ruby, 
                                                    :index => true,
                                                    }
-    logger.error("#{solr_response}")
     solr_response['response']['docs'][0]
   end
 
