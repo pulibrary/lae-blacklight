@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require openseadragon/rails.js
+//= require openseadragon
 //= require jquery.iiifOsdViewer
 //= require modernizr
 //= require turbolinks
