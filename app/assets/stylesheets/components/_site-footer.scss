@@ -28,7 +28,11 @@ footer {
     > a img {
         height: 40px;
         display: inline-block;
-        margin: 16px;
+        margin: 6px;
+
+        @include breakpoint($tab){
+            margin: 10px;
+        }
 
         @include breakpoint($tab-desk){
             display: block;

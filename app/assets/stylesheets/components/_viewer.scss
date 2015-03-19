@@ -1,9 +1,19 @@
+@import "breakpoint";
+@import "variables/grid";
+
 .viewer {
-        // border: 1px solid #ccc;
-        height: 520px;
-        //margin: 40px 0 0 40px;
-        width: 650px;
-        margin: 2em auto;
+        height: 400px;
+        width: 290px;
+        margin: 0 auto;
+        @include breakpoint(375px){
+          height: 480px;
+          width: 350px;
+        }
+        @include breakpoint($tab){
+          height: 520px;
+          width: 650px;
+          margin: 2em auto;
+        }
       }
 
 .viewer-full {
