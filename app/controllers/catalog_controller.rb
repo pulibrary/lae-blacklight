@@ -6,13 +6,14 @@ class CatalogController < ApplicationController
   helper Openseadragon::OpenseadragonHelper
 
   configure_blacklight do |config|
-    config.view.gallery.partials = [:index_header, :index]
-    #config.view.slideshow.partials = [:index]
+    # config.view.gallery.partials = [:index_header, :index]
+    config.view.masonry.partials = [:index]
+    # config.view.slideshow.partials = [:index]
     config.index.thumbnail_method = :thumbnail_from_manifest
     #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     #config.show.partials.insert(0, :openseadragon)
     config.index.display_type_field = 'genre_pul_label_facet'
-    config.show.partials = [:show_header, :show_viewer, :show, :show_similar] 
+    config.show.partials = [:show_header, :show_viewer, :show, :show_similar]
 
     # Get rid of sms, citation and email features
     config.show.document_actions.delete(:sms)
@@ -51,7 +52,7 @@ class CatalogController < ApplicationController
     # solr field configuration for document/show views
     config.show.title_field = 'title_display'
 
-    # config.show.document_actions.sms_action 
+    # config.show.document_actions.sms_action
 
     # config.show.display_type_field = 'genre_pul_label'
 

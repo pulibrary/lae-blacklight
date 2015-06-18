@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'bundler', '>= 1.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -30,8 +30,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'blacklight', '~> 5.9.3'
-gem 'blacklight-gallery'
+gem 'blacklight', '~> 5.13.1'
+gem 'blacklight-gallery', '~> 0.4'
 gem "blacklight_range_limit"
 gem 'openseadragon'
 gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
@@ -40,7 +40,7 @@ source 'https://rails-assets.org' do
   #gem 'rails-assets-openseadragon'
   gem 'rails-assets-font-awesome'
   gem 'rails-assets-modernizr'
-  gem 'rails-assets-masonry'
+#  gem 'rails-assets-masonry'
   gem 'rails-assets-imagesloaded'
 end
 
@@ -53,7 +53,7 @@ gem 'mysql2'
 gem 'capistrano', '~> 3.3.5'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
-gem 'capistrano-passenger'
+gem 'capistrano-passenger', '~> 0.0.5'
 
 gem "devise"
 gem "devise-guests", "~> 0.3"

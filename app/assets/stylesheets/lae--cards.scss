@@ -1,165 +1,47 @@
-@import "bourbon";
-@import "breakpoint";
 @import "variables/grid";
 
 .cards {
-    width: 100%;
+  margin: 0.5em 0;
+  padding: 0;
+  -moz-column-gap: 0.5em;
+  -webkit-column-gap: 0.5em;
+  column-gap: 0.5em;
 }
 
-.card {
-  cursor: pointer;
+.cards .card {
   display: inline-block;
+  padding: 1em;
+  margin: 0 0 0.5em;
   width: 100%;
-  @include breakpoint($tab) {
-    body:after { content: 'default'; }
-    width: 50%;
-  }
-  @include breakpoint($tab-desk) {
-    body:after { content: 'tablet'; }
-    width: 33%;
-  }
-  @include breakpoint($desk) {
-    body:after { content: 'widescreen'; }
-    width: 25%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.cards .card img {
+  width: 100%;
+}
+
+@media only screen and (min-width: $tab) {
+  .cards {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
   }
 }
 
-$base-font-color: black;
-$base-background-color: white;
-$base-accent-color: #eee;
-// $base-border-radius: 4px;
-$base-spacing: 1.4em;
-$gutter: 2em;
-$card-background-color: white;
-
-.cards {
-  @include clearfix;
+@media only screen and (min-width: $tab-desk) {
+  .cards {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
 }
 
-.card {
-  $card-border-color: #ddd;
-  $card-border: none;//1px solid $card-border-color;
-  $card-background: lighten($card-background-color,2);
-  $card-header-background: $card-background;
-  $card-hover-background: lighten($card-background, 5);
-  $card-image-background: #DBD199;
-  $card-image-hover-background: lighten($card-image-background, 5);
-
-  @include transition (all 0.2s ease-in-out);
-  background-color: $card-background;
-  border: $card-border;
-  margin-bottom: $base-spacing*1.5;
-  padding: 0 1em;
-  cursor: pointer;
-  position: relative;
-
-  a {
-    text-decoration: none;
-    color: #23527c;
-
-    &:hover {
-      color: #337ab7;
-    }
-  }
-
-    img {
-      width: 100%;
-      @include transition (all 0.2s ease-in-out);
-      background: $card-image-background;
-    }
-
-  .ribbon-wrapper {
-    $ribbon-size: 85px;
-    $ribbon-background: $base-accent-color;
-    @include size($ribbon-size);
-    overflow: hidden;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-
-    .ribbon {
-      font-size: .8em;
-      font-weight: 800;
-      text-align: center;
-      @include transform(rotate(45deg));
-      position: relative;
-      padding: 2px 7px;
-      left: -5px;
-      top: 15px;
-      width: 120px;
-      background-color: $ribbon-background;
-      color: white;
-    }
-  }
-
-  .card-header {
-    @include transition (all 0.2s ease-in-out);
-    background-color: $card-header-background;
-    padding: $base-spacing/2 0 0;
-    color: black;
-  }
-
-  .card-stats {
-    padding: $base-spacing/2 0;
-    overflow: auto;
-
-    ul {
-      padding-left: 0;
-    }
-
-    ul li, dd {
-      display: inline;
-      color: #333;
-      font-size: 1em;
-      float: left;
-      line-height: 1.1em;
-      padding: 0 .7em 0 .7em;
-
-      &.blacklight-publisher_display {
-        display: none;
-      }
-
-      &:first-child {
-        padding-left: 0;
-        border-right: 1px solid transparentize($base-font-color, .8);
-      }
-
-      span {
-        color: $base-font-color;
-        font-size: .7em;
-        display: block;
-        font-weight: normal;
-      }
-    }
-    dt {
-        color: $base-font-color;
-        font-size: .7em;
-        display: block;
-        font-weight: normal;
-
-        &.blacklight-publisher_display {
-          display: none;
-        }
-      }
-  }
-
-  &:hover {
-    background-color: $card-hover-background;
-    
-    .card-image img {
-      background: $card-image-hover-background;
-    }
-  
-    .card-header {
-      background-color: $card-hover-background;
-    }
-  }
-
-  &:active {
-    background-color: $card-background;
-
-    .card-header {
-      background-color: $card-background;
-    }
+@media only screen and (min-width: $desk) {
+  .cards {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
   }
 }

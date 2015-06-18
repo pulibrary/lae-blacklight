@@ -1,0 +1,23 @@
+<div class="card">
+    <%= render_thumbnail_tag(document, {:height => '400', :width => '400'}, :counter => document_counter_with_offset(document_counter)) %>
+    <div class="card-header">
+      <%= render_document_partials document, blacklight_config.view_config(:masonry).partials, :document_counter => document_counter %>
+      <%# default partial to display solr document fields in catalog index view -%>
+<dl class="card-stats">
+
+  <% index_fields(document).each do |solr_fname, field| -%>
+    <% if should_render_index_field? document, field %>
+        <dd class="blacklight-<%= solr_fname.parameterize %>"><%= render_index_field_value document, :field => solr_fname %>
+            <span><%= render_index_field_label document, :field => solr_fname %></span>
+        </dd>
+        <!-- <dt class="blacklight-<%= solr_fname.parameterize %>"><%= render_index_field_label document, :field => solr_fname %>
+        </dt> -->
+    <% end -%>
+  <% end -%>
+
+</dl>
+
+<% # bookmark functions for items/docs -%>
+        <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
+    </div>
+</div>
