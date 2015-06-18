@@ -101,6 +101,7 @@ $card-background-color: white;
 
   .card-stats {
     padding: $base-spacing/2 0;
+    margin-bottom: 0;
     overflow: auto;
 
     ul {
@@ -110,7 +111,7 @@ $card-background-color: white;
     ul li, dd {
       display: inline;
       color: #333;
-      font-size: 1em;
+      font-size: 0.9em;
       float: left;
       line-height: 1.1em;
       padding: 0 .7em 0 .7em;
@@ -145,11 +146,11 @@ $card-background-color: white;
 
   &:hover {
     background-color: $card-hover-background;
-    
+
     .card-image img {
       background: $card-image-hover-background;
     }
-  
+
     .card-header {
       background-color: $card-hover-background;
     }
