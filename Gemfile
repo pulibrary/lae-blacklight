@@ -53,7 +53,7 @@ gem 'mysql2'
 gem 'capistrano', '~> 3.3.5'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
-gem 'capistrano-passenger'
+gem 'capistrano-passenger', '~> 0.0.5'
 
 gem "devise"
 gem "devise-guests", "~> 0.3"
