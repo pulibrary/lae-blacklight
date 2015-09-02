@@ -9,7 +9,7 @@
 
 header {
 	font-size: 13px;
-	background: url(http://subtlepatterns.com/patterns/symphony.png);
+	background: image-url("symphony.png");
 	position: relative;
 	-webkit-box-shadow: 0 5px 6px -6px #ccc;
 	   -moz-box-shadow: 0 5px 6px -6px #ccc;
@@ -52,7 +52,7 @@ header {
   		font-size: 1.9em;
   		margin-left: 115px;
   	}
-    
+
     a {
     	color: black;
     	text-decoration: none;
@@ -84,7 +84,7 @@ header {
 		top: 4px;
 		margin-left: 0;
 	}
-	
+
 	a {
 		background: white;
 		@include border-radius(4px);
@@ -94,7 +94,7 @@ header {
 	}
 }
 
-.search-bar {	
+.search-bar {
 	display: inline-block;
 	margin: 0 1em;
 	@include breakpoint($tab-desk){
