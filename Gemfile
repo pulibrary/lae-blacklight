@@ -30,24 +30,28 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'blacklight', '~> 5.13.1'
+gem 'blacklight', '~> 5.14.0'
 gem 'blacklight-gallery', '~> 0.4'
 gem "blacklight_range_limit"
 gem 'openseadragon'
-gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
+#gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
+gem 'iiif-presentation'
 
-source 'https://rails-assets.org' do
-  #gem 'rails-assets-openseadragon'
-  gem 'rails-assets-font-awesome'
-  gem 'rails-assets-modernizr'
-#  gem 'rails-assets-masonry'
-  gem 'rails-assets-imagesloaded'
-end
+# source 'https://rails-assets.org' do
+#   #gem 'rails-assets-font-awesome'
+#   #gem 'rails-assets-modernizr'
+#   #gem 'rails-assets-imagesloaded'
+# end
+
+gem 'modernizr-rails'
+gem 'font-awesome-sass'
+#gem "font-awesome-rails"
+
 
 gem "mail_form"
 gem "simple_form"
 
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.13'
 
 # Use Capistrano for deployment
 gem 'capistrano', '~> 3.3.5'

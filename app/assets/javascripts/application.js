@@ -16,6 +16,9 @@
 //= require jquery.iiifOsdViewer
 //= require modernizr
 //= require turbolinks
+//= require eventie/eventie
+//= require eventEmitter/EventEmitter
+//= require imagesloaded/imagesloaded
 //
 // Required by Blacklight
 //= require blacklight/blacklight
