@@ -48,7 +48,7 @@ GEM
       bourbon (>= 4.2)
       sass (>= 3.4)
       thor
-    blacklight (5.14.0)
+    blacklight (5.15.0)
       bootstrap-sass (~> 3.2)
       deprecation
       kaminari (>= 0.15)
@@ -366,7 +366,7 @@ PLATFORMS
 
 DEPENDENCIES
   bitters
-  blacklight (~> 5.14.0)
+  blacklight (~> 5.15.0)
   blacklight-gallery (~> 0.4)
   blacklight_range_limit
   bourbon
@@ -391,7 +391,7 @@ DEPENDENCIES
   jquery-rails
   mail_form
   modernizr-rails
-  mysql2 (~> 0.3.13)
+  mysql2 (>= 0.3.13, < 0.4.0)
   nokogiri (~> 1.6.5)
   openseadragon
   rails (= 4.2.4)
