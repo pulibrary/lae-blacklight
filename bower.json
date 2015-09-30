@@ -1,0 +1,20 @@
+{
+  "name": "lae_public",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pulibrary/lae-blacklight",
+  "authors": [
+    "Kevin Reiss <kevin.reiss@gmail.com>"
+  ],
+  "description": "Assets for Lae Public BL",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "imagesloaded": "~3.1.8"
+  }
+}
