@@ -54,10 +54,10 @@ gem "simple_form"
 gem 'mysql2', '>= 0.3.13', "< 0.4.0"
 
 # Use Capistrano for deployment
-gem 'capistrano', '~> 3.3.5'
+gem 'capistrano', '~> 3.4.0'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
-gem 'capistrano-passenger', '~> 0.0.5'
+gem 'capistrano-passenger'
 
 gem "devise"
 gem "devise-guests", "~> 0.3"

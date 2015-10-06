@@ -74,20 +74,18 @@ GEM
       sass (~> 3.3)
       sassy-maps (< 1.0.0)
     builder (3.2.2)
-    capistrano (3.3.5)
-      capistrano-stats (~> 1.1.0)
+    capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
-    capistrano-passenger (0.0.5)
+    capistrano-passenger (0.1.1)
       capistrano (~> 3.0)
     capistrano-rails (1.1.3)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capistrano-stats (1.1.1)
     capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -121,7 +119,7 @@ GEM
       compass (~> 1.0.0)
       sass-rails (< 5.1)
       sprockets (< 2.13)
-    coveralls (0.8.2)
+    coveralls (0.8.3)
       json (~> 1.8)
       rest-client (>= 1.6.8, < 2)
       simplecov (~> 0.10.0)
@@ -143,7 +141,7 @@ GEM
       devise
     diff-lcs (1.2.5)
     docile (1.1.5)
-    domain_name (0.5.24)
+    domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
     ebnf (0.3.9)
       rdf (~> 1.1)
@@ -169,7 +167,7 @@ GEM
       activesupport (>= 3.2.18)
       faraday (~> 0.9.0)
       json
-    jbuilder (2.3.1)
+    jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jettywrapper (1.8.3)
@@ -372,9 +370,9 @@ DEPENDENCIES
   bourbon
   breakpoint
   bundler (>= 1.7.0)
-  capistrano (~> 3.3.5)
+  capistrano (~> 3.4.0)
   capistrano-bundler
-  capistrano-passenger (~> 0.0.5)
+  capistrano-passenger
   capistrano-rails
   capybara (~> 2.4.4)
   coffee-rails (~> 4.0.0)
