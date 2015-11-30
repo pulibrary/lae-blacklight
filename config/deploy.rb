@@ -37,6 +37,10 @@ set :linked_dirs, fetch(:linked_dirs, []).push('tmp/pids', 'tmp/cache', 'tmp/soc
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+# Force passenger to use touch tmp/restart.txt instead of
+# passenger-config restart-app which requires sudo access
+set :passenger_restart_with_touch, true
+
 namespace :deploy do
 
   after :restart, :clear_cache do
