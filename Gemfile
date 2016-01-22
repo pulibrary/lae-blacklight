@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 gem 'bundler', '>= 1.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
-gem 'compass-rails'
+gem 'compass-rails', '~> 2.0.4'
 gem 'breakpoint'
 gem 'singularitygs'
 gem 'bourbon'
@@ -84,7 +84,7 @@ group :development do
 end
 
 group :test do
-  gem 'nokogiri', '~> 1.6.5'
+  gem 'nokogiri', '~> 1.6.7'
   gem 'vcr', '~> 2.9.3'
   gem 'webmock'
 end
