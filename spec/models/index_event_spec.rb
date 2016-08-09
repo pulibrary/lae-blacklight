@@ -3,6 +3,7 @@ require 'nokogiri'
 
 vcr_options = {
   record: :new_episodes, # See https://www.relishapp.com/vcr/vcr/v/1-6-0/docs/record-modes
+  cassette_name: 'index_events',
   serialize_with: :json
 }
 
