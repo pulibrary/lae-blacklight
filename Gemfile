@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 gem 'bundler', '>= 1.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.5'
+gem 'rails', '~> 4.2.7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'compass-rails', '~> 2.0.4'
 gem 'breakpoint'
 gem 'singularitygs'
-gem 'bourbon'
-gem 'bitters'
+gem 'bourbon', '~> 4.2.7'
+gem 'bitters', '~> 1.2.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 2.7.2'
@@ -76,6 +76,8 @@ group :test, :development do
   gem 'jettywrapper', '~> 1.7'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara', '~> 2.4.4'
+  gem 'byebug'
+  gem 'pry-byebug'
 end
 
 group :development do

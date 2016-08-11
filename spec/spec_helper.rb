@@ -9,7 +9,7 @@ Coveralls.wear!
 VCR.configure do |c|
   c.ignore_hosts '127.0.0.1', 'localhost'
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  c.hook_into :webmock
+  c.hook_into :webmock, :faraday
   c.configure_rspec_metadata!
   c.preserve_exact_body_bytes do |http_message|
     http_message.body.encoding.name == 'ASCII-8BIT' ||
