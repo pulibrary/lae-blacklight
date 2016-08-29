@@ -9,8 +9,6 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  config.serve_static_files = false
-
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
@@ -29,6 +27,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+
+  config.serve_static_files = true
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.

@@ -12,10 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require openseadragon
-//= require jquery.iiifOsdViewer
 //= require modernizr
-//= require turbolinks
 //= require eventie/eventie
 //= require eventEmitter/EventEmitter
 //= require imagesloaded/imagesloaded

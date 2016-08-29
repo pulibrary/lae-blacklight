@@ -21,6 +21,8 @@ gem 'therubyracer',  platforms: :ruby
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'pul_uv_rails', git: 'https://github.com/pulibrary/pul_uv_rails.git', tag: 'v1.7.27'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -33,19 +35,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'blacklight', '~> 5.18.0'
 gem 'blacklight-gallery', '~> 0.4'
 gem "blacklight_range_limit"
-gem 'openseadragon'
-#gem 'osullivan', github: 'jpstroop/osullivan', tag: 'v0.0.1'
-gem 'iiif-presentation'
 
-# source 'https://rails-assets.org' do
-#   #gem 'rails-assets-font-awesome'
-#   #gem 'rails-assets-modernizr'
-#   #gem 'rails-assets-imagesloaded'
-# end
+gem 'iiif-presentation'
 
 gem 'modernizr-rails'
 gem 'font-awesome-sass'
-#gem "font-awesome-rails"
 
 
 gem "mail_form"
