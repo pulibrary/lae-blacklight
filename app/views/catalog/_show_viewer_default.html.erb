@@ -1,16 +1,2 @@
-<% ids = image_ids_labels_from_manifest_as_hash(@manifest) %>
-<div class="viewer">
-  <script>
-        var osdviewer = $('.viewer');
-       
-        if ($('div.iov').length == 0) {
-          // var viewer = modal.find('.viewer');
-          osdviewer.iiifOsdViewer({
-            data: [{
-              iiifServer: 'http://libimages.princeton.edu/loris2',
-              images: <%= raw ids.to_json %> }
-            ]
-          });
-        }
-    </script>
-</div>
+<div class="uv viewer" data-config="/uv_config.json" data-uri="<%= "#{catalog_path}.jsonld" %>"></div>
+<%= PulUvRails::UniversalViewer.script_tag %>

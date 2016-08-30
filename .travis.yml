@@ -1,13 +1,16 @@
 language: ruby
 #install: rvm @global do gem uninstall bundler -x && gem install bundler -v '~> 1.7.4' && bundle install
 rvm:
-  - 2.1.5
+  - 2.3.1
 
 before_script:
   - cp config/database.yml.travis config/database.yml
   - cp config/solr.yml.tmpl config/solr.yml
   - cp config/secrets.yml.tmpl config/secrets.yml
   - mysql -e 'create database lae_blacklight_test;'
+
+before_install:
+  - gem update bundler
 
 script: bundle exec rake ci
 
