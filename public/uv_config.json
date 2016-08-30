@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "pagingHeaderPanel": {
+      "options": {
+        "autoCompleteBoxEnabled": false,
+        "imageSelectionBoxEnabled": false,
+        "pageModeEnabled": false,
+        "pagingToggleEnabled": false
+      }
+    },
+    "footerPanel": {
+      "options": {
+        "downloadEnabled": false,
+        "embedEnabled": false
+      }
+    }
+  }
+}
