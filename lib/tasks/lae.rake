@@ -56,45 +56,13 @@ namespace :lae do
     end
   end
 
-  desc 'Copy solr config files to Jetty wrapper'
-  task solr2jetty: :environment do
-    cp Rails.root.join('solr_conf','solr.xml'), Rails.root.join('jetty','solr')
-    cp Rails.root.join('solr_conf','conf','schema.xml'), Rails.root.join('jetty','solr','blacklight-core','conf')
-    cp Rails.root.join('solr_conf','conf','solrconfig.xml'), Rails.root.join('jetty','solr','blacklight-core','conf')
-    unless File.exists?(Rails.root.join('jetty','solr','blacklight-core','conf','lang'))
-      Dir.mkdir(Rails.root.join('jetty','solr','blacklight-core','conf','lang'))
-    end
-    Dir.glob(Rails.root.join('solr_conf','conf','lang','*')).each do |lang_file|
-      cp lang_file, Rails.root.join('jetty','solr','blacklight-core','conf', 'lang')
-    end
-  end
-
-  desc 'Clear the index and load development fixtures into Solr'
-  task load_fixtures: :environment do
-    if Rails.env.development?
-      begin
-        fp = Rails.root.join('spec','fixtures', 'files', '208_solr_docs.xml.gz')
-        solr_url = "#{Blacklight.blacklight_yml[Rails.env]['url']}"
-        solr = RSolr.connect(url: solr_url)
-        solr.delete_by_query('*:*')
-
-        File.open(fp) do |f|
-          gz = Zlib::GzipReader.new(f)
-          content = gz.read
-          solr.update(data: content, headers: { 'Content-Type' => 'text/xml' })
-          solr.commit
-          gz.close
-        end
-
-      rescue Exception => e
-        solr.rollback
-        puts '***Rolled back Solr***'
-        raise e
-      end
+  namespace :solr do
+    desc 'Posts fixtures to Solr'
+    task :index do
+      solr = RSolr.connect :url => Blacklight.connection_config[:url]
+      content = File.read('spec/fixtures/files/208_solr_docs.xml')
+      solr.update(data: content, headers: { 'Content-Type' => 'text/xml' })
       solr.commit
-      solr.optimize
-    else
-      STDERR.puts 'This task is only available in the development environment'
     end
   end
 end
