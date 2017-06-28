@@ -1,4 +1,4 @@
-class CreateIndexEvents < ActiveRecord::Migration
+class CreateIndexEvents < ActiveRecord::Migration[4.2]
   def change
     create_table :index_events do |t|
       t.datetime :start
