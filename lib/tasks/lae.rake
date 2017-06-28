@@ -7,7 +7,6 @@ namespace :lae do
   # TODO: we need an optimize task when we have spellcheck going; that's when
   # the spellcheck index is built (recommended, can be changed to index time but
   # takes a while and we may not want to do it every time.)
-
   desc 'Do a complete reindex of the site (dumps the current index and starts over)'
   task index: :environment do
     data = IndexEvent.get_boxes_data
@@ -77,12 +76,12 @@ namespace :lae do
         fp = Rails.root.join('spec','fixtures', 'files', '208_solr_docs.xml.gz')
         solr_url = "#{Blacklight.blacklight_yml[Rails.env]['url']}"
         solr = RSolr.connect(url: solr_url)
-        solr.delete_by_query(['*:*'])
+        solr.delete_by_query('*:*')
 
         File.open(fp) do |f|
           gz = Zlib::GzipReader.new(f)
           content = gz.read
-          solr.update(data: content)
+          solr.update(data: content, headers: { 'Content-Type' => 'text/xml' })
           solr.commit
           gz.close
         end
@@ -98,17 +97,4 @@ namespace :lae do
       STDERR.puts 'This task is only available in the development environment'
     end
   end
-
 end
-
-
-
-
-
-
-
-
-
-
-
-

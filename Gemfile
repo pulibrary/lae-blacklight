@@ -55,7 +55,7 @@ gem 'capistrano-passenger'
 gem "devise"
 gem "devise-guests", "~> 0.3"
 
-gem 'rsolr', '~> 1.0.10'
+gem 'rsolr'
 gem 'faraday'
 
 gem 'rdf-rdfxml', '~> 2.0.0'
