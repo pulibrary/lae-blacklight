@@ -16,7 +16,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
 
   describe 'IndexEvent.get_boxes_data' do
 
-    it 'gets a an Array of Hashes' do
+    it 'gets an Array of Hashes' do
       boxes = described_class.get_boxes_data
       expect(boxes.class).to be Array
       expect(boxes.all? { |box| box.kind_of?(Hash) }).to be_truthy
@@ -24,7 +24,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
 
     it 'raises an error if the service in not available (bad url or whatever)' do
       bogus = 'http://notaurl.foo'
-      expect { described_class.get_boxes_data(url: bogus) }.to raise_error
+      expect { described_class.get_boxes_data(url: bogus) }.to raise_error(Faraday::ConnectionFailed)
     end
 
   end
@@ -40,7 +40,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
 
     it 'raises an error if the service in not available (bad url or whatever)' do
       bogus_id = '12345'
-      expect { described_class.send(:get_solr_xml, box_id: bogus_id) }.to raise_error
+      expect { described_class.send(:get_solr_xml, box_id: bogus_id) }.to raise_error(Faraday::ResourceNotFound)
     end
 
   end
