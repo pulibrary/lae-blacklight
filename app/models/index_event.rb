@@ -105,7 +105,7 @@ class IndexEvent < ActiveRecord::Base
 
     protected
     def solr_url
-      "#{Blacklight.solr_yml[Rails.env]['url']}"
+      "#{Blacklight.blacklight_yml[Rails.env]['url']}"
     end
 
     def boxes_url

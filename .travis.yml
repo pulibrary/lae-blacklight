@@ -5,7 +5,7 @@ rvm:
 
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - cp config/solr.yml.tmpl config/solr.yml
+  - cp config/blacklight.yml.tmpl config/blacklight.yml
   - cp config/secrets.yml.tmpl config/secrets.yml
   - mysql -e 'create database lae_blacklight_test;'
 
