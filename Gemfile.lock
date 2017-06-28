@@ -293,6 +293,8 @@ GEM
     rdf-turtle (2.2.0)
       ebnf (~> 1.1)
       rdf (~> 2.2)
+    rdf-vocab (2.2.2)
+      rdf (~> 2.2)
     rdf-xsd (2.2.0)
       rdf (~> 2.1)
     rdoc (4.3.0)
@@ -436,6 +438,7 @@ DEPENDENCIES
   rails-controller-testing
   rdf-rdfxml (~> 2.0.0)
   rdf-turtle (~> 2.2.0)
+  rdf-vocab
   rsolr (~> 1.0.10)
   rspec-rails (~> 3.0)
   sass-rails

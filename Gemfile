@@ -61,6 +61,7 @@ gem 'faraday', '~> 0.9.0'
 
 gem 'rdf-rdfxml', '~> 2.0.0'
 gem 'rdf-turtle', '~> 2.2.0'
+gem 'rdf-vocab'
 
 # Rails engine for static pages.
 gem 'high_voltage', '~> 3.0.0'
