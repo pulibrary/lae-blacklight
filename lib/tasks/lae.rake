@@ -75,7 +75,7 @@ namespace :lae do
     if Rails.env.development?
       begin
         fp = Rails.root.join('spec','fixtures', 'files', '208_solr_docs.xml.gz')
-        solr_url = "#{Blacklight.solr_yml[Rails.env]['url']}"
+        solr_url = "#{Blacklight.blacklight_yml[Rails.env]['url']}"
         solr = RSolr.connect(url: solr_url)
         solr.delete_by_query(['*:*'])
 
