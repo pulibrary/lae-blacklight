@@ -41,7 +41,6 @@ gem 'iiif-presentation'
 gem 'modernizr-rails'
 gem 'font-awesome-sass'
 
-
 gem "mail_form"
 gem "simple_form"
 
@@ -57,7 +56,7 @@ gem "devise"
 gem "devise-guests", "~> 0.3"
 
 gem 'rsolr', '~> 1.0.10'
-gem 'faraday', '~> 0.9.0'
+gem 'faraday'
 
 gem 'rdf-rdfxml', '~> 2.0.0'
 gem 'rdf-turtle', '~> 2.2.0'
@@ -69,8 +68,8 @@ gem 'high_voltage', '~> 3.0.0'
 group :test, :development do
   gem 'coveralls', require: false
   gem 'jettywrapper', '~> 1.7'
-  gem 'rspec-rails', '~> 3.0'
-  gem 'capybara', '~> 2.4.4'
+  gem 'rspec-rails', '~> 3.5.0'
+  gem 'capybara'
   gem 'byebug'
   gem 'pry-byebug'
 end
@@ -81,7 +80,6 @@ group :development do
 end
 
 group :test do
-  gem 'nokogiri', '~> 1.6.7'
   gem 'vcr', '~> 2.9.3'
   gem 'webmock'
   gem 'rails-controller-testing'
