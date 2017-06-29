@@ -160,6 +160,7 @@
       <analyzer>
         <!-- <tokenizer class="solr.WhitespaceTokenizerFactory"/> -->
         <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.ICUFoldingFilterFactory" />
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="lang/stopwords_en.txt" />
@@ -180,6 +181,7 @@
       <analyzer>
         <!-- <tokenizer class="solr.WhitespaceTokenizerFactory"/> -->
         <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.ICUFoldingFilterFactory" />
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="lang/stopwords_es.txt" />
@@ -199,6 +201,7 @@
       <analyzer>
         <!-- <tokenizer class="solr.WhitespaceTokenizerFactory"/> -->
         <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.ICUFoldingFilterFactory" />
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="lang/stopwords_pt.txt" />
@@ -219,6 +222,7 @@
       <analyzer>
         <!-- <tokenizer class="solr.WhitespaceTokenizerFactory"/> -->
         <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.ICUFoldingFilterFactory" />
         <filter class="solr.WordDelimiterFilterFactory"
                 generateWordParts="1" generateNumberParts="1" 
                 catenateWords="1" catenateNumbers="1" 
@@ -234,7 +238,6 @@
       </analyzer>
     </fieldType>
 
-
     <fieldType name="textSpell" class="solr.TextField" positionIncrementGap="100" >
       <analyzer>
         <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -243,6 +246,15 @@
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
       </analyzer>
+    </fieldType>
+
+    <fieldType class="solr.TextField" name="textSuggest" positionIncrementGap="100">
+       <analyzer>
+          <tokenizer class="solr.KeywordTokenizerFactory"/>
+          <filter class="solr.StandardFilterFactory"/>
+          <filter class="solr.LowerCaseFilterFactory"/>
+          <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+       </analyzer>
     </fieldType>
 
     <fieldType name="alphaOnlySort" class="solr.TextField" sortMissingLast="true" omitNorms="true">
@@ -260,7 +272,6 @@
     <fieldtype name="ignored" stored="false" indexed="false" multiValued="true" 
                class="solr.StrField" />
  </types>
-
 
  <fields>
    <!-- Valid attributes for fields:
@@ -401,7 +412,4 @@
    <copyField source="subject_topic_facet" dest="subject_spell"/>
    <copyField source="subject_t" dest="subject_spell"/>
    <copyField source="subject_addl_t" dest="subject_spell"/>  
-
-
-
 </schema>
