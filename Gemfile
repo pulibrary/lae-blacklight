@@ -64,11 +64,12 @@ gem 'rdf-vocab'
 
 # Rails engine for static pages.
 gem 'high_voltage', '~> 3.0.0'
+gem 'solr_wrapper', '~> 0.22'
 
+gem 'rspec-rails', '~> 3.5.0'
+  
 group :test, :development do
   gem 'coveralls', require: false
-  gem 'solr_wrapper', '~> 0.22'
-  gem 'rspec-rails', '~> 3.5.0'
   gem 'capybara'
   gem 'byebug'
   gem 'pry-byebug'
