@@ -85,15 +85,15 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
     describe 'time stamps' do
       it 'registers a start time' do
         IndexEvent.record { x = 1 }
-        expect(IndexEvent.last.start).to_not be nil
+        expect(IndexEvent.last.start).not_to be nil
       end
       it 'registers a finish time' do
         IndexEvent.record { x = 1 }
-        expect(IndexEvent.last.finish).to_not be nil
+        expect(IndexEvent.last.finish).not_to be nil
       end
       it 'registers a finish time when an exception occurs' do
         IndexEvent.record { raise }
-        expect(IndexEvent.last.finish).to_not be nil
+        expect(IndexEvent.last.finish).not_to be nil
       end
     end
   end

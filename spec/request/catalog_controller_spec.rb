@@ -26,7 +26,7 @@ RSpec.describe CatalogController, type: :request do
           RDF::Reader.for(:turtle).new(response.body) do |reader|
             reader.each_statement(&:inspect)
           end
-        end.to_not raise_error
+        end.not_to raise_error
       end
 
       it 'has the correct content-type' do
@@ -47,7 +47,7 @@ RSpec.describe CatalogController, type: :request do
           RDF::Reader.for(:rdfxml).new(response.body) do |reader|
             reader.each_statement(&:inspect)
           end
-        end.to_not raise_error
+        end.not_to raise_error
         expect(response.headers['Content-Type']).to eq 'application/rdf+xml; charset=utf-8'
       end
 

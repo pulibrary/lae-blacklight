@@ -29,3 +29,9 @@ Rails/Output:
 Rails/TimeZone:
   Exclude:
     - 'lib/tasks/lae.rake'
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
