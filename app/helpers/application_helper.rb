@@ -128,8 +128,7 @@ module ApplicationHelper
                                                     :start => 0,
                                                     :rows => 1,
                                                     :wt => :ruby,
-                                                    :index => true,
-                                                   }
+                                                    :index => true, }
     solr_response['response']['docs'][0]
   end
 

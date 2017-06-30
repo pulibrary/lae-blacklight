@@ -43,8 +43,8 @@ module FacetsHelper
   end
 
   def pivot_facet_field_in_params? pivot
-      in_params = false
-      pivot.each { |field| in_params = true if params[:f] and params[:f][field] }
-      return in_params
+    in_params = false
+    pivot.each { |field| in_params = true if params[:f] and params[:f][field] }
+    return in_params
   end
 end
