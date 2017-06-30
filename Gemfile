@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 gem 'bundler', '>= 1.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.7'
+gem 'rails', '~> 5.1.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
-gem 'compass-rails', '~> 2.0.4'
+gem 'compass-rails', '~> 3.0.2'
 gem 'breakpoint'
 gem 'singularitygs'
 gem 'bourbon', '~> 4.2.7'
@@ -14,7 +14,7 @@ gem 'bitters', '~> 1.2.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 2.7.2'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.2.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 
@@ -32,15 +32,14 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'blacklight', '~> 5.18.0'
+gem 'blacklight', '~> 6.10'
 gem 'blacklight-gallery', '~> 0.4'
-gem "blacklight_range_limit"
+gem 'blacklight_range_limit', '~> 6.1'
 
 gem 'iiif-presentation'
 
 gem 'modernizr-rails'
 gem 'font-awesome-sass'
-
 
 gem "mail_form"
 gem "simple_form"
@@ -56,20 +55,22 @@ gem 'capistrano-passenger'
 gem "devise"
 gem "devise-guests", "~> 0.3"
 
-gem 'rsolr', '~> 1.0.10'
-gem 'faraday', '~> 0.9.0'
+gem 'rsolr'
+gem 'faraday'
 
-gem 'rdf-rdfxml', '~> 1.1.3'
-gem 'rdf-turtle', '~> 1.1.4'
+gem 'rdf-rdfxml', github: 'ruby-rdf/rdf-rdfxml', branch: :develop
+gem 'rdf-turtle', '~> 2.2.0'
+gem 'rdf-vocab'
 
 # Rails engine for static pages.
-gem 'high_voltage', '~> 2.2.1'
+gem 'high_voltage', '~> 3.0.0'
+gem 'solr_wrapper', '~> 0.22'
 
+gem 'rspec-rails', '~> 3.5.0'
+  
 group :test, :development do
   gem 'coveralls', require: false
-  gem 'jettywrapper', '~> 1.7'
-  gem 'rspec-rails', '~> 3.0'
-  gem 'capybara', '~> 2.4.4'
+  gem 'capybara'
   gem 'byebug'
   gem 'pry-byebug'
 end
@@ -80,7 +81,7 @@ group :development do
 end
 
 group :test do
-  gem 'nokogiri', '~> 1.6.7'
   gem 'vcr', '~> 2.9.3'
   gem 'webmock'
+  gem 'rails-controller-testing'
 end

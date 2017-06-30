@@ -6,9 +6,9 @@ module LaeExportExtension
   end
 
   PREFIXES ||= {
-    dc: RDF::DC.to_uri,
+    dc: RDF::Vocab::DC.to_uri,
     dctype: RDF::URI.new('http://purl.org/dc/dcmitype/'),
-    foaf: RDF::FOAF.to_uri,
+    foaf: RDF::Vocab::FOAF.to_uri,
     geonames:  RDF::URI.new('http://sws.geonames.org/'),
     lae: RDF::URI.new('http://lae.princeton.edu/'),
     lang: RDF::URI.new('http://id.loc.gov/vocabulary/iso639-2/'),

@@ -1,6 +1,7 @@
 set :stage, :production
 set :rails_env, 'production'
 
+set :branch, ENV['BRANCH'] || 'master'
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group

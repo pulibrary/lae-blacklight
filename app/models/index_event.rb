@@ -36,7 +36,7 @@ class IndexEvent < ActiveRecord::Base
       IndexEvent.record do
         puts 'Deleting index' if defined?(Rake)
         solr = RSolr.connect(url: solr_url)
-        solr.delete_by_query(['*:*'])
+        solr.delete_by_query('*:*')
         solr.commit
       end
     end
@@ -99,13 +99,13 @@ class IndexEvent < ActiveRecord::Base
 
     def post_to_solr(xml_str)
       solr = RSolr.connect(url: solr_url)
-      solr.update(data: xml_str)
+      solr.update(data: xml_str, headers: { 'Content-Type' => 'text/xml' })
       solr.commit
     end
 
     protected
     def solr_url
-      "#{Blacklight.solr_yml[Rails.env]['url']}"
+      "#{Blacklight.blacklight_yml[Rails.env]['url']}"
     end
 
     def boxes_url
@@ -119,18 +119,5 @@ class IndexEvent < ActiveRecord::Base
     def folder_url(id)
       "#{PULSTORE_CONFIG[Rails.env]['url']}/folders/#{id}.xml"
     end
-
-
-
   end
-
 end
-
-
-
-
-
-
-
-
-

@@ -18,12 +18,12 @@ RSpec.describe CatalogController, type: :request do
     describe 'gets a catalog record as turtle' do
 
       it 'responds with 200' do
-        get catalog_path(doc_ids[0], :ttl)
+        get solr_document_path(doc_ids[0], :ttl)
         expect(response.status).to be(200)
       end
 
       it 'returns parseable turtle' do
-        get catalog_path(doc_ids[1], :ttl)
+        get solr_document_path(doc_ids[1], :ttl)
         expect {
           RDF::Reader.for(:turtle).new(response.body) do |reader|
             reader.each_statement { |s| s.inspect }
@@ -32,7 +32,7 @@ RSpec.describe CatalogController, type: :request do
       end
 
       it 'has the correct content-type' do
-        get catalog_path(doc_ids[2], :ttl)
+        get solr_document_path(doc_ids[2], :ttl)
         expect(response.headers['Content-Type']).to eq 'text/turtle; charset=utf-8'
       end
     end
@@ -40,12 +40,12 @@ RSpec.describe CatalogController, type: :request do
     describe 'gets a catalog record as rdfxml' do
 
       it 'responds with 200' do
-        get catalog_path(doc_ids[0], :rdf)
+        get solr_document_path(doc_ids[0], :rdf)
         expect(response.status).to be(200)
       end
 
       it 'returns parseable rdf-xml' do
-        get catalog_path(doc_ids[1], :rdf)
+        get solr_document_path(doc_ids[1], :rdf)
         expect {
           RDF::Reader.for(:rdfxml).new(response.body) do |reader|
             reader.each_statement { |s| s.inspect }
@@ -55,7 +55,7 @@ RSpec.describe CatalogController, type: :request do
       end
 
       it 'has the correct content-type' do
-        get catalog_path(doc_ids[2], :rdf)
+        get solr_document_path(doc_ids[2], :rdf)
         expect(response.headers['Content-Type']).to eq 'application/rdf+xml; charset=utf-8'
       end
 
@@ -66,18 +66,18 @@ RSpec.describe CatalogController, type: :request do
   describe 'manifest services' do
 
     it 'responds with 200' do
-      get catalog_path(doc_ids[0], :jsonld)
+      get solr_document_path(doc_ids[0], :jsonld)
       expect(response.status).to be(200)
     end
 
     it 'returns parseable jsonld that parses as a IIIF Manifest' do
-      get catalog_path(doc_ids[1], :jsonld)
+      get solr_document_path(doc_ids[1], :jsonld)
       expect(IIIF::Service.parse(response.body).class).to be IIIF::Presentation::Manifest
       expect(response.headers['Content-Type']).to eq 'application/ld+json; charset=utf-8'
     end
 
     it 'has the correct content-type' do
-      get catalog_path(doc_ids[2], :jsonld)
+      get solr_document_path(doc_ids[2], :jsonld)
       expect(response.headers['Content-Type']).to eq 'application/ld+json; charset=utf-8'
     end
 

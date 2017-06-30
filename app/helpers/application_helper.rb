@@ -111,7 +111,7 @@ module ApplicationHelper
   end
 
   def get_recent_documents
-    solr = RSolr.connect(Blacklight.solr_config)
+    solr = RSolr.connect(url: Blacklight.connection_config[:url])
     solr_response = solr.get 'select', :params => {:qt => "search", 
                                                    :start => 0, 
                                                    :rows => 8, 
@@ -123,7 +123,7 @@ module ApplicationHelper
 
   def get_featured_document
     doc_id = self.random_sample_graphic
-    solr = RSolr.connect(Blacklight.solr_config)
+    solr = RSolr.connect(url: Blacklight.connection_config[:url])
     solr_response = solr.get 'select', :params => {:qt => "search",
                                                    :q => doc_id,
                                                    :start => 0, 
