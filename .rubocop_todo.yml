@@ -7,23 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-Lint/RescueException:
-  Exclude:
-    - 'app/models/index_event.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-Lint/UnusedBlockArgument:
-  Exclude:
-    - 'lib/tasks/server.rake'
-
-# Offense count: 4
-Lint/UselessAssignment:
-  Exclude:
-    - 'spec/models/index_event_spec.rb'
-
-# Offense count: 1
 Metrics/AbcSize:
   Max: 32
 

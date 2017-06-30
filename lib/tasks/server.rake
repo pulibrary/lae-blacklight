@@ -14,7 +14,7 @@ task :ci do
 end
 
 desc 'Run solr and orangelight for interactive development'
-task :server, [:rails_server_args] do |t, args|
+task :server, [:rails_server_args] do |_t, args|
   run_solr('development', port: '8983') do
     Rake::Task['lae:solr:index'].invoke
     system "bundle exec rails s #{args[:rails_server_args]}"

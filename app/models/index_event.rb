@@ -10,7 +10,7 @@ class IndexEvent < ActiveRecord::Base
         event.success = true
         event.task = Rake.application.top_level_tasks.first if defined?(Rake)
         yield
-      rescue Exception => e
+      rescue StandardError => e
         event.success = false
         event.error_text = "#{e.class}: #{e.message}"
         STDERR.puts e.message if defined?(Rake)
