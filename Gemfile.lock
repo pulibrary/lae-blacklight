@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/ruby-rdf/rdf-rdfxml.git
+  revision: 9f43ed940d0122f1c9b43f255ad4b558455708ea
+  branch: develop
+  specs:
+    rdf-rdfxml (2.0.0)
+      htmlentities (~> 4.3)
+      rdf (~> 2.0)
+      rdf-rdfa (~> 2.0)
+      rdf-xsd (~> 2.0)
+
+GIT
   remote: https://github.com/pulibrary/pul_uv_rails.git
   revision: 4ae89c38c86cb3479374139df2dc19d6016597a1
   tag: v1.7.27
@@ -278,11 +289,6 @@ GEM
       rdf (~> 2.2)
       rdf-aggregate-repo (~> 2.2)
       rdf-xsd (~> 2.1)
-    rdf-rdfxml (2.0.0)
-      htmlentities (~> 4.3)
-      rdf (~> 2.0)
-      rdf-rdfa (~> 2.0)
-      rdf-xsd (~> 2.0)
     rdf-turtle (2.2.0)
       ebnf (~> 1.1)
       rdf (~> 2.2)
@@ -434,7 +440,7 @@ DEPENDENCIES
   pul_uv_rails!
   rails (~> 5.1.0)
   rails-controller-testing
-  rdf-rdfxml (~> 2.0.0)
+  rdf-rdfxml!
   rdf-turtle (~> 2.2.0)
   rdf-vocab
   rsolr

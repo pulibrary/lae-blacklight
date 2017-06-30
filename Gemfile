@@ -58,7 +58,7 @@ gem "devise-guests", "~> 0.3"
 gem 'rsolr'
 gem 'faraday'
 
-gem 'rdf-rdfxml', '~> 2.0.0'
+gem 'rdf-rdfxml', github: 'ruby-rdf/rdf-rdfxml', branch: :develop
 gem 'rdf-turtle', '~> 2.2.0'
 gem 'rdf-vocab'
 
