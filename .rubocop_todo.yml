@@ -19,13 +19,6 @@ Lint/UnusedBlockArgument:
     - 'lib/tasks/server.rake'
 
 # Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
-Lint/UnusedMethodArgument:
-  Exclude:
-    - 'app/helpers/application_helper.rb'
-
-# Offense count: 4
 Lint/UselessAssignment:
   Exclude:
     - 'spec/models/index_event_spec.rb'
@@ -122,7 +115,3 @@ Rails/TimeZone:
   Exclude:
     - 'lib/tasks/lae.rake'
 
-# # Offense count: 2
-# Style/AccessorMethodName:
-#   Exclude:
-#     - 'app/helpers/application_helper.rb'

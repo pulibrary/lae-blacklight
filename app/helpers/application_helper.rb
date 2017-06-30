@@ -76,11 +76,11 @@ module ApplicationHelper
     image_tag "#{document['thumbnail_base']}/full/!#{image_options[:height]},#{image_options[:width]}/0/default.png"
   end
 
-  def render_square_thumbnail(document, image_options = {})
+  def render_square_thumbnail(document)
     image_tag "#{document['thumbnail_base']}/full/!400,400/0/default.png"
   end
 
-  def render_fullsize_thumbnail(document, image_options = {})
+  def render_fullsize_thumbnail(document)
     return unless document.nil?
     image_tag "#{document['thumbnail_base']}/full/!600,600/0/default.jpg"
   end
@@ -89,7 +89,7 @@ module ApplicationHelper
     "/catalog/#{document['id']}"
   end
 
-  def first_id_from_manfiest(document, image_options = {})
+  def first_id_from_manfiest(document)
     document['thumbnail_base']
   end
 
@@ -98,7 +98,7 @@ module ApplicationHelper
   #
   # @param [SolrDocument]
   # @return [String]
-  def render_lae_document_sidebar_partial(document = @document)
+  def render_lae_document_sidebar_partial
     render partial: 'show_sidebar'
   end
 
