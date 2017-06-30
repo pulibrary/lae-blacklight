@@ -20,8 +20,8 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  #config.serve_static_assets = false
-  #config.serve_static_files = false
+  # config.serve_static_assets = false
+  # config.serve_static_files = false
   config.serve_static_files = true
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -61,7 +61,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  # use mail relay per John K. 
+  # use mail relay per John K.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'dss.princeton.edu',

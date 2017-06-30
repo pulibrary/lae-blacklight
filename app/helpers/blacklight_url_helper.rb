@@ -6,7 +6,6 @@ module BlacklightUrlHelper
   # is suitable for a redirect. See
   # add_facet_params_and_redirect
   def add_facet_params(field, item, source_params = params)
-
     if item.respond_to? :field
       field = item.field
     end
@@ -22,17 +21,16 @@ module BlacklightUrlHelper
     if facet_config.single and not p[:f][field].empty?
       p[:f][field] = []
     end
-    
+
     p[:f][field].push(value)
     p[:f][field].uniq!
 
     if item and item.respond_to?(:fq) and item.fq
-      item.fq.each do |f,v|
+      item.fq.each do |f, v|
         p = add_facet_params(f, v, p)
       end
     end
 
     p
   end
-  
 end

@@ -3,7 +3,6 @@ require 'faraday'
 require 'yaml'
 
 namespace :lae do
-
   # TODO: we need an optimize task when we have spellcheck going; that's when
   # the spellcheck index is built (recommended, can be changed to index time but
   # takes a while and we may not want to do it every time.)
@@ -11,7 +10,7 @@ namespace :lae do
   task index: :environment do
     data = IndexEvent.get_boxes_data
     IndexEvent.delete_index
-    data.select{ |box| !box['last_mod_prod_folder'].nil? }.each do |box|
+    data.select { |box| !box['last_mod_prod_folder'].nil? }.each do |box|
       IndexEvent.index_resource(box_id: box['id'])
     end
     IndexEvent.optimize

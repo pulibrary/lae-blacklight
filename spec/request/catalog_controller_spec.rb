@@ -3,7 +3,6 @@ require 'rdf/turtle'
 require 'iiif/presentation'
 
 RSpec.describe CatalogController, type: :request do
-
   let(:fixture_box_id) { 'puls:00014' }
   let(:doc_ids) { ['004kr', '006tx', '00b84'] }
   let(:solr_xml_string) { IO.read(File.join(Rails.root, 'spec/fixtures/files/solr.xml')) }
@@ -14,9 +13,7 @@ RSpec.describe CatalogController, type: :request do
   end
 
   describe 'rdf services' do
-
     describe 'gets a catalog record as turtle' do
-
       it 'responds with 200' do
         get solr_document_path(doc_ids[0], :ttl)
         expect(response.status).to be(200)
@@ -38,7 +35,6 @@ RSpec.describe CatalogController, type: :request do
     end
 
     describe 'gets a catalog record as rdfxml' do
-
       it 'responds with 200' do
         get solr_document_path(doc_ids[0], :rdf)
         expect(response.status).to be(200)
@@ -58,13 +54,10 @@ RSpec.describe CatalogController, type: :request do
         get solr_document_path(doc_ids[2], :rdf)
         expect(response.headers['Content-Type']).to eq 'application/rdf+xml; charset=utf-8'
       end
-
     end
-
   end
 
   describe 'manifest services' do
-
     it 'responds with 200' do
       get solr_document_path(doc_ids[0], :jsonld)
       expect(response.status).to be(200)
@@ -80,7 +73,5 @@ RSpec.describe CatalogController, type: :request do
       get solr_document_path(doc_ids[2], :jsonld)
       expect(response.headers['Content-Type']).to eq 'application/ld+json; charset=utf-8'
     end
-
   end
-
 end

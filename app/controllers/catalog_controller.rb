@@ -1,7 +1,6 @@
 # -*- encoding : utf-8 -*-
 #
 class CatalogController < ApplicationController
-
   include Blacklight::Catalog
   helper Openseadragon::OpenseadragonHelper
 
@@ -10,8 +9,8 @@ class CatalogController < ApplicationController
     config.view.masonry.partials = [:index]
     # config.view.slideshow.partials = [:index]
     config.index.thumbnail_method = :thumbnail_from_manifest
-    #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
-    #config.show.partials.insert(0, :openseadragon)
+    # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
+    # config.show.partials.insert(0, :openseadragon)
     config.index.display_type_field = 'genre_pul_label_facet'
     config.show.partials = [:show_header, :show_viewer, :show, :show_similar]
 
@@ -27,10 +26,10 @@ class CatalogController < ApplicationController
     }
 
     # solr path which will be added to solr base url before the other solr params.
-    #config.solr_path = 'select'
+    # config.solr_path = 'select'
 
     # items to show per page, each number in the array represent another option to choose from.
-    config.per_page = [12,24,48]
+    config.per_page = [12, 24, 48]
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
@@ -84,8 +83,6 @@ class CatalogController < ApplicationController
     config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
     config.add_facet_field 'category_subject_facet', label: 'Subjects', :pivot => ['category_facet', 'subject_label_facet']
 
-
-
     # config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
     #    :years_5 => { label: 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
     #    :years_10 => { label: 'within 10 Years', :fq => "pub_date:[#{Time.now.year - 10 } TO *]" },
@@ -129,7 +126,6 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise.
 
     config.add_search_field 'all_fields', label: 'Keyword'
-
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
@@ -190,8 +186,4 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
-
 end
-
-
-

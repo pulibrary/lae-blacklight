@@ -1,10 +1,8 @@
 class IndexEvent < ActiveRecord::Base
-
   PULSTORE_CONFIG ||= YAML.load_file(File.join(Rails.root, 'config/pulstore.yml'))
   INDEXING_TASKS =
 
   class << self
-
     def record
       event = IndexEvent.new
       event.start = Time.now.utc
@@ -23,7 +21,7 @@ class IndexEvent < ActiveRecord::Base
     # Raises exceptions that indicate HTTP problems
     # options:
     #   url: Where to get the data from. Default: #boxes_url
-    def get_boxes_data(opts={})
+    def get_boxes_data(opts = {})
       url = opts.fetch(:url, boxes_url)
       conn = Faraday.new(url) do |c|
         c.use Faraday::Response::RaiseError
@@ -62,7 +60,7 @@ class IndexEvent < ActiveRecord::Base
     #  * box_id
     #  * folder_id
     # Raises exceptions that indicate HTTP problems (from #get_solr_xml)
-    def index_resource(opts={})
+    def index_resource(opts = {})
       IndexEvent.record do
         IndexEvent.post_to_solr(IndexEvent.get_solr_xml(opts))
       end
@@ -104,6 +102,7 @@ class IndexEvent < ActiveRecord::Base
     end
 
     protected
+
     def solr_url
       "#{Blacklight.blacklight_yml[Rails.env]['url']}"
     end

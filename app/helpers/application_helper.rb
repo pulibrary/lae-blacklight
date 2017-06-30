@@ -2,7 +2,6 @@ require 'json'
 require 'iiif/presentation'
 
 module ApplicationHelper
-
   def image_ids_labels_from_manifest(manifest)
     ids_labels = []
     manifest.sequences.first.canvases.each do |canvas|
@@ -13,20 +12,20 @@ module ApplicationHelper
   end
 
   ## This is rather lame, but it gives returns a JSON
-  ## structure with images and labels for the iiiF 
-  ## Jquery plugin 
+  ## structure with images and labels for the iiiF
+  ## Jquery plugin
   def image_ids_labels_from_manifest_as_hash(manifest)
     ids_labels = []
     page_number = 0
     manifest.sequences.first.canvases.each do |canvas|
       page_number = page_number + 1
       id = canvas.images.first.resource.service['@id']
-      if canvas['label'].nil? 
+      if canvas['label'].nil?
         label = "Page #{page_number}"
-      else 
+      else
         label = canvas['label']
       end
-      ids_labels << {'id' => strip_iiif_server_base_from_id(id), 'label' => label}
+      ids_labels << { 'id' => strip_iiif_server_base_from_id(id), 'label' => label }
     end
     ids_labels
   end
@@ -73,12 +72,12 @@ module ApplicationHelper
     end
   end
 
-  def facet_query_for_label_and_value(label,value)
-    query={"f[#{facet_for_label(label)}][]" => value }.to_param
+  def facet_query_for_label_and_value(label, value)
+    query = { "f[#{facet_for_label(label)}][]" => value }.to_param
     "#{request.protocol}#{request.host_with_port}/catalog?#{query}"
   end
 
-  def thumbnail_from_manifest document, image_options = {:height => '400', :width => '400'}
+  def thumbnail_from_manifest document, image_options = { :height => '400', :width => '400' }
     image_tag "#{document['thumbnail_base']}/full/!#{image_options[:height]},#{image_options[:width]}/0/default.png"
   end
 
@@ -100,7 +99,6 @@ module ApplicationHelper
     document['thumbnail_base']
   end
 
-
   ##
   # Render the sidebar partial for a document
   #
@@ -112,24 +110,24 @@ module ApplicationHelper
 
   def get_recent_documents
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
-    solr_response = solr.get 'select', :params => {:qt => "search", 
-                                                   :start => 0, 
-                                                   :rows => 8, 
-                                                   :wt => :ruby, 
-                                                   :index => true,
-                                                   :sort => 'date_modified desc' }
+    solr_response = solr.get 'select', :params => { :qt => "search",
+                                                    :start => 0,
+                                                    :rows => 8,
+                                                    :wt => :ruby,
+                                                    :index => true,
+                                                    :sort => 'date_modified desc' }
     solr_response['response']['docs']
   end
 
   def get_featured_document
     doc_id = self.random_sample_graphic
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
-    solr_response = solr.get 'select', :params => {:qt => "search",
-                                                   :q => doc_id,
-                                                   :start => 0, 
-                                                   :rows => 1, 
-                                                   :wt => :ruby, 
-                                                   :index => true,
+    solr_response = solr.get 'select', :params => { :qt => "search",
+                                                    :q => doc_id,
+                                                    :start => 0,
+                                                    :rows => 1,
+                                                    :wt => :ruby,
+                                                    :index => true,
                                                    }
     solr_response['response']['docs'][0]
   end
@@ -140,16 +138,15 @@ module ApplicationHelper
 
   def render_brief_doc_metadata(document)
     bf = Hash.new
-    bf[:date] ||= document['date_display'] 
+    bf[:date] ||= document['date_display']
     bf[:publisher] = document['publisher_display'].first if document.has_key?('publisher_display')
-    bf[:origin] ||= document['geographic_origin_label'].first 
-    render partial: 'brief_document_metadata', :locals => { :bf => bf } 
+    bf[:origin] ||= document['geographic_origin_label'].first
+    render partial: 'brief_document_metadata', :locals => { :bf => bf }
   end
 
   def random_sample_graphic
     image_pids = LAE_CONFIG['featured_objects']
     sample_pid = image_pids.shuffle[0]
     sample_pid
-  end 
-
+  end
 end

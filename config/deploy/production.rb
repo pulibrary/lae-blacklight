@@ -7,10 +7,9 @@ set :rails_env, 'production'
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-#role :app, %w{deploy@libruby-prod}
-#role :web, %w{deploy@libruby-prod}
-#role :db,  %w{deploy@libruby-prod}
-
+# role :app, %w{deploy@libruby-prod}
+# role :web, %w{deploy@libruby-prod}
+# role :db,  %w{deploy@libruby-prod}
 
 # Extended Server Syntax
 # ======================
@@ -19,7 +18,6 @@ set :rails_env, 'production'
 # used to set extended properties on the server.
 
 server 'libruby-prod', user: 'deploy', roles: %w{web app db}, my_property: :my_value
-
 
 # Custom SSH Options
 # ==================

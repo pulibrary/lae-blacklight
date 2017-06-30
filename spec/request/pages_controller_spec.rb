@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :request do
-
   describe "get /about" do
     subject { get('/about') }
     it 'should respond with 200' do
@@ -12,7 +11,6 @@ RSpec.describe PagesController, type: :request do
     end
   end
 
-
   describe 'get /' do
     subject { get('/') }
     it 'should respond with 200' do
@@ -22,6 +20,4 @@ RSpec.describe PagesController, type: :request do
       expect(subject).to render_template('index')
     end
   end
-
 end
-

@@ -16,7 +16,7 @@ gem 'uglifier', '>= 2.7.2'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.2.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -30,7 +30,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'blacklight', '~> 6.10'
 gem 'blacklight-gallery', '~> 0.4'
