@@ -10,3 +10,9 @@ AllCops:
     - 'db/schema.rb'
     - 'config/deploy.rb'
     - 'vendor/**/*'
+
+Style/FileName:
+  Exclude:
+    - '**/Gemfile'
+    - '**/*.rake'
+    - 'Capfile'

@@ -126,19 +126,3 @@ Rails/TimeZone:
 Style/AccessorMethodName:
   Exclude:
     - 'app/helpers/application_helper.rb'
-
-# Offense count: 1
-# Configuration parameters: ExpectMatchingDefinition, Regex, IgnoreExecutableScripts, AllowedAcronyms.
-# AllowedAcronyms: CLI, DSL, ACL, API, ASCII, CPU, CSS, DNS, EOF, GUID, HTML, HTTP, HTTPS, ID, IP, JSON, LHS, QPS, RAM, RHS, RPC, SLA, SMTP, SQL, SSH, TCP, TLS, TTL, UDP, UI, UID, UUID, URI, URL, UTF8, VM, XML, XMPP, XSRF, XSS
-Style/FileName:
-  Exclude:
-    - '**/Gemfile'
-    - '**/*.rake'
-    - 'Capfile'
-
-# Offense count: 4
-# Configuration parameters: MinBodyLength.
-# Style/GuardClause:
-#   Exclude:
-#     - 'app/helpers/application_helper.rb'
-#     - 'lib/tasks/lae.rake'
