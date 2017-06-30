@@ -77,19 +77,8 @@ class IndexEvent < ActiveRecord::Base
       #  * box_id
       #  * folder_id
       def get_solr_xml(opts)
-        box_id = opts.fetch(:box_id, nil)
-        folder_id = opts.fetch(:folder_id, nil)
-        if [box_id, folder_id].all?(&:nil?)
-          raise 'A box_id or folder_id must be supplied'
-        end
-        url = nil
-        if box_id
-          puts "Getting Box #{box_id}" if defined?(Rake)
-          url = box_url(box_id)
-        else
-          puts "Getting Folder #{folder_id}" if defined?(Rake)
-          url = folder_url(folder_id)
-        end
+        url = item_url(opts)
+        raise 'A box_id or folder_id must be supplied' unless url
         conn = Faraday.new(url) do |c|
           c.use Faraday::Response::RaiseError
           c.use Faraday::Adapter::NetHttp
@@ -105,20 +94,35 @@ class IndexEvent < ActiveRecord::Base
 
       protected
 
-      def solr_url
-        (Blacklight.blacklight_yml[Rails.env]['url']).to_s
-      end
+        def solr_url
+          (Blacklight.blacklight_yml[Rails.env]['url']).to_s
+        end
 
-      def boxes_url
-        "#{PULSTORE_CONFIG[Rails.env]['url']}/boxes.json"
-      end
+        def boxes_url
+          "#{PULSTORE_CONFIG[Rails.env]['url']}/boxes.json"
+        end
 
-      def box_url(id)
-        "#{PULSTORE_CONFIG[Rails.env]['url']}/boxes/#{id}.xml"
-      end
+        def box_url(id)
+          "#{PULSTORE_CONFIG[Rails.env]['url']}/boxes/#{id}.xml"
+        end
 
-      def folder_url(id)
-        "#{PULSTORE_CONFIG[Rails.env]['url']}/folders/#{id}.xml"
-      end
+        def folder_url(id)
+          "#{PULSTORE_CONFIG[Rails.env]['url']}/folders/#{id}.xml"
+        end
+
+        def item_url(opts)
+          box_id = opts.fetch(:box_id, nil)
+          folder_id = opts.fetch(:folder_id, nil)
+          return nil unless box_id || folder_id
+          if box_id
+            puts "Getting Box #{box_id}" if defined?(Rake)
+            url = box_url(box_id)
+          else
+            puts "Getting Folder #{folder_id}" if defined?(Rake)
+            url = folder_url(folder_id)
+          end
+
+          url
+        end
     end
 end
