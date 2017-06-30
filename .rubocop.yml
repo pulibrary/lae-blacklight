@@ -21,3 +21,11 @@ Style/FileName:
     - '**/Gemfile'
     - '**/*.rake'
     - 'Capfile'
+
+Rails/Output:
+  Exclude:
+    - 'app/models/index_event.rb'
+
+Rails/TimeZone:
+  Exclude:
+    - 'lib/tasks/lae.rake'
