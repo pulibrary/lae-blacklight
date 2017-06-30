@@ -14,17 +14,18 @@ module FacetsHelper
     display_facet.respond_to?('value') ? "id=#{display_facet.field.parameterize}-#{display_facet.value.parameterize}" : ""
   end
 
+  # TODO: Write specs for this method and refactor.
+  # rubocop:disable CyclomaticComplexity, PerceivedComplexity
   def pivot_facet_in_params?(field, item)
     field = item.field if item && item.respond_to?(:field)
-
     value = facet_value_for_facet_item(item)
-
     pivot_in_params = true if params[:f] && params[:f][field] && params[:f][field].include?(value)
     unless item.items.blank?
       item.items.each { |pivot_item| pivot_in_params = true if pivot_facet_in_params?(pivot_item.field, pivot_item) }
     end
     pivot_in_params
   end
+  # rubocop:enable CyclomaticComplexity, PerceivedComplexity
 
   ##
   # Are any facet restrictions for a field in the query parameters?

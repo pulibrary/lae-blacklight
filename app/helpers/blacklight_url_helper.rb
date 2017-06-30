@@ -6,6 +6,8 @@ module BlacklightUrlHelper
   # Does NOT remove request keys and otherwise ensure that the hash
   # is suitable for a redirect. See
   # add_facet_params_and_redirect
+  # TODO: Write specs for this method and refactor.
+  # rubocop:disable AbcSize, CyclomaticComplexity, MethodLength, PerceivedComplexity
   def add_facet_params(field, item, source_params = params)
     field = item.field if item.respond_to? :field
 
@@ -30,4 +32,5 @@ module BlacklightUrlHelper
 
     p
   end
+  # rubocop:enable AbcSize, CyclomaticComplexity, MethodLength, PerceivedComplexity
 end

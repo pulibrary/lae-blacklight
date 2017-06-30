@@ -1,7 +1,6 @@
 require: rubocop-rspec
 inherit_gem:
   bixby: bixby_default.yml
-inherit_from: .rubocop_todo.yml
 
 AllCops:
   DisplayCopNames: true
@@ -16,11 +15,16 @@ Lint/UselessAssignment:
   Exclude:
     - 'spec/models/index_event_spec.rb'
 
-Style/FileName:
+Metrics/BlockLength:
   Exclude:
-    - '**/Gemfile'
-    - '**/*.rake'
-    - 'Capfile'
+    - 'app/controllers/catalog_controller.rb'
+    - 'spec/**/*'
+    - 'config/initializers/*'
+    - 'lib/tasks/lae.rake'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/**/*'
 
 Rails/Output:
   Exclude:
@@ -35,3 +39,9 @@ RSpec/ExampleLength:
 
 RSpec/MultipleExpectations:
   Enabled: false
+
+Style/FileName:
+  Exclude:
+    - '**/Gemfile'
+    - '**/*.rake'
+    - 'Capfile'
