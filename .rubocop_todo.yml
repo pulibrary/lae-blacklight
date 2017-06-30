@@ -33,19 +33,6 @@ Metrics/ModuleLength:
 Metrics/PerceivedComplexity:
   Max: 9
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: MaxKeyValuePairs.
-Performance/RedundantMerge:
-  Exclude:
-    - 'config/initializers/rack.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Performance/Sample:
-  Exclude:
-    - 'app/helpers/application_helper.rb'
-
 # Offense count: 2
 # Configuration parameters: Max.
 RSpec/ExampleLength:
@@ -97,4 +84,3 @@ Rails/Output:
 Rails/TimeZone:
   Exclude:
     - 'lib/tasks/lae.rake'
-

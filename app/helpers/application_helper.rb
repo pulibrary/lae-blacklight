@@ -139,7 +139,7 @@ module ApplicationHelper
 
   def random_sample_graphic
     image_pids = LAE_CONFIG['featured_objects']
-    sample_pid = image_pids.shuffle[0]
+    sample_pid = image_pids.sample
     sample_pid
   end
 end
