@@ -22,7 +22,7 @@ $ brew services start mysql
 ### Copy Configuration Files
 
 ```bash
-$ cp config/database.yml.travis config/database.yml
+$ cp config/database.yml.tmpl config/database.yml
 $ cp config/blacklight.yml.tmpl config/blacklight.yml
 $ cp config/secrets.yml.tmpl config/secrets.yml
 ```
