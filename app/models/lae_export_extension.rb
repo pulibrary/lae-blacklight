@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module LaeExportExtension
   def self.extended(document)
     document.will_export_as(:ttl, 'text/turtle')

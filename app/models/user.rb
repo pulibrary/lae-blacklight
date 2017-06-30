@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation if Rails::VERSION::MAJOR < 4
 # Connects this user object to Blacklights Bookmarks.

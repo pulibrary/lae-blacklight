@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # This migration comes from blacklight (originally 20140202020202)
 # -*- encoding : utf-8 -*-
 class CreateBookmarks < ActiveRecord::Migration[4.2]

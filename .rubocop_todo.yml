@@ -237,13 +237,6 @@ Style/FileName:
     - '**/*.rake'
     - 'Capfile'
 
-# Offense count: 57
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: when_needed, always, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 # Offense count: 4
 # Configuration parameters: MinBodyLength.
 Style/GuardClause:
