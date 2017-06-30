@@ -138,12 +138,7 @@ Style/FileName:
 
 # Offense count: 4
 # Configuration parameters: MinBodyLength.
-Style/GuardClause:
-  Exclude:
-    - 'app/helpers/application_helper.rb'
-    - 'lib/tasks/lae.rake'
-
-# Offense count: 1
-Style/MultilineBlockChain:
-  Exclude:
-    - 'lib/tasks/lae.rake'
+# Style/GuardClause:
+#   Exclude:
+#     - 'app/helpers/application_helper.rb'
+#     - 'lib/tasks/lae.rake'

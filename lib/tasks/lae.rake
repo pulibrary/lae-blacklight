@@ -31,7 +31,8 @@ namespace :lae do
 
     boxes = IndexEvent.get_boxes_data.select do |box|
       !box['last_mod_prod_folder'].nil?
-    end.select do |box|
+    end
+    boxes.select do |box|
       Time.parse(box['last_mod_prod_folder']['time']) > latest_index.start
     end
     if boxes.empty?
@@ -49,11 +50,8 @@ namespace :lae do
 
   desc 'Delete a single record from the index (supply the id: `id=12345 lae:delete_one`)'
   task delete_one: :environment do
-    if ENV['id'].nil?
-      raise 'No record id supplied'
-    else
-      IndexEvent.delete_one(ENV['id'])
-    end
+    return IndexEvent.delete_one(ENV['id']) unless ENV['id'].nil?
+    raise 'No record id supplied'
   end
 
   namespace :solr do

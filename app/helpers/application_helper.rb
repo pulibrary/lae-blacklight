@@ -57,20 +57,14 @@ module ApplicationHelper
 
   def label_has_facet?(label)
     label = label.singularize
-    if LABEL_METADATA.key?(label)
-      return LABEL_METADATA[label].key?(:facet_field)
-    else
-      return false
-    end
+    return false unless LABEL_METADATA.key?(label)
+    LABEL_METADATA[label].key?(:facet_field)
   end
 
   def label_has_schema_prop?(label)
     label = label.singularize
-    if LABEL_METADATA.key?(label)
-      return LABEL_METADATA[label].key?(:schema)
-    else
-      return false
-    end
+    return false unless LABEL_METADATA.key?(label)
+    LABEL_METADATA[label].key?(:schema)
   end
 
   def facet_query_for_label_and_value(label, value)
@@ -87,9 +81,8 @@ module ApplicationHelper
   end
 
   def render_fullsize_thumbnail(document, image_options = {})
-    unless document.nil?
-      image_tag "#{document['thumbnail_base']}/full/!600,600/0/default.jpg"
-    end
+    return unless document.nil?
+    image_tag "#{document['thumbnail_base']}/full/!600,600/0/default.jpg"
   end
 
   def doc_path(document)
