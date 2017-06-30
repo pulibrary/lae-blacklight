@@ -61,12 +61,3 @@ RSpec/NotToNot:
   Exclude:
     - 'spec/models/index_event_spec.rb'
     - 'spec/request/catalog_controller_spec.rb'
-
-# Offense count: 6
-Rails/FilePath:
-  Exclude:
-    - 'app/models/index_event.rb'
-    - 'config/initializers/lae_blacklight.rb'
-    - 'spec/features/catalog_controller_spec.rb'
-    - 'spec/models/index_event_spec.rb'
-    - 'spec/request/catalog_controller_spec.rb'

@@ -11,7 +11,7 @@ vcr_options = {
 RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
   let(:fixture_box_id) { 'puls:00014' }
   let(:doc_ids) { ['004kr', '006tx', '00b84'] }
-  let(:solr_xml_string) { IO.read(File.join(Rails.root, 'spec/fixtures/files/solr.xml')) }
+  let(:solr_xml_string) { IO.read(Rails.root.join('spec', 'fixtures', 'files', 'solr.xml')) }
   let(:solr) { RSolr.connect(url: described_class.send(:solr_url)) }
 
   describe 'IndexEvent.get_boxes_data' do

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class IndexEvent < ActiveRecord::Base
-  PULSTORE_CONFIG ||= YAML.load_file(File.join(Rails.root, 'config/pulstore.yml'))
+  PULSTORE_CONFIG ||= YAML.load_file(Rails.root.join('config', 'pulstore.yml'))
+
   INDEXING_TASKS =
 
     class << self
