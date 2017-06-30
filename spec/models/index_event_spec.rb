@@ -18,7 +18,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
     it 'gets an Array of Hashes' do
       boxes = described_class.get_boxes_data
       expect(boxes.class).to be Array
-      expect(boxes.all? { |box| box.kind_of?(Hash) }).to be_truthy
+      expect(boxes.all? { |box| box.is_a?(Hash) }).to be_truthy
     end
 
     it 'raises an error if the service in not available (bad url or whatever)' do

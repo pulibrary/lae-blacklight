@@ -4,7 +4,7 @@
 class CreateBookmarks < ActiveRecord::Migration[4.2]
   def self.up
     create_table :bookmarks do |t|
-      t.integer :user_id, :null => false
+      t.integer :user_id, null: false
       t.string :user_type
       t.string :document_id
       t.string :title

@@ -19,13 +19,13 @@ module ApplicationHelper
     ids_labels = []
     page_number = 0
     manifest.sequences.first.canvases.each do |canvas|
-      page_number = page_number + 1
+      page_number += 1
       id = canvas.images.first.resource.service['@id']
-      if canvas['label'].nil?
-        label = "Page #{page_number}"
-      else
-        label = canvas['label']
-      end
+      label = if canvas['label'].nil?
+                "Page #{page_number}"
+              else
+                canvas['label']
+              end
       ids_labels << { 'id' => strip_iiif_server_base_from_id(id), 'label' => label }
     end
     ids_labels
@@ -33,7 +33,7 @@ module ApplicationHelper
 
   def strip_iiif_server_base_from_id(id)
     base_url = "http://libimages.princeton.edu/loris2/"
-    id.gsub("#{base_url}", '')
+    id.gsub(base_url.to_s, '')
   end
 
   def all_image_ids_from_from_manifest(manifest)
@@ -57,8 +57,8 @@ module ApplicationHelper
 
   def label_has_facet?(label)
     label = label.singularize
-    if LABEL_METADATA.has_key?(label)
-      return LABEL_METADATA[label].has_key?(:facet_field)
+    if LABEL_METADATA.key?(label)
+      return LABEL_METADATA[label].key?(:facet_field)
     else
       return false
     end
@@ -66,8 +66,8 @@ module ApplicationHelper
 
   def label_has_schema_prop?(label)
     label = label.singularize
-    if LABEL_METADATA.has_key?(label)
-      return LABEL_METADATA[label].has_key?(:schema)
+    if LABEL_METADATA.key?(label)
+      return LABEL_METADATA[label].key?(:schema)
     else
       return false
     end
@@ -78,15 +78,15 @@ module ApplicationHelper
     "#{request.protocol}#{request.host_with_port}/catalog?#{query}"
   end
 
-  def thumbnail_from_manifest document, image_options = { :height => '400', :width => '400' }
+  def thumbnail_from_manifest(document, image_options = { height: '400', width: '400' })
     image_tag "#{document['thumbnail_base']}/full/!#{image_options[:height]},#{image_options[:width]}/0/default.png"
   end
 
-  def render_square_thumbnail document, image_options = {}
+  def render_square_thumbnail(document, image_options = {})
     image_tag "#{document['thumbnail_base']}/full/!400,400/0/default.png"
   end
 
-  def render_fullsize_thumbnail document, image_options = {}
+  def render_fullsize_thumbnail(document, image_options = {})
     unless document.nil?
       image_tag "#{document['thumbnail_base']}/full/!600,600/0/default.jpg"
     end
@@ -96,7 +96,7 @@ module ApplicationHelper
     "/catalog/#{document['id']}"
   end
 
-  def first_id_from_manfiest document, image_options = {}
+  def first_id_from_manfiest(document, image_options = {})
     document['thumbnail_base']
   end
 
@@ -111,24 +111,24 @@ module ApplicationHelper
 
   def get_recent_documents
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
-    solr_response = solr.get 'select', :params => { :qt => "search",
-                                                    :start => 0,
-                                                    :rows => 8,
-                                                    :wt => :ruby,
-                                                    :index => true,
-                                                    :sort => 'date_modified desc' }
+    solr_response = solr.get 'select', params: { qt: "search",
+                                                 start: 0,
+                                                 rows: 8,
+                                                 wt: :ruby,
+                                                 index: true,
+                                                 sort: 'date_modified desc' }
     solr_response['response']['docs']
   end
 
   def get_featured_document
-    doc_id = self.random_sample_graphic
+    doc_id = random_sample_graphic
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
-    solr_response = solr.get 'select', :params => { :qt => "search",
-                                                    :q => doc_id,
-                                                    :start => 0,
-                                                    :rows => 1,
-                                                    :wt => :ruby,
-                                                    :index => true, }
+    solr_response = solr.get 'select', params: { qt: "search",
+                                                 q: doc_id,
+                                                 start: 0,
+                                                 rows: 1,
+                                                 wt: :ruby,
+                                                 index: true }
     solr_response['response']['docs'][0]
   end
 
@@ -137,11 +137,11 @@ module ApplicationHelper
   end
 
   def render_brief_doc_metadata(document)
-    bf = Hash.new
+    bf = {}
     bf[:date] ||= document['date_display']
-    bf[:publisher] = document['publisher_display'].first if document.has_key?('publisher_display')
+    bf[:publisher] = document['publisher_display'].first if document.key?('publisher_display')
     bf[:origin] ||= document['geographic_origin_label'].first
-    render partial: 'brief_document_metadata', :locals => { :bf => bf }
+    render partial: 'brief_document_metadata', locals: { bf: bf }
   end
 
   def random_sample_graphic

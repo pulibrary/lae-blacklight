@@ -29,11 +29,11 @@ namespace :lae do
 
     puts "Last indexing event was `#{latest_index.task}` on #{latest_index.start}"
 
-    boxes = IndexEvent.get_boxes_data.select { |box|
+    boxes = IndexEvent.get_boxes_data.select do |box|
       !box['last_mod_prod_folder'].nil?
-    }.select { |box|
+    end.select do |box|
       Time.parse(box['last_mod_prod_folder']['time']) > latest_index.start
-    }
+    end
     if boxes.empty?
       puts 'There is no new data to index'
     else
@@ -59,7 +59,7 @@ namespace :lae do
   namespace :solr do
     desc 'Posts fixtures to Solr'
     task :index do
-      solr = RSolr.connect :url => Blacklight.connection_config[:url]
+      solr = RSolr.connect url: Blacklight.connection_config[:url]
       content = File.read('spec/fixtures/files/208_solr_docs.xml')
       solr.update(data: content, headers: { 'Content-Type' => 'text/xml' })
       solr.commit

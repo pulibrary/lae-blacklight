@@ -3,7 +3,7 @@ class AddDeviseGuestsToUsers < ActiveRecord::Migration[4.2]
   def self.up
     change_table(:users) do |t|
       ## Database authenticatable
-      t.boolean :guest, :default => false
+      t.boolean :guest, default: false
     end
   end
 

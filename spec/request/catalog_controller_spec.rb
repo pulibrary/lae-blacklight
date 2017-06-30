@@ -22,11 +22,11 @@ RSpec.describe CatalogController, type: :request do
 
       it 'returns parseable turtle' do
         get solr_document_path(doc_ids[1], :ttl)
-        expect {
+        expect do
           RDF::Reader.for(:turtle).new(response.body) do |reader|
-            reader.each_statement { |s| s.inspect }
+            reader.each_statement(&:inspect)
           end
-        }.to_not raise_error
+        end.to_not raise_error
       end
 
       it 'has the correct content-type' do
@@ -43,11 +43,11 @@ RSpec.describe CatalogController, type: :request do
 
       it 'returns parseable rdf-xml' do
         get solr_document_path(doc_ids[1], :rdf)
-        expect {
+        expect do
           RDF::Reader.for(:rdfxml).new(response.body) do |reader|
-            reader.each_statement { |s| s.inspect }
+            reader.each_statement(&:inspect)
           end
-        }.to_not raise_error
+        end.to_not raise_error
         expect(response.headers['Content-Type']).to eq 'application/rdf+xml; charset=utf-8'
       end
 
