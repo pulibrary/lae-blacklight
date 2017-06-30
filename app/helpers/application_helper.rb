@@ -80,15 +80,6 @@ module ApplicationHelper
     document['thumbnail_base']
   end
 
-  ##
-  # Render the sidebar partial for a document
-  #
-  # @param [SolrDocument]
-  # @return [String]
-  def render_lae_document_sidebar_partial
-    render partial: 'show_sidebar'
-  end
-
   def retrieve_recent_documents
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
     solr_response = solr.get 'select', params: { qt: "search",
