@@ -1,5 +1,5 @@
 <div class="cards">
-  <% documents = get_recent_documents %>
+  <% documents = retrieve_recent_documents %>
   <% documents.each do |doc| %>
   <div class="card">
     <%= link_to "/catalog/#{doc['id']}" do %>

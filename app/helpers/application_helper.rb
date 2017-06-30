@@ -102,7 +102,7 @@ module ApplicationHelper
     render partial: 'show_sidebar'
   end
 
-  def get_recent_documents
+  def retrieve_recent_documents
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
     solr_response = solr.get 'select', params: { qt: "search",
                                                  start: 0,
@@ -113,7 +113,7 @@ module ApplicationHelper
     solr_response['response']['docs']
   end
 
-  def get_featured_document
+  def retrieve_featured_document
     doc_id = random_sample_graphic
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
     solr_response = solr.get 'select', params: { qt: "search",
