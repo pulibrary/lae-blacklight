@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
+# frozen_string_literal: true
 #
 class CatalogController < ApplicationController
-
   include Blacklight::Catalog
   helper Openseadragon::OpenseadragonHelper
 
@@ -10,8 +10,8 @@ class CatalogController < ApplicationController
     config.view.masonry.partials = [:index]
     # config.view.slideshow.partials = [:index]
     config.index.thumbnail_method = :thumbnail_from_manifest
-    #config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
-    #config.show.partials.insert(0, :openseadragon)
+    # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
+    # config.show.partials.insert(0, :openseadragon)
     config.index.display_type_field = 'genre_pul_label_facet'
     config.show.partials = [:show_header, :show_viewer, :show, :show_similar]
 
@@ -22,15 +22,15 @@ class CatalogController < ApplicationController
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
-      :qt => 'search',
-      :rows => 12
+      qt: 'search',
+      rows: 12
     }
 
     # solr path which will be added to solr base url before the other solr params.
-    #config.solr_path = 'select'
+    # config.solr_path = 'select'
 
     # items to show per page, each number in the array represent another option to choose from.
-    config.per_page = [12,24,48]
+    config.per_page = [12, 24, 48]
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
@@ -82,9 +82,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
     config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
     config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
-    config.add_facet_field 'category_subject_facet', label: 'Subjects', :pivot => ['category_facet', 'subject_label_facet']
-
-
+    config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet']
 
     # config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
     #    :years_5 => { label: 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
@@ -130,38 +128,37 @@ class CatalogController < ApplicationController
 
     config.add_search_field 'all_fields', label: 'Keyword'
 
-
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
     config.add_search_field('title') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = { :'spellcheck.dictionary' => 'title' }
+      field.solr_parameters = { 'spellcheck.dictionary': 'title' }
 
       # :solr_local_parameters will be sent using Solr LocalParams
       # syntax, as eg {! qf=$title_qf }. This is neccesary to use
       # Solr parameter de-referencing like $title_qf.
       # See: http://wiki.apache.org/solr/LocalParams
       field.solr_local_parameters = {
-        :qf => '$title_qf',
-        :pf => '$title_pf'
+        qf: '$title_qf',
+        pf: '$title_pf'
       }
     end
 
     config.add_search_field('creator/publisher') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'creator' }
+      field.solr_parameters = { 'spellcheck.dictionary': 'creator' }
       field.solr_local_parameters = {
-        :qf => '$creator_qf',
-        :pf => '$creator_pf'
+        qf: '$creator_qf',
+        pf: '$creator_pf'
       }
     end
 
     config.add_search_field('subject') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'subject' }
+      field.solr_parameters = { 'spellcheck.dictionary': 'subject' }
       field.solr_local_parameters = {
-        :qf => '$subject_qf',
-        :pf => '$subject_pf'
+        qf: '$subject_qf',
+        pf: '$subject_pf'
       }
     end
 
@@ -190,8 +187,4 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
-
 end
-
-
-

@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 require 'solr_wrapper'
 
 desc 'Run test suite'
 task :ci do
   if Rails.env.test?
-    run_solr('test', { port: '8985' }) do
+    run_solr('test', port: '8985') do
       Rake::Task['lae:solr:index'].invoke
       Rake::Task['spec'].invoke
     end
@@ -13,8 +14,8 @@ task :ci do
 end
 
 desc 'Run solr and orangelight for interactive development'
-task :server, [:rails_server_args] do |t, args|
-  run_solr('development', { port: '8983' }) do
+task :server, [:rails_server_args] do |_t, args|
+  run_solr('development', port: '8983') do
     Rake::Task['lae:solr:index'].invoke
     system "bundle exec rails s #{args[:rails_server_args]}"
   end
@@ -23,7 +24,7 @@ end
 namespace :server do
   desc 'Run development solr'
   task :dev do
-    run_solr('development', { port: '8983' }) do
+    run_solr('development', port: '8983') do
       Rake::Task['lae:solr:index'].invoke
       sleep
     end
@@ -32,7 +33,7 @@ namespace :server do
   desc 'Run test solr'
   task :test do
     if Rails.env.test?
-      run_solr('test', { port: '8888' }) do
+      run_solr('test', port: '8888') do
         Rake::Task['lae:solr:index'].invoke
         sleep
       end

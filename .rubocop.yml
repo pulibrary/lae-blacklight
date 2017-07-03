@@ -1,0 +1,47 @@
+require: rubocop-rspec
+inherit_gem:
+  bixby: bixby_default.yml
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'config/deploy.rb'
+    - 'vendor/**/*'
+
+Lint/UselessAssignment:
+  Exclude:
+    - 'spec/models/index_event_spec.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'app/controllers/catalog_controller.rb'
+    - 'spec/**/*'
+    - 'config/initializers/*'
+    - 'lib/tasks/lae.rake'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/**/*'
+
+Rails/Output:
+  Exclude:
+    - 'app/models/index_event.rb'
+
+Rails/TimeZone:
+  Exclude:
+    - 'lib/tasks/lae.rake'
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/FileName:
+  Exclude:
+    - '**/Gemfile'
+    - '**/*.rake'
+    - 'Capfile'

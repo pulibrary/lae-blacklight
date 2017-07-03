@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 set :stage, :production
 set :rails_env, 'production'
 
@@ -8,10 +9,9 @@ set :branch, ENV['BRANCH'] || 'master'
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-#role :app, %w{deploy@libruby-dev}
-#role :web, %w{deploy@libruby-dev}
-#role :db,  %w{deploy@libruby-dev}
-
+# role :app, %w{deploy@libruby-dev}
+# role :web, %w{deploy@libruby-dev}
+# role :db,  %w{deploy@libruby-dev}
 
 # Extended Server Syntax
 # ======================
@@ -19,8 +19,7 @@ set :branch, ENV['BRANCH'] || 'master'
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'libruby-dev', user: 'deploy', roles: %w{web app db}, my_property: :my_value
-
+server 'libruby-dev', user: 'deploy', roles: %w[web app db], my_property: :my_value
 
 # Custom SSH Options
 # ==================

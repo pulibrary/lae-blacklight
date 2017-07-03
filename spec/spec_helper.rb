@@ -1,10 +1,11 @@
+# frozen_string_literal: true
 require 'coveralls'
 require 'vcr'
 
 Coveralls.wear!
 
-# VCR is used here to cache results that would normally come from 
-# http://pulstore.princeton.edu/lae (e.g. IndexEvent specs). Interactions with 
+# VCR is used here to cache results that would normally come from
+# http://pulstore.princeton.edu/lae (e.g. IndexEvent specs). Interactions with
 # localhost remain live.
 VCR.configure do |c|
   c.ignore_hosts '127.0.0.1', 'localhost'
@@ -13,7 +14,7 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
   c.preserve_exact_body_bytes do |http_message|
     http_message.body.encoding.name == 'ASCII-8BIT' ||
-    !http_message.body.valid_encoding?
+      !http_message.body.valid_encoding?
   end
 end
 
@@ -99,5 +100,4 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
-
 end

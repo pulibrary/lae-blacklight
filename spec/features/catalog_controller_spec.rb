@@ -1,10 +1,10 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe CatalogController, type: :feature do
-
   let(:fixture_box_id) { 'puls:00014' }
   let(:doc_ids) { ['004kr', '006tx', '00b84'] }
-  let(:solr_xml_string) { IO.read(File.join(Rails.root, 'spec/fixtures/files/solr.xml')) }
+  let(:solr_xml_string) { IO.read(Rails.root.join('spec', 'fixtures', 'files', 'solr.xml')) }
 
   before do
     IndexEvent.post_to_solr('<delete><query>*:*</query></delete>')
@@ -31,6 +31,4 @@ RSpec.describe CatalogController, type: :feature do
       expect(page.assert_no_selector('#emailLink')).to be_truthy
     end
   end
-
 end
-

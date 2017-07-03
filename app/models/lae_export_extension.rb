@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module LaeExportExtension
   def self.extended(document)
     document.will_export_as(:ttl, 'text/turtle')
@@ -23,7 +24,7 @@ module LaeExportExtension
     tgm: RDF::URI.new('http://id.loc.gov/vocabulary/graphicMaterials/'),
     unit: RDF::URI.new('http://sweet.jpl.nasa.gov/2.3/reprSciUnits.owl'),
     xsd: RDF::XSD.to_uri
-  }
+  }.freeze
 
   def export_as_ttl
     self['ttl']

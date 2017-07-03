@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
   root to: 'pages#show', id: 'index'
   match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
-  
+
   mount Blacklight::Engine => '/'
 
   concern :searchable, Blacklight::Routes::Searchable.new
