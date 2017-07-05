@@ -5,7 +5,7 @@ gem 'bitters', '~> 1.2.0'
 gem 'bixby'
 gem 'blacklight', '~> 6.10'
 gem 'blacklight-gallery', '~> 0.4'
-gem 'blacklight_range_limit', '~> 6.1'
+gem 'blacklight_range_limit', git: 'https://github.com/projectblacklight/blacklight_range_limit', branch: 'rails-5.1'
 gem 'bourbon', '~> 4.2.7'
 gem 'breakpoint'
 gem 'bundler', '>= 1.7.0'
@@ -29,7 +29,7 @@ gem 'modernizr-rails'
 gem "pg"
 gem 'pul_uv_rails', git: 'https://github.com/pulibrary/pul_uv_rails.git', tag: 'v1.7.27'
 gem 'rails', '~> 5.1.0'
-gem 'rdf-rdfxml', github: 'ruby-rdf/rdf-rdfxml', branch: :develop
+gem 'rdf-rdfxml', git: 'https://github.com/ruby-rdf/rdf-rdfxml', branch: :develop
 gem 'rdf-turtle', '~> 2.2.0'
 gem 'rdf-vocab'
 gem 'rsolr'
