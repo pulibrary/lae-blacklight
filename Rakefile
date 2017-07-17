@@ -4,6 +4,7 @@ require File.expand_path('../config/application', __FILE__)
 require 'solr_wrapper/rake_task'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
+require 'sneakers/tasks'
 
 Rails.application.load_tasks
 

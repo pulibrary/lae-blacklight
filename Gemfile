@@ -23,6 +23,7 @@ gem 'high_voltage', '~> 3.0.0'
 gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'json-ld'
 gem "mail_form"
 gem 'modernizr-rails'
 gem 'mysql2', '>= 0.3.13', "< 0.4.0"
@@ -37,6 +38,7 @@ gem 'sass-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "simple_form"
 gem 'singularitygs'
+gem 'sneakers'
 gem 'solr_wrapper', '~> 0.22'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'

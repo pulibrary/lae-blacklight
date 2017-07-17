@@ -1,0 +1,22 @@
+---
+development:
+  plum_url: "https://hydra-dev.princeton.edu"
+  collection:
+    slug: "lae"
+  events:
+    server: <%= ENV["LAE_RABBITMQ_URL"] || "amqp://localhost:5672" %>
+    exchange: <%= ENV["LAE_RABBITMQ_EXCHANGE"] || "plum_events" %>
+test:
+  plum_url: "https://hydra-dev.princeton.edu"
+  collection:
+    slug: "lae"
+  events:
+    server: 'amqp://localhost:5672'
+    exchange: 'plum_events'
+production:
+  plum_url: "https://plum.princeton.edu"
+  collection:
+    slug: "lae"
+  events:
+    server: <%= ENV["LAE_RABBITMQ_URL"] %>
+    exchange: <%= ENV["LAE_RABBITMQ_EXCHANGE"] %>

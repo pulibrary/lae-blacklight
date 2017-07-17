@@ -308,6 +308,8 @@
    <field name="title_pt" type="text_pt" indexed="true" stored="true" multiValued="false" termVectors="true" />
    <field name="title" type="text" indexed="true" stored="true" multiValued="false" termVectors="true" />
    <field name="sort_title" type="alphaOnlySort" indexed="true"  stored="true" multiValued="false"/>
+   <field name="width_in_cm" type="text" indexed="true" stored="true" multiValued="false" termVectors="true" />
+   <field name="height_in_cm" type="text" indexed="true" stored="true" multiValued="false" termVectors="true" />
   
    <field name="date_created"     type="tint"   indexed="true"  stored="true" multiValued="false"/>
    <field name="date_modified"    type="date"   indexed="true"  stored="true" multiValued="false"/>
@@ -318,6 +320,8 @@
 
    <field name="barcode"          type="string" indexed="true"  stored="true" multiValued="false"/>
    <field name="box_barcode"      type="string" indexed="true"  stored="true" multiValued="false"/>
+   <field name="box_physical_location"  type="string" indexed="true"  stored="true" multiValued="false"/>
+   <field name="box_physical_number"    type="string" indexed="true"  stored="true" multiValued="false"/>
    <field name="rights"           type="string" indexed="false" stored="true" multiValued="false"/>
 
    <!-- multi-values -->
