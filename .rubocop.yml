@@ -25,6 +25,19 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Exclude:
     - 'db/migrate/**/*'
+    - 'app/indexers/plum_jsonld_converter.rb'
+Metrics/ClassLength:
+  Exclude:
+    - 'app/indexers/plum_jsonld_converter.rb'
+Metrics/AbcSize:
+  Exclude:
+    - 'app/indexers/plum_jsonld_converter.rb'
+Metrics/LineLength:
+  Exclude:
+    - 'spec/indexers/plum_jsonld_converter_spec.rb'
+RSpec/SubjectStub:
+  Exclude:
+    - 'spec/indexers/plum_jsonld_converter_spec.rb'
 
 Rails/Output:
   Exclude:
@@ -39,6 +52,11 @@ RSpec/ExampleLength:
 
 RSpec/MultipleExpectations:
   Enabled: false
+
+RSpec/SubjectStub:
+  Exclude:
+    - 'spec/workers/plum_event_handler_spec.rb'
+    - 'spec/indexers/plum_jsonld_converter_spec.rb'
 
 Style/FileName:
   Exclude:
