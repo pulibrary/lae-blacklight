@@ -3,7 +3,7 @@ lock '3.4.1'
 
 set :application, 'lae-blackight'
 set :repo_url, 'git@github.com:pulibrary/lae-blacklight.git'
-set :branch, 'master'
+set :branch, ENV['BRANCH'] || 'master'
 
 # Default branch is :master
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -53,3 +53,14 @@ namespace :deploy do
   end
 
 end
+
+namespace :sneakers do
+  task :restart do
+    on roles(:worker) do
+      execute :sudo, :initctl, :restart, "lae-sneakers"
+    end
+  end
+end
+
+after 'deploy:reverted', 'sneakers:restart'
+after 'deploy:published', 'sneakers:restart'

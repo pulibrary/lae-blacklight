@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 require File.expand_path('../boot', __FILE__)
-require 'compass'
-require 'breakpoint'
 
 require 'rails/all'
+require 'compass'
+require 'breakpoint'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
