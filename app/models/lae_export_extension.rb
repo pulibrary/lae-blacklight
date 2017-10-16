@@ -30,7 +30,7 @@ module LaeExportExtension
   end
 
   def export_as_jsonld
-    self['manifest']
+    self['manifest'].gsub('"http://libimages.princeton.edu/loris2/','"https://libimages.princeton.edu/loris/')
   end
 
   def export_as_rdf
