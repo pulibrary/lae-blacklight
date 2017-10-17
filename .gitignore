@@ -23,10 +23,7 @@
 jetty/*
 
 # Ignore the private conf files
-config/database.yml
-config/secrets.yml
 config/solr.yml
-config/blacklight.yml
 
 # ignore compiled assets and bundled gems
 public/assets

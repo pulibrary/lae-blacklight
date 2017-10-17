@@ -26,7 +26,7 @@ gem 'jquery-rails'
 gem 'json-ld'
 gem "mail_form"
 gem 'modernizr-rails'
-gem 'mysql2', '>= 0.3.13', "< 0.4.0"
+gem "pg"
 gem 'pul_uv_rails', git: 'https://github.com/pulibrary/pul_uv_rails.git', tag: 'v1.7.27'
 gem 'rails', '~> 5.1.0'
 gem 'rdf-rdfxml', github: 'ruby-rdf/rdf-rdfxml', branch: :develop
@@ -39,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "simple_form"
 gem 'singularitygs'
 gem 'sneakers'
-gem 'solr_wrapper', '~> 0.22'
+gem 'solr_wrapper', '~> 1.1.0'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier', '>= 2.7.2'

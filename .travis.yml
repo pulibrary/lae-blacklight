@@ -4,14 +4,13 @@ rvm:
   - 2.3.1
 
 before_script:
-  - cp config/database.yml.travis config/database.yml
-  - cp config/blacklight.yml.tmpl config/blacklight.yml
-  - cp config/secrets.yml.tmpl config/secrets.yml
-  - mysql -e 'create database lae_blacklight_test;'
   - jdk_switcher use oraclejdk8
 
 before_install:
   - gem update bundler
+before_script:
+  - "bundle exec rake db:create"
+  - "bundle exec rake db:migrate"
 
 script: bundle exec rake ci
 
