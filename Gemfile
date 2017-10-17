@@ -39,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "simple_form"
 gem 'singularitygs'
 gem 'sneakers'
-gem 'solr_wrapper', '~> 0.22'
+gem 'solr_wrapper', '~> 1.1.0'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier', '>= 2.7.2'

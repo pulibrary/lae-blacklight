@@ -370,12 +370,6 @@
    -->
  <uniqueKey>id</uniqueKey>
 
- <!-- field for the QueryParser to use when an explicit fieldname is absent -->
- <defaultSearchField>title</defaultSearchField>
-
- <!-- SolrQueryParser configuration: defaultOperator="AND|OR" -->
- <solrQueryParser defaultOperator="OR"/>
-
    <!-- Copy Fields for facets -->
    <copyField source="category" dest="category_facet"/>
    <copyField source="genre_pul_label" dest="genre_pul_label_facet"/>
