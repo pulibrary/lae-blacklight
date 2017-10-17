@@ -69,8 +69,7 @@ class IndexEvent < ActiveRecord::Base
       end
 
       def latest_successful
-        q = "task in (\"lae:index\", \"lae:update\") and success = true"
-        IndexEvent.where(q).order('start desc').first
+        IndexEvent.where(task: ["lae:index", "lae:update"], success: true).order('start desc').first
       end
 
       # Options

@@ -26,10 +26,10 @@ set :log_level, :debug
 shared_path = "#{:deploy_to}/shared"
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/blacklight.yml', 'config/database.yml', 'config/secrets.yml')
+set :linked_files, fetch(:linked_files, [])
 
 # Default value for linked_dirs is []
-set :linked_dirs, fetch(:linked_dirs, []).push('tmp/pids', 'tmp/cache', 'tmp/sockets') #, 'vendor/bundle', 'public/system')
+set :linked_dirs, fetch(:linked_dirs, []).push('tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'log')
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -57,7 +57,7 @@ end
 namespace :sneakers do
   task :restart do
     on roles(:worker) do
-      execute :sudo, :initctl, :restart, "lae-sneakers"
+      execute :sudo, :service, "lae-sneakers", :restart
     end
   end
 end

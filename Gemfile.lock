@@ -236,7 +236,6 @@ GEM
     modernizr-rails (2.7.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
-    mysql2 (0.3.21)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.1.0)
@@ -249,6 +248,7 @@ GEM
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
+    pg (0.21.0)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -472,7 +472,7 @@ DEPENDENCIES
   json-ld
   mail_form
   modernizr-rails
-  mysql2 (>= 0.3.13, < 0.4.0)
+  pg
   pry-byebug
   pul_uv_rails!
   rails (~> 5.1.0)
