@@ -24,7 +24,7 @@ end
 namespace :server do
   desc 'Run development solr'
   task :dev do
-    run_solr('development', port: '8983') do
+    run_solr('development', port: '8989') do
       Rake::Task['lae:solr:index'].invoke
       sleep
     end
