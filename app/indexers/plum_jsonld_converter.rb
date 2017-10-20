@@ -66,11 +66,7 @@ class PlumJsonldConverter
     end
 
     def project_label
-      collection["title"]
-    end
-
-    def collection
-      json["memberOf"].find { |x| x["@id"].include?("collections") } || {}
+      "Latin American Ephemera"
     end
 
     def contributor
@@ -90,11 +86,11 @@ class PlumJsonldConverter
     end
 
     def box
-      json["memberOf"].find { |x| x["@id"].include?("boxes") } || []
+      json["memberOf"].find { |x| x["box_number"].present? } || []
     end
 
     def category
-      json["category"]
+      json["subject"].select { |x| x["in_scheme"].present? }.map { |x| x["in_scheme"]["pref_label"] }
     end
 
     def genre_pul_label
@@ -122,11 +118,11 @@ class PlumJsonldConverter
     end
 
     def height
-      json["height"]
+      Array.wrap(json["height"]).first
     end
 
     def width
-      json["width"]
+      Array.wrap(json["width"]).first
     end
 
     def language_label
@@ -138,7 +134,7 @@ class PlumJsonldConverter
     end
 
     def title_display
-      json["title"]
+      Array.wrap(json["title"]).first
     end
 
     def subject_label
@@ -160,7 +156,7 @@ class PlumJsonldConverter
     def manifest
       @manifest ||=
         begin
-          open("#{json['@id']}/manifest")
+          open("#{json['@id'].gsub('catalog', 'concern/ephemera_folders')}/manifest")
         rescue OpenURI::HTTPError
           "{}"
         end
