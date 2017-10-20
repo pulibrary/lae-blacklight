@@ -9,25 +9,17 @@ Public UI for the LAE Project.
 
 Application Configuration
 ------------------
-### MySQL Installation
+### Postgres
 
 MacOS with Homebrew:
 
 ```bash
 $ brew update
-$ brew install mysql
-$ brew services start mysql
+$ brew install postgresql
+$ brew services start postgresql
 ```
 
-### Copy Configuration Files
-
-```bash
-$ cp config/database.yml.tmpl config/database.yml
-$ cp config/blacklight.yml.tmpl config/blacklight.yml
-$ cp config/secrets.yml.tmpl config/secrets.yml
-```
-
-### Database Configuration
+### Database Setup
 ```bash
 $ rake db:create
 $ rake db:migrate
