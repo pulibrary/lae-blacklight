@@ -18,7 +18,7 @@ class SolrDocumentMetadata
       geographic_subject_label: :solr_lookup,
       category: :solr_lookup,
       subject_label: :solr_lookup,
-      rendered_category_subject: :rendered_category_subject,
+      category_subject_pairs: :category_subject_pairs,
       language_label: :solr_lookup,
       # do something for container
       rights: :solr_lookup,
@@ -42,10 +42,10 @@ class SolrDocumentMetadata
     "#{document['width_in_cm']} cm. × #{document['height_in_cm']} cm"
   end
 
-  def rendered_category_subject(_key = nil)
+  def category_subject_pairs(_key = nil)
     return unless document['subject_with_category']
     JSON.parse(document['subject_with_category']).map do |h|
-      "#{h["category"]} -- #{h["subject"]}"
+      { category: h["category"], subject: h["subject"] }
     end
   end
 end

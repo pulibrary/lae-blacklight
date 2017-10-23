@@ -36,9 +36,10 @@ RSpec.describe SolrDocumentMetadata do
       end
     end
 
-    it "renders subject and category as facet links" do
-      expect(metadata.rendered_category_subject).to contain_exactly(
-        "Environment and ecology -- National parks and reserves", "Tourism -- Advertising--Tourism"
+    it "provides subject and category as hashes" do
+      expect(metadata.category_subject_pairs).to contain_exactly(
+        { category: "Environment and ecology", subject: "National parks and reserves" },
+        { category: "Tourism", subject: "Advertising--Tourism" }
       )
     end
   end
