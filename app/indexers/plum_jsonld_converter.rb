@@ -33,6 +33,7 @@ class PlumJsonldConverter
       "subject_with_category" => subject_with_category,
       "publisher_#{postfix}" => publisher_display,
       "title_#{postfix}" => title_display,
+      "title" => title_display,
       "ttl" => ttl,
       "manifest" => manifest,
       "thumbnail_base" => thumbnail_base,
