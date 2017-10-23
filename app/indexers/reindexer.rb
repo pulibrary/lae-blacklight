@@ -6,13 +6,18 @@ class Reindexer
   end
 
   def index!
+    solr_documents.each_slice(500) do |docs|
+      solr.add(docs, params: { softCommit: true })
+    end
+  end
+
+  def solr_documents
     jsonld_response = PaginatingJSONLDResponse.new(url: url)
     progressbar = ProgressBar.create(total: jsonld_response.total, format: "%a %e %P% Processed: %c from %C")
-    docs = jsonld_response.lazy.map do |jsonld|
+    jsonld_response.lazy.map do |jsonld|
       progressbar.increment
       PlumJsonldConverter.new(jsonld: jsonld).output
-    end.to_a
-    solr.add(docs, params: { softCommit: true })
+    end
   end
 
   def solr
@@ -76,7 +81,7 @@ class Reindexer
       end
 
       def response
-        @response ||= JSON.parse(open("#{url}&page=#{page}").read)["response"]
+        @response ||= JSON.parse(open("#{url}&page=#{page}").read.force_encoding('UTF-8'))["response"]
       end
 
       def next_page

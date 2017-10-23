@@ -44,7 +44,7 @@ class PlumJsonldConverter
   private
 
     def json
-      @json ||= JSON.parse(jsonld)
+      @json ||= JSON.parse(jsonld.force_encoding('UTF-8'))
     end
 
     def ttl; end
@@ -162,7 +162,7 @@ class PlumJsonldConverter
         begin
           result = open("#{json['@id'].gsub('catalog', 'concern/ephemera_folders')}/manifest")
           if result.success?
-            result.body
+            result.body.force_encoding('UTF-8')
           else
             "{}"
           end
