@@ -17,7 +17,7 @@ class Reindexer
   end
 
   def url
-    "#{LAE.config['plum_url']}/catalog.json?f[human_readable_type_sim][]=Ephemera+Folder&f[ephemera_project_ssim][]=#{collection_name.tr(' ', '+')}"
+    "#{LAE.config['plum_url']}/catalog.json?f[human_readable_type_ssim][]=Ephemera+Folder&f[ephemera_project_ssim][]=#{collection_name.tr(' ', '+')}"
   end
 
   class JSONLDPathBuilder
