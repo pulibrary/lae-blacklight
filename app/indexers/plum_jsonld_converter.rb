@@ -160,18 +160,23 @@ class PlumJsonldConverter
     def manifest
       @manifest ||=
         begin
-          open("#{json['@id'].gsub('catalog', 'concern/ephemera_folders')}/manifest")
+          result = open("#{json['@id'].gsub('catalog', 'concern/ephemera_folders')}/manifest")
+          if result.success?
+            result.body
+          else
+            "{}"
+          end
         rescue OpenURI::HTTPError
           "{}"
         end
     end
 
     def open(url)
-      Faraday.get(url).body
+      Faraday.get(url)
     end
 
     def manifest_json
-      @manifest_json ||= JSON.parse(manifest.force_encoding('UTF-8'))
+      @manifest_json ||= JSON.parse(manifest.dup.force_encoding('UTF-8'))
     end
 
     def thumbnail_base
