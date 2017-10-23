@@ -6,7 +6,10 @@ class Reindexer
   end
 
   def index!
-    docs = PaginatingJSONLDResponse.new(url: url).lazy.map do |jsonld|
+    jsonld_response = PaginatingJSONLDResponse.new(url: url)
+    progressbar = ProgressBar.create(total: jsonld_response.total, format: "%a %e %P% Processed: %c from %C")
+    docs = jsonld_response.lazy.map do |jsonld|
+      progressbar.increment
       PlumJsonldConverter.new(jsonld: jsonld).output
     end.to_a
     solr.add(docs, params: { softCommit: true })
@@ -56,6 +59,10 @@ class Reindexer
       open(JSONLDPathBuilder.new(doc).path).read
     end
 
+    def total
+      @total ||= Response.new(url: url, page: 1).total_count
+    end
+
     class Response
       require 'open-uri'
       attr_reader :url, :page
@@ -75,6 +82,10 @@ class Reindexer
       def next_page
         return nil unless response["pages"]["next_page"]
         Response.new(url: url, page: response["pages"]["next_page"])
+      end
+
+      def total_count
+        response["pages"]["total_count"]
       end
     end
   end
