@@ -46,7 +46,7 @@ RSpec.describe PlumJsonldConverter do
   end
   context "when there's no valid manifest" do
     before do
-      allow(converter).to receive(:open).with("https://figgy.princeton.edu/concern/ephemera_folders/b9e8325e-baf2-45e4-b32c-5e5b3755c8ef/manifest").and_return("{}")
+      stub_plum_jsonld(record: "b9e8325e-baf2-45e4-b32c-5e5b3755c8ef", success: false)
     end
     it "works, but doesn't set the thumbnail" do
       output = converter.output

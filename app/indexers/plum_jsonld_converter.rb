@@ -45,7 +45,7 @@ class PlumJsonldConverter
   private
 
     def json
-      @json ||= JSON.parse(jsonld)
+      @json ||= JSON.parse(jsonld.force_encoding('UTF-8'))
     end
 
     def ttl; end
@@ -151,7 +151,11 @@ class PlumJsonldConverter
     end
 
     def postfix
-      lang_lookup[json["language"].first["exact_match"]["@id"]] || "en"
+      if json["language"].present? && json["language"].first["exact_match"]
+        lang_lookup[json["language"].first["exact_match"]["@id"]]
+      else
+        "en"
+      end
     end
 
     def lang_lookup
@@ -165,18 +169,23 @@ class PlumJsonldConverter
     def manifest
       @manifest ||=
         begin
-          open("#{json['@id'].gsub('catalog', 'concern/ephemera_folders')}/manifest")
+          result = open("#{json['@id'].gsub('catalog', 'concern/ephemera_folders')}/manifest")
+          if result.success?
+            result.body.force_encoding('UTF-8')
+          else
+            "{}"
+          end
         rescue OpenURI::HTTPError
           "{}"
         end
     end
 
     def open(url)
-      Faraday.get(url).body
+      Faraday.get(url)
     end
 
     def manifest_json
-      @manifest_json ||= JSON.parse(manifest)
+      @manifest_json ||= JSON.parse(manifest.dup.force_encoding('UTF-8'))
     end
 
     def thumbnail_base
