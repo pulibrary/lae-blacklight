@@ -94,7 +94,7 @@ class PlumJsonldConverter
     end
 
     def category
-      json["category"]
+      json["category"].map { |x| x["pref_label"] }
     end
 
     def genre_pul_label

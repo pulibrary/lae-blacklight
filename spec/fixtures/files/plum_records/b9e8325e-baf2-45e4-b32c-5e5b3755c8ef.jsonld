@@ -1,16 +1,16 @@
-{  
-   "title":[  
+{
+   "title":[
       "Caripe. Jardín turístico de Monagas. "
    ],
    "@context":"https://bibdata.princeton.edu/context.json",
    "@id":"https://figgy.princeton.edu/catalog/b9e8325e-baf2-45e4-b32c-5e5b3755c8ef",
-   "edm_rights":{  
+   "edm_rights":{
       "@id":"http://rightsstatements.org/vocab/CNE/1.0/",
       "@type":"dcterms:RightsStatement",
       "pref_label":"Copyright Not Evaluated"
    },
-   "memberOf":[  
-      {  
+   "memberOf":[
+      {
          "@id":"https://figgy.princeton.edu/catalog/092e6344-cf18-4ce0-a797-b8578c457767",
          "@type":"pcdm:Collection",
          "barcode":"32101086454731",
@@ -19,95 +19,133 @@
       }
    ],
    "@type":"pcdm:Object",
-   "alternative":[  
+   "alternative":[
 
    ],
-   "creator":[  
+   "creator":[
      "Test Creator"
    ],
-   "contributor":[  
+   "contributor":[
       "Gobierno Bolivariano de Venezuela"
    ],
-   "publisher":[  
+   "publisher":[
       "Alcaldía del Municipio Caripe"
    ],
    "barcode":"32101086454731",
    "label":"Folder 193",
    "is_part_of":"Latin American Ephemera",
-   "coverage":[  
-      {  
-         "@id":"https://figgy.princeton.edu/concern/ephemera_terms/e36dd185-6875-4efd-a62d-81f01a700097",
+   "coverage":[
+      {
+         "@id":"https://figgy.princeton.edu/catalog/e36dd185-6875-4efd-a62d-81f01a700097",
          "@type":"skos:Concept",
          "pref_label":"Venezuela",
-         "exact_match":{  
+         "in_scheme":{
+            "@id":"https://figgy.princeton.edu/catalog/22597862-062b-4c91-a6ca-cd73a30aceb1",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Areas"
+         },
+         "exact_match":{
             "@id":"http://id.loc.gov/vocabulary/countries/ve"
          }
       }
    ],
-   "dcterms_type":[  
-      {  
-         "@id":"https://figgy.princeton.edu/concern/ephemera_terms/42754ac7-7723-4219-81eb-11085946fdca",
+   "dcterms_type":[
+      {
+         "@id":"https://figgy.princeton.edu/catalog/42754ac7-7723-4219-81eb-11085946fdca",
          "@type":"skos:Concept",
          "pref_label":"Pamphlets",
-         "exact_match":{  
+         "in_scheme":{
+            "@id":"https://figgy.princeton.edu/catalog/e7771cb0-e5a9-4ef7-b7ea-8e2f9b103302",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Genres"
+         },
+         "exact_match":{
             "@id":"http://id.loc.gov/vocabulary/graphicMaterials/tgm007415"
          }
       }
    ],
-   "origin_place":[  
-      {  
-         "@id":"https://figgy.princeton.edu/concern/ephemera_terms/e36dd185-6875-4efd-a62d-81f01a700097",
+   "origin_place":[
+      {
+         "@id":"https://figgy.princeton.edu/catalog/e36dd185-6875-4efd-a62d-81f01a700097",
          "@type":"skos:Concept",
          "pref_label":"Venezuela",
-         "exact_match":{  
+         "in_scheme":{
+            "@id":"https://figgy.princeton.edu/catalog/22597862-062b-4c91-a6ca-cd73a30aceb1",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Areas"
+         },
+         "exact_match":{
             "@id":"http://id.loc.gov/vocabulary/countries/ve"
          }
       }
    ],
-   "language":[  
-      {  
-         "@id":"https://figgy.princeton.edu/concern/ephemera_terms/1bb6e264-8b3a-452c-9bc5-10e1c4c98c3e",
+   "language":[
+      {
+         "@id":"https://figgy.princeton.edu/catalog/1bb6e264-8b3a-452c-9bc5-10e1c4c98c3e",
          "@type":"skos:Concept",
          "pref_label":"Spanish",
-         "exact_match":{  
+         "in_scheme":{
+            "@id":"https://figgy.princeton.edu/catalog/f0608fb8-d182-437f-b489-8296dcb87678",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Languages"
+         },
+         "exact_match":{
             "@id":"http://id.loc.gov/vocabulary/iso639-1/es"
          }
       }
    ],
-   "subject":[  
-      {  
-         "@id":"https://figgy.princeton.edu/concern/ephemera_terms/fb359d07-e82d-479b-b3b9-06dcaebebd9f",
+   "subject":[
+      {
+         "@id":"https://figgy.princeton.edu/catalog/fb359d07-e82d-479b-b3b9-06dcaebebd9f",
          "@type":"skos:Concept",
          "pref_label":"National parks and reserves",
-         "exact_match":{  
+         "in_scheme":{
+            "@id":"https://figgy.princeton.edu/catalog/64275d5f-7148-4e3a-b836-084dff3977f0",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"Environment and ecology"
+         },
+         "exact_match":{
             "@id":"http://id.loc.gov/authorities/subjects/sh85090045"
          }
       },
-      {  
-         "@id":"https://figgy.princeton.edu/concern/ephemera_terms/a51c7f0b-4203-4ae9-b063-3e03fac1832b",
+      {
+         "@id":"https://figgy.princeton.edu/catalog/a51c7f0b-4203-4ae9-b063-3e03fac1832b",
          "@type":"skos:Concept",
          "pref_label":"Advertising--Tourism",
-         "exact_match":{  
+         "in_scheme":{
+            "@id":"https://figgy.princeton.edu/catalog/69d9e1d0-7cf2-49e7-9c28-ac03d6628b64",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"Tourism"
+         },
+         "exact_match":{
             "@id":"http://id.loc.gov/authorities/subjects/sh88000359"
          }
       }
    ],
-   "category":[  
-      "Environment and ecology",
-      "Tourism"
+   "category":[
+      {
+         "@id":"https://figgy.princeton.edu/catalog/64275d5f-7148-4e3a-b836-084dff3977f0",
+         "@type":"skos:ConceptScheme",
+         "pref_label":"Environment and ecology"
+      },
+      {
+         "@id":"https://figgy.princeton.edu/catalog/69d9e1d0-7cf2-49e7-9c28-ac03d6628b64",
+         "@type":"skos:ConceptScheme",
+         "pref_label":"Tourism"
+      }
    ],
-   "description":[  
+   "description":[
 
    ],
    "source":null,
    "related_url":null,
-   "height":[  
+   "height":[
       "25"
    ],
-   "width":[  
+   "width":[
       "11"
    ],
-   "sort_title":[  
+   "sort_title":[
       "caripe. jardín turístico de monagas. "
    ],
    "page_count":"6",
