@@ -171,7 +171,7 @@ class PlumJsonldConverter
     end
 
     def manifest_json
-      @manifest_json ||= JSON.parse(manifest)
+      @manifest_json ||= JSON.parse(manifest.force_encoding('UTF-8'))
     end
 
     def thumbnail_base
