@@ -47,6 +47,7 @@ class Reindexer
       loop do
         response.docs.each do |doc|
           yield jsonld_for(doc)
+          sleep(0.5)
         end
         break unless (response = response.next_page)
       end

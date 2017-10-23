@@ -142,7 +142,11 @@ class PlumJsonldConverter
     end
 
     def postfix
-      lang_lookup[json["language"].first["exact_match"]["@id"]] || "en"
+      if json["language"].present? && json["language"].first["exact_match"]
+        lang_lookup[json["language"].first["exact_match"]["@id"]]
+      else
+        "en"
+      end
     end
 
     def lang_lookup
