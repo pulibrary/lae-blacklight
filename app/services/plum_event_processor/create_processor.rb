@@ -9,7 +9,7 @@ class PlumEventProcessor
     end
 
     def jsonld_url
-      manifest_url.gsub("/manifest", ".jsonld")
+      manifest_url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")
     end
 
     def json
