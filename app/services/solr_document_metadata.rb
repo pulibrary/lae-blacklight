@@ -5,32 +5,39 @@ class SolrDocumentMetadata
     @document = document
   end
 
+  # key is used for translation and solr lookup
+  # value is method to call on key.
+  #   use :solr_lookup to pull from document.
   def fields
     {
-      geographic_origin_label: "Origin",
-      publisher_display: "Publisher",
-      date_display: "Date",
-      genre_pul_label: "Item Type",
-      page_count: "Page Count",
-      geographic_subject_label: "Geographic Subject",
-      category: "Category",
-      subject_label: "Subjects",
-      language_label: "Language",
+      geographic_origin_label: :solr_lookup,
+      publisher_display: :solr_lookup,
+      date_display: :solr_lookup,
+      genre_pul_label: :solr_lookup,
+      page_count: :solr_lookup,
+      geographic_subject_label: :solr_lookup,
+      category: :solr_lookup,
+      subject_label: :solr_lookup,
+      language_label: :solr_lookup,
       # do something for container
-      rights: "Rights"
+      rights: :solr_lookup,
+      dimensions: :dimensions
     }
   end
 
   def each
-    fields.each do |solr_key, label|
-      next unless document[solr_key]
-      yield 'label' => I18n.t("metadata.labels.#{solr_key}"), 'value' => document[solr_key]
+    fields.each do |key, method|
+      next unless send(method, key)
+      yield 'label' => I18n.t("metadata.labels.#{key}"), 'value' => send(method, key)
     end
-    yield dimensions if dimensions
   end
 
-  def dimensions
+  def solr_lookup(key)
+    document[key]
+  end
+
+  def dimensions(_key = nil)
     return unless document['width_in_cm'] && document['height_in_cm']
-    { 'label' => "Dimensions", 'value' => "#{document['width_in_cm']} cm. × #{document['height_in_cm']} cm" }
+    "#{document['width_in_cm']} cm. × #{document['height_in_cm']} cm"
   end
 end
