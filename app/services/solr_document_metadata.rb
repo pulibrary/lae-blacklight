@@ -18,6 +18,7 @@ class SolrDocumentMetadata
       geographic_subject_label: :solr_lookup,
       category: :solr_lookup,
       subject_label: :solr_lookup,
+      rendered_category_subject: :rendered_category_subject,
       language_label: :solr_lookup,
       # do something for container
       rights: :solr_lookup,
@@ -39,5 +40,12 @@ class SolrDocumentMetadata
   def dimensions(_key = nil)
     return unless document['width_in_cm'] && document['height_in_cm']
     "#{document['width_in_cm']} cm. × #{document['height_in_cm']} cm"
+  end
+
+  def rendered_category_subject(_key = nil)
+    return unless document['subject_with_category']
+    JSON.parse(document['subject_with_category']).map do |h|
+      "#{h["category"]} -- #{h["subject"]}"
+    end
   end
 end

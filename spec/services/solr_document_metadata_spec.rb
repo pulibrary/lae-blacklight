@@ -13,6 +13,7 @@ RSpec.describe SolrDocumentMetadata do
       geographic_subject_label: ["Venezuela"],
       category: ["Environment and ecology", "Tourism"],
       subject_label: ["National parks and reserves", "Advertising--Tourism"],
+      "subject_with_category" => "[{\"subject\":\"National parks and reserves\",\"category\":\"Environment and ecology\"},{\"subject\":\"Advertising--Tourism\",\"category\":\"Tourism\"}]",
       language_label: ["Spanish"],
       rights: "This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions",
       height_in_cm: "25",
@@ -28,11 +29,17 @@ RSpec.describe SolrDocumentMetadata do
 
     it "retrieves values from solr_doc" do
       metadata.each do |entry|
-        exceptions = ["Dimensions"]
+        exceptions = ["Dimensions", "Subjects"]
         unless exceptions.include? entry['label']
           expect(solr_doc.to_h.values).to include entry['value']
         end
       end
+    end
+
+    it "renders subject and category as facet links" do
+      expect(metadata.rendered_category_subject).to contain_exactly(
+        "Environment and ecology -- National parks and reserves", "Tourism -- Advertising--Tourism"
+      )
     end
   end
 end
