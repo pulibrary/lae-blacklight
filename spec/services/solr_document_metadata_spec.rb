@@ -23,7 +23,6 @@ RSpec.describe SolrDocumentMetadata do
 
   describe "converting index values for display" do
     it "displays width and height as dimensions" do
-      # TODO either both should have a period or neither should, right?
       expect(metadata.dimensions).to eq "11 cm. × 25 cm"
     end
 
