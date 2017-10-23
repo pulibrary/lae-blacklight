@@ -1,8 +1,5 @@
-# config valid only for current version of Capistrano
-lock '3.4.1'
-
 set :application, 'lae-blackight'
-set :repo_url, 'git@github.com:pulibrary/lae-blacklight.git'
+set :repo_url, 'https://github.com/pulibrary/lae-blacklight.git'
 set :branch, ENV['BRANCH'] || 'master'
 
 # Default branch is :master
