@@ -24,7 +24,7 @@ class SolrDocumentMetadata
   def each
     fields.each do |solr_key, label|
       next unless document[solr_key]
-      yield 'label' => label, 'value' => document[solr_key]
+      yield 'label' => I18n.t("metadata.labels.#{solr_key}"), 'value' => document[solr_key]
     end
     yield dimensions if dimensions
   end
