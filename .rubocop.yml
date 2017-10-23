@@ -64,3 +64,7 @@ Style/FileName:
     - '**/Gemfile'
     - '**/*.rake'
     - 'Capfile'
+
+Style/BracesAroundHashParameters:
+  Exclude:
+    - spec/services/solr_document_metadata_spec.rb

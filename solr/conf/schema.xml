@@ -330,6 +330,7 @@
    <field name="alternative_title_es" type="text_es" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="alternative_title_pt" type="text_pt" indexed="true" stored="true" multiValued="true" termVectors="true"/>
 
+   <field name="subject_with_category" type="string" indexed="false" stored="true" multiValued="false"/>
    <field name="category"          type="text_en" indexed="true" stored="true" multiValued="true"/>
    <field name="description"       type="text_en" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="contributor"       type="text_en" indexed="true" stored="true" multiValued="true" termVectors="true"/>

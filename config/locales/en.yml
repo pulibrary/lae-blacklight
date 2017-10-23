@@ -20,4 +20,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  metadata:
+    labels:
+      geographic_origin_label: "Origin"
+      publisher_display: "Publisher"
+      date_display: "Date"
+      genre_pul_label: "Item Type"
+      page_count: "Page Count"
+      geographic_subject_label: "Geographic Subject"
+      category: "Category"
+      subject_label: "Subjects"
+      language_label: "Language"
+      rights: "Rights"
+      dimensions: "Dimensions"
+      category_subject_pairs: "Subjects"

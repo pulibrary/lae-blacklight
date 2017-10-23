@@ -30,6 +30,7 @@ class PlumJsonldConverter
       "publisher_display" => publisher_display,
       "title_display" => title_display,
       "subject_label" => subject_label,
+      "subject_with_category" => subject_with_category,
       "publisher_#{postfix}" => publisher_display,
       "title_#{postfix}" => title_display,
       "ttl" => ttl,
@@ -139,6 +140,14 @@ class PlumJsonldConverter
 
     def subject_label
       json["subject"].map { |x| x["pref_label"] }
+    end
+
+    def subject_with_category
+      JSON.generate(
+        json["subject"].map do |x|
+          { "subject": x["pref_label"], "category": x["in_scheme"]["pref_label"] }
+        end
+      )
     end
 
     def postfix
