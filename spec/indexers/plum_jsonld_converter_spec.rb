@@ -23,6 +23,7 @@ RSpec.describe PlumJsonldConverter do
       "contributor" => ["Gobierno Bolivariano de Venezuela"],
       "creator" => "Test Creator",
       "sort_title" => "caripe. jardín turístico de monagas. ",
+      "title" => "Caripe. Jardín turístico de Monagas. ",
       "title_es" => "Caripe. Jardín turístico de Monagas. ",
       "title_display" => "Caripe. Jardín turístico de Monagas. ",
       "height_in_cm" => "25",
