@@ -74,3 +74,6 @@ Metrics/ModuleLength:
 Rails/OutputSafety:
   Exclude:
     - app/helpers/application_helper.rb
+RSpec/MessageSpies:
+  Exclude:
+    - spec/indexers/plum_jsonld_converter_spec.rb

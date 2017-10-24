@@ -174,6 +174,9 @@ class PlumJsonldConverter
     def subject_with_category
       JSON.generate(
         json["subject"].map do |x|
+          unless x["in_scheme"]
+            Rails.logger.warn("Data inconsistency: #{id} has subject #{x['pref_label']} with no category")
+          end
           { "subject": x["pref_label"],
             "category": x["in_scheme"] ? x["in_scheme"]["pref_label"] : '' }
         end
