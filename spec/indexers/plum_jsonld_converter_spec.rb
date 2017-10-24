@@ -34,8 +34,8 @@ RSpec.describe PlumJsonldConverter do
       "rights" => "This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions", ## Is this right?
       "category" => ["Environment and ecology", "Tourism"],
       "geographic_subject_label" => ["Venezuela"],
-      "subject_label" => ["National parks and reserves", "Advertising--Tourism"],
-      "subject_with_category" => "[{\"subject\":\"National parks and reserves\",\"category\":\"Environment and ecology\"},{\"subject\":\"Advertising--Tourism\",\"category\":\"Tourism\"}]",
+      "subject_label" => ["National parks and reserves", "Advertising--Tourism", "Biodiversity"],
+      "subject_with_category" => "[{\"subject\":\"National parks and reserves\",\"category\":\"Environment and ecology\"},{\"subject\":\"Advertising--Tourism\",\"category\":\"Tourism\"},{\"subject\":\"Biodiversity\",\"category\":\"\"}]",
       "genre_pul_label" => ["Pamphlets"],
       "language_label" => ["Spanish"],
       "geographic_origin_label" => ["Venezuela"],
