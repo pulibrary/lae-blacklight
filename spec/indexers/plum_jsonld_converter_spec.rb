@@ -42,8 +42,20 @@ RSpec.describe PlumJsonldConverter do
       "box_barcode" => "32101086454731",
       "box_physical_location" => "rcpxr",
       "box_physical_number" => "57", ## MISSING
-      "thumbnail_base" => "https://libimages1.princeton.edu/loris/figgy_prod/c6%2Fb4%2Fbe%2Fc6b4beb0d65b4d979adcd74ceba30e92%2Fintermediate_file.jp2"
+      "thumbnail_base" => "https://libimages1.princeton.edu/loris/figgy_prod/c6%2Fb4%2Fbe%2Fc6b4beb0d65b4d979adcd74ceba30e92%2Fintermediate_file.jp2",
+      "earliest_created" => "2004",
+      "latest_created" => "2012",
+      "date_display" => "2004-2012",
+      "date_created" => nil
     )
+  end
+  context "when there's no earliest/latest" do
+    let(:jsonld) { file_fixture("plum_records/a520829e-5cbd-4bff-8e0e-c05fbd6ed979.jsonld").read }
+    it "converts date when there's no earliest/latest" do
+      stub_plum_jsonld(record: "a520829e-5cbd-4bff-8e0e-c05fbd6ed979")
+      expect(converter.output["date_display"]).to eq "2014"
+      expect(converter.output["date_created"]).to eq "2014"
+    end
   end
   context "when there's no valid manifest" do
     before do

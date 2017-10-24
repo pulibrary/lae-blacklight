@@ -1,0 +1,608 @@
+{  
+   "@context":"http://iiif.io/api/presentation/2/context.json",
+   "@type":"sc:Manifest",
+   "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest",
+   "label":"La fuerza del sol. Gobierna para tu bien. PRD-DF. Enrique emPeña al país.",
+   "viewingHint":"individuals",
+   "sequences":[  
+      {  
+         "@type":"sc:Sequence",
+         "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/sequence/normal",
+         "rendering":[  
+
+         ],
+         "canvases":[  
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/016c4f1c-0fcf-4f53-a794-f3fd9b897134",
+               "label":"1",
+               "width":"3500",
+               "height":"4205",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"016c4f1c-0fcf-4f53-a794-f3fd9b897134"
+                        },
+                        "height":"4205",
+                        "width":"3500",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/86%2F41%2F9e%2F86419ef56b7a413eb8b3304ace34f3d4%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/016c4f1c-0fcf-4f53-a794-f3fd9b897134"
+                  }
+               ]
+            },
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/d5871d3f-4471-46c2-b64c-08d76f3ce1de",
+               "label":"2",
+               "width":"3481",
+               "height":"4203",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"d5871d3f-4471-46c2-b64c-08d76f3ce1de"
+                        },
+                        "height":"4203",
+                        "width":"3481",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/b3%2F7c%2Fd9%2Fb37cd997c2044a5598be4e48a5159aae%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/d5871d3f-4471-46c2-b64c-08d76f3ce1de"
+                  }
+               ]
+            },
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/f6a6739c-ced4-47c4-b622-25099f2b5f63",
+               "label":"3",
+               "width":"3501",
+               "height":"4230",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"f6a6739c-ced4-47c4-b622-25099f2b5f63"
+                        },
+                        "height":"4230",
+                        "width":"3501",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/ef%2Fe1%2F0d%2Fefe10dd07e39414f844435d8a26f7669%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/f6a6739c-ced4-47c4-b622-25099f2b5f63"
+                  }
+               ]
+            },
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/e9e8765d-401e-4553-9e2d-1274c9e87969",
+               "label":"4",
+               "width":"3480",
+               "height":"4226",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"e9e8765d-401e-4553-9e2d-1274c9e87969"
+                        },
+                        "height":"4226",
+                        "width":"3480",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/0d%2F20%2Fdf%2F0d20df7a555d450fb000bf4b1970aeb9%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/e9e8765d-401e-4553-9e2d-1274c9e87969"
+                  }
+               ]
+            },
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/7cb33ae9-6c36-4c20-9241-9d6f0cf2fffe",
+               "label":"5",
+               "width":"3478",
+               "height":"4226",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"7cb33ae9-6c36-4c20-9241-9d6f0cf2fffe"
+                        },
+                        "height":"4226",
+                        "width":"3478",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/10%2F71%2F3a%2F10713a6adf924be2a682225333dd133b%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/7cb33ae9-6c36-4c20-9241-9d6f0cf2fffe"
+                  }
+               ]
+            },
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/b76549a7-c7fc-47d8-96e4-2232b118addb",
+               "label":"6",
+               "width":"3485",
+               "height":"4229",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"b76549a7-c7fc-47d8-96e4-2232b118addb"
+                        },
+                        "height":"4229",
+                        "width":"3485",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/8d%2Fb6%2F99%2F8db6990d993a49c692d3458c1c545ab8%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/b76549a7-c7fc-47d8-96e4-2232b118addb"
+                  }
+               ]
+            },
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/58f9cb18-0797-43f6-a8ff-97858727d252",
+               "label":"7",
+               "width":"3479",
+               "height":"4203",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"58f9cb18-0797-43f6-a8ff-97858727d252"
+                        },
+                        "height":"4203",
+                        "width":"3479",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/28%2Fb2%2F09%2F28b209b461d44aaf9c04fdffdc5031f1%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/58f9cb18-0797-43f6-a8ff-97858727d252"
+                  }
+               ]
+            },
+            {  
+               "@type":"sc:Canvas",
+               "@id":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/d852883d-0f63-4643-875d-4c4bc00fe0f9",
+               "label":"8",
+               "width":"3482",
+               "height":"4201",
+               "images":[  
+                  {  
+                     "@type":"oa:Annotation",
+                     "motivation":"sc:painting",
+                     "resource":{  
+                        "@type":"dctypes:Image",
+                        "@id":{  
+                           "id":"d852883d-0f63-4643-875d-4c4bc00fe0f9"
+                        },
+                        "height":"4201",
+                        "width":"3482",
+                        "format":"image/jpeg",
+                        "service":{  
+                           "@context":"http://iiif.io/api/image/2/context.json",
+                           "@id":"https://libimages1.princeton.edu/loris/figgy_prod/88%2Fed%2F6e%2F88ed6e659e9447859983599826e98df8%2Fintermediate_file.jp2",
+                           "profile":"http://iiif.io/api/image/2/level2.json"
+                        }
+                     },
+                     "on":"https://figgy.princeton.edu/concern/ephemera_folders/a520829e-5cbd-4bff-8e0e-c05fbd6ed979/manifest/canvas/d852883d-0f63-4643-875d-4c4bc00fe0f9"
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "metadata":[  
+      {  
+         "label":"Created At",
+         "value":[  
+            "10/16/17 02:58:50 AM UTC"
+         ]
+      },
+      {  
+         "label":"Updated At",
+         "value":[  
+            "10/16/17 02:58:50 AM UTC"
+         ]
+      },
+      {  
+         "label":"Barcode",
+         "value":[  
+            "32101095145502"
+         ]
+      },
+      {  
+         "label":"Folder Number",
+         "value":[  
+            "143"
+         ]
+      },
+      {  
+         "label":"Title",
+         "value":[  
+            "La fuerza del sol. Gobierna para tu bien. PRD-DF. Enrique emPeña al país."
+         ]
+      },
+      {  
+         "label":"Sort Title",
+         "value":[  
+            "fuerza del sol. gobierna para tu bien. prd-df. enrique empeña al país."
+         ]
+      },
+      {  
+         "label":"Language",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:49:23 PM UTC",
+               "updated_at":"10/06/17 07:49:23 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"1bb6e264-8b3a-452c-9bc5-10e1c4c98c3e"
+               },
+               "label":"Spanish",
+               "uri":"http://id.loc.gov/vocabulary/iso639-1/es",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"f0608fb8-d182-437f-b489-8296dcb87678"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Genre",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:51:01 PM UTC",
+               "updated_at":"10/06/17 07:51:01 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"d38becc1-3c6f-4247-b64b-6ca8057664e9"
+               },
+               "label":"Serials",
+               "uri":"http://id.loc.gov/vocabulary/graphicMaterials/tgm007641",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"e7771cb0-e5a9-4ef7-b7ea-8e2f9b103302"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Width",
+         "value":[  
+            "30"
+         ]
+      },
+      {  
+         "label":"Height",
+         "value":[  
+            "36"
+         ]
+      },
+      {  
+         "label":"Page Count",
+         "value":[  
+            "8"
+         ]
+      },
+      {  
+         "label":"Series",
+         "value":[  
+            "Quincenario 731 del PRD en el DF"
+         ]
+      },
+      {  
+         "label":"Publisher",
+         "value":[  
+            "Partido de la Revolución Democrática (PRD)"
+         ]
+      },
+      {  
+         "label":"Geographic Origin",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:50:14 PM UTC",
+               "updated_at":"10/06/17 07:50:14 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"69b26b58-7a33-4712-b19a-a35409a31fcd"
+               },
+               "label":"Mexico",
+               "uri":"http://id.loc.gov/vocabulary/countries/mx",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"22597862-062b-4c91-a6ca-cd73a30aceb1"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Rendered Subject",
+         "value":[  
+            "\u003ca href=\"/?f%5Bdisplay_subject_ssim%5D%5B%5D=Politics+and+government\"\u003ePolitics and government\u003c/a\u003e -- \u003ca href=\"/?f%5Bdisplay_subject_ssim%5D%5B%5D=Local+government\"\u003eLocal government\u003c/a\u003e",
+            "\u003ca href=\"/?f%5Bdisplay_subject_ssim%5D%5B%5D=Politics+and+government\"\u003ePolitics and government\u003c/a\u003e -- \u003ca href=\"/?f%5Bdisplay_subject_ssim%5D%5B%5D=Elections\"\u003eElections\u003c/a\u003e"
+         ]
+      },
+      {  
+         "label":"Geo Subject",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:50:14 PM UTC",
+               "updated_at":"10/06/17 07:50:14 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"69b26b58-7a33-4712-b19a-a35409a31fcd"
+               },
+               "label":"Mexico",
+               "uri":"http://id.loc.gov/vocabulary/countries/mx",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"22597862-062b-4c91-a6ca-cd73a30aceb1"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Date Created",
+         "value":[  
+            "2014"
+         ]
+      },
+      {  
+         "label":"Rendered Date Range",
+         "value":[  
+            "-"
+         ]
+      },
+      {  
+         "label":"Subject",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:48:37 PM UTC",
+               "updated_at":"10/06/17 07:48:37 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"a5dea481-c71c-4945-bc71-8002767a0425"
+               },
+               "label":"Local government",
+               "uri":"http://id.loc.gov/authorities/subjects/sh85077923",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"8c6d894a-323e-446e-ad22-3eb43b2a57f1"
+                  }
+               ]
+            },
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:48:37 PM UTC",
+               "updated_at":"10/06/17 07:48:37 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"901dca85-bad6-451a-abee-620f0626d936"
+               },
+               "label":"Elections",
+               "uri":"http://id.loc.gov/authorities/subjects/sh85041557",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"8c6d894a-323e-446e-ad22-3eb43b2a57f1"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Categories",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraVocabulary",
+               "created_at":"10/06/17 07:48:37 PM UTC",
+               "updated_at":"10/06/17 07:48:37 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"8c6d894a-323e-446e-ad22-3eb43b2a57f1"
+               },
+               "label":"Politics and government",
+               "uri":"https://plum.princeton.edu/ns/lAESubjects/politicsAndGovernment",
+               "definition":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"94ac8724-64e5-4f46-bbe1-991d6cdd438f"
+                  }
+               ]
+            },
+            {  
+               "internal_resource":"EphemeraVocabulary",
+               "created_at":"10/06/17 07:48:37 PM UTC",
+               "updated_at":"10/06/17 07:48:37 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"8c6d894a-323e-446e-ad22-3eb43b2a57f1"
+               },
+               "label":"Politics and government",
+               "uri":"https://plum.princeton.edu/ns/lAESubjects/politicsAndGovernment",
+               "definition":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"94ac8724-64e5-4f46-bbe1-991d6cdd438f"
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "seeAlso":{  
+      "@id":"https://figgy.princeton.edu/catalog/a520829e-5cbd-4bff-8e0e-c05fbd6ed979.jsonld",
+      "format":"application/ld+json"
+   },
+   "license":"http://rightsstatements.org/vocab/CNE/1.0/",
+   "thumbnail":{  
+      "@id":"https://libimages1.princeton.edu/loris/figgy_prod/86%2F41%2F9e%2F86419ef56b7a413eb8b3304ace34f3d4%2Fintermediate_file.jp2/full/!200,150/0/default.jpg",
+      "service":{  
+         "@context":"http://iiiif.io/api/image/2/context.json",
+         "@id":"https://libimages1.princeton.edu/loris/figgy_prod/86%2F41%2F9e%2F86419ef56b7a413eb8b3304ace34f3d4%2Fintermediate_file.jp2",
+         "profile":"http;//iiiif.io/api/image/2/level2.json"
+      }
+   }
+}
