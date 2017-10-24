@@ -68,3 +68,9 @@ Style/FileName:
 Style/BracesAroundHashParameters:
   Exclude:
     - spec/services/solr_document_metadata_spec.rb
+Metrics/ModuleLength:
+  Exclude:
+    - app/helpers/application_helper.rb
+Rails/OutputSafety:
+  Exclude:
+    - app/helpers/application_helper.rb
