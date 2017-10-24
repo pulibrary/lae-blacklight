@@ -39,7 +39,11 @@ class PlumJsonldConverter
       "thumbnail_base" => thumbnail_base,
       "rights" => rights,
       "physical_number" => physical_number,
-      "box_physical_number" => box_physical_number
+      "box_physical_number" => box_physical_number,
+      "earliest_created" => earliest_created,
+      "latest_created" => latest_created,
+      "date_display" => date_display,
+      "date_created" => date_created
     }
   end
 
@@ -53,6 +57,30 @@ class PlumJsonldConverter
 
     def id
       json["@id"].split("/").last
+    end
+
+    def earliest_created
+      return unless date && date.is_a?(Hash)
+      Array.wrap(date["begin"]).first
+    end
+
+    def latest_created
+      return unless date && date.is_a?(Hash)
+      Array.wrap(date["end"]).first
+    end
+
+    def date_display
+      return date_created unless earliest_created && latest_created
+      "#{earliest_created}-#{latest_created}"
+    end
+
+    def date_created
+      return if earliest_created
+      Array.wrap(json["date_created"]).first
+    end
+
+    def date
+      Array.wrap(json["date_range"]).first
     end
 
     def barcode
