@@ -10,7 +10,7 @@ module ThumbnailHelper
   end
 
   def render_fullsize_thumbnail(document)
-    return unless document.nil?
+    return if document.nil?
     image_tag "#{document['thumbnail_base']}/full/!600,600/0/default.jpg"
   end
 end
