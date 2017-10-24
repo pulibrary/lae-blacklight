@@ -1,30 +1,9 @@
 GIT
-  remote: https://github.com/projectblacklight/blacklight_range_limit
-  revision: eec6b5d630db327716d4661b9df9060932708520
-  branch: rails-5.1
-  specs:
-    blacklight_range_limit (6.1.2)
-      blacklight (>= 6.0.2)
-      jquery-rails
-      rails (>= 3.0)
-
-GIT
   remote: https://github.com/pulibrary/pul_uv_rails.git
   revision: 4ae89c38c86cb3479374139df2dc19d6016597a1
   tag: v1.7.27
   specs:
     pul_uv_rails (1.7.27)
-
-GIT
-  remote: https://github.com/ruby-rdf/rdf-rdfxml
-  revision: 9f43ed940d0122f1c9b43f255ad4b558455708ea
-  branch: develop
-  specs:
-    rdf-rdfxml (2.0.0)
-      htmlentities (~> 4.3)
-      rdf (~> 2.0)
-      rdf-rdfa (~> 2.0)
-      rdf-xsd (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -97,6 +76,10 @@ GEM
       bootstrap-sass (~> 3.0)
       openseadragon (>= 0.2.0)
       rails
+    blacklight_range_limit (6.2.1)
+      blacklight (>= 6.0.2)
+      jquery-rails
+      rails (>= 3.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -188,7 +171,7 @@ GEM
       sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    haml (5.0.1)
+    haml (5.0.2)
       temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
@@ -305,12 +288,17 @@ GEM
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (2.2.0)
       rdf (~> 2.0)
-    rdf-rdfa (2.2.2)
+    rdf-rdfa (2.2.3)
       haml (~> 5.0)
       htmlentities (~> 4.3)
       rdf (~> 2.2)
       rdf-aggregate-repo (~> 2.2)
       rdf-xsd (~> 2.1)
+    rdf-rdfxml (2.2.0)
+      htmlentities (~> 4.3)
+      rdf (~> 2.0)
+      rdf-rdfa (~> 2.0)
+      rdf-xsd (~> 2.0)
     rdf-turtle (2.2.0)
       ebnf (~> 1.1)
       rdf (~> 2.2)
@@ -456,7 +444,7 @@ DEPENDENCIES
   bixby
   blacklight (~> 6.10)
   blacklight-gallery (~> 0.4)
-  blacklight_range_limit!
+  blacklight_range_limit (= 6.2.1)
   bourbon (~> 4.2.7)
   breakpoint
   bundler (>= 1.7.0)
@@ -485,7 +473,7 @@ DEPENDENCIES
   pul_uv_rails!
   rails (~> 5.1.0)
   rails-controller-testing
-  rdf-rdfxml!
+  rdf-rdfxml (= 2.2.0)
   rdf-turtle (~> 2.2.0)
   rdf-vocab
   rsolr
@@ -505,4 +493,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.15.1
+   1.15.4
