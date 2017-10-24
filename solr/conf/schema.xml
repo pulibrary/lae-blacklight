@@ -347,7 +347,7 @@
    <!-- export fields ttl and manifest-->
    <field name="ttl"            type="string" indexed="false" stored="true" multiValued="false"/>
    <field name="manifest"       type="string" indexed="false" stored="true" multiValued="false"/>
-   <field name="thumbnail_base" type="string" indexed="false" stored="true" multiValued="false"/>
+   <field name="thumbnail_base" type="string" indexed="true" stored="true" multiValued="false"/>
 
    <!-- 
      All labels:

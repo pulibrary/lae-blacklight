@@ -83,6 +83,7 @@ module ApplicationHelper
   def retrieve_recent_documents
     solr = RSolr.connect(url: Blacklight.connection_config[:url])
     solr_response = solr.get 'select', params: { qt: "search",
+                                                 fq: "thumbnail_base:['' TO *]",
                                                  start: 0,
                                                  rows: 8,
                                                  wt: :ruby,
