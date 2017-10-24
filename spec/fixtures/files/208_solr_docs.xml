@@ -8066,6 +8066,7 @@ lae:Folder rdfs:subClassOf dctype:Text .
 <field name="subject_label">Blacks</field>
 <field name="subject_label">Gender</field>
 <field name="subject_label">Labor</field>
+<field name="subject_with_category">[{"subject":"Blacks","category":"Minorities, ethnic and racial groups"},{"subject":"Gender","category":"Gender"},{"subject":"Labor","category":"Labor"}]</field>
 <field name="genre_pul_label">Pamphlets</field>
 <field name="language_label">Portuguese</field>
 <field name="geographic_origin_label">Brazil</field>
