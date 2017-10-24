@@ -72,6 +72,14 @@ module ApplicationHelper
     "#{request.protocol}#{request.host_with_port}/catalog?#{query}"
   end
 
+  def facet_links_for_category_and_subject(hash)
+    category = link_to hash[:category], facet_query_for_label_and_value('Category', hash[:category])
+    return category if hash[:subject] == hash[:category]
+    subject = link_to hash[:subject], facet_query_for_label_and_value('Subjects', hash[:subject])
+    return subject if hash[:category].blank?
+    "#{category} -- #{subject}".html_safe
+  end
+
   def doc_path(document)
     "/catalog/#{document['id']}"
   end

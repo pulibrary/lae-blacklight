@@ -8,11 +8,7 @@
           <% entry['value'].each do |value| -%>
             <li class="blacklight-<%= entry['label'].parameterize %>">
               <% if value.kind_of?(Hash) %>
-                <a href="<%= facet_query_for_label_and_value('Category',value[:category]) %>">
-                  <%= value[:category] %>
-                </a> -- <a href="<%= facet_query_for_label_and_value('Subjects',value[:subject]) %>">
-                  <%= value[:subject] %>
-                </a>
+                <%= facet_links_for_category_and_subject(value) %>
               <% elsif label_has_facet?(entry['label']) %>
                 <a href="<%= facet_query_for_label_and_value(entry['label'],value) %>">
                   <%= value %>
@@ -35,5 +31,3 @@
     </dd>
   <% end -%>
 </dl>
-
-

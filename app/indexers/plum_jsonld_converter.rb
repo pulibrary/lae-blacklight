@@ -173,8 +173,9 @@ class PlumJsonldConverter
 
     def subject_with_category
       JSON.generate(
-        json["subject"].select { |x| x["in_scheme"] }.map do |x|
-          { "subject": x["pref_label"], "category": x["in_scheme"]["pref_label"] }
+        json["subject"].map do |x|
+          { "subject": x["pref_label"],
+            "category": x["in_scheme"] ? x["in_scheme"]["pref_label"] : '' }
         end
       )
     end

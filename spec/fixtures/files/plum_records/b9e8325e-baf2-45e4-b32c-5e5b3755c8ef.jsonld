@@ -108,7 +108,7 @@
             "@id":"http://id.loc.gov/authorities/subjects/sh85090045"
          }
       },
-      {  
+      {
          "@id":"https://figgy.princeton.edu/catalog/a51c7f0b-4203-4ae9-b063-3e03fac1832b",
          "@type":"skos:Concept",
          "pref_label":"Advertising--Tourism",
@@ -120,6 +120,14 @@
          "exact_match":{  
             "@id":"http://id.loc.gov/authorities/subjects/sh88000359"
          }
+      },
+      {
+          "@id":"https://figgy.princeton.edu/catalog/b0b2fc0d-32ac-40ab-bfdf-e6c5546075c0",
+          "@type":"skos:Concept",
+          "pref_label":"Biodiversity",
+          "exact_match":{
+              "@id":"http://id.loc.gov/authorities/subjects/sh87005569"
+          }
       }
    ],
    "category":[  
