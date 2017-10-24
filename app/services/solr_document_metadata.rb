@@ -16,8 +16,6 @@ class SolrDocumentMetadata
       genre_pul_label: :solr_lookup,
       page_count: :solr_lookup,
       geographic_subject_label: :solr_lookup,
-      category: :solr_lookup,
-      subject_label: :solr_lookup,
       category_subject_pairs: :category_subject_pairs,
       language_label: :solr_lookup,
       # do something for container
