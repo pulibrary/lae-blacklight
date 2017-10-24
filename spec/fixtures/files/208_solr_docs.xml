@@ -5322,7 +5322,7 @@ lae:Folder rdfs:subClassOf dctype:Text .
 <field name="subject_label">AIDS (Disease)</field>
 <field name="subject_label">HIV infections</field>
 <field name="subject_label">Children--Health and hygiene</field>
-<field name="subject_with_category">[{"subject":"AIDS (Disease)","category":"Health"},{"subject":"HIV infections","category":"Health"},{"subject":"Children--Health and hygiene","category":"Children and youth"}]</field>
+<field name="subject_with_category">[{"subject":"AIDS (Disease)","category":"Health"},{"subject":"HIV infections","category":"Health"},{"subject":"Children--Health and hygiene","category":"Children and youth"},{"subject":"Children","category":""}]</field>
 <field name="genre_pul_label">Pamphlets</field>
 <field name="language_label">English</field>
 <field name="geographic_origin_label">Trinidad and Tobago</field>
