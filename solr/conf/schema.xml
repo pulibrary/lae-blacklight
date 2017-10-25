@@ -322,6 +322,7 @@
    <field name="box_barcode"      type="string" indexed="true"  stored="true" multiValued="false"/>
    <field name="box_physical_location"  type="string" indexed="true"  stored="true" multiValued="false"/>
    <field name="box_physical_number"    type="string" indexed="true"  stored="true" multiValued="false"/>
+   <field name="physical_number"        type="string" indexed="true"  stored="true" multiValued="false"/>
    <field name="rights"           type="string" indexed="false" stored="true" multiValued="false"/>
 
    <!-- multi-values -->

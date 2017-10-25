@@ -18,7 +18,7 @@ class SolrDocumentMetadata
       geographic_subject_label: :solr_lookup,
       category_subject_pairs: :category_subject_pairs,
       language_label: :solr_lookup,
-      # do something for container
+      container: :container,
       rights: :solr_lookup,
       dimensions: :dimensions
     }
@@ -33,6 +33,10 @@ class SolrDocumentMetadata
 
   def solr_lookup(key)
     document[key]
+  end
+
+  def container(_key = nil)
+    "Box #{document['box_physical_number']}, Folder #{document['physical_number']}"
   end
 
   def dimensions(_key = nil)
