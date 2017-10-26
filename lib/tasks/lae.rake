@@ -8,6 +8,15 @@ namespace :lae do
     Reindexer.new.index!
   end
 
+  task index_fixtures: :environment do
+    fixture_files = Rails.root.join('spec', 'fixtures', 'files', 'plum_records')
+    Dir["#{fixture_files}/*.jsonld"].each do |fn|
+      puts "Indexing #{fn}"
+      Blacklight.default_index.connection.add(PlumJsonldConverter.new(jsonld: File.new(fn).read).output)
+    end
+    Blacklight.default_index.connection.commit
+  end
+
   desc 'Delete the ENTIRE existing index'
   task drop_index: :environment do
     IndexEvent.delete_index
