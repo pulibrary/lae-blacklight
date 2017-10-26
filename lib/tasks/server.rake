@@ -5,7 +5,7 @@ desc 'Run test suite'
 task :ci do
   if Rails.env.test?
     run_solr('test', port: '8985') do
-      Rake::Task['lae:solr:index'].invoke
+      Rake::Task['lae:index_fixtures'].invoke
       Rake::Task['spec'].invoke
     end
   else
@@ -16,7 +16,7 @@ end
 desc 'Run solr and orangelight for interactive development'
 task :server, [:rails_server_args] do |_t, args|
   run_solr('development', port: '8989') do
-    Rake::Task['lae:solr:index'].invoke
+    Rake::Task['lae:index_fixtures'].invoke
     system "bundle exec rails s #{args[:rails_server_args]}"
   end
 end

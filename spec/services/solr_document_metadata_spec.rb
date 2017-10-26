@@ -17,7 +17,9 @@ RSpec.describe SolrDocumentMetadata do
       language_label: ["Spanish"],
       rights: "This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions",
       height_in_cm: "25",
-      width_in_cm: "11"
+      width_in_cm: "11",
+      box_physical_number: "1",
+      physical_number: "2"
     )
   end
 
@@ -26,9 +28,13 @@ RSpec.describe SolrDocumentMetadata do
       expect(metadata.dimensions).to eq "11 cm. × 25 cm"
     end
 
+    it "displays box/folder number as container" do
+      expect(metadata.container).to eq "Box 1, Folder 2"
+    end
+
     it "retrieves values from solr_doc" do
       metadata.each do |entry|
-        exceptions = ["Dimensions", "Subjects"]
+        exceptions = ["Dimensions", "Subjects", "Container"]
         unless exceptions.include? entry['label']
           expect(solr_doc.to_h.values).to include entry['value']
         end

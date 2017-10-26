@@ -31,4 +31,11 @@ RSpec.describe CatalogController, type: :feature do
       expect(page.assert_no_selector('#emailLink')).to be_truthy
     end
   end
+
+  feature 'container display' do
+    scenario 'should be displayed on catalog#show pages' do
+      visit "/catalog/004kr"
+      expect(page).to have_selector 'dd.blacklight-container', text: 'Box 1, Folder 131'
+    end
+  end
 end
