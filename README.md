@@ -30,6 +30,19 @@ $ rake db:migrate
 $ rake server
 ```
 
+### Loading sample data
+Clear your solr index with:
+```bash
+$ rake lae:drop_index
+```
+
+Then index sample data with:
+```bash
+$ rake lae:reindex
+```
+Note: This will take about an hour to finish indexing all data, but data will show up in your index after
+500 records have been indexed.
+
 Deploying with Capistrano
 ------------------
 Default branch for deployment is `master`. You can specify a branch using the BRANCH environment variable.
