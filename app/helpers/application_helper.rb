@@ -32,7 +32,7 @@ module ApplicationHelper
   end
 
   def strip_iiif_server_base_from_id(id)
-    base_url = "http://libimages.princeton.edu/loris2/"
+    base_url = "https://libimages.princeton.edu/loris/"
     id.gsub(base_url.to_s, '')
   end
 
