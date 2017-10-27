@@ -31,6 +31,7 @@ en:
       category: "Category"
       subject_label: "Subjects"
       language_label: "Language"
+      local_identifier: "Local Identifier"
       rights: "Rights"
       dimensions: "Dimensions"
       container: "Container"

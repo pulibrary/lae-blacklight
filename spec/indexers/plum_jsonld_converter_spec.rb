@@ -35,6 +35,7 @@ RSpec.describe PlumJsonldConverter do
         "title_display" => "Caripe. Jardín turístico de Monagas. ",
         "height_in_cm" => "25",
         "width_in_cm" => "11",
+        "local_identifier" => "3cff0",
         "page_count" => "6",
         "publisher_es" => ["Alcaldía del Municipio Caripe"],
         "publisher_display" => ["Alcaldía del Municipio Caripe"],

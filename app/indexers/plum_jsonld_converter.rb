@@ -40,6 +40,7 @@ class PlumJsonldConverter
       "rights" => rights,
       "physical_number" => physical_number,
       "box_physical_number" => box_physical_number,
+      "local_identifier" => local_identifier,
       "earliest_created" => earliest_created,
       "latest_created" => latest_created,
       "date_display" => date_display,
@@ -121,6 +122,10 @@ class PlumJsonldConverter
 
     def category
       json["subject"].select { |x| x["in_scheme"].present? }.map { |x| x["in_scheme"]["pref_label"] }
+    end
+
+    def local_identifier
+      Array.wrap(json["local_identifier"]).first
     end
 
     def genre_pul_label
