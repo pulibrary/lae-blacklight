@@ -18,6 +18,7 @@ RSpec.describe SolrDocumentMetadata do
       rights: "This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions",
       height_in_cm: "25",
       width_in_cm: "11",
+      local_identifier: "xyx123",
       box_physical_number: "1",
       physical_number: "2"
     )

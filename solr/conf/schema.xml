@@ -336,6 +336,7 @@
    <field name="description"       type="text_en" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="contributor"       type="text_en" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="creator"           type="text" indexed="true" stored="true" multiValued="true" termVectors="true"/>
+   <field name="local_identifier"  type="text" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="publisher"         type="text" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="publisher_en"      type="text_en" indexed="true" stored="true" multiValued="true" termVectors="true"/>
    <field name="publisher_es"      type="text_es" indexed="true" stored="true" multiValued="true" termVectors="true"/>

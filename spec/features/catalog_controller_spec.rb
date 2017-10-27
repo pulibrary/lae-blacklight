@@ -38,4 +38,33 @@ RSpec.describe CatalogController, type: :feature do
       expect(page).to have_selector 'dd.blacklight-container', text: 'Box 1, Folder 131'
     end
   end
+
+  feature 'rescue 404s with local_identifier lookup' do
+    let(:solr) { Blacklight.default_index.connection }
+    let(:new_id) { "fec7bb63-a5e1-4caf-be57-c14d41c8db43" }
+    let(:old_id) { "34w4m" }
+
+    before do
+      VCR.turn_off!
+
+      fixture_files = Rails.root.join('spec', 'fixtures', 'files', 'plum_records')
+      stub_request(:get, "https://figgy.princeton.edu/concern/ephemera_folders/#{new_id}/manifest")
+        .to_return(
+          body: File.new("#{fixture_files}/#{new_id}.manifest.json").read,
+          headers: {
+            'Content-Type' => "application/json"
+          }
+        )
+      solr.add(PlumJsonldConverter.new(jsonld: File.new("#{fixture_files}/#{new_id}.jsonld").read).output)
+      solr.commit
+    end
+    after do
+      VCR.turn_on!
+    end
+
+    it "looks up the new id by local_identifier and redirects to it" do
+      visit "/catalog/#{old_id}"
+      expect(page.current_path).to eq "/catalog/#{new_id}"
+    end
+  end
 end

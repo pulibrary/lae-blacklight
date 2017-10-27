@@ -188,4 +188,13 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
+
+  def invalid_document_id_error(exception)
+    @response, @document = search_results(search_field: 'local_identifier', q: params[:id])
+    if @document.first && @document.length == 1
+      redirect_to solr_document_path(@document.first.id)
+      return
+    end
+    super
+  end
 end

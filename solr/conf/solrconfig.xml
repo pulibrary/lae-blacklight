@@ -119,6 +119,7 @@
           earliest_created
           language_label
           latest_created
+          local_identifier
           id
        </str>
        <str name="pf">
@@ -153,6 +154,7 @@
           earliest_created
           language_label
           latest_created
+          local_identifier
           id
        </str>
        <str name="creator_qf">

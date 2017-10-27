@@ -19,6 +19,7 @@ class SolrDocumentMetadata
       category_subject_pairs: :category_subject_pairs,
       language_label: :solr_lookup,
       container: :container,
+      local_identifier: :solr_lookup,
       rights: :solr_lookup,
       dimensions: :dimensions
     }
