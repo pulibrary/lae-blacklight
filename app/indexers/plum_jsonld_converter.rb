@@ -44,7 +44,8 @@ class PlumJsonldConverter
       "earliest_created" => earliest_created,
       "latest_created" => latest_created,
       "date_display" => date_display,
-      "date_created" => date_created
+      "date_created" => date_created,
+      "description" => description
     }
   end
 
@@ -86,6 +87,10 @@ class PlumJsonldConverter
 
     def barcode
       json["barcode"]
+    end
+
+    def description
+      json["description"]
     end
 
     def date_uploaded

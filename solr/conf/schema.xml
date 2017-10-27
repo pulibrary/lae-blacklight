@@ -310,6 +310,7 @@
    <field name="sort_title" type="alphaOnlySort" indexed="true"  stored="true" multiValued="false"/>
    <field name="width_in_cm" type="text" indexed="true" stored="true" multiValued="false" termVectors="true" />
    <field name="height_in_cm" type="text" indexed="true" stored="true" multiValued="false" termVectors="true" />
+   <field name="page_count" type="text" indexed="true" stored="true" multiValued="false" termVectors="true" />
   
    <field name="date_created"     type="tint"   indexed="true"  stored="true" multiValued="false"/>
    <field name="date_modified"    type="date"   indexed="true"  stored="true" multiValued="false"/>
