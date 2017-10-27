@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'rsolr'
 require 'faraday'
+require 'webmock'
 require 'yaml'
 
 namespace :lae do
@@ -9,9 +10,21 @@ namespace :lae do
   end
 
   task index_fixtures: :environment do
+    include WebMock::API
+    WebMock.enable!
+    WebMock.disable_net_connect!(allow_localhost: true)
+
     fixture_files = Rails.root.join('spec', 'fixtures', 'files', 'plum_records')
     Dir["#{fixture_files}/*.jsonld"].each do |fn|
       puts "Indexing #{fn}"
+      id = File.basename(fn, ".jsonld")
+      stub_request(:get, "https://figgy.princeton.edu/concern/ephemera_folders/#{id}/manifest")
+        .to_return(
+          body: File.new("#{fixture_files}/#{id}.manifest.json").read,
+          headers: {
+            'Content-Type' => "application/json"
+          }
+        )
       Blacklight.default_index.connection.add(PlumJsonldConverter.new(jsonld: File.new(fn).read).output)
     end
     Blacklight.default_index.connection.commit
