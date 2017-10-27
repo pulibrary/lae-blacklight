@@ -122,11 +122,11 @@ class PlumJsonldConverter
     end
 
     def box
-      json["memberOf"].find { |x| x["box_number"].present? } || []
+      Array.wrap(json["memberOf"]).find { |x| x["box_number"].present? } || []
     end
 
     def category
-      json["subject"].select { |x| x["in_scheme"].present? }.map { |x| x["in_scheme"]["pref_label"] }
+      Array.wrap(json["subject"]).select { |x| x["in_scheme"].present? }.map { |x| x["in_scheme"]["pref_label"] }
     end
 
     def local_identifier
@@ -134,11 +134,11 @@ class PlumJsonldConverter
     end
 
     def genre_pul_label
-      json["dcterms_type"].map { |x| x["pref_label"] }
+      Array.wrap(json["dcterms_type"]).map { |x| x["pref_label"] }
     end
 
     def geo_origin_label
-      json["origin_place"].map do |value|
+      Array.wrap(json["origin_place"]).map do |value|
         if value.is_a?(Hash)
           value["pref_label"]
         else
@@ -148,7 +148,7 @@ class PlumJsonldConverter
     end
 
     def geo_subject_label
-      json["coverage"].map do |value|
+      Array.wrap(json["coverage"]).map do |value|
         if value.is_a?(Hash)
           value["pref_label"]
         else
@@ -166,11 +166,11 @@ class PlumJsonldConverter
     end
 
     def language_label
-      json["language"].map { |x| x["pref_label"] }
+      Array.wrap(json["language"]).map { |x| x["pref_label"] }
     end
 
     def publisher_display
-      json["publisher"]
+      Array.wrap(json["publisher"])
     end
 
     def title_display
@@ -178,12 +178,12 @@ class PlumJsonldConverter
     end
 
     def subject_label
-      json["subject"].map { |x| x["pref_label"] }
+      Array.wrap(json["subject"]).map { |x| x["pref_label"] }
     end
 
     def subject_with_category
       JSON.generate(
-        json["subject"].map do |x|
+        Array.wrap(json["subject"]).map do |x|
           unless x["in_scheme"]
             Rails.logger.warn("Data inconsistency: #{id} has subject #{x['pref_label']} with no category")
           end
