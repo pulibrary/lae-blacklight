@@ -11,8 +11,8 @@ class SolrDocumentMetadata
   def fields
     {
       creator: :solr_lookup,
-      geographic_origin_label: :solr_lookup,
       contributor: :solr_lookup,
+      geographic_origin_label: :solr_lookup,
       publisher_display: :solr_lookup,
       date_display: :solr_lookup,
       genre_pul_label: :solr_lookup,
