@@ -27,6 +27,7 @@ Metrics/MethodLength:
     - 'db/migrate/**/*'
     - 'app/indexers/plum_jsonld_converter.rb'
     - 'spec/support/stub_plum_catalog.rb'
+    - 'app/services/solr_document_metadata.rb'
 Metrics/ClassLength:
   Exclude:
     - 'app/indexers/plum_jsonld_converter.rb'

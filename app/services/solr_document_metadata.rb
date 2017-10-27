@@ -10,18 +10,20 @@ class SolrDocumentMetadata
   #   use :solr_lookup to pull from document.
   def fields
     {
+      creator: :solr_lookup,
       geographic_origin_label: :solr_lookup,
+      contributor: :solr_lookup,
       publisher_display: :solr_lookup,
       date_display: :solr_lookup,
       genre_pul_label: :solr_lookup,
+      description: :solr_lookup,
       page_count: :solr_lookup,
+      dimensions: :dimensions,
       geographic_subject_label: :solr_lookup,
       category_subject_pairs: :category_subject_pairs,
       language_label: :solr_lookup,
       container: :container,
-      local_identifier: :solr_lookup,
-      rights: :solr_lookup,
-      dimensions: :dimensions
+      rights: :solr_lookup
     }
   end
 
