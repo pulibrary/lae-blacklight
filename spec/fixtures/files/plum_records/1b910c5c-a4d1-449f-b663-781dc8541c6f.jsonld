@@ -1,0 +1,104 @@
+{  
+   "@context":"https://bibdata.princeton.edu/context.json",
+   "@id":"https://figgy.princeton.edu/catalog/1b910c5c-a4d1-449f-b663-781dc8541c6f",
+   "edm_rights":{  
+      "@id":"http://rightsstatements.org/vocab/CNE/1.0/",
+      "@type":"dcterms:RightsStatement",
+      "pref_label":"Copyright Not Evaluated"
+   },
+   "memberOf":[  
+      {  
+         "@id":"https://figgy.princeton.edu/catalog/a007f8ef-6dd3-436a-a38d-9936b794b42f",
+         "@type":"pcdm:Collection",
+         "barcode":"32101086454749",
+         "label":"Box 58",
+         "box_number":"58"
+      }
+   ],
+   "@type":"pcdm:Object",
+   "publisher":[  
+      "Universidad Central de Venezuela"
+   ],
+   "barcode":"32101086454749",
+   "local_identifier":[  
+      "3chbs"
+   ],
+   "label":"Folder 144",
+   "is_part_of":"Latin American Ephemera",
+   "coverage":[  
+      {  
+         "@id":"https://figgy.princeton.edu/catalog/e36dd185-6875-4efd-a62d-81f01a700097",
+         "@type":"skos:Concept",
+         "pref_label":"Venezuela",
+         "in_scheme":{  
+            "@id":"https://plum.princeton.edu/ns/lAEAreas",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Areas"
+         },
+         "exact_match":{  
+            "@id":"http://id.loc.gov/vocabulary/countries/ve"
+         }
+      }
+   ],
+   "dcterms_type":[  
+      {  
+         "@id":"https://figgy.princeton.edu/catalog/42754ac7-7723-4219-81eb-11085946fdca",
+         "@type":"skos:Concept",
+         "pref_label":"Pamphlets",
+         "in_scheme":{  
+            "@id":"https://plum.princeton.edu/ns/lAEGenres",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Genres"
+         },
+         "exact_match":{  
+            "@id":"http://id.loc.gov/vocabulary/graphicMaterials/tgm007415"
+         }
+      }
+   ],
+   "origin_place":[  
+      {  
+         "@id":"https://figgy.princeton.edu/catalog/e36dd185-6875-4efd-a62d-81f01a700097",
+         "@type":"skos:Concept",
+         "pref_label":"Venezuela",
+         "in_scheme":{  
+            "@id":"https://plum.princeton.edu/ns/lAEAreas",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Areas"
+         },
+         "exact_match":{  
+            "@id":"http://id.loc.gov/vocabulary/countries/ve"
+         }
+      }
+   ],
+   "language":[  
+      {  
+         "@id":"https://figgy.princeton.edu/catalog/1bb6e264-8b3a-452c-9bc5-10e1c4c98c3e",
+         "@type":"skos:Concept",
+         "pref_label":"Spanish",
+         "in_scheme":{  
+            "@id":"https://plum.princeton.edu/ns/lAELanguages",
+            "@type":"skos:ConceptScheme",
+            "pref_label":"LAE Languages"
+         },
+         "exact_match":{  
+            "@id":"http://id.loc.gov/vocabulary/iso639-1/es"
+         }
+      }
+   ],
+   "height":[  
+      "28"
+   ],
+   "width":[  
+      "22"
+   ],
+   "sort_title":[  
+      "plaza cubierta. 365 días de la nueva gestíon rectoral. "
+   ],
+   "page_count":"12",
+   "created":"10/18/17 06:12:01 PM UTC",
+   "modified":"10/27/17 06:55:35 PM UTC",
+   "folder_number":"144",
+   "date_created":[  
+      "2009"
+   ]
+}

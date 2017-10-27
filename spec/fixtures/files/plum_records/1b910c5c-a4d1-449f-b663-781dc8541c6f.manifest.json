@@ -1,0 +1,238 @@
+{  
+   "@context":"http://iiif.io/api/presentation/2/context.json",
+   "@type":"sc:Manifest",
+   "@id":"https://figgy.princeton.edu/concern/ephemera_folders/1b910c5c-a4d1-449f-b663-781dc8541c6f/manifest",
+   "label":"Plaza Cubierta. 365 días de la nueva gestíon rectoral. ",
+   "viewingHint":"individuals",
+   "metadata":[  
+      {  
+         "label":"Created At",
+         "value":[  
+            "10/18/17 06:12:01 PM UTC"
+         ]
+      },
+      {  
+         "label":"Updated At",
+         "value":[  
+            "10/27/17 06:55:34 PM UTC"
+         ]
+      },
+      {  
+         "label":"Barcode",
+         "value":[  
+            "32101098160888"
+         ]
+      },
+      {  
+         "label":"Folder Number",
+         "value":[  
+            "144"
+         ]
+      },
+      {  
+         "label":"Title",
+         "value":[  
+            "Plaza Cubierta. 365 días de la nueva gestíon rectoral. "
+         ]
+      },
+      {  
+         "label":"Sort Title",
+         "value":[  
+            "plaza cubierta. 365 días de la nueva gestíon rectoral. "
+         ]
+      },
+      {  
+         "label":"Language",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:49:23 PM UTC",
+               "updated_at":"10/06/17 07:49:23 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"1bb6e264-8b3a-452c-9bc5-10e1c4c98c3e"
+               },
+               "label":"Spanish",
+               "uri":"http://id.loc.gov/vocabulary/iso639-1/es",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"f0608fb8-d182-437f-b489-8296dcb87678"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Genre",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:51:01 PM UTC",
+               "updated_at":"10/06/17 07:51:01 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"42754ac7-7723-4219-81eb-11085946fdca"
+               },
+               "label":"Pamphlets",
+               "uri":"http://id.loc.gov/vocabulary/graphicMaterials/tgm007415",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"e7771cb0-e5a9-4ef7-b7ea-8e2f9b103302"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Width",
+         "value":[  
+            "22"
+         ]
+      },
+      {  
+         "label":"Height",
+         "value":[  
+            "28"
+         ]
+      },
+      {  
+         "label":"Page Count",
+         "value":[  
+            "12"
+         ]
+      },
+      {  
+         "label":"Series",
+         "value":[  
+            "Año 1, No. 3"
+         ]
+      },
+      {  
+         "label":"Publisher",
+         "value":[  
+            "Universidad Central de Venezuela"
+         ]
+      },
+      {  
+         "label":"Geographic Origin",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:50:14 PM UTC",
+               "updated_at":"10/06/17 07:50:14 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"e36dd185-6875-4efd-a62d-81f01a700097"
+               },
+               "label":"Venezuela",
+               "uri":"http://id.loc.gov/vocabulary/countries/ve",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"22597862-062b-4c91-a6ca-cd73a30aceb1"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Geo Subject",
+         "value":[  
+            {  
+               "internal_resource":"EphemeraTerm",
+               "created_at":"10/06/17 07:50:14 PM UTC",
+               "updated_at":"10/06/17 07:50:14 PM UTC",
+               "read_groups":[  
+
+               ],
+               "read_users":[  
+
+               ],
+               "edit_users":[  
+
+               ],
+               "edit_groups":[  
+
+               ],
+               "id":{  
+                  "id":"e36dd185-6875-4efd-a62d-81f01a700097"
+               },
+               "label":"Venezuela",
+               "uri":"http://id.loc.gov/vocabulary/countries/ve",
+               "code":null,
+               "tgm_label":null,
+               "lcsh_label":null,
+               "member_of_vocabulary_id":[  
+                  {  
+                     "id":"22597862-062b-4c91-a6ca-cd73a30aceb1"
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "label":"Date Created",
+         "value":[  
+            "2009"
+         ]
+      },
+      {  
+         "label":"Rendered Date Range",
+         "value":[  
+            "-"
+         ]
+      },
+      {  
+         "label":"Local Identifier",
+         "value":[  
+            "3chbs"
+         ]
+      }
+   ],
+   "seeAlso":{  
+      "@id":"https://figgy.princeton.edu/catalog/1b910c5c-a4d1-449f-b663-781dc8541c6f.jsonld",
+      "format":"application/ld+json"
+   },
+   "license":"http://rightsstatements.org/vocab/CNE/1.0/"
+}
