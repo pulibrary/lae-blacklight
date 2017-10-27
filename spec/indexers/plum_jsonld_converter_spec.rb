@@ -54,7 +54,8 @@ RSpec.describe PlumJsonldConverter do
         "earliest_created" => "2004",
         "latest_created" => "2012",
         "date_display" => "2004-2012",
-        "date_created" => nil
+        "date_created" => nil,
+        "description" => ["Test Description"]
       )
     end
   end
