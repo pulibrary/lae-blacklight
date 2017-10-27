@@ -77,13 +77,13 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
     config.add_facet_field 'genre_pul_label_facet', label: 'Genre'
+    config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
+    config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
+    config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet']
+    config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
+    config.add_facet_field 'language_label_facet', label: 'Language'
     config.add_facet_field 'category_facet', label: 'Category', show: false
     config.add_facet_field 'subject_label_facet', label: 'Subject', show: false
-    config.add_facet_field 'language_label_facet', label: 'Language'
-    config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
-    config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
-    config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
-    config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet']
 
     # config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
     #    :years_5 => { label: 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
