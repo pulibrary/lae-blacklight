@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rsolr'
 require 'faraday'
-require 'webmock'
+require 'webmock' unless Rails.env.production?
 require 'yaml'
 
 namespace :lae do
@@ -10,6 +10,7 @@ namespace :lae do
   end
 
   task index_fixtures: :environment do
+    raise "Don't load fixtures in production" if Rails.env.production?
     include WebMock::API
     WebMock.enable!
     WebMock.disable_net_connect!(allow_localhost: true)
