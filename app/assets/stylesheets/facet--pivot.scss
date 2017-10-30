@@ -8,3 +8,21 @@
 .facet-count {
     width: 2em !important;
 }
+
+.panel-heading {
+  padding: 5px !important;
+}
+
+h2.facets-heading {
+  text-transform: none !important;
+}
+
+h3.facet-field-heading {
+  a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+  }
+}
+h3.facet-field-heading:after {
+  padding: 5px 10px;
+}
