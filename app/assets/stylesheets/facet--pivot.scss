@@ -1,5 +1,10 @@
 .pivot-facet .facet-label {
     display: inline;
     padding-left: 0px;
-    word-break: none;
+    padding-right: 0px;
+    word-break: break-word;
+}
+
+.facet-count {
+    width: 2em !important;
 }
