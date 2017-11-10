@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+require 'rails_helper'
+
+RSpec.feature 'Search History', type: :feature do
+  scenario 'when there is search history' do
+    visit '/catalog?q=test&search_field=all_fields'
+    visit '/search_history'
+    expect(page).to have_selector 'span.filterValue', text: 'test'
+  end
+end
