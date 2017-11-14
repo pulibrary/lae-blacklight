@@ -1,0 +1,15 @@
+@media print {
+
+  /* remove header, navigation, footer, etc */
+  header,
+  #previousNextDocument,
+  .l-footer,
+  #sidebar,
+  #sortAndPerPage
+  {
+    display: none;
+  }
+
+  /* allow uv to fill the width of the page; keeps images from being cut off */
+  div.viewer { margin: 0; }
+}
