@@ -1,7 +1,12 @@
 @media print {
 
-  /* remove header, navigation, footer */
-  header, #previousNextDocument, .l-footer {
+  /* remove header, navigation, footer, etc */
+  header,
+  #previousNextDocument,
+  .l-footer,
+  #sidebar,
+  #sortAndPerPage
+  {
     display: none;
   }
 
