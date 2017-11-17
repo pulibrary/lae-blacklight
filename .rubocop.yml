@@ -21,6 +21,7 @@ Metrics/BlockLength:
     - 'spec/**/*'
     - 'config/initializers/*'
     - 'lib/tasks/lae.rake'
+    - 'config/routes.rb'
 
 Metrics/MethodLength:
   Exclude:

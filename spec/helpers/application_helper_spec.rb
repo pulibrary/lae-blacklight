@@ -31,4 +31,10 @@ RSpec.describe ApplicationHelper do
       end
     end
   end
+
+  describe "#available_translations" do
+    it "returns a hash of strings" do
+      expect(helper.available_translations['en']).to eq 'English'
+    end
+  end
 end

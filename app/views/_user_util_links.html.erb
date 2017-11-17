@@ -19,3 +19,12 @@
     </li>
   </ul>
 </div>
+<div>
+  <ul class="nav navbar-nav">
+    <% available_translations.each do |language, label| %>
+      <li role="presentation" lang="<%= language %>">
+        <%= link_to label, params.to_unsafe_hash.merge(locale: language) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

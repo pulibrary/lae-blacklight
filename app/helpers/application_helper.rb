@@ -129,4 +129,14 @@ module ApplicationHelper
     sample_pid = image_pids.sample
     sample_pid
   end
+
+  # Which translations are available for the user to select
+  # @return [Hash<String,String>] locale abbreviations as keys and labels as values
+  def available_translations
+    {
+      'en' => 'English',
+      'es' => 'Español',
+      'pt-BR' => 'Português do Brasil'
+    }
+  end
 end
