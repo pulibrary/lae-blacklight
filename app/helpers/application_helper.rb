@@ -139,4 +139,17 @@ module ApplicationHelper
       'pt-BR' => 'Português do Brasil'
     }
   end
+
+  # replace this on resolution of https://github.com/projectblacklight/blacklight/issues/1809
+  # I don't know how to write a helper test for this
+  def locale_switch_link(language)
+    path = request.original_fullpath
+    if params.to_unsafe_h.include? 'locale'
+      path.gsub(%r{locale=#{I18n.locale}}, "locale=#{language}")
+    elsif request.query_parameters.empty?
+      path + "?locale=#{language}"
+    else
+      path + "&locale=#{language}"
+    end
+  end
 end

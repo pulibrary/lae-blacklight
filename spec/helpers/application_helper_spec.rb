@@ -37,4 +37,53 @@ RSpec.describe ApplicationHelper do
       expect(helper.available_translations['en']).to eq 'English'
     end
   end
+
+  describe "#locale_switch_link" do
+    let(:request) { double }
+
+    before do
+      allow(helper).to receive(:request).and_return(request)
+      allow(request).to receive(:original_fullpath).and_return(original_fullpath)
+      allow(helper).to receive(:params).and_return(params)
+      allow(request).to receive(:query_parameters).and_return(query_params)
+    end
+
+    context "on root path" do
+      let(:original_fullpath) { "/" }
+      let(:params) do
+        ActionController::Parameters.new("id" => "index", "controller" => "pages", "action" => "show")
+      end
+      let(:query_params) { {} }
+      it "adds a locale where there were no params" do
+        expect(helper.locale_switch_link("es")).to eq "/?locale=es"
+      end
+    end
+
+    context "on search path" do
+      let(:original_fullpath) { "/catalog?utf8=%E2%9C%93&search_field=all_fields&q=health" }
+      let(:params) do
+        ActionController::Parameters.new("utf8" => "✓", "search_field" => "all_fields", "q" => "health", "controller" => "catalog", "action" => "index")
+      end
+      let(:query_params) do
+        { "utf8" => "✓", "search_field" => "all_fields", "q" => "health" }
+      end
+      it "preserves all the other params" do
+        expect(helper.locale_switch_link("es")).to eq "/catalog?utf8=%E2%9C%93&search_field=all_fields&q=health&locale=es"
+      end
+    end
+
+    context "on search_history path" do
+      let(:original_fullpath) { "/search_history?locale=pt-BR" }
+      let(:params) do
+        ActionController::Parameters.new("locale" => "pt-BR", "controller" => "search_history", "action" => "index")
+      end
+      let(:query_params) { { "locale" => "pt-BR" } }
+      before do
+        allow(I18n).to receive(:locale).and_return(:"pt-BR")
+      end
+      it "substitutes locale from existing locale param" do
+        expect(helper.locale_switch_link("es")).to eq "/search_history?locale=es"
+      end
+    end
+  end
 end
