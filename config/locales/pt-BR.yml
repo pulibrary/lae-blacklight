@@ -3,21 +3,21 @@ pt-BR:
   blacklight_gallery:
     catalog:
       modal_slideshow:
-        counter: Counter
+        counter: "%{counter} de %{count}"
   metadata:
     labels:
-      category: Category
-      category_subject_pairs: Subjects
-      container: Container
-      contributor: Contributor
-      date_display: Date
-      dimensions: Dimensions
-      genre_pul_label: Item Type
-      geographic_origin_label: Origin
-      geographic_subject_label: Geographic Subject
-      language_label: Language
-      local_identifier: Local Identifier
-      page_count: Page Count
-      publisher_display: Publisher
-      rights: Rights
-      subject_label: Subjects
+      category: Categoria
+      category_subject_pairs: Sujeito
+      container: Recipiente
+      contributor: Colaborador
+      date_display: Data
+      dimensions: Dimensões
+      genre_pul_label: Tipo de item
+      geographic_origin_label: Origem
+      geographic_subject_label: Assunto geográfico
+      language_label: língua
+      local_identifier: Identificador Local
+      page_count: Contagem de páginas
+      publisher_display: Editor
+      rights: Direitos
+      subject_label: Sujeito

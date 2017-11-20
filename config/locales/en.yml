@@ -3,11 +3,11 @@ en:
   blacklight_gallery:
     catalog:
       modal_slideshow:
-        counter: Counter
+        counter: "%{counter} of %{count}"
   metadata:
     labels:
       category: Category
-      category_subject_pairs: Subjects
+      category_subject_pairs: Subject
       container: Container
       contributor: Contributor
       creator: Creator
@@ -21,4 +21,4 @@ en:
       page_count: Page Count
       publisher_display: Publisher
       rights: Rights
-      subject_label: Subjects
+      subject_label: Subject
