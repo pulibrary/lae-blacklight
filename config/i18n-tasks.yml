@@ -3,7 +3,7 @@
 # The "main" locale.
 base_locale: en
 ## All available locales are inferred from the data by default. Alternatively, specify them explicitly:
-# locales: [es, fr]
+locales: [es, pt-BR]
 ## Reporting locale, default: en. Available: en, ru.
 # internal_locale: en
 
@@ -25,6 +25,8 @@ data:
   write:
     ## For example, write devise and simple form keys to their respective files:
     # - ['{devise, simple_form}.*', 'config/locales/\1.%{locale}.yml']
+    - ['{simple_form}.*', 'config/locales/\1.%{locale}.yml']
+    - config/locales/%{locale}.yml
     ## Catch-all default:
     # - config/locales/%{locale}.yml
 
@@ -88,9 +90,10 @@ search:
 #   api_key: "AbC-dEf5"
 
 ## Do not consider these keys missing:
-# ignore_missing:
+ignore_missing:
 # - 'errors.messages.{accepted,blank,invalid,too_short,too_long}'
-# - '{devise,simple_form}.*'
+# both blacklight and devise provide translation in the languages we use
+  - '{blacklight,devise}.*'
 
 ## Consider these keys used:
 # ignore_unused:
