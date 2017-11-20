@@ -1,0 +1,12 @@
+pt-BR:
+  blacklight:
+    application_name: 'Digital Archive of Latin American and Caribbean Ephemera'
+    welcome: 'Digite uma pesquisa ou filtro pelas facetas da esquerda para começar.'
+    search:
+      fields:
+        language_label_facet: Língua
+        genre_pul_label_facet: Gênero
+        date_created_facet: Data
+        geographic_origin_label_facet: Origem
+        category_subject_facet: Sujeito
+        geographic_subject_label_facet: Assunto geográfico

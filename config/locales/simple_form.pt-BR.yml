@@ -1,0 +1,7 @@
+---
+pt-BR:
+  simple_form:
+    labels:
+      contact:
+        name: Nome
+        message: Mensagem

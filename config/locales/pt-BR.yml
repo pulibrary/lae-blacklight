@@ -15,9 +15,23 @@ pt-BR:
       genre_pul_label: Tipo de item
       geographic_origin_label: Origem
       geographic_subject_label: Assunto geográfico
-      language_label: língua
+      language_label: Língua
       local_identifier: Identificador Local
       page_count: Contagem de páginas
       publisher_display: Editor
       rights: Direitos
       subject_label: Sujeito
+  header:
+    nav:
+      language: Língua
+      user: Usuário
+      about: Sobre
+      contact: Contato
+      browse: Procurar Visualizar
+  contact:
+    heading: Entre em contato com o Projeto Ephemera da América Latina
+    form:
+      instruction:
+        required: Campo obrigatório
+  catalog:
+    return_link_text: Retornar ao catálogo de projetos

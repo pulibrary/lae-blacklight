@@ -21,3 +21,17 @@ es:
       publisher_display: Editor
       rights: Derechos
       subject_label: Tema
+  header:
+    nav:
+      language: Idioma
+      user: Usuario
+      about: Acerca de
+      contact: Contacto
+      browse: Vista Navegación
+  contact:
+    heading: Póngase en contacto con el Proyecto Ephemera de América Latina
+    form:
+      instruction:
+        required: Campo requerido
+  catalog:
+    return_link_text: Regrese al Catálogo del Proyecto

@@ -22,3 +22,17 @@ en:
       publisher_display: Publisher
       rights: Rights
       subject_label: Subject
+  header:
+    nav:
+      language: Language
+      user: User
+      about: About
+      contact: Contact
+      browse: Browse
+  contact:
+    heading: Contact the Latin American Ephemera Project
+    form:
+      instruction:
+        required: Required field
+  catalog:
+    return_link_text: Return to Project Catalog
