@@ -1,5 +1,5 @@
 ---
-en:
+es:
   blacklight_gallery:
     catalog:
       modal_slideshow:
@@ -10,7 +10,6 @@ en:
       category_subject_pairs: Subjects
       container: Container
       contributor: Contributor
-      creator: Creator
       date_display: Date
       dimensions: Dimensions
       genre_pul_label: Item Type
