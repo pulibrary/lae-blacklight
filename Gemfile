@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.2.0'
 gem 'compass-rails', '~> 3.0.2'
 gem "devise"
 gem "devise-guests", "~> 0.3"
+gem 'devise-i18n'
 gem 'faraday'
 gem 'font-awesome-sass'
 gem 'high_voltage', '~> 3.0.0'
