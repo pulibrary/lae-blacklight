@@ -36,3 +36,12 @@ en:
         required: Required field
   catalog:
     return_link_text: Return to Project Catalog
+  footer:
+    copyright_holder: The Trustees of Princeton University. All rights reserved.
+    acknowledgement_html: The Princeton University <em>Digital Archive of Latin American and Caribbean Ephemera</em> is made possible with generous grants from The Council on Library and Information Resources and The Latin Americanist Research Resources Project.
+  index:
+    browse: Browse
+    learn_more: Learn more
+    description_html: "The Digital Archive of Latin American and Caribbean Ephemera is a steadily growing repository containing a previously unavailable subset of Princeton’s %{href} as well as newly acquired materials being digitized and added on an ongoing basis."
+    description_href: Latin American Ephemera Collection
+    recent_additions: Recent Additions

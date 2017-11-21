@@ -1,6 +1,6 @@
 es:
   blacklight:
-    application_name: 'Digital Archive of Latin American and Caribbean Ephemera'
+    application_name: 'Archivo digital de Ephemera de América Latina y el Caribe'
     welcome: 'Ingrese una búsqueda o filtro por las facetas de la izquierda para comenzar.'
     search:
       fields:
