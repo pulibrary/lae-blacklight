@@ -25,6 +25,20 @@ RSpec.describe ApplicationController do
       expect(I18n).to have_received(:locale=).with('es')
     end
 
+    it "uses accept_language header if no parameter" do
+      allow(I18n).to receive(:locale=)
+      allow(controller.request).to receive(:env).and_return('HTTP_ACCEPT_LANGUAGE' => "pt-BR")
+      get :index
+      expect(I18n).to have_received(:locale=).with("pt-BR")
+    end
+
+    it "uses pt-BR if pt is given in header" do
+      allow(I18n).to receive(:locale=)
+      allow(controller.request).to receive(:env).and_return('HTTP_ACCEPT_LANGUAGE' => "pt")
+      get :index
+      expect(I18n).to have_received(:locale=).with("pt-BR")
+    end
+
     it "falls back to default_locale" do
       allow(I18n).to receive(:locale=)
       get :index
