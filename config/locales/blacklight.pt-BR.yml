@@ -10,3 +10,13 @@ pt-BR:
         geographic_origin_label_facet: Origem
         category_subject_facet: Sujeito
         geographic_subject_label_facet: Assunto geográfico
+        geographic_origin_label: Origem
+        date_display: Data
+        publisher_display: Editor
+      # these label fields were missing upstream; can be removed on release of
+      # https://github.com/projectblacklight/blacklight/pull/1812/files
+      # (probably BL 7.0)
+      index:
+        label: '%{label}:'
+      show:
+        label: '%{label}:'

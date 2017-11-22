@@ -10,3 +10,6 @@ es:
         geographic_origin_label_facet: Origen
         category_subject_facet: Tema
         geographic_subject_label_facet: Tema geográfico
+        geographic_origin_label: Origen
+        date_display: Fecha
+        publisher_display: Editor
