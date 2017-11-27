@@ -4,6 +4,29 @@ es:
     catalog:
       modal_slideshow:
         counter: "%{counter} de %{count}"
+  catalog:
+    return_link_text: Regrese al Catálogo del Proyecto
+  contact:
+    form:
+      instruction:
+        required: Campo requerido
+    heading: Póngase en contacto con el Proyecto Ephemera de América Latina
+  footer:
+    acknowledgement_html: El <em>Archivo digital de Ephemera de América Latina y el Caribe</em> de la Universidad de Princeton es posible gracias a las generosas subvenciones del Consejo de Biblioteca y Recursos de Información y el Proyecto de Recursos de Investigación Latinoamericanos.
+    copyright_holder: Los Fideicomisarios de la Universidad de Princeton. Todos los derechos reservados.
+  header:
+    nav:
+      about: Acerca de
+      browse: Vista Navegación
+      contact: Contacto
+      language: Idioma
+      user: Usuario
+  index:
+    browse: Vista Navegación
+    description_href: Colección Ephemera Latinoamericana
+    description_html: El Archivo digital de Ephemera de América Latina y el Caribe es un repositorio en constante crecimiento que contiene un subconjunto de %{href} de Princeton que no estaba disponible anteriormente, así como materiales recién adquiridos que se digitalizan y agregan de forma continua.
+    learn_more: Aprende más
+    recent_additions: Adiciones recientes
   metadata:
     labels:
       category: Categoría
@@ -21,26 +44,3 @@ es:
       publisher_display: Editor
       rights: Derechos
       subject_label: Tema
-  header:
-    nav:
-      language: Idioma
-      user: Usuario
-      about: Acerca de
-      contact: Contacto
-      browse: Vista Navegación
-  contact:
-    heading: Póngase en contacto con el Proyecto Ephemera de América Latina
-    form:
-      instruction:
-        required: Campo requerido
-  catalog:
-    return_link_text: Regrese al Catálogo del Proyecto
-  footer:
-    copyright_holder: Los Fideicomisarios de la Universidad de Princeton. Todos los derechos reservados.
-    acknowledgement_html: El <em>Archivo digital de Ephemera de América Latina y el Caribe</em> de la Universidad de Princeton es posible gracias a las generosas subvenciones del Consejo de Biblioteca y Recursos de Información y el Proyecto de Recursos de Investigación Latinoamericanos.
-  index:
-    browse: Vista Navegación
-    learn_more: Aprende más
-    description_html: "El Archivo digital de Ephemera de América Latina y el Caribe es un repositorio en constante crecimiento que contiene un subconjunto de %{href} de Princeton que no estaba disponible anteriormente, así como materiales recién adquiridos que se digitalizan y agregan de forma continua."
-    description_href: Colección Ephemera Latinoamericana
-    recent_additions: Adiciones recientes
