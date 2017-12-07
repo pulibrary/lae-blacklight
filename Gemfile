@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'bitters', '~> 1.2.0'
 gem 'bixby'
-gem 'blacklight', '~> 6.10'
+gem 'blacklight', '~> 6.13'
 gem 'blacklight-gallery', '~> 0.4'
 gem 'blacklight_range_limit', '6.2.1'
 gem 'bourbon', '~> 4.2.7'
