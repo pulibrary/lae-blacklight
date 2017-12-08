@@ -127,7 +127,7 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
 
-    config.add_search_field 'all_fields', label: 'Keyword'
+    config.add_search_field 'all_fields'
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
@@ -147,7 +147,7 @@ class CatalogController < ApplicationController
       }
     end
 
-    config.add_search_field('creator/publisher') do |field|
+    config.add_search_field('creator_publisher') do |field|
       field.solr_parameters = { 'spellcheck.dictionary': 'creator' }
       field.solr_local_parameters = {
         qf: '$creator_qf',
@@ -179,11 +179,11 @@ class CatalogController < ApplicationController
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
-    config.add_sort_field 'score desc, sort_title asc', label: 'Relevance'
-    config.add_sort_field 'sort_title asc', label: 'Title'
-    config.add_sort_field 'date_modified desc', label: 'Recently Added', show: false
-    config.add_sort_field 'date_numsort asc, sort_title asc', label: 'Date Created - Oldest'
-    config.add_sort_field 'date_numsort desc, sort_title asc', label: 'Date Created - Newest'
+    config.add_sort_field 'relevance', field: 'score desc, sort_title asc'
+    config.add_sort_field 'title', field: 'sort_title asc'
+    config.add_sort_field 'recently_added', field: 'date_modified desc', show: false
+    config.add_sort_field 'date_created_oldest', field: 'date_numsort asc, sort_title asc'
+    config.add_sort_field 'date_created_newest', field: 'date_numsort desc, sort_title asc'
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5

@@ -13,6 +13,16 @@ pt-BR:
         geographic_origin_label: Origem
         date_display: Data
         publisher_display: Editor
+        search:
+          all_fields: Todos os campos
+          title: Título
+          creator_publisher: Criador/Editor
+          subject: Sujeito
+        sort:
+          relevance: Relevância
+          title: Título
+          date_created_oldest: Data de criação - mais antigos
+          date_created_newest: Data Criada - Mais nova
       # these label fields were missing upstream; can be removed on release of
       # https://github.com/projectblacklight/blacklight/pull/1812/files
       # (probably BL 7.0)

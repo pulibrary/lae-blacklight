@@ -13,3 +13,13 @@ es:
         geographic_origin_label: Origen
         date_display: Fecha
         publisher_display: Editor
+        search:
+          all_fields: Todos los campos
+          title: Título
+          creator_publisher: Creador/Editor
+          subject: Tema
+        sort:
+          relevance: Pertinencia
+          title: Título
+          date_created_oldest: Fecha de creación - Más antigua
+          date_created_newest: Fecha de creación - El más nuevo
