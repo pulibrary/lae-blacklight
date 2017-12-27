@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 set :stage, :production
 set :rails_env, 'production'
+set :deploy_to, '/opt/lae-blacklight'
 
 set :branch, ENV['BRANCH'] || 'master'
 # Simple Role Syntax
