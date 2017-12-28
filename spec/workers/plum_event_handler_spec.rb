@@ -4,6 +4,12 @@ require 'rails_helper'
 RSpec.describe PlumEventHandler do
   subject(:handler) { described_class.new }
 
+  describe "queue name" do
+    it 'incorporates the env' do
+      expect(handler.queue.name).to eq "lae_test_queue"
+    end
+  end
+
   describe "#work" do
     before do
       # I hate stubbing the object under test, but I'm not sure how to stop it
