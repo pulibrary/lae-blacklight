@@ -13,7 +13,12 @@ class PlumEventProcessor
     end
 
     def json
-      @json ||= open(jsonld_url).read
+      @json ||=
+        begin
+          open(jsonld_url).read
+        rescue OpenURI::HTTPError
+          '{}'
+        end
     end
 
     def solr_record

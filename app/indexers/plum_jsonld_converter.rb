@@ -52,7 +52,7 @@ class PlumJsonldConverter
   private
 
     def json
-      @json ||= JSON.parse(jsonld.force_encoding('UTF-8'))
+      @json ||= JSON.parse(jsonld.dup.force_encoding('UTF-8'))
     end
 
     def ttl; end
