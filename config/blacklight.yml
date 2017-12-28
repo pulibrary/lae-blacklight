@@ -16,7 +16,7 @@ development:
 test: &test
   adapter: solr
   url: <%= "http://127.0.0.1:#{ENV['SOLR_TEST_PORT'] || 8888}/solr/blacklight-core-test" %>
-production:
+production: &deploy
   adapter: solr
   url: <%= ENV['SOLR_URL'] || "http://localhost:8080/lae-blacklight" %>
-
+staging: *deploy

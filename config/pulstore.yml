@@ -4,3 +4,5 @@ test:
   url: 'http://pulstore.princeton.edu/lae'
 production:
   url: 'http://pulstore.princeton.edu/lae'
+staging:
+  url: 'http://pulstore.princeton.edu/lae'

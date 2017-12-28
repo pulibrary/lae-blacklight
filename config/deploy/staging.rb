@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 set :stage, :production
 set :rails_env, 'production'
+set :deploy_to, '/opt/lae-blacklight'
 
 set :branch, ENV['BRANCH'] || 'master'
 # Simple Role Syntax
@@ -19,7 +20,7 @@ set :branch, ENV['BRANCH'] || 'master'
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'libruby-dev', user: 'deploy', roles: %w[web app db worker], my_property: :my_value
+server 'lae-staging1', user: 'deploy', roles: %w[web app db worker], my_property: :my_value
 
 # Custom SSH Options
 # ==================

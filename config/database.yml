@@ -18,3 +18,5 @@ production: &deploy
   host: <%= ENV["LAE_DB_HOST"] %>
   username: <%= ENV["LAE_DB_USERNAME"] %>
   password: <%= ENV["LAE_DB_PASSWORD"] %>
+
+staging: *deploy
