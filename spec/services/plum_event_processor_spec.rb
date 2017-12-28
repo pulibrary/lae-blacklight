@@ -85,7 +85,7 @@ RSpec.describe PlumEventProcessor do
     context "when it's no longer accessible" do
       it "deletes it" do
         solr.add(PlumJsonldConverter.new(jsonld: open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
-        stub_request(:get, url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).to_return(body: "{}", headers: { "Content-Type" => "application/json+ld" })
+        stub_request(:get, url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).to_return(body: "{}", headers: { "Content-Type" => "application/json+ld" }, status: 404)
 
         expect(processor.process).to eq true
 
