@@ -66,6 +66,13 @@ RSpec.describe PlumJsonldConverter do
       expect { converter.output }.not_to raise_error
     end
   end
+  context "when there's no box" do
+    let(:jsonld) { file_fixture("plum_records/1b910c5c-a4d1-449f-b663-781dc8541c6f-boxless.jsonld").read }
+    it "works" do
+      stub_plum_jsonld(record: "1b910c5c-a4d1-449f-b663-781dc8541c6f-boxless")
+      expect { converter.output }.not_to raise_error
+    end
+  end
   context "when there's no earliest/latest" do
     let(:jsonld) { file_fixture("plum_records/a520829e-5cbd-4bff-8e0e-c05fbd6ed979.jsonld").read }
     it "converts date when there's no earliest/latest" do

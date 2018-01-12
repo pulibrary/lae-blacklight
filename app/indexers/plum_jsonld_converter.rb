@@ -122,7 +122,7 @@ class PlumJsonldConverter
     end
 
     def box
-      Array.wrap(json["memberOf"]).find { |x| x["box_number"].present? } || []
+      Array.wrap(json["memberOf"]).find { |x| x["box_number"].present? } || {}
     end
 
     def category
