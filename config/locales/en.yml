@@ -22,6 +22,7 @@
 en:
   metadata:
     labels:
+      creator: "Creator"
       geographic_origin_label: "Origin"
       publisher_display: "Publisher"
       date_display: "Date"

@@ -67,4 +67,11 @@ RSpec.describe CatalogController, type: :feature do
       expect(page.current_path).to eq "/catalog/#{new_id}"
     end
   end
+
+  feature 'field labels' do
+    it "shows creator label" do
+      visit "/catalog/004kr"
+      expect(page).to have_selector 'dt.blacklight-creator', text: 'Creator:'
+    end
+  end
 end
