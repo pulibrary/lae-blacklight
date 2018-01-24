@@ -99,7 +99,7 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
     config.add_index_field 'geographic_origin_label', label: 'Geographic Origin'
-    config.add_index_field 'publisher_display', label: 'Publisher'
+    config.add_index_field 'publisher_display', label: 'Publisher', separator_options: { words_connector: '<br/>', two_words_connector: '<br/>', last_word_connector: '<br/>' }
     config.add_index_field 'date_display', label: 'Date'
 
     # Solr fields to be displayed in the show (single result) view
