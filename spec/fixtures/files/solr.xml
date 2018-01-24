@@ -19,6 +19,7 @@
     <field name="rights">This digital reproduction is intended to support research, teaching, and private study. Users are responsible for determining any copyright questions.</field>
     <field name="category">Labor</field>
     <field name="category">Economics</field>
+    <field name="creator">Test Creator</field>
     <field name="geographic_subject_label">Puerto Rico</field>
     <field name="geographic_subject_iso_3166_2_code">pr</field>
     <field name="geographic_subject_gac_code">nwpr</field>
