@@ -10,6 +10,7 @@ en:
     form:
       instruction:
         required: Required field
+      submit: Send message
     heading: Contact the Latin American Ephemera Project
   footer:
     acknowledgement_html: The Princeton University <em>%{application_name}</em> is made possible with generous grants from The Council on Library and Information Resources and The Latin Americanist Research Resources Project.

@@ -10,6 +10,7 @@ pt-BR:
     form:
       instruction:
         required: Campo obrigatório
+      submit: Enviar
     heading: Entre em contato com o Projeto Ephemera da América Latina
   footer:
     acknowledgement_html: A Universidade de Princeton <em>%{application_name}</em> é possível com generosas doações do Conselho de Recursos de Biblioteca e de Informação e do Projeto de Recursos de Pesquisa Latino-Americanos.
