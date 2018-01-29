@@ -11,37 +11,37 @@ pt-BR:
       instruction:
         required: Campo obrigatório
       submit: Enviar
-    heading: Entre em contato com o Projeto Ephemera da América Latina
+    heading: Entre em contato com o Arquivo de Documentos Efêmeros da América Latina
   footer:
-    acknowledgement_html: A Universidade de Princeton <em>%{application_name}</em> é possível com generosas doações do Conselho de Recursos de Biblioteca e de Informação e do Projeto de Recursos de Pesquisa Latino-Americanos.
+    acknowledgement_html: A realização do <em>%{application_name}</em> da Universidade de Princeton foi possível através de generosas doações do Council on Library and Information Resources e do Latin Americanist Research Resources Project.
     copyright_holder: Os curadores da Universidade de Princeton. Todos os direitos reservados.
   header:
     nav:
       about: Sobre
-      browse: Procurar Visualizar
+      browse: Explorar
       contact: Contato
-      language: Língua
+      language: Idioma
       user: Usuário
   index:
-    browse: Procurar Visualizar
+    browse: Explorar
     description_href: Colecção Ephemera da América Latina
-    description_html: O %{application_name} é um repositório cada vez maior que contém um subconjunto de Princeton %{href} anteriormente, bem como materiais recém-adquiridos digitalizados e adicionados de forma contínua.
-    learn_more: Saber mais
-    recent_additions: Adições recentes
+    description_html: O %{application_name} é um repositório em constante crescimento que contém uma parte da Coleção de Documentos Efêmeros da América Latina da Universidade de Princeton até agora nunca disponível, além de materiais recém-adquiridos.
+    learn_more: Saiba mais
+    recent_additions: Itens adicionados recentemente
   metadata:
     labels:
       category: Categoria
-      category_subject_pairs: Sujeito
-      container: Recipiente
+      category_subject_pairs: Assunto
+      container: Localização
       contributor: Colaborador
       date_display: Data
       dimensions: Dimensões
-      genre_pul_label: Tipo de item
-      geographic_origin_label: Origem
+      genre_pul_label: Tipo
+      geographic_origin_label: País de Origem
       geographic_subject_label: Assunto geográfico
-      language_label: Língua
+      language_label: Idioma
       local_identifier: Identificador Local
-      page_count: Contagem de páginas
+      page_count: N° de páginas
       publisher_display: Editor
-      rights: Direitos
-      subject_label: Sujeito
+      rights: Direitos autorais
+      subject_label: Assunto
