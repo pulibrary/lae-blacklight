@@ -9,7 +9,7 @@
             <%= t('blacklight.application_name') %>
 	     		</h1>
 	     		<div class="featured-text">
-            <p><%= t('index.description_html', href: link_to(t('index.description_href'), "http://libguides.princeton.edu/laec")) %></p>
+            <p><%= t('index.description_html', href: link_to(t('index.description_href'), "http://libguides.princeton.edu/laec"), application_name: t('blacklight.application_name')) %></p>
             <%= link_to "<button>#{t('index.browse')}</button>".html_safe, page_path('catalog', sort: 'date_modified desc', search_field:'all_fields') %>
             <%= link_to "<button>#{t('index.learn_more')}</button>".html_safe, 'about' %>
 	     		</div>
