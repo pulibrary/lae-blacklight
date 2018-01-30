@@ -11,7 +11,7 @@ es:
       instruction:
         required: Campo requerido
       submit: Enviar
-    heading: Entre en contacto con el Archivo Digital de Efímera de América Latina y el Caribe 
+    heading: Entre en contacto con el Archivo Digital de Efímera de América Latina y el Caribe
   footer:
     acknowledgement_html: La creación del <em>%{application_name}</em> ha sido posible gracias al generoso apoyo del Council on Library and Information Resources y el Latin Americanist Research Resources Project.
     copyright_holder: The Trustees of Princeton University. Todos los derechos reservados.
@@ -30,11 +30,11 @@ es:
     recent_additions: Adiciones recientes
   metadata:
     labels:
-      creator: Creator
       category: Categoría
       category_subject_pairs: Tema
       container: Envase
       contributor: Colaborador
+      creator: Creator
       date_display: Fecha
       dimensions: Dimensiones
       genre_pul_label: Tipo de artículo
