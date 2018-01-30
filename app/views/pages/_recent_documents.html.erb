@@ -2,7 +2,7 @@
   <% documents = retrieve_recent_documents %>
   <% documents.each do |doc| %>
   <div class="card">
-    <%= link_to "/catalog/#{doc['id']}" do %>
+    <%= link_to link_with_locale("/catalog/#{doc['id']}") do %>
     <div class="card-image">
       <%= render_square_thumbnail(doc) %>
     </div>

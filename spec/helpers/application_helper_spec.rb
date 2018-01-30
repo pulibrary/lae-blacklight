@@ -92,4 +92,17 @@ RSpec.describe ApplicationHelper do
       expect(helper.viewer_data_uri("/catalog/07gmd?locale=en")).to eq "/catalog/07gmd.jsonld"
     end
   end
+
+  describe "#link_with_locale" do
+    let(:params) do
+      ActionController::Parameters.new("locale" => "pt-BR")
+    end
+    before do
+      allow(helper).to receive(:params).and_return(params)
+      allow(I18n).to receive(:locale).and_return(:"pt-BR")
+    end
+    it "adds current locale to a link" do
+      expect(helper.link_with_locale("/catalog/07gmd")).to eq "/catalog/07gmd?locale=pt-BR"
+    end
+  end
 end

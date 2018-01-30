@@ -157,4 +157,9 @@ module ApplicationHelper
     uri = URI.parse(solr_document_uri)
     "#{uri.path}.jsonld"
   end
+
+  # if user is using locale via querystring params, make sure it's part of the links on the page
+  def link_with_locale(url)
+    params.to_unsafe_h.include?('locale') ? "#{url}?locale=#{I18n.locale}" : url
+  end
 end
