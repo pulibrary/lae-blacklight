@@ -10,23 +10,23 @@ es:
     form:
       instruction:
         required: Campo requerido
-      submit: Send message
-    heading: Póngase en contacto con el Proyecto Ephemera de América Latina
+      submit: Enviar
+    heading: Entre en contacto con el Archivo Digital de Efímera de América Latina y el Caribe 
   footer:
-    acknowledgement_html: El <em>%{application_name}</em> de la Universidad de Princeton es posible gracias a las generosas subvenciones del Consejo de Biblioteca y Recursos de Información y el Proyecto de Recursos de Investigación Latinoamericanos.
-    copyright_holder: Los Fideicomisarios de la Universidad de Princeton. Todos los derechos reservados.
+    acknowledgement_html: La creación del <em>%{application_name}</em> ha sido posible gracias al generoso apoyo del Council on Library and Information Resources y el Latin Americanist Research Resources Project.
+    copyright_holder: The Trustees of Princeton University. Todos los derechos reservados.
   header:
     nav:
       about: Acerca de
-      browse: Vista Navegación
-      contact: Contacto
+      browse: Explorar
+      contact: Contactar
       language: Idioma
       user: Usuario
   index:
-    browse: Vista Navegación
+    browse: Explorar
     description_href: Colección Ephemera Latinoamericana
     description_html: El %{application_name} es un repositorio en constante crecimiento que contiene un subconjunto de %{href} de Princeton que no estaba disponible anteriormente, así como materiales recién adquiridos que se digitalizan y agregan de forma continua.
-    learn_more: Aprende más
+    learn_more: Conozca más
     recent_additions: Adiciones recientes
   metadata:
     labels:

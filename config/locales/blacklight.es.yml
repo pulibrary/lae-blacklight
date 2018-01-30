@@ -1,25 +1,42 @@
 es:
+
+  views:
+    pagination:
+      next: 'Próximo &raquo;'
+    pagination_compact:
+      next: 'Próximo &raquo;'
   blacklight:
     application_name: 'Archivo Digital de Efímera de América Latina y el Caribe'
     welcome: 'Ingrese una búsqueda o filtro por las facetas de la izquierda para comenzar.'
+    header_links:
+      search_history: 'Historial de búsqueda'
     search:
       fields:
         language_label_facet: Idioma
-        genre_pul_label_facet: Género
+        genre_pul_label_facet: Género/Formato
         date_created_facet: Fecha
-        geographic_origin_label_facet: Origen
-        category_subject_facet: Tema
+        geographic_origin_label_facet: Lugar de publicación
+        category_subject_facet: Temas
         geographic_subject_label_facet: Tema geográfico
-        geographic_origin_label: Origen
+        geographic_origin_label: Lugar de publicación
         date_display: Fecha
         publisher_display: Editor
         search:
-          all_fields: Todos los campos
+          all_fields: Palabra clave
           title: Título
-          creator_publisher: Creador/Editor
-          subject: Tema
+          creator_publisher: Creador/editor
+          subject: Materia
         sort:
-          relevance: Pertinencia
+          relevance: Relevancia
           title: Título
-          date_created_oldest: Fecha de creación - Más antigua
-          date_created_newest: Fecha de creación - El más nuevo
+          recently_added: 'Añadidos recientemente'
+          date_created_oldest: 'Fecha de creación más antigua'
+          date_created_newest: 'Fecha de creación más reciente'
+      bookmarks:
+        absent: Seleccionar
+        present: Seleccionado
+      facets:
+        title: 'Filtre su búsqueda'
+      filters:
+        title: 'Su búsqueda'
+      start_over: 'Comenzar otra vez'
