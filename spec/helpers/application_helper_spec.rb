@@ -86,4 +86,10 @@ RSpec.describe ApplicationHelper do
       end
     end
   end
+
+  describe "#viewer_data_uri" do
+    it "doesn't include the locale" do
+      expect(helper.viewer_data_uri("/catalog/07gmd?locale=en")).to eq "/catalog/07gmd.jsonld"
+    end
+  end
 end

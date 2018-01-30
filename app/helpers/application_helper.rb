@@ -152,4 +152,9 @@ module ApplicationHelper
       path + "&locale=#{language}"
     end
   end
+
+  def viewer_data_uri(solr_document_uri)
+    uri = URI.parse(solr_document_uri)
+    "#{uri.path}.jsonld"
+  end
 end
