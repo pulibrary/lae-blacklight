@@ -30,6 +30,7 @@ pt-BR:
     recent_additions: Itens adicionados recentemente
   metadata:
     labels:
+      creator: Creator
       category: Categoria
       category_subject_pairs: Assunto
       container: Localização

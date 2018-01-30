@@ -30,6 +30,7 @@ es:
     recent_additions: Adiciones recientes
   metadata:
     labels:
+      creator: Creator
       category: Categoría
       category_subject_pairs: Tema
       container: Envase
