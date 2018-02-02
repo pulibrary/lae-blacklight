@@ -1,40 +1,48 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
+---
 en:
+  blacklight_gallery:
+    catalog:
+      modal_slideshow:
+        counter: "%{counter} of %{count}"
+  catalog:
+    return_link_text: Return to Project Catalog
+  contact:
+    form:
+      instruction:
+        required: Required field
+      submit: Send message
+    heading: Contact the Latin American Ephemera Project
+  footer:
+    acknowledgement_html: The Princeton University <em>%{application_name}</em> is made possible with generous grants from The Council on Library and Information Resources and The Latin Americanist Research Resources Project.
+    copyright_holder: The Trustees of Princeton University. All rights reserved.
+  header:
+    nav:
+      about: About
+      browse: Browse
+      contact: Contact
+      language: Language
+      user: User
+  index:
+    browse: Browse
+    description_href: Latin American Ephemera Collection
+    description_html: The %{application_name} is a steadily growing repository containing a previously unavailable subset of Princeton’s %{href} as well as newly acquired materials being digitized and added on an ongoing basis.
+    learn_more: Learn more
+    recent_additions: Recent Additions
   metadata:
     labels:
-      creator: "Creator"
-      geographic_origin_label: "Origin"
-      publisher_display: "Publisher"
-      date_display: "Date"
-      genre_pul_label: "Item Type"
-      page_count: "Page Count"
-      geographic_subject_label: "Geographic Subject"
-      category: "Category"
-      subject_label: "Subjects"
-      language_label: "Language"
-      local_identifier: "Local Identifier"
-      rights: "Rights"
-      dimensions: "Dimensions"
-      container: "Container"
-      category_subject_pairs: "Subjects"
-      contributor: "Contributor"
+      category: Category
+      category_subject_pairs: Subject
+      container: Container
+      contributor: Contributor
+      creator: Creator
+      date_display: Date
+      dimensions: Dimensions
+      genre_pul_label: Item Type
+      geographic_origin_label: Origin
+      geographic_subject_label: Geographic Subject
+      language_label: Language
+      local_identifier: Local Identifier
+      page_count: Page Count
+      publisher_display: Publisher
+      rights: Rights
+      subject_label: Subject

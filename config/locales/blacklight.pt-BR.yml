@@ -1,0 +1,43 @@
+pt-BR:
+  blacklight:
+    application_name: 'Arquivo Digital de Documentos Efêmeros da América Latina e Caribe'
+    welcome: 'Digite uma pesquisa ou filtro pelas facetas da esquerda para começar.'
+    back_to_search: Resultados
+    search:
+      fields:
+        language_label_facet: Idioma
+        genre_pul_label_facet: Gênero
+        date_created_facet: Data
+        geographic_origin_label_facet: Origem
+        category_subject_facet: Assunto
+        geographic_subject_label_facet: Assunto geográfico
+        geographic_origin_label: País de Origem
+        date_display: Data
+        publisher_display: Editor
+        search:
+          all_fields: Palavra-chave
+          title: Título
+          creator_publisher: Criador/Editor
+          subject: Assunto
+        sort:
+          relevance: Relevância
+          title: Título
+          recently_added: 'Novas adições'
+          date_created_oldest: 'Data de criaçao (mais antigos)'
+          date_created_newest: 'Data de criação (mais recentes)'
+      form:
+        search:
+          label: 'pesquisar'
+          placeholder: 'Pesquisar...'
+        submit: 'Pesquisar'
+      # these label fields were missing upstream; can be removed on release of
+      # https://github.com/projectblacklight/blacklight/pull/1812/files
+      # (probably BL 7.0)
+      index:
+        label: '%{label}:'
+      show:
+        label: '%{label}:'
+      bookmarks:
+        absent: Salvar
+        present: 'Nos favoritos'
+      start_over: 'Nova busca'

@@ -1,6 +1,6 @@
   <div class="wrapper">
-    <h1>Contact the Latin American Ephemera Project</h1>
-    <span class="req"><abbr title="required">*</abbr> Indicates required field</span>
+    <h1><%= t('contact.heading') %></h1>
+    <span class="req"><abbr title="required">*</abbr> <%= t('contact.form.instruction.required') %></span>
     <%= simple_form_for @contact, :html => {:class => 'form-horizontal form-lae-contact' } do |f| %>
 
       <%= f.input :name, :required => true, label_html: { class: '' }, wrapper_html: { class: '' } %>
@@ -11,7 +11,7 @@
         <%= f.input :nickname, :hint => 'Leave this field blank!' %>
       </div>
       <div class="send-button">
-        <%= f.button :submit, 'Send message', :class=> "submit-button" %>
+        <%= f.button :submit, t('contact.form.submit'), :class=> "submit-button" %>
       </div>
     <% end %>
   </div>

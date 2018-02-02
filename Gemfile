@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'bitters', '~> 1.2.0'
 gem 'bixby'
-gem 'blacklight', '~> 6.10'
+gem 'blacklight', '~> 6.14', '> 6.14.0'
 gem 'blacklight-gallery', '~> 0.4'
 gem 'blacklight_range_limit', '6.2.1'
 gem 'bourbon', '~> 4.2.7'
@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.2.0'
 gem 'compass-rails', '~> 3.0.2'
 gem "devise"
 gem "devise-guests", "~> 0.3"
+gem 'devise-i18n'
 gem 'faraday'
 gem 'font-awesome-sass'
 gem 'high_voltage', '~> 3.0.0'
@@ -48,6 +49,7 @@ group :test, :development do
   gem 'byebug'
   gem 'capybara'
   gem 'coveralls', require: false
+  gem 'i18n-tasks', '~> 0.9'
   gem 'pry-byebug'
 end
 

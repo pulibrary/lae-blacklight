@@ -1,0 +1,48 @@
+---
+pt-BR:
+  blacklight_gallery:
+    catalog:
+      modal_slideshow:
+        counter: "%{counter} de %{count}"
+  catalog:
+    return_link_text: Retornar ao catálogo de projetos
+  contact:
+    form:
+      instruction:
+        required: Campo obrigatório
+      submit: Enviar
+    heading: Entre em contato com o Arquivo de Documentos Efêmeros da América Latina
+  footer:
+    acknowledgement_html: A realização do <em>%{application_name}</em> da Universidade de Princeton foi possível através de generosas doações do Council on Library and Information Resources e do Latin Americanist Research Resources Project.
+    copyright_holder: Os curadores da Universidade de Princeton. Todos os direitos reservados.
+  header:
+    nav:
+      about: Sobre
+      browse: Explorar
+      contact: Contato
+      language: Idioma
+      user: Usuário
+  index:
+    browse: Explorar
+    description_href: Colecção Ephemera da América Latina
+    description_html: O %{application_name} é um repositório em constante crescimento que contém uma parte da Coleção de Documentos Efêmeros da América Latina da Universidade de Princeton até agora nunca disponível, além de materiais recém-adquiridos.
+    learn_more: Saiba mais
+    recent_additions: Itens adicionados recentemente
+  metadata:
+    labels:
+      category: Categoria
+      category_subject_pairs: Assunto
+      container: Localização
+      contributor: Colaborador
+      creator: Criador
+      date_display: Data
+      dimensions: Dimensões
+      genre_pul_label: Tipo
+      geographic_origin_label: País de Origem
+      geographic_subject_label: Assunto geográfico
+      language_label: Idioma
+      local_identifier: Identificador Local
+      page_count: N° de páginas
+      publisher_display: Editor
+      rights: Direitos autorais
+      subject_label: Assunto

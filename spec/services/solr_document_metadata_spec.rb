@@ -35,7 +35,7 @@ RSpec.describe SolrDocumentMetadata do
 
     it "retrieves values from solr_doc" do
       metadata.each do |entry|
-        exceptions = ["Dimensions", "Subjects", "Container"]
+        exceptions = ["Dimensions", "Subject", "Container"]
         unless exceptions.include? entry['label']
           expect(solr_doc.to_h.values).to include entry['value']
         end

@@ -6,12 +6,12 @@
 			<%= render 'featured_document' %>
 	     	<div class="featured-text-block">
 	     		<h1 class="visually-hidden">
-	     			Digital Archive of Latin American and Caribbean Ephemera
+            <%= t('blacklight.application_name') %>
 	     		</h1>
 	     		<div class="featured-text">
-				  <p>The Digital Archive of Latin American and Caribbean Ephemera is a steadily growing repository containing a previously unavailable subset of Princeton’s <a href="http://libguides.princeton.edu/laec">Latin American Ephemera Collection</a> as well as newly acquired materials being digitized and added on an ongoing basis. </p>
-				  <%= link_to '<button>Browse</button>'.html_safe, page_path('catalog', sort: 'date_modified desc', search_field:'all_fields') %>
-				  <%= link_to '<button>Learn More</button>'.html_safe, 'about' %>
+            <p><%= t('index.description_html', href: link_to(t('index.description_href'), "http://libguides.princeton.edu/laec"), application_name: t('blacklight.application_name')) %></p>
+            <%= link_to "<button>#{t('index.browse')}</button>".html_safe, page_path('catalog', sort: 'date_modified desc', search_field:'all_fields') %>
+            <%= link_to "<button>#{t('index.learn_more')}</button>".html_safe, page_path('about') %>
 	     		</div>
 	     	</div>	
 		</div>
@@ -19,7 +19,7 @@
 </section>
 <main class="front">
 	<div class="wrapper">
-		<h3>Recent Additions</h3>
+    <h3><%= t('index.recent_additions') %></h3>
 		<%= render 'recent_documents' %>
 	</div>
 </main>

@@ -1,5 +1,5 @@
 <ul class="nav navbar-nav">
-  <li><%= link_to 'About', page_path('about') %></li>
-  <li><%= link_to 'Contact', page_path('contacts') %></li>
-  <li><%= link_to 'Browse', page_path('catalog', sort: 'date_modified desc', search_field:'all_fields') %></li>
+  <li><%= link_to t('header.nav.about'), page_path('about') %></li>
+  <li><%= link_to t('header.nav.contact'), page_path('contacts') %></li>
+  <li><%= link_to t('header.nav.browse'), page_path('catalog', sort: 'date_modified desc', search_field:'all_fields') %></li>
 </ul>

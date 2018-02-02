@@ -129,4 +129,37 @@ module ApplicationHelper
     sample_pid = image_pids.sample
     sample_pid
   end
+
+  # Which translations are available for the user to select
+  # @return [Hash<String,String>] locale abbreviations as keys and labels as values
+  def available_translations
+    {
+      'en' => 'English',
+      'es' => 'Español',
+      'pt-BR' => 'Português do Brasil'
+    }
+  end
+
+  # replace this on resolution of https://github.com/projectblacklight/blacklight/issues/1809
+  # I don't know how to write a helper test for this
+  def locale_switch_link(language)
+    path = request.original_fullpath
+    if params.to_unsafe_h.include? 'locale'
+      path.gsub(%r{locale=#{I18n.locale}}, "locale=#{language}")
+    elsif request.query_parameters.empty?
+      path + "?locale=#{language}"
+    else
+      path + "&locale=#{language}"
+    end
+  end
+
+  def viewer_data_uri(solr_document_uri)
+    uri = URI.parse(solr_document_uri)
+    "#{uri.path}.jsonld"
+  end
+
+  # if user is using locale via querystring params, make sure it's part of the links on the page
+  def link_with_locale(url)
+    params.to_unsafe_h.include?('locale') ? "#{url}?locale=#{I18n.locale}" : url
+  end
 end

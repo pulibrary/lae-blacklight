@@ -1,0 +1,51 @@
+<%= render 'shared/header_navbar' %>
+<%= content_for :page_title, 'About' %>
+<main role="main">
+  <div class="wrapper">
+    <h1>Sobre o <%= t('blacklight.application_name') %></h1>
+
+    <p>O <em><%= t('blacklight.application_name') %></em> é a fase mais recente e mais ambiciosa do compromisso de Princeton em proporcionar acesso à <a href = "http://libguides sem paralelo. princeton.edu/laec">Coleção de Documentos Efêmeros da América Latina</a>. O acesso aberto e on-line a este subconjunto da coleção, até agora inacessível, se tornou realidade no início de 2015 graças ao generoso apoio fornecido pelo <a href="http://www.crl.edu/rn/larrp">Projeto de Recursos de Pesquisa Latinoamericanos (LARRP)</a> e um subsídio inicial de três anos do <a href="http://www.clir.org/hiddencollections">Conselho sobre Recursos de Biblioteca e Informação (CLIR)</a>. O objetivo de Princeton e seus parceiros para os próximos anos é continuar a adicionar centenas de novos documentos efêmero digitalizados por mês, transformando essa vasta e excepcional coleção de um arquivo praticamente inacessível em um recurso acadêmico dinâmico que irá apoiar as presentes e futuras atividades acadêmicas em estudos latino-americanos interdisciplinares e nas ciências sociais e ciências humanas de forma geral.
+
+    <p>Mesmo que um número significativo de itens de anos anteriores tenha sido incluído, a maior parte dos materiais atualmente encontrados no Arquivo Digital foram originalmente criados em torno da virada do século 20 e depois, com alguns originados tão recentemente quanto no último ano. Os formatos ou gênero mais comumente incluídos são panfletos, panfletos, folhetos, folhetos, cartazes, adesivos e cartões postais. Esses itens foram criados originalmente por uma ampla gama de ativistas sociais, organizações não governamentais, agências governamentais, partidos políticos, grupos de reflexão de políticas públicas e outros tipos de organizações para divulgar seus pontos de vista, posições, agendas, políticas, eventos e actividades. A grande maioria das fontes primárias raras e difíceis de encontrar não está disponível em outros lugares.</p>
+
+    <p>O Arquivo abora os seguintes assuntos:</p>
+    <ul>
+      <li>Questões agrárias e rurais</li>
+      <li>Artes e cultura</li>
+      <li>Crianças e jovens</li>
+      <li>Economia</li>
+      <li>Educação</li>
+      <li>Ambiente e ecologia</li>
+      <li>Questões de gênero</li>
+      <li>Saúde</li>
+      <li>Direitos humanos e civis</li>
+      <li>Trabalho</li>
+      <li>Minorias, grupos étnicos e raciais</li>
+      <li>Política e governo</li>
+      <li>Religião</li>
+      <li>Ciência e tecnologia</li>
+      <li>Condições socioeconômicas e desenvolvimento</li>
+      <li>Turismo</li>
+    </ul>
+     
+    <p>Essas categorias de assuntos são divididas em várias subcategorias.</p>
+
+    <p>Quase todos os países da América Latina estão representados no repositório, embora a maioria dos documentos tenham sido produzidos na Argentina, Bolívia, Chile e Venezuela. Há um esforço para fornecer uma cobertura mais equilibrada no futuro.</p>
+
+    <h2>História da Coleção de Documentos Efêmeros da América Latina</h2>
+
+    <p>A Biblioteca da Universidade de Princeton começou a colecionar documentos de conteúdo efêmero e literatura cinzenta latino-americana na década de 1970. Barbara Hadley Stein, a primeira bibliógrafa da universidade focada em América Latina, Espanha e Portugal (1966-1977), procurou inicialmente documentar alguns dos principais desenvolvimentos políticos do período, incluindo o surgimento das ditaduras militares, os golpes de Estado, a institucionalização da Revolução Cubana e as respostas populares a todos esses desenvolvimentos. Sua sucessora, Peter T. Johnson (1977-2003), expandiu o escopo geográfico e temático da coleção e sistematizou o processo de organização, catalogação e preservação dos materiais. Fernando Acosta-Rodríguez, o atual bibliotecário de Princeton para estudos latino-americanos, ibéricos e latinos, supervisiona a coleção desde 2003.</p>
+
+    <p>Antes do <em><%= t('blacklight.application_name') %></em> ficar disponível online no início de 2015, o acesso à coleção se deu pelo organização, catalogação e microfilmage de subcoleções temáticas, e a elaboração de guias de pesquisa. Aproximadamente 350 subcoleções foram processadas ao longo dos anos. Elas permanecem acessíveis apenas através de empréstimos entre bibliotecas ou pela consula presencial na Universidade de Princeton. Uma visão geral das subcoleções está disponível no guia <a href="http://libguides.princeton.edu/laemicro">Documentos Efêmeros Latinoamericanos em microfilme e coleções especiais</a>.</p>
+
+    <p>A criação de um arquivo digital com acesso aberto à coleção se tornou um objetivo quando ficou evidente que o antigo modelo de acesso era insustentável. A coleção continuou crescendo sem ser processada nos anos necessários para a elaboração e construcão de uma plataforma digital para o arquivo, chegando a aproximadamente 12 mil itens não disponíveis para pesquisa. Essa coleção retrospectiva está agora sendo digitalizada e compondo o <em><%= t('blacklight.application_name') %></em>.</p>
+
+    <h2>Copyright</h2>
+
+    <p>La Biblioteca de la Universidad de Princeton pone a disposición los contenidos del Archivo Digital de Efímera de América Latina y el Caribe con el propósito de apoyar la investigación, la enseñanza y el estudio. La Universidad de Princeton no posee los derechos de autor de ninguno de los materiales incluidos. Los titulares de derechos de autor que estén preocupados por la violación de sus derechos legales pueden enviar una solicitud para retirar el contenido pertinente <%= link_to "aqui", page_path('contacts') %>.</p>
+
+    <h2>Como citar</h2>
+    <p>[Identificación del documento], Digital Archive of Latin American and Caribbean Ephemera, Princeton University Library.</p>
+
+  </div>
+</main>

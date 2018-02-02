@@ -2,12 +2,23 @@ en:
   blacklight:
     application_name: 'Digital Archive of Latin American and Caribbean Ephemera'
     welcome: 'Enter a search or filter by the facets at left to get started.'
-
     tools:
       title: 'Options'
     search:
       facets:
         title: 'Filter your search'
+      fields:
+        search:
+          all_fields: 'Keyword'
+          title: 'Title'
+          creator_publisher: 'Creator/Publisher'
+          subject: 'Subject'
+        sort:
+          relevance: 'Relevance'
+          title: 'Title'
+          recently_added: 'Recently Added'
+          date_created_oldest: 'Date Created - Oldest'
+          date_created_newest: 'Date Created - Newest'
     back_to_search: 'Back to Results'
     header_links:
       login: 'Login'

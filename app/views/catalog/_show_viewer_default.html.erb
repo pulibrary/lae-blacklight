@@ -1,4 +1,4 @@
 <% if document["manifest"] != "{}" %>
-  <div class="uv viewer" data-config="/uv_config.json" data-uri="<%= "#{solr_document_path}.jsonld" %>"></div>
+  <div class="uv viewer" data-config="/uv_config.json" data-uri="<%= viewer_data_uri(solr_document_path) %>"></div>
   <%= PulUvRails::UniversalViewer.script_tag %>
 <% end %>
