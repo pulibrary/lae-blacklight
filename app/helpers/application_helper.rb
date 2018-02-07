@@ -153,6 +153,11 @@ module ApplicationHelper
     end
   end
 
+  # Generates the URL for the IIIF Manifest (cached in the Solr Document)
+  # @see LaeExportExtension#export_as_jsonld
+  #
+  # @param solr_document_uri [String] the URI for the Solr Document
+  # @return [String] the URL to the
   def viewer_data_uri(solr_document_uri)
     uri = URI.parse(solr_document_uri)
     "#{uri.path}.jsonld"
