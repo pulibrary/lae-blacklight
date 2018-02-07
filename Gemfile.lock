@@ -1,9 +1,9 @@
 GIT
-  remote: https://github.com/pulibrary/pul_uv_rails.git
-  revision: 4ae89c38c86cb3479374139df2dc19d6016597a1
-  tag: v1.7.27
+  remote: git://github.com/pulibrary/pul_uv_rails.git
+  revision: e3dd14a13aa8468751dd5d870b3647bafc0db9ff
+  branch: master
   specs:
-    pul_uv_rails (1.7.27)
+    pul_uv_rails (2.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -515,4 +515,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.3

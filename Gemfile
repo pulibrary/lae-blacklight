@@ -28,7 +28,7 @@ gem 'json-ld'
 gem "mail_form"
 gem 'modernizr-rails'
 gem "pg"
-gem 'pul_uv_rails', git: 'https://github.com/pulibrary/pul_uv_rails.git', tag: 'v1.7.27'
+gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rails', '~> 5.1.0'
 gem 'rdf-rdfxml', '2.2.0'
 gem 'rdf-turtle', '~> 2.2.0'
