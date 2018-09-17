@@ -19,6 +19,7 @@ gem "devise"
 gem "devise-guests", "~> 0.3"
 gem 'devise-i18n'
 gem 'faraday'
+gem 'ffi', '>= 1.9.25'
 gem 'font-awesome-sass'
 gem 'high_voltage', '~> 3.0.0'
 gem 'iiif-presentation'
@@ -38,6 +39,7 @@ gem 'rdf-turtle', '~> 2.2.0'
 gem 'rdf-vocab'
 gem 'rsolr'
 gem 'rspec-rails', '~> 3.5.0'
+gem 'rubyzip', '>= 1.2.2'
 gem 'sass-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "simple_form"
