@@ -147,6 +147,7 @@ GEM
       tins (~> 1.6)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    crass (1.0.4)
     debug_inspector (0.0.3)
     deprecation (1.0.0)
       activesupport
@@ -227,7 +228,8 @@ GEM
     kaminari-core (1.1.1)
     libv8 (3.16.14.19)
     link_header (0.0.8)
-    loofah (2.0.3)
+    loofah (2.2.2)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
@@ -238,7 +240,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_portile2 (2.2.0)
+    mini_portile2 (2.3.0)
     minitest (5.10.2)
     modernizr-rails (2.7.1)
     multi_json (1.12.1)
@@ -247,8 +249,8 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.1.0)
     nio4r (2.1.0)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    nokogiri (1.8.4)
+      mini_portile2 (~> 2.3.0)
     openseadragon (0.3.3)
       rails (> 3.2.0)
     orm_adapter (0.5.0)
@@ -287,8 +289,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
     railties (5.1.2)
       actionpack (= 5.1.2)
       activesupport (= 5.1.2)
@@ -401,7 +403,7 @@ GEM
       rubyzip
     spring (2.0.2)
       activesupport (>= 4.2)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.0)
@@ -488,13 +490,16 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   json-ld
+  loofah (>= 2.0.4)
   mail_form
   modernizr-rails
+  nokogiri (>= 1.8.1)
   pg
   pry-byebug
   pul_uv_rails!
   rails (~> 5.1.0)
   rails-controller-testing
+  rails-html-sanitizer (>= 1.0.4)
   rdf-rdfxml (= 2.2.0)
   rdf-turtle (~> 2.2.0)
   rdf-vocab
@@ -507,6 +512,7 @@ DEPENDENCIES
   sneakers
   solr_wrapper (~> 1.2.0)
   spring
+  sprockets (>= 3.7.2)
   therubyracer
   turbolinks
   uglifier (>= 2.7.2)
@@ -515,4 +521,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.4
