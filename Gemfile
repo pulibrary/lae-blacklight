@@ -25,11 +25,14 @@ gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'json-ld'
+gem 'loofah', '>= 2.0.4'
 gem "mail_form"
 gem 'modernizr-rails'
+gem 'nokogiri', '>= 1.8.1'
 gem "pg"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rails', '~> 5.1.0'
+gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '2.2.0'
 gem 'rdf-turtle', '~> 2.2.0'
 gem 'rdf-vocab'
@@ -41,6 +44,7 @@ gem "simple_form"
 gem 'singularitygs'
 gem 'sneakers'
 gem 'solr_wrapper', '~> 1.2.0'
+gem 'sprockets', '>= 3.7.2'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier', '>= 2.7.2'
