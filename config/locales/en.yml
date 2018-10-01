@@ -35,6 +35,7 @@ en:
       container: Container
       contributor: Contributor
       creator: Creator
+      description: Description
       date_display: Date
       dimensions: Dimensions
       genre_pul_label: Item Type
