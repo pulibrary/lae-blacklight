@@ -35,6 +35,7 @@ pt-BR:
       container: Localização
       contributor: Colaborador
       creator: Criador
+      description: Descrição
       date_display: Data
       dimensions: Dimensões
       genre_pul_label: Tipo
