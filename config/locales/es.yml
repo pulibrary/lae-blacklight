@@ -35,8 +35,8 @@ es:
       container: Envase
       contributor: Colaborador
       creator: Creador
-      description: Descripción
       date_display: Fecha
+      description: Descripción
       dimensions: Dimensiones
       genre_pul_label: Tipo de artículo
       geographic_origin_label: Origen
