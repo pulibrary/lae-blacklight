@@ -20,6 +20,8 @@
     <field name="category">Labor</field>
     <field name="category">Economics</field>
     <field name="creator">Test Creator</field>
+    <field name="provenance">Test Provenance</field>
+    <field name="series">Test Series</field>
     <field name="geographic_subject_label">Puerto Rico</field>
     <field name="geographic_subject_iso_3166_2_code">pr</field>
     <field name="geographic_subject_gac_code">nwpr</field>

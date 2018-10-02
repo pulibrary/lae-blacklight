@@ -148,6 +148,8 @@
    "description":[  
      "Test Description"
    ],
+   "provenance":"Test Provenance",
+   "series":"Test Series",
    "source":null,
    "related_url":null,
    "height":[  

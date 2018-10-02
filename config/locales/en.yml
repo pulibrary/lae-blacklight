@@ -43,6 +43,8 @@ en:
       language_label: Language
       local_identifier: Local Identifier
       page_count: Page Count
+      provenance: Provenance
       publisher_display: Publisher
       rights: Rights
+      series: Series
       subject_label: Subject

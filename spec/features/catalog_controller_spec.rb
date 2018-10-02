@@ -72,6 +72,8 @@ RSpec.describe CatalogController, type: :feature do
     it "shows creator label" do
       visit "/catalog/004kr"
       expect(page).to have_selector 'dt.blacklight-creator', text: 'Creator:'
+      expect(page).to have_selector 'dt.blacklight-series', text: 'Series:'
+      expect(page).to have_selector 'dt.blacklight-provenance', text: 'Provenance:'
     end
   end
 end
