@@ -17,6 +17,8 @@ class SolrDocumentMetadata
       date_display: :solr_lookup,
       genre_pul_label: :solr_lookup,
       description: :solr_lookup,
+      series: :solr_lookup,
+      provenance: :solr_lookup,
       page_count: :solr_lookup,
       dimensions: :dimensions,
       geographic_subject_label: :solr_lookup,

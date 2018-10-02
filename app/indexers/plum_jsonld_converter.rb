@@ -45,7 +45,9 @@ class PlumJsonldConverter
       "latest_created" => latest_created,
       "date_display" => date_display,
       "date_created" => date_created,
-      "description" => description
+      "description" => description,
+      "series" => series,
+      "provenance" => provenance
     }
   end
 
@@ -91,6 +93,14 @@ class PlumJsonldConverter
 
     def description
       json["description"]
+    end
+
+    def series
+      json["series"]
+    end
+
+    def provenance
+      json["provenance"]
     end
 
     def date_uploaded

@@ -43,6 +43,8 @@ es:
       language_label: Idioma
       local_identifier: Identificador local
       page_count: Número de páginas
+      provenance: Procedencia
       publisher_display: Editor
       rights: Derechos
+      series: Serie
       subject_label: Tema
