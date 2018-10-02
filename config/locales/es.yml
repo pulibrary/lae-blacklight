@@ -35,6 +35,7 @@ es:
       container: Envase
       contributor: Colaborador
       creator: Creador
+      description: Descripción
       date_display: Fecha
       dimensions: Dimensiones
       genre_pul_label: Tipo de artículo
