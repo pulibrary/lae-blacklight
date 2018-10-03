@@ -36,6 +36,7 @@ es:
       contributor: Colaborador
       creator: Creador
       date_display: Fecha
+      description: Descripción
       dimensions: Dimensiones
       genre_pul_label: Tipo de artículo
       geographic_origin_label: Origen

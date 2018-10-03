@@ -36,6 +36,7 @@ en:
       contributor: Contributor
       creator: Creator
       date_display: Date
+      description: Description
       dimensions: Dimensions
       genre_pul_label: Item Type
       geographic_origin_label: Origin
