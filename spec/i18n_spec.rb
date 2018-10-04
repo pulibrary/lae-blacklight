@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
 require 'i18n/tasks'
 
 RSpec.describe 'I18n' do
@@ -23,5 +24,16 @@ RSpec.describe 'I18n' do
                     "#{non_normalized.map { |path| "  #{path}" }.join("\n")}\n" \
                     'Please run `i18n-tasks normalize` to fix'
     expect(non_normalized).to be_empty, error_message
+  end
+
+  context 'with missing keys' do
+    before do
+      allow(Rails.logger).to receive(:warn)
+    end
+
+    it 'falls back to default value and logs the missing key' do
+      expect(I18n.t('blacklight.labels.missing')).to eq('Missing')
+      expect(Rails.logger).to have_received(:warn)
+    end
   end
 end
