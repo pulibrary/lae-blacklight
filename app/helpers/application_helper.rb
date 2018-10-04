@@ -167,4 +167,18 @@ module ApplicationHelper
   def link_with_locale(url)
     params.to_unsafe_h.include?('locale') ? "#{url}?locale=#{I18n.locale}" : url
   end
+
+  # Renders a field value based on value type
+  # @param entry [Hash]
+  # @param value [String, Hash] the value of the field
+  # @return [String]
+  def metadata_field_value(field, value)
+    if value.is_a?(Hash)
+      facet_links_for_category_and_subject(value)
+    elsif label_has_facet?(field['label'])
+      link_to(value, facet_query_for_label_and_value(field['label'], value))
+    else
+      value
+    end
+  end
 end

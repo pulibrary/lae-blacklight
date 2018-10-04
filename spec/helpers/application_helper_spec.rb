@@ -105,4 +105,44 @@ RSpec.describe ApplicationHelper do
       expect(helper.link_with_locale("/catalog/07gmd")).to eq "/catalog/07gmd?locale=pt-BR"
     end
   end
+
+  describe "#metadata_field_value" do
+    let(:request) { double }
+
+    before do
+      allow(helper).to receive(:request).and_return(request)
+      allow(request).to receive(:protocol).and_return('http://')
+      allow(request).to receive(:host_with_port).and_return('test.host')
+    end
+
+    context "when the value is a hash" do
+      let(:value) { { category: "Arts and culture", subject: "Artists" } }
+      let(:field) { { "label" => "Subject", "value" => value } }
+
+      it "returns facet links for subject and category" do
+        output = metadata_field_value(field, value)
+        expect(output).to include("catalog?f%5Bcategory_facet%5D%5B%5D=Arts+and+culture")
+        expect(output).to include("catalog?f%5Bsubject_label_facet%5D%5B%5D=Artists")
+      end
+    end
+
+    context "when the field label has a facet" do
+      let(:value) { "Nicaragua" }
+      let(:field) { { "label" => "Origin", "value" => [value] } }
+
+      it "returns a link to a facet query" do
+        output = metadata_field_value(field, value)
+        expect(output).to include("catalog?f%5Bgeographic_origin_label_facet%5D%5B%5D=Nicaragua")
+      end
+    end
+
+    context "when the field label does not have a facet" do
+      let(:value) { "Ernesto Cardenal and Juan R. Fuentes" }
+      let(:field) { { "label" => "Creator", "value" => [value] } }
+
+      it "returns the value" do
+        expect(metadata_field_value(field, value)).to eq(value)
+      end
+    end
+  end
 end
