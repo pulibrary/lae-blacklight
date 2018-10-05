@@ -76,8 +76,10 @@
     }
   }
 
-  li.blacklight-description {
-    white-space: pre-wrap;
+  li {
+    &.blacklight-description, &.blacklight-descripcion, &.blacklight-descricao {
+      white-space: pre-wrap;
+    }
   }
 }
 
