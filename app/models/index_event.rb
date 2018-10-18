@@ -37,7 +37,6 @@ class IndexEvent < ActiveRecord::Base
           puts 'Deleting index' if defined?(Rake)
           solr = RSolr.connect(url: solr_url)
           solr.delete_by_query('*:*')
-          solr.commit
         end
       end
 
@@ -46,7 +45,6 @@ class IndexEvent < ActiveRecord::Base
           puts "Deleting #{id}" if defined?(Rake)
           solr = RSolr.connect(url: solr_url)
           solr.delete_by_id(id)
-          solr.commit
         end
       end
 
@@ -88,7 +86,6 @@ class IndexEvent < ActiveRecord::Base
       def post_to_solr(xml_str)
         solr = RSolr.connect(url: solr_url)
         solr.update(data: xml_str, headers: { 'Content-Type' => 'text/xml' })
-        solr.commit
       end
 
       protected

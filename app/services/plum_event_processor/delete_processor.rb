@@ -2,7 +2,7 @@
 class PlumEventProcessor
   class DeleteProcessor < Processor
     def process
-      index.delete_by_id(id, params: { softCommit: true })
+      index.delete_by_id(id)
       true
     end
   end

@@ -46,6 +46,7 @@ RSpec.describe PlumEventProcessor do
     end
     it "indexes that resource" do
       expect(processor.process).to eq true
+      solr.commit
       output = solr.get("select", params: { q: "id:b9e8325e-baf2-45e4-b32c-5e5b3755c8ef", qt: "document" })
       expect(output["response"]["numFound"]).to eq 1
     end
@@ -63,6 +64,7 @@ RSpec.describe PlumEventProcessor do
       solr.add(PlumJsonldConverter.new(jsonld: open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
 
       expect(processor.process).to eq true
+      solr.commit
 
       output = solr.get("select", params: { q: "id:b9e8325e-baf2-45e4-b32c-5e5b3755c8ef", qt: "document" })
       expect(output["response"]["numFound"]).to eq 0
@@ -76,6 +78,7 @@ RSpec.describe PlumEventProcessor do
       allow(solr).to receive(:add).and_call_original
 
       expect(processor.process).to eq true
+      solr.commit
 
       output = solr.get("select", params: { q: "id:#{id}", qt: "document" })
       expect(output["response"]["numFound"]).to eq 1
@@ -88,6 +91,7 @@ RSpec.describe PlumEventProcessor do
         stub_request(:get, url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).to_return(body: "{}", headers: { "Content-Type" => "application/json+ld" }, status: 404)
 
         expect(processor.process).to eq true
+        solr.commit
 
         output = solr.get("select", params: { q: "id:#{id}", qt: "document" })
         expect(output["response"]["numFound"]).to eq 0
@@ -99,6 +103,7 @@ RSpec.describe PlumEventProcessor do
         solr.add(PlumJsonldConverter.new(jsonld: open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
 
         expect(processor.process).to eq true
+        solr.commit
 
         output = solr.get("select", params: { q: "id:#{id}", qt: "document" })
         expect(output["response"]["numFound"]).to eq 0
