@@ -11,6 +11,7 @@ RSpec.describe CatalogController, type: :request do
   before do
     IndexEvent.post_to_solr('<delete><query>*:*</query></delete>')
     IndexEvent.post_to_solr(solr_xml_string)
+    Blacklight.default_index.connection.commit
   end
 
   describe 'rdf services' do

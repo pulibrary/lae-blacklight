@@ -51,6 +51,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
     end
     it 'does' do
       described_class.post_to_solr(solr_xml_string)
+      Blacklight.default_index.connection.commit
       # check
       params = { fl: ['id'] }
       resp = solr.get('select', params: params)
@@ -118,6 +119,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
     describe 'IndexEvent.delete_one' do
       it 'does' do
         IndexEvent.delete_one(doc_ids[0])
+        Blacklight.default_index.connection.commit
         resp = solr.get('select', params: { fl: ['id'] })
         expect(resp['response']['numFound']).to eq doc_ids.length - 1
       end
@@ -126,6 +128,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
     describe 'IndexEvent.delete_index' do
       it 'does' do
         IndexEvent.delete_index
+        Blacklight.default_index.connection.commit
         resp = solr.get('select', params: { fl: ['id'] })
         expect(resp['response']['numFound']).to eq 0
       end

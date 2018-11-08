@@ -7,9 +7,8 @@ class Reindexer
 
   def index!
     solr_documents.each_slice(500) do |docs|
-      solr.add(docs, params: { softCommit: true })
+      solr.add(docs)
     end
-    solr.commit
   end
 
   def solr_documents

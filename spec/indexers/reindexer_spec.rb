@@ -13,6 +13,7 @@ RSpec.describe Reindexer do
   end
   it "pulls in all objects from Solr and indexes them" do
     reindexer.index!
+    Blacklight.default_index.connection.commit
     expect(solr.get("select", params: { q: "Caripe. Jardín turístico de Monagas." })["response"]["numFound"]).to eq 1
   end
 end

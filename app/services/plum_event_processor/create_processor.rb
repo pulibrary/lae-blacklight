@@ -4,7 +4,7 @@ class PlumEventProcessor
     def process
       return false unless collection_slugs.include?(LAE.config["collection"]["slug"])
       return false unless solr_record["id"]
-      index.add(solr_record, params: { softCommit: true })
+      index.add(solr_record)
       true
     end
 
