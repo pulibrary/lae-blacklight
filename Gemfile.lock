@@ -228,7 +228,7 @@ GEM
     kaminari-core (1.1.1)
     libv8 (3.16.14.19)
     link_header (0.0.8)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -267,7 +267,7 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     public_suffix (2.0.5)
-    rack (2.0.3)
+    rack (2.0.6)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.2)
@@ -491,13 +491,14 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   json-ld
-  loofah (>= 2.0.4)
+  loofah (>= 2.2.3)
   mail_form
   modernizr-rails
   nokogiri (>= 1.8.1)
   pg
   pry-byebug
   pul_uv_rails!
+  rack (>= 2.0.6)
   rails (~> 5.1.0)
   rails-controller-testing
   rails-html-sanitizer (>= 1.0.4)
