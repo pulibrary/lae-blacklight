@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
+gem 'actionview', '~> 5.1.6.2'
+gem 'activejob', '~> 5.1.6.2'
 gem 'bitters', '~> 1.2.0'
 gem 'bixby'
 gem 'blacklight', '~> 6.14', '> 6.14.0'
 gem 'blacklight-gallery', '~> 0.4'
 gem 'blacklight_range_limit', '6.2.1'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'bourbon', '~> 4.2.7'
 gem 'breakpoint'
 gem 'bundler', '>= 1.7.0'
@@ -15,7 +18,7 @@ gem 'capistrano-passenger'
 gem 'capistrano-rails'
 gem 'coffee-rails', '~> 4.2.0'
 gem 'compass-rails', '~> 3.0.2'
-gem "devise"
+gem "devise", '~> 4.6.0'
 gem "devise-guests", "~> 0.3"
 gem 'devise-i18n'
 gem 'faraday'
@@ -29,11 +32,11 @@ gem 'json-ld'
 gem 'loofah', '>= 2.2.3'
 gem "mail_form"
 gem 'modernizr-rails'
-gem 'nokogiri', '>= 1.8.1'
+gem 'nokogiri', '~> 1.8.5'
 gem "pg"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.1.6.2'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '2.2.0'
 gem 'rdf-turtle', '~> 2.2.0'
