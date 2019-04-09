@@ -20,6 +20,7 @@ set :deploy_to, '/opt/lae-blacklight'
 # used to set extended properties on the server.
 
 server 'lae1.princeton.edu', user: 'deploy', roles: %w[web app db worker]
+server 'lae2.princeton.edu', user: 'deploy', roles: %w[web app]
 
 # Custom SSH Options
 # ==================
