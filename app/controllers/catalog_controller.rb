@@ -135,31 +135,26 @@ class CatalogController < ApplicationController
 
     config.add_search_field('title') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = { 'spellcheck.dictionary': 'title' }
-
-      # :solr_local_parameters will be sent using Solr LocalParams
-      # syntax, as eg {! qf=$title_qf }. This is neccesary to use
-      # Solr parameter de-referencing like $title_qf.
-      # See: http://wiki.apache.org/solr/LocalParams
-      field.solr_local_parameters = {
-        qf: '$title_qf',
-        pf: '$title_pf'
+      field.solr_parameters = {
+        'spellcheck.dictionary': 'title',
+        qf: '${title_qf}',
+        pf: '${title_pf}'
       }
     end
 
     config.add_search_field('creator_publisher') do |field|
-      field.solr_parameters = { 'spellcheck.dictionary': 'creator' }
-      field.solr_local_parameters = {
-        qf: '$creator_qf',
-        pf: '$creator_pf'
+      field.solr_parameters = {
+        'spellcheck.dictionary': 'creator',
+        qf: '${creator_qf}',
+        pf: '${creator_pf}'
       }
     end
 
     config.add_search_field('subject') do |field|
-      field.solr_parameters = { 'spellcheck.dictionary': 'subject' }
-      field.solr_local_parameters = {
-        qf: '$subject_qf',
-        pf: '$subject_pf'
+      field.solr_parameters = {
+        'spellcheck.dictionary': 'subject',
+        qf: '${subject_qf}',
+        pf: '${subject_pf}'
       }
     end
 
