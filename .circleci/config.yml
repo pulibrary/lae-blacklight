@@ -6,13 +6,15 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.5-node-browsers
         environment:
+          PGHOST: 127.0.0.1
+          PGUSER: root
           RAILS_ENV: test
 
       # Service container image available at 'host: localhost'
       - image: postgres:10
         environment:
           POSTGRES_DB: lae_blacklight_test
-          POSTGRES_PASSWORD: ""
+          POSTGRES_USER: root
 
     working_directory: ~/lae-blacklight
 
@@ -63,6 +65,10 @@ jobs:
       - run:
           name: Run rubocop
           command: bundle exec rake rubocop
+
+      - run:
+          name: Index lae fixtures
+          command: bundle exec rake lae:index_fixtures
 
       - run:
           name: Run Rspec
