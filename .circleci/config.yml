@@ -13,6 +13,7 @@ jobs:
         environment:
           POSTGRES_DB: lae_blacklight_test
           POSTGRES_USER: root
+          POSTGRES_HOST_AUTH_METHOD: trust
     working_directory: ~/lae-blacklight
     steps: &test_steps
       - checkout
@@ -95,6 +96,7 @@ jobs:
         environment:
           POSTGRES_DB: lae_blacklight_test
           POSTGRES_USER: root
+          POSTGRES_HOST_AUTH_METHOD: trust
     working_directory: ~/lae-blacklight
     steps: *test_steps
 workflows:
