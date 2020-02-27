@@ -1,7 +1,6 @@
 version: 2
 jobs:
   build:
-
     # Primary command image where all commands run
     docker:
       - image: circleci/ruby:2.4.5-node-browsers
@@ -9,17 +8,27 @@ jobs:
           PGHOST: 127.0.0.1
           PGUSER: root
           RAILS_ENV: test
-
       # Service container image available at 'host: localhost'
       - image: postgres:10
         environment:
           POSTGRES_DB: lae_blacklight_test
           POSTGRES_USER: root
-
     working_directory: ~/lae-blacklight
-
-    steps:
+    steps: &test_steps
       - checkout
+      - run:
+          name: Install node@8.17.0 (need right version for `yarn`)
+          command: |
+            set +e
+            touch $BASH_ENV
+            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+            echo 'nvm install v8.17.0' >> $BASH_ENV
+            echo 'nvm alias default v8.17.0' >> $BASH_ENV
+      - run:
+          name: Check current version of node
+          command: node -v
       #set timezone to est
       - run:
           name: Set Timezone to EST
@@ -73,3 +82,24 @@ jobs:
       - run:
           name: Run Rspec
           command: bundle exec rspec spec
+  test_2_6:
+    # Primary command image where all commands run
+    docker:
+      - image: circleci/ruby:2.6-node-browsers
+        environment:
+          PGHOST: 127.0.0.1
+          PGUSER: root
+          RAILS_ENV: test
+      # Service container image available at 'host: localhost'
+      - image: postgres:10
+        environment:
+          POSTGRES_DB: lae_blacklight_test
+          POSTGRES_USER: root
+    working_directory: ~/lae-blacklight
+    steps: *test_steps
+workflows:
+  version: 2
+  build_accept_deploy:
+    jobs:
+      - build
+      - test_2_6
