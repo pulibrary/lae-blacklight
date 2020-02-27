@@ -14,6 +14,8 @@ jobs:
           POSTGRES_DB: lae_blacklight_test
           POSTGRES_USER: root
           POSTGRES_HOST_AUTH_METHOD: trust
+      - image: solr:7.7-alpine
+        command: bin/solr -cloud -noprompt -f -p 8888
     working_directory: ~/lae-blacklight
     steps: &test_steps
       - checkout
@@ -54,19 +56,20 @@ jobs:
             - ./vendor/bundle
 
       - run:
-          name: Start Solr test instance
-          command: bundle exec rake server:test
-          background: true
-
-      - run: bin/jetty_wait
-
-      - run:
           name: npm install
           command: npm install
 
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Load config into solr
+          command: |
+            cd solr/conf
+            zip -1 -r solr_config.zip ./*
+            curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://localhost:8888/solr/admin/configs?action=UPLOAD&name=lae"
+            curl -H 'Content-type: application/json' http://localhost:8888/api/collections/ -d '{create: {name: blacklight-core-test, config: lae, numShards: 1}}'
 
       - run:
           name: Database setup
@@ -97,6 +100,8 @@ jobs:
           POSTGRES_DB: lae_blacklight_test
           POSTGRES_USER: root
           POSTGRES_HOST_AUTH_METHOD: trust
+      - image: solr:7.7-alpine
+        command: bin/solr -cloud -noprompt -f -p 8888
     working_directory: ~/lae-blacklight
     steps: *test_steps
 workflows:
