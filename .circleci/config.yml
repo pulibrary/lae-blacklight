@@ -42,7 +42,8 @@ jobs:
           keys:
           - lae-blacklight-{{ checksum "Gemfile.lock" }}
           - lae-blacklight-
-
+      # Install Bundler
+      - run: gem install bundler -v '~> 2.0'
       # Bundle install dependencies
       - run:
           name: Install dependencies
