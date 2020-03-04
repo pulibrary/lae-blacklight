@@ -24,7 +24,7 @@ module BlacklightUrlHelper
     p[:f][field].push(value)
     p[:f][field].uniq!
 
-    if item && item.respond_to?(:fq) && item.fq
+    if item&.respond_to?(:fq) && item.fq
       item.fq.each do |f, v|
         p = add_facet_params(f, v, p)
       end

@@ -61,7 +61,7 @@ RSpec/SubjectStub:
     - 'spec/workers/plum_event_handler_spec.rb'
     - 'spec/indexers/plum_jsonld_converter_spec.rb'
 
-Style/FileName:
+Naming/FileName:
   Exclude:
     - '**/Gemfile'
     - '**/*.rake'

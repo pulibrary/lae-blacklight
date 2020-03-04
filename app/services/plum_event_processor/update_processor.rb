@@ -2,9 +2,7 @@
 class PlumEventProcessor
   class UpdateProcessor < Processor
     def process
-      unless PlumEventProcessor::CreateProcessor.new(event).process
-        PlumEventProcessor::DeleteProcessor.new(event).process
-      end
+      PlumEventProcessor::DeleteProcessor.new(event).process unless PlumEventProcessor::CreateProcessor.new(event).process
       true
     end
   end
