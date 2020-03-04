@@ -65,8 +65,8 @@ Rails.application.configure do
   # use mail relay per John K.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'lib-ponyexpr.princeton.edu',
-    from:                 'no_reply@libruby-prod.princeton.edu'
+    address: 'lib-ponyexpr.princeton.edu',
+    from: 'no_reply@libruby-prod.princeton.edu'
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

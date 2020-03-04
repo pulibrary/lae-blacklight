@@ -7,8 +7,8 @@ class RecordMailer < ActionMailer::Base
 
     subject = I18n.t('blacklight.email.text.subject', count: documents.length, title: (begin
                                                                                                documents.first.to_semantic_values[:title]
-                                                                                             rescue
-                                                                                               'N/A'
+                                                                                       rescue
+                                                                                         'N/A'
                                                                                              end))
 
     @documents      = documents

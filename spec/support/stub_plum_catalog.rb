@@ -13,12 +13,11 @@ module PlumStubbing
             docs: records.map do |record|
               JSON.parse(file_fixture("plum_records/#{record}.json").read)
             end,
-            facets: [
-            ],
+            facets: [],
             pages: {
               current_page: 1,
               next_page: nil,
-              prev_page:  nil,
+              prev_page: nil,
               total_pages: 1,
               limit_value: records.length,
               offset_value: 0,

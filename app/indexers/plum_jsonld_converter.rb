@@ -64,12 +64,12 @@ class PlumJsonldConverter
     end
 
     def earliest_created
-      return unless date && date.is_a?(Hash)
+      return unless date&.is_a?(Hash)
       Array.wrap(date["begin"]).first
     end
 
     def latest_created
-      return unless date && date.is_a?(Hash)
+      return unless date&.is_a?(Hash)
       Array.wrap(date["end"]).first
     end
 
@@ -194,9 +194,7 @@ class PlumJsonldConverter
     def subject_with_category
       JSON.generate(
         Array.wrap(json["subject"]).map do |x|
-          unless x["in_scheme"]
-            Rails.logger.warn("Data inconsistency: #{id} has subject #{x['pref_label']} with no category")
-          end
+          Rails.logger.warn("Data inconsistency: #{id} has subject #{x['pref_label']} with no category") unless x["in_scheme"]
           { "subject": x["pref_label"],
             "category": x["in_scheme"] ? x["in_scheme"]["pref_label"] : '' }
         end

@@ -13,7 +13,7 @@ module LaeExportExtension
     dc: RDF::Vocab::DC.to_uri,
     dctype: RDF::URI.new('http://purl.org/dc/dcmitype/'),
     foaf: RDF::Vocab::FOAF.to_uri,
-    geonames:  RDF::URI.new('http://sws.geonames.org/'),
+    geonames: RDF::URI.new('http://sws.geonames.org/'),
     lae: RDF::URI.new('http://lae.princeton.edu/'),
     lang: RDF::URI.new('http://id.loc.gov/vocabulary/iso639-2/'),
     lcco: RDF::URI.new('http://id.loc.gov/vocabulary/countries/'),
