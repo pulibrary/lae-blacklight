@@ -180,7 +180,7 @@ GEM
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    hashdiff (1.0.0)
+    hashdiff (1.0.1)
     high_voltage (3.0.0)
     highline (2.0.3)
     htmlentities (4.3.4)
