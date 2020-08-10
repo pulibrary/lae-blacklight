@@ -16,7 +16,7 @@ gem 'capistrano-passenger'
 gem 'capistrano-rails'
 gem 'coffee-rails', '~> 4.2.0'
 gem 'compass-rails', '~> 3.0.2'
-gem "devise", '~> 4.6.0'
+gem "devise", '~> 4.7.1'
 gem "devise-guests", "~> 0.3"
 gem 'devise-i18n'
 gem 'faraday'
