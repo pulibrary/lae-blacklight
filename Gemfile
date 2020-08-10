@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
-gem 'actionview', '~> 5.1.6.2'
-gem 'activejob', '~> 5.1.6.2'
 gem 'bitters', '~> 1.2.0'
 gem 'bixby', '~> 2.0.0'
 gem 'blacklight', '~> 6.14', '> 6.14.0'
@@ -36,7 +34,7 @@ gem 'nokogiri', '~> 1.8.5'
 gem "pg"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 5.1.6.2'
+gem 'rails', '5.1.7'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '2.2.0'
 gem 'rdf-turtle', '~> 2.2.0'
