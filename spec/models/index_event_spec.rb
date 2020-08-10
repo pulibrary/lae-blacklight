@@ -21,8 +21,9 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
       expect(boxes.all? { |box| box.is_a?(Hash) }).to be_truthy
     end
 
-    it 'raises an error if the service in not available (bad url or whatever)' do
+    it 'raises an error if the service is not available (bad url or whatever)' do
       bogus = 'http://notaurl.foo'
+      allow(Faraday).to receive(:new).with(bogus).and_raise(Faraday::ConnectionFailed.new("hey that's not a url"))
       expect { described_class.get_boxes_data(url: bogus) }.to raise_error(Faraday::ConnectionFailed)
     end
   end
@@ -35,7 +36,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
       expect(doc.xpath('/*').first.name).to eq 'add'
     end
 
-    it 'raises an error if the service in not available (bad url or whatever)' do
+    it 'raises an error if the id does not exist' do
       bogus_id = '12345'
       expect { described_class.send(:get_solr_xml, box_id: bogus_id) }.to raise_error(Faraday::ResourceNotFound)
     end
