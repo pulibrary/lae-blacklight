@@ -35,6 +35,7 @@ gem "pg"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rack', '>= 2.0.6'
 gem 'rails', '5.1.7'
+#gem 'rails', '~> 5.2'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '2.2.0'
 gem 'rdf-turtle', '~> 2.2.0'
@@ -44,7 +45,7 @@ gem 'rspec-rails', '~> 3.5.0'
 gem 'rubyzip', '>= 1.2.2'
 gem 'sass-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem "simple_form"
+gem "simple_form", "4.0.0"
 gem 'singularitygs'
 gem 'sneakers'
 gem 'solr_wrapper', '~> 1.2.0'
