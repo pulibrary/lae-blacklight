@@ -30,7 +30,7 @@ gem 'json-ld'
 gem 'loofah', '>= 2.2.3'
 gem "mail_form"
 gem 'modernizr-rails'
-gem 'nokogiri', '~> 1.8.5'
+gem 'nokogiri', '~> 1.10.8'
 gem "pg"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rack', '>= 2.0.6'
