@@ -9,6 +9,8 @@ RSpec.describe CatalogController, type: :feature do
   before do
     IndexEvent.post_to_solr('<delete><query>*:*</query></delete>')
     IndexEvent.post_to_solr(solr_xml_string)
+    # prevent intermittent test failures by committing the index before they run
+    Blacklight.default_index.connection.commit
   end
 
   feature 'cite this' do
