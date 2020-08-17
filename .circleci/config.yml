@@ -20,15 +20,15 @@ jobs:
     steps: &test_steps
       - checkout
       - run:
-          name: Install node@8.17.0 (need right version for `yarn`)
+          name: Install node@erbnium (need right version for `yarn`)
           command: |
             set +e
             touch $BASH_ENV
             curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
             echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
             echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
-            echo 'nvm install v8.17.0' >> $BASH_ENV
-            echo 'nvm alias default v8.17.0' >> $BASH_ENV
+            echo 'nvm install erbnium' >> $BASH_ENV
+            echo 'nvm alias default erbnium' >> $BASH_ENV
       - run:
           name: Check current version of node
           command: node -v
@@ -57,8 +57,13 @@ jobs:
             - ./vendor/bundle
 
       - run:
-          name: npm install
-          command: npm install
+          name: Install NPM Dependencies via Yarn
+          command: yarn install
+      # Store Yarn / Webpacker cache
+      - save_cache:
+          key: lae-blacklight-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
 
       - run:
           name: Wait for DB
