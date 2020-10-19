@@ -20,18 +20,23 @@ jobs:
     steps: &test_steps
       - checkout
       - run:
-          name: Install node@8.17.0 (need right version for `yarn`)
+          name: Install the NVM
           command: |
-            set +e
-            touch $BASH_ENV
-            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
-            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
-            echo 'nvm install v8.17.0' >> $BASH_ENV
-            echo 'nvm alias default v8.17.0' >> $BASH_ENV
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+            [ -s "/home/circleci/.nvm/nvm.sh" ]
+            source /home/circleci/.nvm/nvm.sh
+            echo 'The NVM has been installed'
       - run:
-          name: Check current version of node
-          command: node -v
+          name: Install Node LTS/erbium
+          command: |
+            source ~/.nvm/nvm.sh
+            nvm install lts/erbium
+            nvm use lts/erbium
+      - run:
+          name: Install Yarn
+          command: |
+            source ~/.nvm/nvm.sh
+            curl -o- -L https://yarnpkg.com/install.sh | bash
       #set timezone to est
       - run:
           name: Set Timezone to EST
@@ -57,8 +62,10 @@ jobs:
             - ./vendor/bundle
 
       - run:
-          name: npm install
-          command: npm install
+          name: Yarn Install
+          command: |
+            source ~/.nvm/nvm.sh
+            yarn install
 
       - run:
           name: Wait for DB
