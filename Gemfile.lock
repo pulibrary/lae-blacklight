@@ -246,7 +246,7 @@ GEM
     mime-types-data (3.2018.0812)
     mimemagic (0.3.5)
     mini_mime (1.0.2)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     minitest (5.14.1)
     modernizr-rails (2.7.1)
     multi_json (1.12.1)
@@ -255,8 +255,8 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.1.0)
     nio4r (2.5.2)
-    nokogiri (1.8.5)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
     openseadragon (0.3.3)
       rails (> 3.2.0)
     orm_adapter (0.5.0)
@@ -508,7 +508,7 @@ DEPENDENCIES
   loofah (>= 2.2.3)
   mail_form
   modernizr-rails
-  nokogiri (~> 1.8.5)
+  nokogiri (~> 1.10.10)
   pg
   pry-byebug
   pul_uv_rails!
