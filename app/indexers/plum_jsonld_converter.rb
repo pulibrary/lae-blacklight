@@ -263,6 +263,8 @@ class PlumJsonldConverter
       end
     end
 
+    # Return all collections which aren't boxes (have a barcode) and which
+    # aren't the LAE collection (which is every item.)
     def eligible_collections
       Array.wrap(json["memberOf"]).select do |member|
         member["barcode"].blank? && member["title"] != "Latin American Ephemera"
