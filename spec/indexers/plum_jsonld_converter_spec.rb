@@ -57,8 +57,19 @@ RSpec.describe PlumJsonldConverter do
         "latest_created" => "2012",
         "date_display" => "2004-2012",
         "date_created" => nil,
-        "description" => ["Test Description"]
+        "description" => ["Test Description"],
+        "collections_label" => []
       )
+    end
+  end
+  context "when there's collections" do
+    let(:jsonld) { file_fixture("plum_records/986ecdfc-7a39-4511-9412-1d5e6edaeaee.jsonld").read }
+    it "indexes collections" do
+      stub_plum_jsonld(record: "986ecdfc-7a39-4511-9412-1d5e6edaeaee")
+
+      output = converter.output
+
+      expect(output["collections_label"]).to eq ["Tourism in Cuba"]
     end
   end
   context "when there's no subject" do
