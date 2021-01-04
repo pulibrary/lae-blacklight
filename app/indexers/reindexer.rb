@@ -6,8 +6,21 @@ class Reindexer
   end
 
   def index!
+    errored_documents = []
     solr_documents.each_slice(500) do |docs|
       solr.add(docs)
+    rescue StandardError => e
+      Rails.logger.warn "Failed to index a document with error: #{e.message}. Adding for individual indexing."
+      errored_documents += docs
+    end
+    run_individual_retries(docs: errored_documents)
+  end
+
+  def run_individual_retries(docs:)
+    docs.each do |document|
+      solr.add(document)
+    rescue StandardError => e
+      Rails.logger.warn "Failed to index #{document['id']}: #{e.message}"
     end
   end
 
