@@ -47,7 +47,8 @@ class PlumJsonldConverter
       "date_created" => date_created,
       "description" => description,
       "series" => series,
-      "provenance" => provenance
+      "provenance" => provenance,
+      "collections_label" => collections
     }
   end
 
@@ -254,5 +255,19 @@ class PlumJsonldConverter
 
     def box_physical_number
       box["box_number"]
+    end
+
+    def collections
+      eligible_collections.map do |member|
+        member["title"]
+      end
+    end
+
+    # Return all collections which aren't boxes (have a barcode) and which
+    # aren't the LAE collection (which is every item.)
+    def eligible_collections
+      Array.wrap(json["memberOf"]).select do |member|
+        member["barcode"].blank? && member["title"] != "Latin American Ephemera"
+      end
     end
 end

@@ -1,0 +1,177 @@
+{
+    "@context": "https://bibdata.princeton.edu/context.json",
+    "@id": "https://figgy.princeton.edu/catalog/986ecdfc-7a39-4511-9412-1d5e6edaeaee",
+    "@type": "pcdm:Object",
+    "barcode": "32101085320008",
+    "category": [
+        {
+            "@id": "https://figgy.princeton.edu/catalog/69d9e1d0-7cf2-49e7-9c28-ac03d6628b64",
+            "@type": "skos:ConceptScheme",
+            "pref_label": "Tourism"
+        },
+        {
+            "@id": "https://figgy.princeton.edu/catalog/69d9e1d0-7cf2-49e7-9c28-ac03d6628b64",
+            "@type": "skos:ConceptScheme",
+            "pref_label": "Tourism"
+        },
+        {
+            "@id": "https://figgy.princeton.edu/catalog/69d9e1d0-7cf2-49e7-9c28-ac03d6628b64",
+            "@type": "skos:ConceptScheme",
+            "pref_label": "Tourism"
+        }
+    ],
+    "contributor": [
+        "Comercializadora de Servicios M\u00e9dicos Cubanos (SMC)"
+    ],
+    "coverage": [
+        {
+            "@id": "https://figgy.princeton.edu/catalog/8fcc94cd-3043-4c89-958b-19c8e4f8c416",
+            "@type": "skos:Concept",
+            "exact_match": {
+                "@id": "http://id.loc.gov/vocabulary/countries/cu"
+            },
+            "in_scheme": {
+                "@id": "https://figgy.princeton.edu/ns/lAEGeographicAreas",
+                "@type": "skos:ConceptScheme",
+                "pref_label": "LAE Geographic Areas"
+            },
+            "pref_label": "Cuba"
+        }
+    ],
+    "created": "08/24/20 06:02:18 PM UTC",
+    "date_created": [
+        "2018"
+    ],
+    "dcterms_type": [
+        {
+            "@id": "https://figgy.princeton.edu/catalog/42754ac7-7723-4219-81eb-11085946fdca",
+            "@type": "skos:Concept",
+            "exact_match": {
+                "@id": "http://id.loc.gov/vocabulary/graphicMaterials/tgm007415"
+            },
+            "in_scheme": {
+                "@id": "https://figgy.princeton.edu/ns/lAEGenres",
+                "@type": "skos:ConceptScheme",
+                "pref_label": "LAE Genres"
+            },
+            "pref_label": "Pamphlets"
+        }
+    ],
+    "edm_rights": {
+        "@id": "http://rightsstatements.org/vocab/CNE/1.0/",
+        "@type": "dcterms:RightsStatement",
+        "pref_label": "Copyright Not Evaluated"
+    },
+    "folder_number": "142",
+    "height": [
+        "13"
+    ],
+    "is_part_of": "Latin American Ephemera",
+    "label": "Folder 142",
+    "language": [
+        {
+            "@id": "https://figgy.princeton.edu/catalog/1bb6e264-8b3a-452c-9bc5-10e1c4c98c3e",
+            "@type": "skos:Concept",
+            "exact_match": {
+                "@id": "http://id.loc.gov/vocabulary/iso639-1/es"
+            },
+            "in_scheme": {
+                "@id": "https://figgy.princeton.edu/ns/lAELanguages",
+                "@type": "skos:ConceptScheme",
+                "pref_label": "LAE Languages"
+            },
+            "pref_label": "Spanish"
+        }
+    ],
+    "memberOf": [
+        {
+            "@id": "https://figgy.princeton.edu/catalog/9c1af234-a3d6-45bb-9ade-dd461f3d6578",
+            "@type": "pcdm:Collection",
+            "title": "Tourism in Cuba"
+        },
+        {
+            "@id": "https://figgy.princeton.edu/catalog/d7c889ba-9992-494e-8fe4-2c4a9b3c3d7d",
+            "@type": "pcdm:Collection",
+            "title": "Latin American Ephemera"
+        },
+        {
+            "@id": "https://figgy.princeton.edu/catalog/1d245989-e0fd-44ad-8839-f811c77e4170",
+            "@type": "pcdm:Collection",
+            "barcode": "32101085320008",
+            "box_number": "102",
+            "label": "Box 102"
+        }
+    ],
+    "modified": "12/18/20 07:23:06 PM UTC",
+    "origin_place": [
+        {
+            "@id": "https://figgy.princeton.edu/catalog/8fcc94cd-3043-4c89-958b-19c8e4f8c416",
+            "@type": "skos:Concept",
+            "exact_match": {
+                "@id": "http://id.loc.gov/vocabulary/countries/cu"
+            },
+            "in_scheme": {
+                "@id": "https://figgy.princeton.edu/ns/lAEGeographicAreas",
+                "@type": "skos:ConceptScheme",
+                "pref_label": "LAE Geographic Areas"
+            },
+            "pref_label": "Cuba"
+        }
+    ],
+    "page_count": "68",
+    "publisher": [
+        "Revista M\u00e1s Cuba"
+    ],
+    "sort_title": [
+        "pasaporte tur\u00edstico y gastron\u00f3mico."
+    ],
+    "subject": [
+        {
+            "@id": "https://figgy.princeton.edu/catalog/a51c7f0b-4203-4ae9-b063-3e03fac1832b",
+            "@type": "skos:Concept",
+            "exact_match": {
+                "@id": "http://id.loc.gov/authorities/subjects/sh88000359"
+            },
+            "in_scheme": {
+                "@id": "https://figgy.princeton.edu/ns/lAESubjects/tourism",
+                "@type": "skos:ConceptScheme",
+                "pref_label": "Tourism"
+            },
+            "pref_label": "Advertising--Tourism"
+        },
+        {
+            "@id": "https://figgy.princeton.edu/catalog/1ab0e166-4ebb-42a2-af47-566958588062",
+            "@type": "skos:Concept",
+            "exact_match": {
+                "@id": "http://id.loc.gov/authorities/subjects/sh85057716"
+            },
+            "in_scheme": {
+                "@id": "https://figgy.princeton.edu/ns/lAESubjects/tourism",
+                "@type": "skos:ConceptScheme",
+                "pref_label": "Tourism"
+            },
+            "pref_label": "Guidebooks"
+        },
+        {
+            "@id": "https://figgy.princeton.edu/catalog/25fb6dfc-11b8-4ecc-bc53-8decb5a0dc51",
+            "@type": "skos:Concept",
+            "exact_match": {
+                "@id": "http://id.loc.gov/authorities/subjects/sh2003000021"
+            },
+            "in_scheme": {
+                "@id": "https://figgy.princeton.edu/ns/lAESubjects/tourism",
+                "@type": "skos:ConceptScheme",
+                "pref_label": "Tourism"
+            },
+            "pref_label": "Tourism and gastronomy"
+        }
+    ],
+    "system_created_at": "2020-08-24T18:02:18Z",
+    "system_updated_at": "2020-12-18T19:23:06Z",
+    "title": [
+        "Pasaporte tur\u00edstico y gastron\u00f3mico."
+    ],
+    "width": [
+        "9"
+    ]
+}
