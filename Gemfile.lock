@@ -244,7 +244,9 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2018.0812)
-    mimemagic (0.3.5)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.3.0)
     minitest (5.14.1)
@@ -505,8 +507,10 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   json-ld
+  libv8 (>= 3.16.14.15)
   loofah (>= 2.2.3)
   mail_form
+  mimemagic (~> 0.3)
   modernizr-rails
   nokogiri (~> 1.8.5)
   pg
@@ -538,4 +542,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   2.1.4
+   2.2.16
