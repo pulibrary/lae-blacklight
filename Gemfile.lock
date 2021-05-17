@@ -228,7 +228,6 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    libv8 (3.16.14.19)
     link_header (0.0.8)
     loofah (2.2.3)
       crass (~> 1.0.2)
@@ -338,7 +337,6 @@ GEM
     rdf-xsd (2.2.0)
       rdf (~> 2.1)
     rdoc (4.3.0)
-    ref (2.0.0)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
@@ -435,9 +433,6 @@ GEM
       tins (~> 1.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.19.4)
     thread (0.1.7)
     thread_safe (0.3.6)
@@ -507,7 +502,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   json-ld
-  libv8 (>= 3.16.14.15)
   loofah (>= 2.2.3)
   mail_form
   mimemagic (~> 0.3)
@@ -534,7 +528,6 @@ DEPENDENCIES
   solr_wrapper (~> 2.1)
   spring
   sprockets (>= 3.7.2)
-  therubyracer
   turbolinks
   uglifier (>= 2.7.2)
   vcr (~> 2.9.3)

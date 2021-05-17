@@ -32,36 +32,6 @@ $ rake server
 
 This will start Solr, index some sample data, and run the application.
 
-#### Gem Dependencies
-
-While invoking `bundler install`, the following may be encountered:
-
-```bash
-Installing therubyracer 0.12.3 with native extensions
-Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
-
-    current directory:
-/ruby/2.6.5/lib/ruby/gems/2.6.0/gems/therubyracer-0.12.3/ext/v8
-/ruby/2.6.5/bin/ruby -I
-/ruby/2.6.5/lib/ruby/2.6.0 -r ./siteconf20210517-40265-18a3ouc.rb extconf.rb --with-v8-dir\=/usr/local/opt/v8
-checking for -lpthread... yes
-checking for -lobjc... yes
-checking for v8.h... no
-*** extconf.rb failed ***
-Could not create Makefile due to some reason, probably lack of necessary
-libraries and/or headers.  Check the mkmf.log file for more details.  You may
-need configuration options.
-```
-
-This is an issue related to the C header dependencies for the `libv8` and `therubyracer` Gems. One approach which may resolve this is the following:
-
-```bash
-brew install v8@3.15
-bundle config build.libv8 --with-system-v8
-bundle config build.therubyracer --with-v8-dir=$(brew --prefix v8@3.15)
-bundle install
-```
-
 ### Reloading sample data
 Clear your solr index with:
 ```bash

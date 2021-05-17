@@ -27,7 +27,6 @@ gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'json-ld'
-gem 'libv8', '>= 3.16.14.15'
 gem 'loofah', '>= 2.2.3'
 gem "mail_form"
 gem "mimemagic", "~> 0.3"
@@ -51,7 +50,6 @@ gem 'singularitygs'
 gem 'sneakers'
 gem 'solr_wrapper', '~> 2.1'
 gem 'sprockets', '>= 3.7.2'
-gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier', '>= 2.7.2'
 
