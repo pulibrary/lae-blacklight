@@ -45,7 +45,7 @@ gem 'rspec-rails', '~> 3.5.0'
 gem 'rubyzip', '>= 1.2.2'
 gem 'sass-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem "simple_form", "4.0.0"
+gem "simple_form", "5.0.0"
 gem 'singularitygs'
 gem 'sneakers'
 gem 'solr_wrapper', '~> 2.1'

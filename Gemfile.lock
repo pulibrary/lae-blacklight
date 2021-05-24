@@ -392,9 +392,9 @@ GEM
     serverengine (1.5.11)
       sigdump (~> 0.2.2)
     sigdump (0.2.4)
-    simple_form (4.0.0)
-      actionpack (> 4)
-      activemodel (> 4)
+    simple_form (5.0.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     simplecov (0.14.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -522,7 +522,7 @@ DEPENDENCIES
   rubyzip (>= 1.2.2)
   sass-rails
   sdoc (~> 0.4.0)
-  simple_form (= 4.0.0)
+  simple_form (= 5.0.0)
   singularitygs
   sneakers
   solr_wrapper (~> 2.1)
