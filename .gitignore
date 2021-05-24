@@ -29,3 +29,5 @@ config/solr.yml
 # ignore compiled assets and bundled gems
 public/assets
 vendor/bundle
+doc/*
+.yardoc
