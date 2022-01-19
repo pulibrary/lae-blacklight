@@ -41,7 +41,6 @@ gem 'rdf-rdfxml', '2.2.0'
 gem 'rdf-turtle', '~> 2.2.0'
 gem 'rdf-vocab'
 gem 'rsolr'
-gem 'rspec-rails', '~> 3.5.0'
 gem 'rubyzip', '>= 1.2.2'
 gem 'sass-rails'
 gem "simple_form", "5.0.0"
@@ -58,6 +57,7 @@ group :test, :development do
   gem 'coveralls', require: false
   gem 'i18n-tasks', '~> 0.9'
   gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.5.0'
   gem 'yard'
 end
 
@@ -68,6 +68,6 @@ end
 
 group :test do
   gem 'rails-controller-testing'
-  gem 'vcr', '~> 2.9.3'
+  gem 'vcr'
   gem 'webmock'
 end
