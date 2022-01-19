@@ -47,7 +47,7 @@ gem 'sass-rails'
 gem "simple_form", "5.0.0"
 gem 'singularitygs'
 gem 'sneakers'
-gem 'solr_wrapper', '~> 2.1'
+gem 'solr_wrapper'
 gem 'sprockets', '>= 3.7.2'
 gem 'turbolinks'
 gem 'uglifier', '>= 2.7.2'
@@ -68,6 +68,6 @@ end
 
 group :test do
   gem 'rails-controller-testing'
-  gem 'vcr', '~> 2.9.3'
+  gem 'vcr'
   gem 'webmock'
 end
