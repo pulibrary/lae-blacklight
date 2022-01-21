@@ -28,7 +28,7 @@ class IndexEvent < ActiveRecord::Base
         url = opts.fetch(:url, boxes_url)
         conn = Faraday.new(url) do |c|
           c.use Faraday::Response::RaiseError
-          c.adapter Faraday::Adapter::NetHttp
+          c.use Faraday::Adapter::NetHttp
         end
         JSON.parse(conn.get.body)
       end
@@ -79,7 +79,7 @@ class IndexEvent < ActiveRecord::Base
         raise 'A box_id or folder_id must be supplied' unless url
         conn = Faraday.new(url) do |c|
           c.use Faraday::Response::RaiseError
-          c.adapter Faraday::Adapter::NetHttp
+          c.use Faraday::Adapter::NetHttp
         end
         conn.get.body
       end
