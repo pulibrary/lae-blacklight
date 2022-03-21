@@ -169,8 +169,6 @@ GEM
       devise (>= 4.7.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
     ebnf (1.1.2)
       rdf (>= 2.2, < 4.0)
       sxp (~> 1.0)
@@ -181,9 +179,6 @@ GEM
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.1)
     ffi (1.15.5)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
-      rake
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     globalid (1.0.0)
@@ -197,14 +192,6 @@ GEM
     high_voltage (3.0.0)
     highline (2.0.3)
     htmlentities (4.3.4)
-    http (5.0.4)
-      addressable (~> 2.8)
-      http-cookie (~> 1.0)
-      http-form_data (~> 2.2)
-      llhttp-ffi (~> 0.4.0)
-    http-cookie (1.0.4)
-      domain_name (~> 0.5)
-    http-form_data (2.3.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.37)
@@ -246,9 +233,6 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     link_header (0.0.8)
-    llhttp-ffi (0.4.0)
-      ffi-compiler (~> 1.0)
-      rake (~> 13.0)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -358,7 +342,6 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
-    retriable (3.1.2)
     rexml (3.2.5)
     rsolr (2.4.0)
       builder (>= 2.1.2)
@@ -425,11 +408,6 @@ GEM
       rake
       serverengine (~> 2.0.5)
       thor
-    solr_wrapper (3.1.2)
-      http
-      retriable
-      ruby-progressbar
-      rubyzip
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
@@ -468,9 +446,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8)
     unicode-display_width (1.4.1)
     vcr (6.0.0)
     warden (1.2.9)
@@ -549,7 +524,6 @@ DEPENDENCIES
   simple_form (= 5.0.0)
   singularitygs
   sneakers
-  solr_wrapper
   spring
   sprockets (>= 3.7.2)
   turbolinks
