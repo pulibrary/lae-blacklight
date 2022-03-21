@@ -21,7 +21,7 @@ gem "devise-guests", "~> 0.3"
 gem 'devise-i18n'
 gem 'faraday'
 gem 'ffi', '>= 1.9.25'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'high_voltage', '~> 3.0.0'
 gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
