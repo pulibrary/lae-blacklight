@@ -33,6 +33,7 @@ gem "mimemagic", "~> 0.3"
 gem 'modernizr-rails'
 gem 'nokogiri', '~> 1.12.5'
 gem "pg"
+gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rack', '>= 2.0.6'
 gem 'rails', '~> 5.2'

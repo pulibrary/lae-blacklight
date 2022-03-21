@@ -8,6 +8,7 @@ jobs:
           PGHOST: 127.0.0.1
           PGUSER: root
           RAILS_ENV: test
+          SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/lae-core-test
       # Service container image available at 'host: localhost'
       - image: postgres:10
         environment:
