@@ -1,0 +1,28 @@
+name: lae
+services:
+  lae_test_solr:
+    type: solr:custom
+    overrides:
+      image: pulibrary/ci-solr:8.4-v1.0.0
+      command: server/scripts/lando-start.sh
+    portforward: true
+    core: lae-core-test
+    config:
+      dir: "solr/conf"
+  lae_development_solr:
+    type: solr:custom
+    overrides:
+      image: pulibrary/ci-solr:8.4-v1.0.0
+      command: server/scripts/lando-start.sh
+    portforward: true
+    core: lae-core-dev
+    config:
+      dir: "solr/conf"
+  lae_database:
+    type: postgres:10
+    portforward: true
+proxy:
+  lae_test_solr:
+    - lae.test.solr.lndo.site:8983
+  lae_development_solr:
+    - lae.dev.solr.lndo.site:8983

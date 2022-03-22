@@ -21,7 +21,7 @@ gem "devise-guests", "~> 0.3"
 gem 'devise-i18n'
 gem 'faraday'
 gem 'ffi', '>= 1.9.25'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'high_voltage', '~> 3.0.0'
 gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
@@ -33,6 +33,7 @@ gem "mimemagic", "~> 0.3"
 gem 'modernizr-rails'
 gem 'nokogiri', '~> 1.12.5'
 gem "pg"
+gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
 gem 'rack', '>= 2.0.6'
 gem 'rails', '~> 5.2'
@@ -47,7 +48,6 @@ gem 'sass-rails'
 gem "simple_form", "5.0.0"
 gem 'singularitygs'
 gem 'sneakers'
-gem 'solr_wrapper', '~> 2.1'
 gem 'sprockets', '>= 3.7.2'
 gem 'turbolinks'
 gem 'uglifier', '>= 2.7.2'
@@ -68,6 +68,6 @@ end
 
 group :test do
   gem 'rails-controller-testing'
-  gem 'vcr', '~> 2.9.3'
+  gem 'vcr'
   gem 'webmock'
 end

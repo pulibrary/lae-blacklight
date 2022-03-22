@@ -1,22 +1,26 @@
-development: &default
+default: &default
   adapter: postgresql
-  database: lae_development
-  encoding: utf8
+  encoding: unicode
+  host: <%= ENV["lando_lae_database_conn_host"] || ENV["LAE_DB_HOST"] || "localhost" %>
+  port: <%= ENV["lando_lae_database_conn_port"] || 5432 %>
+  username: <%= ENV["lando_lae_database_creds_user"] || ENV["LAE_DB_USERNAME"] %>
+  password: <%= ENV["lando_lae_database_creds_password"] || ENV["LAE_DB_PASSWORD"] %>
+  database: <%= ENV['LAE_DB'] %>
   min_messages: warning
   pool: <%= Integer(ENV.fetch("DB_POOL", 30)) %>
   reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 20)) %>
   timeout: 5000
 
+development:
+  <<: *default
+  database: lae_development
+
 test:
   <<: *default
   database: lae_test
 
-production: &deploy
+production:
   <<: *default
-  adapter: postgresql
-  database: <%= ENV["LAE_DB"] %>
-  host: <%= ENV["LAE_DB_HOST"] %>
-  username: <%= ENV["LAE_DB_USERNAME"] %>
-  password: <%= ENV["LAE_DB_PASSWORD"] %>
 
-staging: *deploy
+staging:
+  <<: *default
