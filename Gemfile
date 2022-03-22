@@ -31,7 +31,7 @@ gem 'loofah', '>= 2.2.3'
 gem "mail_form"
 gem "mimemagic", "~> 0.3"
 gem 'modernizr-rails'
-gem 'nokogiri', '~> 1.12.5'
+gem 'nokogiri', '~> 1.13.2'
 gem "pg"
 gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
