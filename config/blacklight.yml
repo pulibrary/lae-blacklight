@@ -13,10 +13,12 @@
 development:
   adapter: solr
   url: <%= ENV['SOLR_URL'] || "http://#{ENV["lando_lae_development_solr_conn_host"] || "127.0.0.1"}:#{ENV["lando_lae_development_solr_conn_port"] || 8983}/solr/lae-core-dev" %>
-test: &test
+test:
   adapter: solr
   url: <%= ENV['SOLR_URL'] || "http://#{ENV["lando_lae_test_solr_conn_host"] || "127.0.0.1"}:#{ENV['SOLR_TEST_PORT'] || ENV["lando_lae_test_solr_conn_port"] || 8984}/solr/lae-core-test" %>
-production: &deploy
+production:
   adapter: solr
   url: <%= ENV['SOLR_URL'] || "http://localhost:8080/lae-blacklight" %>
-staging: *deploy
+staging:
+  adapter: solr
+  url: <%= ENV['SOLR_URL'] || "http://localhost:8080/lae-blacklight" %>

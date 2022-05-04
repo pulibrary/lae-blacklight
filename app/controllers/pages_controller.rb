@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
-  include Blacklight::SearchHelper
 
   layout :layout_for_page
 

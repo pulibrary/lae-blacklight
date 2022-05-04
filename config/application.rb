@@ -2,7 +2,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require 'compass'
 require 'breakpoint'
 require_relative 'lando_env'
 
