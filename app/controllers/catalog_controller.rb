@@ -21,6 +21,10 @@ class CatalogController < ApplicationController
     config.show.document_actions.delete(:citation)
     config.show.document_actions.delete(:email)
 
+    config.add_results_collection_tool(:sort_widget)
+    config.add_results_collection_tool(:per_page_widget)
+    config.add_results_collection_tool(:view_type_group)
+
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       qt: 'search',
