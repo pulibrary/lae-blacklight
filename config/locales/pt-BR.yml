@@ -1,9 +1,5 @@
 ---
 pt-BR:
-  blacklight_gallery:
-    catalog:
-      modal_slideshow:
-        counter: "%{counter} de %{count}"
   catalog:
     return_link_text: Retornar ao catálogo de projetos
   contact:
