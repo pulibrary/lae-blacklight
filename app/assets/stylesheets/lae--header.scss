@@ -123,7 +123,10 @@ header {
 	.navbar-nav > li > a {
 		margin: 0 0.5em;
 	}
-	.nav > li {
+	.navbar-nav > li {
 		display: inline-block;
+    .nav-link {
+      display: inline-block;
+    }
 	}
 }
