@@ -79,7 +79,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'genre_pul_label_facet', label: 'Genre'
     config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
     config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
-    config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet']
+    config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet'], collapsing: true
     config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
     config.add_facet_field 'language_label_facet', label: 'Language'
     config.add_facet_field 'category_facet', label: 'Category', show: false

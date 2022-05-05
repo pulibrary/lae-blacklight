@@ -1,10 +1,11 @@
 @import "bourbon";
 @import "variables/base";
 
-button, .submit-button {
+.hero button, .submit-button {
   @include button(flat, $blue);
   color: white;
   font-family: $slab;
+  font-weight: normal;
 
   &:hover {
     background: darken($blue, 10);
