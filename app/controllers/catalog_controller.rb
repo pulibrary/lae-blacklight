@@ -189,8 +189,11 @@ class CatalogController < ApplicationController
     config.spell_max = 5
   end
 
+  rescue_from Blacklight::Exceptions::RecordNotFound, with: :invalid_document_id_error
+
   def invalid_document_id_error(exception)
-    @response, @document = search_results(search_field: 'local_identifier', q: params[:id])
+    search_service = search_service_class.new(config: blacklight_config, user_params: { search_field: 'local_identifier', q: params[:id] })
+    @response, @document = search_service.search_results
     if @document.first && @document.length == 1
       redirect_to solr_document_path(@document.first.id)
       return
