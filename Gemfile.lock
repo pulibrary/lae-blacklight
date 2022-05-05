@@ -427,8 +427,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    uglifier (4.2.0)
-      execjs (>= 0.3.0, < 3)
     unicode-display_width (1.4.1)
     vcr (6.1.0)
     view_component (2.53.0)
@@ -514,7 +512,6 @@ DEPENDENCIES
   spring
   sprockets (>= 3.7.2)
   turbolinks
-  uglifier (>= 2.7.2)
   vcr
   web-console (~> 2.0)
   webmock

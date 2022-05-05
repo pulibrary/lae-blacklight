@@ -50,7 +50,6 @@ gem 'singularitygs'
 gem 'sneakers'
 gem 'sprockets', '>= 3.7.2'
 gem 'turbolinks'
-gem 'uglifier', '>= 2.7.2'
 
 group :test, :development do
   gem 'byebug'
