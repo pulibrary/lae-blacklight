@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 module FacetsHelper
-
   # def initial_collapse(display_facet, not_selected)
   #   if display_facet.class == Blacklight::Solr::Response::Facets::FacetItem
   #     not_selected ? 'collapse' : 'collapse in'
