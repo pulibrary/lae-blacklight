@@ -3,7 +3,7 @@ jobs:
   build:
     # Primary command image where all commands run
     docker:
-      - image: circleci/ruby:2.7-node-browsers
+      - image: cimg/ruby:2.7-browsers
         environment:
           PGHOST: 127.0.0.1
           PGUSER: root
