@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'lae--fonts'
  *= require_tree .
  *= require_self
 
@@ -21,9 +22,6 @@
 @import "breakpoint";
 @import "singularitygs";
 @import "bourbon";
-
-@import url(https://fonts.googleapis.com/css?family=Sail|EB+Garamond);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic);
 
 body {
 	// font-family: 'EB Garamond', serif;
