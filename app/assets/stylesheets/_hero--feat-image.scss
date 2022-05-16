@@ -31,10 +31,10 @@
   max-height: 100%;
   height: auto;
   width: auto; /* For IE8 */
-  @include breakpoint($tab){ 
+  @include breakpoint($tab){
     @include vertical-align;
   }
-  
+
 }
 
 .featured-text-block {
@@ -68,7 +68,7 @@
         color: $blue;
       }
     }
-    
+
   }
 }
 
