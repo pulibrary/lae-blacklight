@@ -2,7 +2,7 @@
 module ThumbnailHelper
   def thumbnail_from_manifest(document, image_options = { height: '400', width: '400' })
     return unless document['thumbnail_base']
-    image_tag "#{document['thumbnail_base']}/full/!#{image_options[:height]},#{image_options[:width]}/0/default.png"
+    image_tag "#{document['thumbnail_base']}/full/!#{image_options[:height] || 200},#{image_options[:width] || 200}/0/default.png"
   end
 
   def render_square_thumbnail(document)

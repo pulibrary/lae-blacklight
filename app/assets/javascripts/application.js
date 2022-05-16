@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require popper
+//= require bootstrap
 //= require modernizr
 //= require eventie/eventie
 //= require eventEmitter/EventEmitter

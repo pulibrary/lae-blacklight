@@ -1,8 +1,8 @@
 <%# default partial to display solr document fields in catalog show view -%>
-<dl class="dl-horizontal dl-invert metadata">
+<dl class="dl-invert metadata row">
   <% SolrDocumentMetadata.new(document).each do |entry| -%>
-    <dt class="blacklight-<%= entry['label'].parameterize %>"><%= entry['label'] %>:</dt>
-    <dd class="blacklight-<%= entry['label'].parameterize %>">
+    <dt class="col-3 blacklight-<%= entry['label'].parameterize %>"><%= entry['label'] %>:</dt>
+    <dd class="col-9 blacklight-<%= entry['label'].parameterize %>">
       <% if entry['value'].kind_of?(Array) %>
         <ul class="md_val_list">
           <% entry['value'].each do |value| -%>

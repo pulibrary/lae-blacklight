@@ -1,36 +1,29 @@
-<div>
-  <ul class="nav navbar-nav">
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('header.nav.language')%> <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <% available_translations.each do |language, label| %>
-            <li role="presentation" lang="<%= language %>">
-              <%= link_to label, locale_switch_link(language) %>
-            </li>
-          <% end %>
-        </ul>
-    </li>
-    <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('header.nav.user')%> <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <% if has_user_authentication_provider? && current_or_guest_user.present? %>
-          <li>
-            <%= link_to bookmarks_path, id:'bookmarks_nav' do %>
-              <%= t('blacklight.header_links.bookmarks') %>
-        (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)
-            <% end %>
-          </li>
+<ul class="navbar-nav flex-row">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= t('header.nav.language') %>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <% available_translations.each do |language, label| %>
+        <%= link_to label, locale_switch_link(language), class: "dropdown-item" %>
+      <% end %>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= t('header.nav.user') %>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <% if has_user_authentication_provider? && current_or_guest_user.present? %>
+        <%= link_to bookmarks_path, id:'bookmarks_nav', class: 'dropdown-item' do %>
+          <%= t('blacklight.header_links.bookmarks') %>
+          (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)
         <% end %>
-        <% if has_user_authentication_provider? and current_user %>
-          <li>
-            <%= link_to t('blacklight.header_links.saved_searches'), blacklight.saved_searches_path %>
-          </li>
-        <% end %>
-
-        <li>
-          <%= link_to t('blacklight.header_links.search_history'), blacklight.search_history_path %>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+      <% end %>
+      <% if has_user_authentication_provider? and current_user %>
+        <%= link_to t('blacklight.header_links.saved_searches'), blacklight.saved_searches_path, class: 'dropdown-item' %>
+      <% end %>
+      <%= link_to t('blacklight.header_links.search_history'), blacklight.search_history_path, class: 'dropdown-item' %>
+    </div>
+  </li>
+</ul>

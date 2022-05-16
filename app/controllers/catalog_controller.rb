@@ -21,6 +21,11 @@ class CatalogController < ApplicationController
     config.show.document_actions.delete(:citation)
     config.show.document_actions.delete(:email)
 
+    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+    config.add_results_collection_tool(:sort_widget)
+    config.add_results_collection_tool(:per_page_widget)
+    config.add_results_collection_tool(:view_type_group)
+
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       qt: 'search',
@@ -79,7 +84,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'genre_pul_label_facet', label: 'Genre'
     config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
     config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
-    config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet']
+    config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet'], collapsing: true
     config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
     config.add_facet_field 'language_label_facet', label: 'Language'
     config.add_facet_field 'category_facet', label: 'Category', show: false
@@ -184,8 +189,11 @@ class CatalogController < ApplicationController
     config.spell_max = 5
   end
 
+  rescue_from Blacklight::Exceptions::RecordNotFound, with: :invalid_document_id_error
+
   def invalid_document_id_error(exception)
-    @response, @document = search_results(search_field: 'local_identifier', q: params[:id])
+    search_service = search_service_class.new(config: blacklight_config, user_params: { search_field: 'local_identifier', q: params[:id] })
+    @response, @document = search_service.search_results
     if @document.first && @document.length == 1
       redirect_to solr_document_path(@document.first.id)
       return
