@@ -1,9 +1,11 @@
-version: 2
+version: 2.1
+orbs:
+  node: circleci/node@5.0.2
 jobs:
   build:
     # Primary command image where all commands run
     docker:
-      - image: circleci/ruby:2.7-node-browsers
+      - image: cimg/ruby:2.7-browsers
         environment:
           PGHOST: 127.0.0.1
           PGUSER: root
@@ -20,24 +22,10 @@ jobs:
     working_directory: ~/lae-blacklight
     steps: &test_steps
       - checkout
-      - run:
-          name: Install the NVM
-          command: |
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
-            [ -s "/home/circleci/.nvm/nvm.sh" ]
-            source /home/circleci/.nvm/nvm.sh
-            echo 'The NVM has been installed'
-      - run:
-          name: Install Node LTS/erbium
-          command: |
-            source ~/.nvm/nvm.sh
-            nvm install lts/erbium
-            nvm use lts/erbium
-      - run:
-          name: Install Yarn
-          command: |
-            source ~/.nvm/nvm.sh
-            curl -o- -L https://yarnpkg.com/install.sh | bash
+      - node/install:
+          install-yarn: true
+          node-version: '16.15'
+      - run: node --version
       #set timezone to est
       - run:
           name: Set Timezone to EST
