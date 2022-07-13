@@ -25,5 +25,7 @@ module LaePublic
     config.i18n.available_locales = [:en, :es, :'pt-BR']
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+
+    config.active_record.yaml_column_permitted_classes = [Symbol, Date, Time, Hash, HashWithIndifferentAccess]
   end
 end
