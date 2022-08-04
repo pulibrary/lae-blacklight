@@ -485,7 +485,7 @@ DEPENDENCIES
   bootstrap (~> 4.0)
   bourbon (~> 7.0)
   breakpoint
-  bundler (>= 1.7.0)
+  bundler (= 2.3.18)
   byebug
   capistrano (~> 3.4.0)
   capistrano-bundler
@@ -539,4 +539,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.3.17
+   2.3.18
