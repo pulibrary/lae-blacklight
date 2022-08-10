@@ -12,7 +12,7 @@ jobs:
           RAILS_ENV: test
           SOLR_URL: http://solr:SolrRocks@localhost:8888/solr/lae-core-test
       # Service container image available at 'host: localhost'
-      - image: postgres:10
+      - image: postgres:13
         environment:
           POSTGRES_DB: lae_blacklight_test
           POSTGRES_USER: root
