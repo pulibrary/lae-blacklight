@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/pulibrary/pul_uv_rails.git
   revision: 91412fb7fa04ebd66bbf4df621892c9b6dbc97f6
-  branch: master
+  branch: main
   specs:
     pul_uv_rails (2.0.1)
 

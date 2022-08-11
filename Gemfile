@@ -34,7 +34,7 @@ gem 'modernizr-rails'
 gem 'nokogiri', '~> 1.13.4'
 gem "pg"
 gem "progressbar"
-gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'master'
+gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
 gem 'rack', '>= 2.0.6'
 gem 'rails', '~> 6.1.6'
 gem 'rails-html-sanitizer', '>= 1.0.4'
