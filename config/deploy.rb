@@ -1,8 +1,7 @@
 set :application, 'lae-blackight'
 set :repo_url, 'https://github.com/pulibrary/lae-blacklight.git'
-set :branch, ENV['BRANCH'] || 'master'
 
-# Default branch is :master
+# Default branch is :main
 set :branch, ENV['BRANCH'] || 'main'
 
 # Default deploy_to directory is /var/www/my_app_name
