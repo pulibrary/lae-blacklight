@@ -6,16 +6,20 @@ RSpec.describe Reindexer do
   let(:solr) { Blacklight.default_index.connection }
   before do
     VCR.turn_off!
-    stub_plum_catalog(records: ["b9e8325e-baf2-45e4-b32c-5e5b3755c8ef"])
+    Blacklight.default_index.connection.delete_by_query('*:*')
+    stub_plum_catalog
+    stub_plum_jsonld(record: "b9e8325e-baf2-45e4-b32c-5e5b3755c8ef")
   end
   after do
     VCR.turn_on!
   end
+
   it "pulls in all objects from Solr and indexes them" do
     reindexer.index!
     Blacklight.default_index.connection.commit
     expect(solr.get("select", params: { q: "Caripe. Jardín turístico de Monagas." })["response"]["numFound"]).to eq 1
   end
+
   it "suppresses indexing errors" do
     allow(Blacklight.default_index.connection).to receive(:add).and_raise("Something broke")
     allow(Rails.logger).to receive(:warn).and_call_original
