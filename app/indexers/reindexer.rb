@@ -90,20 +90,20 @@ class Reindexer
       end
 
       def docs
-        response["docs"]
+        response["data"]
       end
 
       def response
-        @response ||= JSON.parse(open("#{url}&page=#{page}").read.force_encoding('UTF-8'))["response"]
+        @response ||= JSON.parse(URI.open("#{url}&page=#{page}").read.force_encoding('UTF-8'))
       end
 
       def next_page
-        return nil unless response["pages"]["next_page"]
-        Response.new(url: url, page: response["pages"]["next_page"])
+        return nil unless response["meta"]["pages"]["next_page"]
+        Response.new(url: url, page: response["meta"]["pages"]["next_page"])
       end
 
       def total_count
-        response["pages"]["total_count"]
+        response["meta"]["pages"]["total_count"]
       end
     end
   end
