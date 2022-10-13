@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 class Reindexer
-  attr_reader :collection_name
-  def initialize(collection_name: "Latin American Ephemera")
+  attr_reader :collection_name, :solr
+  def initialize(collection_name: "Latin American Ephemera", solr_url: nil)
     @collection_name = collection_name
+    @solr = if solr_url
+              RSolr.connect(url: solr_url)
+            else
+              Blacklight.default_index.connection
+            end
   end
 
   def index!
@@ -31,10 +36,6 @@ class Reindexer
       progressbar.increment
       PlumJsonldConverter.new(jsonld: jsonld).output
     end
-  end
-
-  def solr
-    Blacklight.default_index.connection
   end
 
   def url

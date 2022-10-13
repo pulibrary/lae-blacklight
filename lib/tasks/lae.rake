@@ -9,6 +9,12 @@ namespace :lae do
     Reindexer.new.index!
   end
 
+  task reindex_alternate: :environment do
+    solr_url = ENV["SOLR_URL"]
+    abort "usage: rake lae:reindex_alternate SOLR_URL=[http://lib-solr8-prod.princeton.edu:8983/solr/lae-alt]" unless solr_url
+    Reindexer.new(solr_url: solr_url).index!
+  end
+
   task index_fixtures: :environment do
     raise "Don't load fixtures in production" if Rails.env.production? || Rails.env.staging?
     include WebMock::API

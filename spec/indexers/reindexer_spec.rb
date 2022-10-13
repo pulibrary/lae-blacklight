@@ -20,6 +20,21 @@ RSpec.describe Reindexer do
     expect(solr.get("select", params: { q: "Caripe. Jardín turístico de Monagas." })["response"]["numFound"]).to eq 1
   end
 
+  context "when initialized with a specific solr url" do
+    let(:solr_url) { Blacklight.blacklight_yml["test"]["url"] }
+    let(:reindexer) { described_class.new(solr_url: solr_url) }
+
+    it "uses the given url" do
+      allow(Blacklight).to receive(:default_index)
+      reindexer.index!
+      expect(Blacklight).not_to have_received(:default_index)
+
+      other_solr = RSolr.connect(url: solr_url)
+      other_solr.commit
+      expect(other_solr.get("select", params: { q: "Caripe. Jardín turístico de Monagas." })["response"]["numFound"]).to eq 1
+    end
+  end
+
   it "suppresses indexing errors" do
     allow(Blacklight.default_index.connection).to receive(:add).and_raise("Something broke")
     allow(Rails.logger).to receive(:warn).and_call_original
