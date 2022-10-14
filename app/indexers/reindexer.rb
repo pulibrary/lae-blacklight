@@ -74,7 +74,7 @@ class Reindexer
     end
 
     def jsonld_for(doc)
-      open(JSONLDPathBuilder.new(doc).path).read
+      URI.open(JSONLDPathBuilder.new(doc).path).read
     end
 
     def total
