@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+
+# Fetches json search results pages from figgy, and then the jsonld record for
+# each result. Formats each record for ingest into solr via PlumJsonldConverter.
 class Reindexer
   attr_reader :collection_name, :solr
   def initialize(collection_name: "Latin American Ephemera", solr_url: nil)
@@ -75,7 +78,7 @@ class Reindexer
     end
 
     def jsonld_for(doc)
-      open(JSONLDPathBuilder.new(doc).path).read
+      URI.open(JSONLDPathBuilder.new(doc).path).read
     end
 
     def total

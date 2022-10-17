@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+
+# Given jsonld, converts to a solr document for indexing
+# Fetches the manifest to index both the manifest and the thumbnail
 class PlumJsonldConverter
   attr_reader :jsonld
   def initialize(jsonld:)
