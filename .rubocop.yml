@@ -4,12 +4,15 @@ inherit_gem:
 
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 3.1.3
   Exclude:
     - 'bin/*'
     - 'db/schema.rb'
     - 'config/deploy.rb'
     - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'solr/**/*'
 
 Lint/UselessAssignment:
   Exclude:
@@ -35,7 +38,7 @@ Metrics/ClassLength:
 Metrics/AbcSize:
   Exclude:
     - 'app/indexers/plum_jsonld_converter.rb'
-Metrics/LineLength:
+Layout/LineLength:
   Exclude:
     - 'spec/indexers/plum_jsonld_converter_spec.rb'
 RSpec/SubjectStub:
@@ -67,9 +70,13 @@ Naming/FileName:
     - '**/*.rake'
     - 'Capfile'
 
-Style/BracesAroundHashParameters:
+Rails/UnknownEnv:
+  Enabled: false
+
+Rails/CreateTableWithTimestamps:
   Exclude:
-    - spec/services/solr_document_metadata_spec.rb
+    - 'db/migrate/20141203210809_create_index_events.rb'
+
 Metrics/ModuleLength:
   Exclude:
     - app/helpers/application_helper.rb
@@ -82,3 +89,6 @@ RSpec/MessageSpies:
 RSpec/DescribeClass:
   Exclude:
     - spec/i18n_spec.rb
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods

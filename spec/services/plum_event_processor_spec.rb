@@ -75,7 +75,7 @@ RSpec.describe PlumEventProcessor do
     let(:type) { "UPDATED" }
     it "updates that resource" do
       solr.add(PlumJsonldConverter.new(jsonld: URI.open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
-      allow(PlumJsonldConverter).to receive(:new).and_return(instance_double(PlumJsonldConverter, output: { id: id, title_display: "Fake Thing" }.stringify_keys))
+      allow(PlumJsonldConverter).to receive(:new).and_return(instance_double(PlumJsonldConverter, output: { id:, title_display: "Fake Thing" }.stringify_keys))
       allow(solr).to receive(:add).and_call_original
 
       expect(processor.process).to eq true

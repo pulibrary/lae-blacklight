@@ -8,7 +8,7 @@ if Rails.env.development? || Rails.env.test?
       system('rake servers:seed RAILS_ENV=test')
     end
 
-    task :seed do
+    task seed: :environment do
       Rake::Task['db:create'].invoke
       Rake::Task['db:migrate'].invoke
       Rake::Task['lae:index_fixtures'].invoke

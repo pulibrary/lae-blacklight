@@ -74,7 +74,7 @@ jobs:
 
       - run:
           name: Run rubocop
-          command: bundle exec rake rubocop
+          command: bundle exec rubocop
 
       - run:
           name: Index lae fixtures

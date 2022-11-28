@@ -22,7 +22,7 @@ RSpec.describe Reindexer do
 
   context "when initialized with a specific solr url" do
     let(:solr_url) { Blacklight.blacklight_yml["test"]["url"] }
-    let(:reindexer) { described_class.new(solr_url: solr_url) }
+    let(:reindexer) { described_class.new(solr_url:) }
 
     it "uses the given url" do
       allow(Blacklight).to receive(:default_index)

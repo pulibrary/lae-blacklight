@@ -33,11 +33,11 @@ class Reindexer
   end
 
   def solr_documents
-    jsonld_response = PaginatingJSONLDResponse.new(url: url)
+    jsonld_response = PaginatingJSONLDResponse.new(url:)
     progressbar = ProgressBar.create(total: jsonld_response.total, format: "%a %e %P% Processed: %c from %C")
     jsonld_response.lazy.map do |jsonld|
       progressbar.increment
-      PlumJsonldConverter.new(jsonld: jsonld).output
+      PlumJsonldConverter.new(jsonld:).output
     end
   end
 
@@ -68,7 +68,7 @@ class Reindexer
     end
 
     def each
-      response = Response.new(url: url, page: 1)
+      response = Response.new(url:, page: 1)
       loop do
         response.docs.each do |doc|
           yield jsonld_for(doc)
@@ -82,7 +82,7 @@ class Reindexer
     end
 
     def total
-      @total ||= Response.new(url: url, page: 1).total_count
+      @total ||= Response.new(url:, page: 1).total_count
     end
 
     class Response
@@ -103,7 +103,7 @@ class Reindexer
 
       def next_page
         return nil unless response["meta"]["pages"]["next_page"]
-        Response.new(url: url, page: response["meta"]["pages"]["next_page"])
+        Response.new(url:, page: response["meta"]["pages"]["next_page"])
       end
 
       def total_count

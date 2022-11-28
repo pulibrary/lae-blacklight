@@ -121,7 +121,7 @@ module ApplicationHelper
     bf[:date] ||= document['date_display']
     bf[:publisher] = document['publisher_display'].first if document.key?('publisher_display')
     bf[:origin] ||= document['geographic_origin_label'].first
-    render partial: 'brief_document_metadata', locals: { bf: bf }
+    render partial: 'brief_document_metadata', locals: { bf: }
   end
 
   def random_sample_graphic
