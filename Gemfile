@@ -53,11 +53,7 @@ gem 'sprockets', '>= 3.7.2'
 gem 'turbolinks'
 
 ## Added for Ruby 3.1 support
-gem "matrix"
-gem "net-imap", require: false
-gem "net-pop", require: false
 gem "net-smtp", require: false
-gem "strscan", "3.0.1"
 
 group :test, :development do
   gem 'byebug'

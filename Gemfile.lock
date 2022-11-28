@@ -255,10 +255,6 @@ GEM
     minitest (5.16.2)
     modernizr-rails (2.7.1)
     multi_json (1.15.0)
-    net-imap (0.3.1)
-      net-protocol
-    net-pop (0.1.2)
-      net-protocol
     net-protocol (0.1.3)
       timeout
     net-scp (4.0.0)
@@ -445,7 +441,6 @@ GEM
     sshkit (1.21.3)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    strscan (3.0.1)
     sxp (1.2.3)
       matrix (~> 0.4)
       rdf (~> 3.2)
@@ -527,11 +522,8 @@ DEPENDENCIES
   json-ld
   loofah (>= 2.2.3)
   mail_form
-  matrix
   mimemagic (~> 0.3)
   modernizr-rails
-  net-imap
-  net-pop
   net-smtp
   nokogiri (~> 1.13.4)
   pg
@@ -555,7 +547,6 @@ DEPENDENCIES
   sneakers
   spring
   sprockets (>= 3.7.2)
-  strscan (= 3.0.1)
   turbolinks
   vcr
   web-console (~> 2.0)
