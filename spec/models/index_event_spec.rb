@@ -55,7 +55,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
       Blacklight.default_index.connection.commit
       # check
       params = { fl: ['id'] }
-      resp = solr.get('select', params: params)
+      resp = solr.get('select', params:)
       expect(resp['response']['numFound']).to eq doc_ids.length
     end
   end

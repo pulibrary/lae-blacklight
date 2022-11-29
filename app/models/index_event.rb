@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'rake'
-class IndexEvent < ActiveRecord::Base
+class IndexEvent < ApplicationRecord
   PULSTORE_CONFIG ||= YAML.load_file(Rails.root.join('config', 'pulstore.yml'))
 
   INDEXING_TASKS =

@@ -12,7 +12,7 @@ namespace :lae do
   task reindex_alternate: :environment do
     solr_url = ENV["SOLR_URL"]
     abort "usage: rake lae:reindex_alternate SOLR_URL=[http://lib-solr8-prod.princeton.edu:8983/solr/lae-alt]" unless solr_url
-    Reindexer.new(solr_url: solr_url).index!
+    Reindexer.new(solr_url:).index!
   end
 
   task index_fixtures: :environment do
@@ -50,7 +50,7 @@ namespace :lae do
 
   namespace :solr do
     desc 'Posts fixtures to Solr'
-    task :index do
+    task index: :environment do
       solr = RSolr.connect url: Blacklight.connection_config[:url]
       content = File.read('spec/fixtures/files/208_solr_docs.xml')
       solr.update(data: content, headers: { 'Content-Type' => 'text/xml' })

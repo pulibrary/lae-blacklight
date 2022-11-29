@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'rails_helper'
+require 'open-uri'
 
 RSpec.describe PlumEventProcessor do
   subject(:processor) { described_class.new(event) }
@@ -61,7 +62,7 @@ RSpec.describe PlumEventProcessor do
       }
     end
     it "deletes that resource" do
-      solr.add(PlumJsonldConverter.new(jsonld: open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
+      solr.add(PlumJsonldConverter.new(jsonld: URI.open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
 
       expect(processor.process).to eq true
       solr.commit
@@ -73,8 +74,8 @@ RSpec.describe PlumEventProcessor do
   context "when given an update event" do
     let(:type) { "UPDATED" }
     it "updates that resource" do
-      solr.add(PlumJsonldConverter.new(jsonld: open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
-      allow(PlumJsonldConverter).to receive(:new).and_return(instance_double(PlumJsonldConverter, output: { id: id, title_display: "Fake Thing" }.stringify_keys))
+      solr.add(PlumJsonldConverter.new(jsonld: URI.open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
+      allow(PlumJsonldConverter).to receive(:new).and_return(instance_double(PlumJsonldConverter, output: { id:, title_display: "Fake Thing" }.stringify_keys))
       allow(solr).to receive(:add).and_call_original
 
       expect(processor.process).to eq true
@@ -87,7 +88,7 @@ RSpec.describe PlumEventProcessor do
     end
     context "when it's no longer accessible" do
       it "deletes it" do
-        solr.add(PlumJsonldConverter.new(jsonld: open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
+        solr.add(PlumJsonldConverter.new(jsonld: URI.open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
         stub_request(:get, url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).to_return(body: "{}", headers: { "Content-Type" => "application/json+ld" }, status: 404)
 
         expect(processor.process).to eq true
@@ -100,7 +101,7 @@ RSpec.describe PlumEventProcessor do
     context "when it's removed from the collection" do
       let(:collection_slugs) { [] }
       it "deletes it" do
-        solr.add(PlumJsonldConverter.new(jsonld: open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
+        solr.add(PlumJsonldConverter.new(jsonld: URI.open(url.gsub("/manifest", ".jsonld").gsub("concern/ephemera_folders", "catalog")).read).output, params: { softCommit: true })
 
         expect(processor.process).to eq true
         solr.commit

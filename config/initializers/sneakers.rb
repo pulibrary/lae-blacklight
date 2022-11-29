@@ -21,4 +21,4 @@ WORKER_OPTIONS = {
 }.freeze
 
 # incorporate the env to prevent staging / prod conflicts
-SNEAKERS_QUEUE = "lae_#{Rails.env}_queue"
+SNEAKERS_QUEUE = "lae_#{Rails.env}_queue".freeze

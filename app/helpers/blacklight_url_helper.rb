@@ -7,7 +7,7 @@ module BlacklightUrlHelper
   # is suitable for a redirect. See
   # add_facet_params_and_redirect
   # TODO: Write specs for this method and refactor.
-  # rubocop:disable AbcSize, CyclomaticComplexity, MethodLength, PerceivedComplexity
+  # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
   def add_facet_params(field, item, source_params = params)
     field = item.field if item.respond_to? :field
 
@@ -32,5 +32,5 @@ module BlacklightUrlHelper
 
     p
   end
-  # rubocop:enable AbcSize, CyclomaticComplexity, MethodLength, PerceivedComplexity
+  # rubocop:enable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
 end

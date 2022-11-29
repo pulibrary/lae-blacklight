@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'open-uri'
 class PlumEventProcessor
   class CreateProcessor < Processor
     def process
@@ -15,7 +16,7 @@ class PlumEventProcessor
     def json
       @json ||=
         begin
-          open(jsonld_url).read
+          URI.open(jsonld_url).read
         rescue OpenURI::HTTPError
           '{}'
         end

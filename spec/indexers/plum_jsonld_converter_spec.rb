@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe PlumJsonldConverter do
-  subject(:converter) { described_class.new(jsonld: jsonld) }
+  subject(:converter) { described_class.new(jsonld:) }
   let(:jsonld) { file_fixture("plum_records/b9e8325e-baf2-45e4-b32c-5e5b3755c8ef.jsonld").read }
   before do
     VCR.turn_off!
