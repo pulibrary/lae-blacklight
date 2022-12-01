@@ -54,6 +54,7 @@ gem 'turbolinks'
 
 ## Added for Ruby 3.1 support
 gem "net-smtp", require: false
+gem "net-pop", require: false
 
 group :test, :development do
   gem 'byebug'
