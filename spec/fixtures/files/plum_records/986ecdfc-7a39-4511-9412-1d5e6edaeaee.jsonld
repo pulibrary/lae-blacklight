@@ -42,7 +42,7 @@
     "date_created": [
         "2018"
     ],
-    "dcterms_type": [
+    "format": [
         {
             "@id": "https://figgy.princeton.edu/catalog/42754ac7-7723-4219-81eb-11085946fdca",
             "@type": "skos:Concept",

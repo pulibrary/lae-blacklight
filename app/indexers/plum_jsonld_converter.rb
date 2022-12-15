@@ -148,7 +148,7 @@ class PlumJsonldConverter
     end
 
     def genre_pul_label
-      Array.wrap(json["dcterms_type"]).map { |x| x["pref_label"] }
+      Array.wrap(json["format"]).map { |x| x["pref_label"] }
     end
 
     def geo_origin_label
