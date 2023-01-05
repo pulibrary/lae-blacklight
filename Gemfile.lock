@@ -269,7 +269,7 @@ GEM
       net-protocol
     net-ssh (7.0.1)
     nio4r (2.5.8)
-    nokogiri (1.13.7)
+    nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     openseadragon (0.6.0)
@@ -542,7 +542,7 @@ DEPENDENCIES
   net-imap
   net-pop
   net-smtp
-  nokogiri (~> 1.13.4)
+  nokogiri (~> 1.13.9)
   pg
   progressbar
   pry-byebug
