@@ -22,9 +22,13 @@
       <div class="search-links">
         <%= render partial: '/user_util_links' %>
       </div>
-        
+
       <div class="search-bar">
-        <%= render_search_bar  %> 
+        <%= render Blacklight::SearchBarComponent.new(
+            url: search_action_url,
+            params: search_state.params_for_search.except(:qt)
+          )
+        %>
       </div>
 
       <div class="site-links">
