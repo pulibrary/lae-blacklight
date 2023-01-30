@@ -1,6 +1,6 @@
   <div id="content" class="wrapper show-document">
 
-    <%= render 'previous_next_doc' %>
+    <%= render(Blacklight::SearchContextComponent.new(search_context: @search_context, search_session: search_session)) %>
      
   <% @page_title = t('blacklight.search.show.title', :document_title => document_show_html_title, :application_name => application_name).html_safe -%>
   <% content_for(:head) { render_link_rel_alternates } -%>
