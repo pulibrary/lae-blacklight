@@ -3,9 +3,8 @@ source 'https://rubygems.org'
 
 gem 'bitters', '~> 1.2.0'
 gem 'bixby', '~> 5.0'
-# Locked to Blacklight 7.24 as 7.25.1 currently breaks range limit
 gem 'blacklight', '~> 7.33.0'
-gem 'blacklight-gallery'
+gem 'blacklight-gallery', '~>4.0'
 gem 'blacklight_range_limit'
 gem 'bootstrap', '~> 4.0'
 gem 'bourbon', '~> 7.0'
@@ -32,6 +31,7 @@ gem "mail_form"
 gem "mimemagic", "~> 0.3"
 gem 'modernizr-rails'
 gem 'nokogiri', '~> 1.13.9'
+gem 'openseadragon'
 gem "pg"
 gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'

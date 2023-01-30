@@ -7,7 +7,9 @@ class CatalogController < ApplicationController
   helper Openseadragon::OpenseadragonHelper
 
   configure_blacklight do |config|
-    config.view.masonry!
+    config.view.masonry(document_component: Blacklight::Gallery::DocumentComponent)
+    # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
+    config.show.partials.insert(1, :openseadragon)
     config.index.thumbnail_method = :thumbnail_from_manifest
     config.search_state_fields = config.search_state_fields + [:id, :locale]
     # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
