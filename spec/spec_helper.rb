@@ -1,8 +1,5 @@
 # frozen_string_literal: true
-require 'coveralls'
 require 'vcr'
-
-Coveralls.wear!
 
 # VCR is used here to cache results that would normally come from
 # http://pulstore.princeton.edu/lae (e.g. IndexEvent specs). Interactions with

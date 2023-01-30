@@ -4,7 +4,6 @@ LAE Blacklight
 Public UI for the LAE Project.
 
 [![CircleCI](https://circleci.com/gh/pulibrary/lae-blacklight.svg?style=svg)](https://circleci.com/gh/pulibrary/lae-blacklight)
-[![Coverage Status](https://coveralls.io/repos/pulibrary/lae-blacklight/badge.png)](https://coveralls.io/r/pulibrary/lae-blacklight)
 
 Development Configuration
 ------------------

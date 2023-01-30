@@ -60,9 +60,9 @@ gem "net-smtp", require: false
 group :test, :development do
   gem 'byebug'
   gem 'capybara'
-  gem 'coveralls', require: false
   gem 'i18n-tasks', '~> 0.9'
   gem 'pry-byebug'
+  gem "simplecov", require: false
   gem 'yard'
 end
 
