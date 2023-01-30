@@ -42,14 +42,11 @@ jobs:
       - run:
           name: Install dependencies
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
-
       - run: sudo apt update
-
       - save_cache:
           key: lae-blacklight-{{ checksum "Gemfile.lock" }}
           paths:
             - ./vendor/bundle
-
       - run:
           name: Yarn Install
           command: |
@@ -59,7 +56,6 @@ jobs:
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
-
       - run:
           name: Load config into solr
           command: |
@@ -67,7 +63,6 @@ jobs:
             zip -1 -r solr_config.zip ./*
             curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://localhost:8888/solr/admin/configs?action=UPLOAD&name=lae"
             curl -H 'Content-type: application/json' http://localhost:8888/api/collections/ -d '{create: {name: lae-core-test, config: lae, numShards: 1}}'
-
       - run:
           name: Database setup
           command: bundle exec rake db:setup
@@ -75,7 +70,6 @@ jobs:
       - run:
           name: Run rubocop
           command: bundle exec rubocop
-
       - run:
           name: Index lae fixtures
           command: bundle exec rake lae:index_fixtures
@@ -83,6 +77,9 @@ jobs:
       - run:
           name: Run Rspec
           command: bundle exec rspec spec
+      - store_artifacts:
+          path: coverage
+
 workflows:
   version: 2
   build_accept_deploy:
