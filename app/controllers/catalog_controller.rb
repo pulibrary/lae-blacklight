@@ -9,6 +9,7 @@ class CatalogController < ApplicationController
   configure_blacklight do |config|
     config.view.masonry!
     config.index.thumbnail_method = :thumbnail_from_manifest
+    config.search_state_fields = config.search_state_fields + [:id, :locale]
     # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     # config.show.partials.insert(0, :openseadragon)
     config.index.display_type_field = 'genre_pul_label_facet'
