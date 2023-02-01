@@ -1,4 +1,22 @@
 GIT
+  remote: https://github.com/projectblacklight/blacklight-gallery.git
+  revision: 3bf20e28e3a959ec7399880c10c9308fa005b8c7
+  branch: main
+  specs:
+    blacklight-gallery (4.0.2)
+      blacklight (>= 7.17, < 9)
+      rails (>= 6.1, < 8)
+
+GIT
+  remote: https://github.com/projectblacklight/blacklight_range_limit.git
+  revision: 5828f02c6c5c7c0fdd5fd61b71f63fccace9221d
+  branch: main
+  specs:
+    blacklight_range_limit (8.2.4)
+      blacklight (>= 7.25.2, < 9)
+      deprecation
+
+GIT
   remote: https://github.com/pulibrary/pul_uv_rails.git
   revision: 91412fb7fa04ebd66bbf4df621892c9b6dbc97f6
   branch: main
@@ -89,21 +107,14 @@ GEM
       rubocop-performance
       rubocop-rails
       rubocop-rspec
-    blacklight (7.33.0)
-      deprecation
+    blacklight (8.0.0.beta4)
       globalid
-      hashdiff
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
       kaminari (>= 0.15)
       ostruct (>= 0.3.2)
-      rails (>= 5.1, < 7.1)
-      view_component (~> 2.66)
-    blacklight-gallery (4.0.2)
-      blacklight (~> 7.17)
-      rails (>= 5.1, < 8)
-    blacklight_range_limit (8.2.3)
-      blacklight (>= 7.25.2, < 9)
+      rails (>= 6.1, < 8)
+      view_component (>= 2.66, < 3.1)
     bootstrap (4.6.2)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.16.1, < 2)
@@ -502,9 +513,9 @@ PLATFORMS
 DEPENDENCIES
   bitters (~> 1.2.0)
   bixby (~> 5.0)
-  blacklight (~> 7.33.0)
-  blacklight-gallery (~> 4.0)
-  blacklight_range_limit
+  blacklight (= 8.0.0.beta4)
+  blacklight-gallery!
+  blacklight_range_limit!
   bootstrap (~> 4.0)
   bourbon (~> 7.0)
   breakpoint

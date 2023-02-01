@@ -194,9 +194,10 @@ class CatalogController < ApplicationController
 
   def invalid_document_id_error(exception)
     search_service = search_service_class.new(config: blacklight_config, user_params: { search_field: 'local_identifier', q: params[:id] })
-    @response, @document = search_service.search_results
-    if @document.first && @document.length == 1
-      redirect_to solr_document_path(@document.first.id)
+    @response = search_service.search_results
+    document = @response.documents.first
+    if document && @response.documents.length == 1
+      redirect_to solr_document_path(document.id)
       return
     end
     super
