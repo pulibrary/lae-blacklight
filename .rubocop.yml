@@ -92,3 +92,6 @@ RSpec/DescribeClass:
 
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
+
+Style/HashSyntax:
+  Enabled: false

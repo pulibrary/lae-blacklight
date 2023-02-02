@@ -19,8 +19,6 @@
 //= require eventEmitter/EventEmitter
 //= require imagesloaded/imagesloaded
 //
-// Required by Blacklight
-//= require blacklight/blacklight
 //= require_tree .
 
 

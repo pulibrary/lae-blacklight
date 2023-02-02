@@ -7,10 +7,11 @@ class CatalogController < ApplicationController
   helper Openseadragon::OpenseadragonHelper
 
   configure_blacklight do |config|
-    # config.view.gallery.partials = [:index_header, :index]
-    config.view.masonry.partials = [:index]
-    # config.view.slideshow.partials = [:index]
+    config.view.masonry(document_component: MasonryDocumentComponent)
+    # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
+    config.show.partials.insert(1, :openseadragon)
     config.index.thumbnail_method = :thumbnail_from_manifest
+    config.search_state_fields = config.search_state_fields + [:id, :locale]
     # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     # config.show.partials.insert(0, :openseadragon)
     config.index.display_type_field = 'genre_pul_label_facet'
@@ -193,9 +194,10 @@ class CatalogController < ApplicationController
 
   def invalid_document_id_error(exception)
     search_service = search_service_class.new(config: blacklight_config, user_params: { search_field: 'local_identifier', q: params[:id] })
-    @response, @document = search_service.search_results
-    if @document.first && @document.length == 1
-      redirect_to solr_document_path(@document.first.id)
+    @response = search_service.search_results
+    document = @response.documents.first
+    if document && @response.documents.length == 1
+      redirect_to solr_document_path(document.id)
       return
     end
     super
