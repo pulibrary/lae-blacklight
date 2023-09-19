@@ -19,7 +19,7 @@ services:
     config:
       dir: "solr/conf"
   lae_database:
-    type: postgres:13
+    type: postgres:15
     portforward: true
 proxy:
   lae_test_solr:
