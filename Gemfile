@@ -58,8 +58,10 @@ gem "net-pop", require: false
 gem "net-smtp", require: false
 
 group :test, :development do
+  gem 'bcrypt_pbkdf'
   gem 'byebug'
   gem 'capybara'
+  gem 'ed25519'
   gem 'i18n-tasks', '~> 0.9'
   gem 'pry-byebug'
   gem "simplecov", require: false
