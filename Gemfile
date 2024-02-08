@@ -2,10 +2,9 @@
 source 'https://rubygems.org'
 
 gem 'bitters', '~> 1.2.0'
-gem 'bixby', '~> 5.0'
+gem 'bixby'
 # Locked to Blacklight 7.24 as 7.25.1 currently breaks range limit
-gem 'blacklight', '~> 7.24.0'
-gem 'blacklight-gallery'
+gem 'blacklight', '~> 7.25'
 gem 'blacklight_range_limit'
 gem 'bootstrap', '~> 4.0'
 gem 'bourbon', '~> 7.0'
@@ -15,7 +14,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 gem 'capistrano-rails'
 gem 'coffee-rails', '~> 4.2.0'
-gem "devise", '~> 4.7.1'
+gem "devise", '~> 4.8.1'
 gem "devise-guests", "~> 0.3"
 gem 'devise-i18n'
 gem 'faraday'
@@ -30,12 +29,12 @@ gem 'loofah', '>= 2.2.3'
 gem "mail_form"
 gem "mimemagic", "~> 0.3"
 gem 'modernizr-rails'
-gem 'nokogiri', '~> 1.14.3'
+gem 'nokogiri'
 gem "pg"
 gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.1.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '~> 3.0'
 gem 'rdf-turtle', '~> 3.0'
@@ -49,6 +48,7 @@ gem "simple_form", "5.0.0"
 gem 'singularitygs'
 gem 'sneakers'
 gem 'sprockets', '>= 3.7.2'
+gem 'sprockets-rails'
 gem 'turbolinks'
 
 ## Added for Ruby 3.1 support
@@ -69,7 +69,6 @@ end
 
 group :development do
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
 
 group :test do
