@@ -23,7 +23,7 @@ RSpec.describe IndexEvent, type: :model, vcr: vcr_options do
 
     it 'raises an error if the service is not available (bad url or whatever)' do
       bogus = 'http://notaurl.foo'
-      allow(Faraday).to receive(:new).with(bogus).and_raise(Faraday::ConnectionFailed.new("hey that's not a url"))
+      allow(Faraday).to receive(:new).and_raise(Faraday::ConnectionFailed.new("hey that's not a url"))
       expect { described_class.get_boxes_data(url: bogus) }.to raise_error(Faraday::ConnectionFailed)
     end
   end

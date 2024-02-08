@@ -18,7 +18,7 @@ RSpec.describe PlumJsonldConverter do
     end
     it "converts the JSON-LD into a suitable solr document" do
       stub_plum_jsonld(record: "b9e8325e-baf2-45e4-b32c-5e5b3755c8ef")
-      expect(logger).to receive(:warn).with("Data inconsistency: #{id} has subject Biodiversity with no category")
+      allow(logger).to receive(:warn)
       expect(converter.output.except("ttl", "manifest")).to eq(
         "id" => id,
         "pulstore_pid" => "b9e8325e-baf2-45e4-b32c-5e5b3755c8ef",
@@ -60,6 +60,7 @@ RSpec.describe PlumJsonldConverter do
         "description" => ["Test Description"],
         "collections_label" => []
       )
+      expect(logger).to have_received(:warn).with("Data inconsistency: #{id} has subject Biodiversity with no category")
     end
   end
   context "when there's collections" do

@@ -2,6 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationController do
+  render_views
   controller do
     def index
       render plain: 'i am an action'
