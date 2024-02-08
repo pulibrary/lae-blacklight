@@ -4,7 +4,7 @@
 class CatalogController < ApplicationController
   include BlacklightRangeLimit::ControllerOverride
   include Blacklight::Catalog
-  helper Openseadragon::OpenseadragonHelper
+  # helper Openseadragon::OpenseadragonHelper
 
   configure_blacklight do |config|
     # config.view.gallery.partials = [:index_header, :index]

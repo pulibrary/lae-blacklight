@@ -15,7 +15,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 gem 'capistrano-rails'
 gem 'coffee-rails', '~> 4.2.0'
-gem "devise", '~> 4.7.1'
+gem "devise", '~> 4.8.1'
 gem "devise-guests", "~> 0.3"
 gem 'devise-i18n'
 gem 'faraday'
@@ -35,7 +35,7 @@ gem "pg"
 gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.0.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '~> 3.0'
 gem 'rdf-turtle', '~> 3.0'
@@ -49,6 +49,7 @@ gem "simple_form", "5.0.0"
 gem 'singularitygs'
 gem 'sneakers'
 gem 'sprockets', '>= 3.7.2'
+gem 'sprockets-rails'
 gem 'turbolinks'
 
 ## Added for Ruby 3.1 support
