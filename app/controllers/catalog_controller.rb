@@ -8,7 +8,7 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     # config.view.gallery.partials = [:index_header, :index]
-    config.view.masonry.partials = [:index]
+    # config.view.masonry.partials = [:index]
     # config.view.slideshow.partials = [:index]
     config.index.thumbnail_method = :thumbnail_from_manifest
     # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
