@@ -153,6 +153,15 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
+    datadog-ci (0.7.0)
+      msgpack
+    ddtrace (1.20.0)
+      datadog-ci (~> 0.7.0)
+      debase-ruby_core_source (= 3.3.1)
+      libdatadog (~> 5.0.0.1.0)
+      libddwaf (~> 1.14.0.0.0)
+      msgpack
+    debase-ruby_core_source (3.3.1)
     debug_inspector (1.1.0)
     deprecation (1.1.0)
       activesupport
@@ -233,6 +242,9 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    libdatadog (5.0.0.1.0)
+    libddwaf (1.14.0.0.0)
+      ffi (~> 1.0)
     link_header (0.0.8)
     loofah (2.21.4)
       crass (~> 1.0.2)
@@ -255,6 +267,7 @@ GEM
     mini_portile2 (2.8.5)
     minitest (5.20.0)
     modernizr-rails (2.7.1)
+    msgpack (1.7.2)
     multi_json (1.15.0)
     net-imap (0.3.1)
       net-protocol
@@ -518,6 +531,7 @@ DEPENDENCIES
   capistrano-rails
   capybara
   coffee-rails (~> 4.2.0)
+  ddtrace
   devise (~> 4.7.1)
   devise-guests (~> 0.3)
   devise-i18n
