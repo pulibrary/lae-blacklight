@@ -23,6 +23,7 @@ gem 'faraday'
 gem 'ffi', '>= 1.9.25'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'high_voltage', '~> 3.0.0'
+gem "honeybadger"
 gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
