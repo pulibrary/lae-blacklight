@@ -19,8 +19,8 @@ set :deploy_to, '/opt/lae-blacklight'
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'lae1.princeton.edu', user: 'deploy', roles: %w[web app db worker]
-server 'lae2.princeton.edu', user: 'deploy', roles: %w[web app]
+server 'lae-prod1.princeton.edu', user: 'deploy', roles: %w[web app db worker]
+server 'lae-prod2.princeton.edu', user: 'deploy', roles: %w[web app]
 
 # Custom SSH Options
 # ==================
