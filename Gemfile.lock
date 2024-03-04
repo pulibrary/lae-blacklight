@@ -202,6 +202,7 @@ GEM
     hashdiff (1.0.1)
     high_voltage (3.0.0)
     highline (2.0.3)
+    honeybadger (5.5.1)
     htmlentities (4.3.4)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -540,6 +541,7 @@ DEPENDENCIES
   ffi (>= 1.9.25)
   font-awesome-sass (~> 4.7.0)
   high_voltage (~> 3.0.0)
+  honeybadger
   i18n-tasks (~> 0.9)
   iiif-presentation
   jbuilder (~> 2.0)
