@@ -1,11 +1,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: <%= ENV["lando_lae_database_conn_host"] || ENV["LAE_DB_HOST"] || "localhost" %>
-  port: <%= ENV["lando_lae_database_conn_port"] || 5432 %>
-  username: <%= ENV["lando_lae_database_creds_user"] || ENV["LAE_DB_USERNAME"] %>
-  password: <%= ENV["lando_lae_database_creds_password"] || ENV["LAE_DB_PASSWORD"] %>
-  database: <%= ENV['LAE_DB'] %>
+  host: <%= ENV["lando_lae_database_conn_host"] || ENV["LAE_DB_HOST"] || ENV["DB_HOST"] || "localhost" %>
+  port: <%= ENV["lando_lae_database_conn_port"] || ENV["DB_PORT"] || 5432 %>
+  username: <%= ENV["lando_lae_database_creds_user"] || ENV["LAE_DB_USERNAME"] || ENV["DB_USERNAME"] %>
+  password: <%= ENV["lando_lae_database_creds_password"] || ENV["LAE_DB_PASSWORD"] || ENV["DB_PASSWORD"] %>
+  database: <%= ENV['LAE_DB'] || ENV["DB_NAME"] %>
   min_messages: warning
   pool: <%= Integer(ENV.fetch("DB_POOL", 30)) %>
   reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 20)) %>

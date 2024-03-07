@@ -36,6 +36,8 @@ gem 'nokogiri', '~> 1.14.3'
 gem "pg"
 gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
+# Use Puma as the app server
+gem "puma", "~> 5.6"
 gem 'rack', '>= 2.0.6'
 gem 'rails', '~> 6.1'
 gem 'rails-html-sanitizer', '>= 1.0.4'
@@ -79,3 +81,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
 end
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
