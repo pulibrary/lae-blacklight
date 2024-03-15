@@ -200,6 +200,8 @@ GEM
       temple (>= 0.8.0)
       tilt
     hashdiff (1.0.1)
+    health-monitor-rails (11.3.0)
+      railties (>= 6.1)
     high_voltage (3.0.0)
     highline (2.0.3)
     honeybadger (5.5.1)
@@ -540,6 +542,7 @@ DEPENDENCIES
   faraday
   ffi (>= 1.9.25)
   font-awesome-sass (~> 4.7.0)
+  health-monitor-rails
   high_voltage (~> 3.0.0)
   honeybadger
   i18n-tasks (~> 0.9)
