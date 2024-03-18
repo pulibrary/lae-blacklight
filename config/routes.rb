@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  mount HealthMonitor::Engine, at: "/"
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
   root to: 'pages#show', id: 'index'
   match '/contacts', to: 'contacts#new', via: 'get'
