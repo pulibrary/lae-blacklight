@@ -92,6 +92,11 @@ created, updated, or deleted.
 
 Indexing from Figgy
 --------
+### Creating a new index
+1. Create a new collection via the solr admin panel
+1. ssh to an lae box and start a tmux session because the index takes 2-2.5 hours. run `rake lae:reindex`
+
+### Updating an existing index
 If there's been any sort of interruption in the rabbitmq exchange, once it's
 restored you'll probably need to reindex on production. During the downtime
 things may have been deleted from figgy, so the preferred reindex process is to  write a fresh index and then swap over to it.
