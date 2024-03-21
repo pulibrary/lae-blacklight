@@ -92,9 +92,11 @@ created, updated, or deleted.
 
 Indexing from Figgy
 --------
+It takes about 5.5 hours.
+
 ### Creating a new index
 1. Create a new collection via the solr admin panel
-1. ssh to an lae box and start a tmux session because the index takes 2-2.5 hours. run `rake lae:reindex`
+1. ssh to an lae box and start a tmux session. run `rake lae:reindex`
 
 ### Updating an existing index
 If there's been any sort of interruption in the rabbitmq exchange, once it's
@@ -103,7 +105,7 @@ things may have been deleted from figgy, so the preferred reindex process is to 
 
 1. Create a new collection via the solr admin panel
 1. Turn off sneakers workers on prod machines. This keeps us from missing updates that happen while we're building the new index.
-1. ssh to an lae box and start a tmux session because the index takes 2-2.5 hours. run `rake lae:reindex_alternate SOLR_URL=[solr_url_with_new_collection]`
+1. ssh to an lae box and start a tmux session. run `rake lae:reindex_alternate SOLR_URL=[solr_url_with_new_collection]`
 1. Once it's done, go to the solr admin panel and confirm that the index has the number of documents you expect. You have to submit an edismax query.
 1. On the solr admin panel, swap the lae-prod alias to point to the new collection.
 1. start sneakers workers again.
