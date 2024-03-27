@@ -4,6 +4,7 @@ Rails.application.config.after_initialize do
     config.cache
 
     config.add_custom_provider(SolrStatus)
+    config.add_custom_provider(SmtpStatus)
 
     # Make this health check available at /health
     config.path = :health
