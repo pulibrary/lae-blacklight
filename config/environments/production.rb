@@ -65,7 +65,7 @@ Rails.application.configure do
   # use mail relay per John K.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'lib-ponyexpr.princeton.edu',
+    address: 'lib-ponyexpr-prod.princeton.edu',
     from: 'no_reply@libruby-prod.princeton.edu'
   }
 
