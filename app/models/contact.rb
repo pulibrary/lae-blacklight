@@ -10,7 +10,7 @@ class Contact < MailForm::Base
   def headers
     {
       subject: "Message from LAE Project",
-      to: "kevin.reiss@gmail.com",
+      to: "digital-library@princeton.libanswers.com",
       from: %("#{name}" <#{email}>)
     }
   end
