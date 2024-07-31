@@ -77,6 +77,7 @@ end
 
 group :test do
   gem 'rails-controller-testing'
+  gem "timecop", "~> 0.9.10"
   gem 'vcr'
   gem 'webmock'
 end
