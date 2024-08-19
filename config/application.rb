@@ -27,5 +27,6 @@ module LaePublic
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
     config.active_record.yaml_column_permitted_classes = [Symbol, Date, Time, Hash, HashWithIndifferentAccess]
+    config.autoloader = :zeitwerk
   end
 end
