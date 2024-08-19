@@ -16,8 +16,8 @@ gem 'capistrano-passenger'
 gem 'capistrano-rails'
 gem 'coffee-rails', '~> 4.2.0'
 gem "ddtrace", require: "ddtrace/auto_instrument"
-gem "devise", '~> 4.7.1'
-gem "devise-guests", "~> 0.3"
+gem "devise"
+gem "devise-guests"
 gem 'devise-i18n'
 gem 'faraday'
 gem 'faraday-multipart'
@@ -41,7 +41,7 @@ gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
 gem "puma"
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.0.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '~> 3.0'
 gem 'rdf-turtle', '~> 3.0'
