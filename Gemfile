@@ -41,7 +41,7 @@ gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
 gem "puma"
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 7.0.0'
+gem 'rails', '~> 7.1.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '~> 3.0'
 gem 'rdf-turtle', '~> 3.0'
