@@ -6,6 +6,13 @@ footer {
     padding: 2.5em 0 0.75em;
 }
 
+.top-flex, .bottom-flex {
+    display: flex;
+    img {
+        max-width: 100px;
+    }
+}
+
 .copyright {
     p {
         padding: 0 1em;
