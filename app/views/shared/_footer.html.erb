@@ -1,6 +1,4 @@
 <footer class="l-footer" role="contentinfo">
-  <div class="wrapper">
-  </div>
 
   <div class="top-flex">
     <a href="http://www.clir.org/">
@@ -9,16 +7,19 @@
     <a href="http://www.crl.edu/programs/larrp">
       <%= image_tag('larrp.gif', :class=> 'logo__sponsor') %>
     </a>
-    <p><%= t('footer.acknowledgement_html', application_name: t('blacklight.application_name')) %></p>
+    <p class = "footer-text"><%= t('footer.acknowledgement_html', application_name: t('blacklight.application_name')) %></p>
   </div>
-  <hr/>
+
+  <hr/ class ="footer-hr">
+
   <div class="bottom-flex">
     <a href="http://www.princeton.edu">
       <%= image_tag('pu_logo_trans.png') %>
     </a>
-    <a href="http://www.princeton.edu">
+    <a href="https://www.library.dartmouth.edu">
       <%= image_tag('dartmouth_logo.png') %>
     </a>
-  <p>© <%= Date.current.year %> <%= t('footer.copyright_holder') %></p>
+    <p class="copyright-date footer-text">© <%= Date.current.year %> <%= t('footer.copyright_holder') %></p>
   </div>
+
 </footer>
