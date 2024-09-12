@@ -1,3 +1,28 @@
 /*
  *= require blacklight_gallery/default
  */
+
+.documents-masonry .document {
+    width: 25%;
+
+    .caption header {
+        background-image: none;
+    }
+    
+    .caption.container {
+        width: 100%;
+        dl, .index-document-functions {
+            display: none;
+        }
+    }
+    
+    .caption .documentHeader {
+        margin: 0;
+        padding: 0;
+    }
+
+    .caption-area {
+        width: 100%;
+        overflow-y: hidden;
+    }
+}

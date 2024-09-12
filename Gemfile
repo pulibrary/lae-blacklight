@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'bitters', '~> 1.2.0'
 gem 'bixby', '~> 5.0'
 # Locked to Blacklight 7.24 as 7.25.1 currently breaks range limit
-gem 'blacklight', '~> 7.24.0'
+gem 'blacklight', '~> 7.24'
 gem 'blacklight-gallery'
 gem 'blacklight_range_limit'
 gem 'bootstrap', '~> 4.0'
@@ -16,10 +16,11 @@ gem 'capistrano-passenger'
 gem 'capistrano-rails'
 gem 'coffee-rails', '~> 4.2.0'
 gem "ddtrace", require: "ddtrace/auto_instrument"
-gem "devise", '~> 4.7.1'
-gem "devise-guests", "~> 0.3"
+gem "devise"
+gem "devise-guests"
 gem 'devise-i18n'
 gem 'faraday'
+gem 'faraday-multipart'
 gem 'ffi', '>= 1.9.25'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem "health-monitor-rails"
@@ -34,11 +35,13 @@ gem "mail_form"
 gem "mimemagic", "~> 0.3"
 gem 'modernizr-rails'
 gem 'nokogiri', '~> 1.14.3'
+gem "openseadragon"
 gem "pg"
 gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
+gem "puma"
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.1.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rdf-rdfxml', '~> 3.0'
 gem 'rdf-turtle', '~> 3.0'
