@@ -11,6 +11,7 @@ footer {
 }
 
 .top-flex, .bottom-flex {
+    flex-wrap: nowrap;
     padding: 0.75em 0em 0.75em;
     display: flex;
     align-items: center;
@@ -41,3 +42,9 @@ footer {
 .copyright-date {
     margin-left: auto;
 }
+
+@media screen and (max-width: 480px) {
+    .top-flex, .bottom-flex {
+        flex-wrap: wrap;
+    }
+  }

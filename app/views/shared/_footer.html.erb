@@ -2,10 +2,10 @@
 
   <div class="top-flex">
     <a href="http://www.clir.org/">
-      <%= image_tag('CLIR_logo.gif', :class=> 'logo__sponsor') %>
+      <%= image_tag('CLIR_logo.gif', :class=> 'logo__sponsor', :alt=> "Council on Library and Information Resources Logo") %>
     </a>
     <a href="http://www.crl.edu/programs/larrp">
-      <%= image_tag('larrp.gif', :class=> 'logo__sponsor') %>
+      <%= image_tag('larrp.gif', :class=> 'logo__sponsor', :alt=> "The Latin Americanist Research Resources Project Logo") %>
     </a>
     <p class = "footer-text"><%= t('footer.acknowledgement_html', application_name: t('blacklight.application_name')) %></p>
   </div>
@@ -14,10 +14,10 @@
 
   <div class="bottom-flex">
     <a href="http://www.princeton.edu">
-      <%= image_tag('pu_logo_trans.png') %>
+      <%= image_tag('pu_logo_trans.png', :alt=> "Princeton University Library Logo") %>
     </a>
     <a href="https://www.library.dartmouth.edu">
-      <%= image_tag('dartmouth_logo.png') %>
+      <%= image_tag('dartmouth_logo.png', :alt=> "Dartmouth Library Logo") %>
     </a>
     <p class="copyright-date footer-text">© <%= Date.current.year %> <%= t('footer.copyright_holder') %></p>
   </div>
