@@ -7,6 +7,7 @@ class CatalogController < ApplicationController
   helper Openseadragon::OpenseadragonHelper
 
   configure_blacklight do |config|
+    config.raw_endpoint.enabled = true
     config.view.masonry(document_component: Blacklight::Gallery::DocumentComponent, icon: Blacklight::Gallery::Icons::MasonryComponent)
     config.index.thumbnail_method = :thumbnail_from_manifest
     # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
