@@ -7,6 +7,7 @@ class CatalogController < ApplicationController
   helper Openseadragon::OpenseadragonHelper
 
   configure_blacklight do |config|
+    config.raw_endpoint.enabled = true
     config.view.masonry(document_component: Blacklight::Gallery::DocumentComponent, icon: Blacklight::Gallery::Icons::MasonryComponent)
     config.index.thumbnail_method = :thumbnail_from_manifest
     # config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
@@ -80,7 +81,7 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
     config.add_facet_field 'genre_pul_label_facet', label: 'Genre'
-    config.add_facet_field 'date_created_facet', label: 'Date Created', range: true
+    config.add_facet_field 'date_created_facet', label: 'Date Created', limit: 10, range: {}
     config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
     config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet'], collapsing: true
     config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
