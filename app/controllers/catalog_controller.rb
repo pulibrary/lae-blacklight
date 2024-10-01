@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 #
 class CatalogController < ApplicationController
-  include BlacklightRangeLimit::ControllerOverride
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
   helper Openseadragon::OpenseadragonHelper
 
   configure_blacklight do |config|
@@ -81,7 +81,7 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
     config.add_facet_field 'genre_pul_label_facet', label: 'Genre'
-    config.add_facet_field 'date_created_facet', label: 'Date Created', limit: 10, range: {}
+    config.add_facet_field 'date_created_facet', label: 'Date Created', **default_range_config
     config.add_facet_field 'geographic_origin_label_facet', label: 'Geographic Origin'
     config.add_facet_field 'category_subject_facet', label: 'Subjects', pivot: ['category_facet', 'subject_label_facet'], collapsing: true
     config.add_facet_field 'geographic_subject_label_facet', label: 'Geographic Subject'
