@@ -226,7 +226,7 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.1.1)
-    health-monitor-rails (12.3.0)
+    health-monitor-rails (12.4.0)
       railties (>= 6.1)
     high_voltage (3.0.0)
     highline (3.1.1)
@@ -616,7 +616,7 @@ DEPENDENCIES
   faraday-multipart
   ffi (>= 1.9.25)
   font-awesome-sass (~> 4.7.0)
-  health-monitor-rails
+  health-monitor-rails (= 12.4.0)
   high_voltage (~> 3.0.0)
   honeybadger
   i18n-tasks (~> 0.9)
