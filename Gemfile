@@ -32,7 +32,7 @@ gem 'jquery-rails'
 gem 'json-ld'
 gem 'loofah', '>= 2.2.3'
 gem "mail_form"
-gem "mimemagic", "~> 0.3"
+gem "mimemagic"
 gem 'modernizr-rails'
 gem 'nokogiri', '~> 1.14.3'
 gem "openseadragon"
@@ -43,6 +43,7 @@ gem "puma"
 gem 'rack', '>= 2.0.6'
 gem 'rails', '~> 7.1.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
+gem 'rake', '~> 13.0'
 gem 'rdf-rdfxml', '~> 3.0'
 gem 'rdf-turtle', '~> 3.0'
 gem 'rdf-vocab'
