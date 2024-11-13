@@ -8,7 +8,6 @@ RSpec.feature 'Search', type: :feature do
       expect(page).to have_selector 'span.from', text: '1990'
       expect(page).to have_selector 'span.to', text: '1992'
       expect(page).to have_content 'Remove constraint Date Created'
-      click_link "Date Created"
       within ".blacklight-date_created_facet" do
         expect(page).to have_button "Apply"
       end
