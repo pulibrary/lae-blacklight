@@ -36,6 +36,8 @@ jobs:
           keys:
           - lae-blacklight-{{ checksum "Gemfile.lock" }}
           - lae-blacklight-
+      - run: sudo apt update -y
+      - run: sudo apt-get install -y shared-mime-info || true
       # Install Bundler
       - run: gem install bundler -v '~> 2.0'
       # Bundle install dependencies
