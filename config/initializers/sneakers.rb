@@ -19,6 +19,3 @@ WORKER_OPTIONS = {
   amqp_heartbeat: 10,
   retry_timeout: 60 * 1000 # 60 seconds
 }.freeze
-
-# incorporate the env to prevent staging / prod conflicts
-SNEAKERS_QUEUE = "lae_#{Rails.env}_queue".freeze

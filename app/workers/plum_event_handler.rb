@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 class PlumEventHandler
   include Sneakers::Worker
-  from_queue SNEAKERS_QUEUE
-  WORKER_OPTIONS.merge(
-    arguments: { 'x-dead-letter-exchange': 'lae-retry' }
-  )
+  from_queue "lae_#{Rails.env}_queue".freeze, WORKER_OPTIONS
 
   def work(msg)
     msg = JSON.parse(msg)
