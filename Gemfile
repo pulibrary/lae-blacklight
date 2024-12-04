@@ -34,7 +34,7 @@ gem 'loofah', '>= 2.2.3'
 gem "mail_form"
 gem "mimemagic"
 gem 'modernizr-rails'
-gem 'nokogiri', '~> 1.14.3'
+gem 'nokogiri', '~> 1.16.0'
 gem "openseadragon"
 gem "pg"
 gem "progressbar"
