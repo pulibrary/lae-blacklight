@@ -99,10 +99,8 @@ GEM
     bigdecimal (3.1.8)
     binding_of_caller (1.0.1)
       debug_inspector (>= 1.2.0)
-    bitters (1.2.0)
-      bourbon (>= 4.2)
-      sass (>= 3.4)
-      thor
+    bitters (2.0.4)
+      thor (~> 1.0)
     bixby (5.0.2)
       rubocop (= 1.28.2)
       rubocop-ast
@@ -592,7 +590,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt_pbkdf
-  bitters (~> 1.2.0)
+  bitters (~> 2.0.0)
   bixby (~> 5.0)
   blacklight (~> 7.24)
   blacklight-gallery
