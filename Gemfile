@@ -23,8 +23,8 @@ gem 'faraday'
 gem 'faraday-multipart'
 gem 'ffi', '>= 1.9.25'
 gem 'font-awesome-sass', '~> 4.7.0'
-gem "health-monitor-rails", "12.4.0"
-gem 'high_voltage', '~> 3.0.0'
+gem "health-monitor-rails", "12.4.1"
+gem 'high_voltage', '~> 3.1.0'
 gem "honeybadger"
 gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
@@ -41,7 +41,7 @@ gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
 gem "puma"
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 7.1.0'
+gem 'rails', '~> 7.2.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rake', '~> 13.0'
 gem 'rdf-rdfxml', '~> 3.0'
@@ -52,7 +52,7 @@ gem 'rspec-rails'
 gem 'rubyzip', '>= 1.2.2'
 gem 'sass'
 gem 'sass-rails'
-gem "simple_form", "5.0.0"
+gem "simple_form", "5.3.1"
 gem 'singularitygs'
 gem 'sneakers'
 gem 'sprockets', '>= 3.7.2'
