@@ -14,7 +14,7 @@ gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 gem 'capistrano-rails'
-gem 'coffee-rails', '~> 4.2.0'
+gem 'coffee-rails', '~> 5.0.0'
 gem "ddtrace", require: "ddtrace/auto_instrument"
 gem "devise"
 gem "devise-guests"
