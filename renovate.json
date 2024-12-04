@@ -27,11 +27,6 @@
       ]
     },
     {
-      "matchDatasources": [
-        "asdf",
-        "circleci",
-        "regex"
-      ],
       "enabled": false,
       "matchPackageNames": [
         "/node/",
