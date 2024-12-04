@@ -22,7 +22,8 @@
       ],
       "enabled": false,
       "matchPackageNames": [
-        "/postgres/"
+        "/postgres/",
+        "/solr/"
       ]
     },
     {
