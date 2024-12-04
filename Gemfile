@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'bitters', '~> 2.0.0'
 gem 'bixby', '~> 5.0'
 # Locked to Blacklight 7.24 as 7.25.1 currently breaks range limit
-gem 'blacklight', '~> 7.24'
+gem 'blacklight', '~> 8.0'
 gem 'blacklight-gallery'
 gem 'blacklight_range_limit'
 gem 'bootstrap', '~> 4.0'
