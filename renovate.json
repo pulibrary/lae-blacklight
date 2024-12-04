@@ -24,6 +24,18 @@
       "matchPackageNames": [
         "/postgres/"
       ]
+    },
+    {
+      "matchDatasources": [
+        "asdf",
+        "circleci",
+        "regex"
+      ],
+      "enabled": false,
+      "matchPackageNames": [
+        "/node/",
+        "/ruby/"
+      ]
     }
   ],
   "customManagers": [
