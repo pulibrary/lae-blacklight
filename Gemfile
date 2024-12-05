@@ -76,7 +76,7 @@ end
 
 group :development do
   gem 'spring'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 4.0'
 end
 
 group :test do
