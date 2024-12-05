@@ -223,7 +223,7 @@ GEM
     hashdiff (1.1.1)
     health-monitor-rails (12.4.1)
       railties (>= 6.1)
-    high_voltage (3.1.2)
+    high_voltage (4.0.0)
     highline (3.1.1)
       reline
     honeybadger (5.26.0)
@@ -612,7 +612,7 @@ DEPENDENCIES
   ffi (>= 1.9.25)
   font-awesome-sass (~> 4.7.0)
   health-monitor-rails (= 12.4.1)
-  high_voltage (~> 3.1.0)
+  high_voltage (~> 4.0.0)
   honeybadger
   i18n-tasks (~> 0.9)
   iiif-presentation
