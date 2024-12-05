@@ -68,7 +68,7 @@ group :test, :development do
   gem 'byebug'
   gem 'capybara'
   gem 'ed25519'
-  gem 'i18n-tasks', '~> 0.9'
+  gem 'i18n-tasks', '~> 1.0'
   gem 'pry-byebug'
   gem "simplecov", require: false
   gem 'yard'
