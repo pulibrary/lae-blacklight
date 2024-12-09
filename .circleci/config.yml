@@ -5,7 +5,7 @@ jobs:
   build:
     # Primary command image where all commands run
     docker:
-      - image: cimg/ruby:3.1.0-browsers
+      - image: cimg/ruby:3.2.6-browsers
         environment:
           PGHOST: 127.0.0.1
           PGUSER: root
@@ -24,7 +24,7 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
-          node-version: '18.18.0'
+          node-version: '22.0.0'
       - run: node --version
       #set timezone to est
       - run:
