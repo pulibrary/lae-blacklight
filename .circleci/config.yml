@@ -24,7 +24,7 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
-          node-version: '22.0.0'
+          node-version: '22.10.0'
       - run: node --version
       #set timezone to est
       - run:
