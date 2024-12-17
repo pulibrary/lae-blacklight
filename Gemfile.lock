@@ -212,11 +212,11 @@ GEM
       multipart-post (~> 2)
     faraday-net_http (3.3.0)
       net-http
-    ffi (1.17.0)
     ffi (1.17.0-arm64-darwin)
     ffi (1.17.0-x86_64-darwin)
-    font-awesome-sass (4.7.0)
-      sass (>= 3.2)
+    ffi (1.17.0-x86_64-linux-gnu)
+    font-awesome-sass (6.7.2)
+      sassc (~> 2.0)
     geo_coord (0.2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -610,7 +610,7 @@ DEPENDENCIES
   faraday
   faraday-multipart
   ffi (>= 1.9.25)
-  font-awesome-sass (~> 4.7.0)
+  font-awesome-sass (~> 6.7.0)
   health-monitor-rails (= 12.4.1)
   high_voltage (~> 4.0.0)
   honeybadger
