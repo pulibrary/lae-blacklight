@@ -23,7 +23,7 @@ gem 'faraday'
 gem 'faraday-multipart'
 gem 'ffi', '>= 1.9.25'
 gem 'font-awesome-sass', '~> 4.7.0'
-gem "health-monitor-rails", "12.4.1"
+gem "health-monitor-rails", "12.5.0"
 gem 'high_voltage', '~> 4.0.0'
 gem "honeybadger"
 gem 'iiif-presentation'
@@ -34,7 +34,7 @@ gem 'loofah', '>= 2.2.3'
 gem "mail_form"
 gem "mimemagic"
 gem 'modernizr-rails'
-gem 'nokogiri', '~> 1.16.0'
+gem 'nokogiri', '~> 1.18.0'
 gem "openseadragon"
 gem "pg"
 gem "progressbar"
