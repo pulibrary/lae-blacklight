@@ -21,6 +21,7 @@
 //
 // Required by Blacklight
 //= require blacklight/blacklight
+//= require blacklight_gallery/blacklight-gallery
 //= require_tree .
 
 
