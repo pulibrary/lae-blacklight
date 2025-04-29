@@ -118,9 +118,8 @@ GEM
     blacklight-gallery (4.8.4)
       blacklight (>= 7.17, < 9)
       rails (>= 6.1, < 9)
-    blacklight_range_limit (8.5.0)
+    blacklight_range_limit (9.0.0)
       blacklight (>= 7.25.2, < 9)
-      deprecation
       view_component (>= 2.54, < 4)
     bootstrap (4.6.2.1)
       autoprefixer-rails (>= 9.1.0)
@@ -318,7 +317,7 @@ GEM
     multipart-post (2.4.1)
     net-http (0.6.0)
       uri
-    net-imap (0.5.6)
+    net-imap (0.5.7)
       date
       net-protocol
     net-pop (0.1.2)
@@ -566,8 +565,8 @@ GEM
     useragent (0.16.11)
     vcr (6.3.1)
       base64
-    view_component (3.14.0)
-      activesupport (>= 5.2.0, < 8.0)
+    view_component (3.21.0)
+      activesupport (>= 5.2.0, < 8.1)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
     warden (1.2.9)
