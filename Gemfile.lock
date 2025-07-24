@@ -227,7 +227,7 @@ GEM
     high_voltage (4.0.0)
     highline (3.1.2)
       reline
-    honeybadger (5.28.0)
+    honeybadger (6.0.2)
       logger
       ostruct
     htmlentities (4.3.4)
@@ -342,7 +342,7 @@ GEM
     openseadragon (0.9.0)
       rails (> 6.1.0)
     orm_adapter (0.5.0)
-    ostruct (0.6.1)
+    ostruct (0.6.3)
     parallel (1.26.3)
     parser (3.3.8.0)
       ast (~> 2.4.1)
