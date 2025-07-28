@@ -20,7 +20,7 @@ set :branch, ENV['BRANCH'] || 'main'
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'lae-staging2', user: 'deploy', roles: %w[web app db worker], my_property: :my_value
+server 'lae-staging2.princeton.edu', user: 'deploy', roles: %w[web app db worker], my_property: :my_value
 
 # Custom SSH Options
 # ==================
