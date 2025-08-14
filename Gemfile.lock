@@ -228,7 +228,7 @@ GEM
     high_voltage (4.0.0)
     highline (3.1.2)
       reline
-    honeybadger (6.0.5)
+    honeybadger (6.0.6)
       logger
       ostruct
     htmlentities (4.3.4)
