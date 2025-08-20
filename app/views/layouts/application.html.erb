@@ -14,12 +14,18 @@
     <meta http-equiv="cleartype" content="on">
   <![endif]-->
   <title>Latin American Ephemera Digital Archive: <%= yield(:page_title) %></title>
+  <% if Rails.env.production? %>
+    <%= render partial: 'shared/analytics' %>
+  <% end %>
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if Rails.env.production? %>
+    <%= render partial: 'shared/analytics_noscript' %>
+  <% end %>
 	<%= yield %>
 	<%= render 'shared/footer' %>
 </body>
