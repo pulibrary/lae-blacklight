@@ -22,7 +22,7 @@ gem 'devise-i18n'
 gem 'faraday'
 gem 'faraday-multipart'
 gem 'ffi', '>= 1.9.25'
-gem 'font-awesome-sass', '~> 4.7.0'
+gem 'font-awesome-sass', '~> 6.7.0'
 gem "health-monitor-rails", "12.9.0"
 gem 'high_voltage', '~> 4.0.0'
 gem "honeybadger"
