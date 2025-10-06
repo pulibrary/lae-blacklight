@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-source 'https://rubygems.org'
+source 'https://gem.coop'
 
 gem 'bitters', '~> 2.0.0'
 gem 'bixby', '~> 5.0'
