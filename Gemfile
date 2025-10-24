@@ -24,7 +24,7 @@ gem 'faraday-multipart'
 gem 'ffi', '>= 1.9.25'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem "health-monitor-rails", "12.9.0"
-gem 'high_voltage', '~> 4.0.0'
+gem 'high_voltage', '~> 5.0.0'
 gem "honeybadger"
 gem 'iiif-presentation'
 gem 'jbuilder', '~> 2.0'
