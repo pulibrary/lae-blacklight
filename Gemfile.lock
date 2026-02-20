@@ -334,11 +334,11 @@ GEM
       net-protocol
     net-ssh (7.2.3)
     nio4r (2.7.4)
-    nokogiri (1.18.10-arm64-darwin)
+    nokogiri (1.19.1-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-darwin)
+    nokogiri (1.19.1-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-linux-gnu)
+    nokogiri (1.19.1-x86_64-linux-gnu)
       racc (~> 1.4)
     openseadragon (1.0.17)
       rails (> 6.1.0)
@@ -647,7 +647,7 @@ DEPENDENCIES
   net-imap
   net-pop
   net-smtp
-  nokogiri (~> 1.18.0)
+  nokogiri (~> 1.19.0)
   openseadragon
   pg
   progressbar
