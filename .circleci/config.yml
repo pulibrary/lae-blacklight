@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
-  node: circleci/node@5.0.2
+  browser-tools: circleci/browser-tools@2.3.2
+  node: circleci/node@7.2.1
 jobs:
   build:
     # Primary command image where all commands run
@@ -26,6 +27,8 @@ jobs:
           install-yarn: true
           node-version: '22.10.0'
       - run: node --version
+      - browser-tools/install_chrome
+      - browser-tools/install_chromedriver
       #set timezone to est
       - run:
           name: Set Timezone to EST
@@ -36,15 +39,12 @@ jobs:
           keys:
           - lae-blacklight-{{ checksum "Gemfile.lock" }}
           - lae-blacklight-
-      - run: sudo apt update -y
-      - run: sudo apt-get install -y shared-mime-info || true
       # Install Bundler
       - run: gem install bundler -v '~> 2.0'
       # Bundle install dependencies
       - run:
           name: Install dependencies
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
-      - run: sudo apt update
       - save_cache:
           key: lae-blacklight-{{ checksum "Gemfile.lock" }}
           paths:
