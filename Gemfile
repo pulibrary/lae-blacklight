@@ -41,7 +41,7 @@ gem "progressbar"
 gem 'pul_uv_rails', github: 'pulibrary/pul_uv_rails', branch: 'main'
 gem "puma"
 gem 'rack', '>= 2.0.6'
-gem 'rails', '~> 8.0.0'
+gem 'rails', '~> 8.1.0'
 gem 'rails-html-sanitizer', '>= 1.0.4'
 gem 'rake', '~> 13.0'
 gem 'rdf-rdfxml', '~> 3.0'
@@ -52,7 +52,7 @@ gem 'rspec-rails'
 gem 'rubyzip', '>= 1.2.2'
 gem 'sass'
 gem 'sass-rails'
-gem "simple_form", "5.3.1"
+gem "simple_form", "5.4.1"
 gem 'singularitygs'
 gem 'sneakers'
 gem 'sprockets', '>= 3.7.2'
