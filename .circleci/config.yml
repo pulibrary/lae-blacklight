@@ -21,6 +21,7 @@ jobs:
       - image: solr:7.7-alpine
         command: bin/solr -cloud -noprompt -f -p 8888
     working_directory: ~/lae-blacklight
+    resource_class: large
     steps: &test_steps
       - checkout
       - node/install:
