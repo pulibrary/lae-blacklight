@@ -42,9 +42,9 @@ jobs:
       # Install Bundler
       - run: gem install bundler -v '~> 2.0'
       # Bundle install dependencies
-      - run:
-          name: Install dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+      - run: bundle config set path 'vendor/bundle'
+      - run: bundle install
+      - run: sudo apt update
       - save_cache:
           key: lae-blacklight-{{ checksum "Gemfile.lock" }}
           paths:
