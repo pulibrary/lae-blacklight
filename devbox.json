@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true",
+    "TMPDIR":                  "/private/tmp/lae"
+  },
+  "packages": {
+    "ruby":         "3.4.8",
+    "libffi":       "latest",
+    "chromedriver": "latest",
+    "postgresql": {
+      "version": "15.7",
+      "outputs": ["lib", "out"]
+    },
+    "nodejs": {
+      "version": "22.10",
+      "outputs": ["out", "libv8"]
+    },
+    "yarn":     "1.22.22"
+  },
+  "shell": {
+    "init_hook": [
+      "mkdir -p $TMPDIR",
+      "gem install ruby-lsp > /dev/null"
+    ]
+  }
+}
