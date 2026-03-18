@@ -6,7 +6,7 @@ jobs:
   build:
     # Primary command image where all commands run
     docker:
-      - image: cimg/ruby:3.2.6-browsers
+      - image: cimg/ruby:3.4.8-browsers
         environment:
           PGHOST: 127.0.0.1
           PGUSER: root
@@ -21,6 +21,7 @@ jobs:
       - image: solr:7.7-alpine
         command: bin/solr -cloud -noprompt -f -p 8888
     working_directory: ~/lae-blacklight
+    resource_class: large
     steps: &test_steps
       - checkout
       - node/install:
@@ -42,9 +43,9 @@ jobs:
       # Install Bundler
       - run: gem install bundler -v '~> 2.0'
       # Bundle install dependencies
-      - run:
-          name: Install dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+      - run: bundle config set path 'vendor/bundle'
+      - run: bundle install
+      - run: sudo apt update
       - save_cache:
           key: lae-blacklight-{{ checksum "Gemfile.lock" }}
           paths:

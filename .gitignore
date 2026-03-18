@@ -31,3 +31,9 @@ public/assets
 vendor/bundle
 doc/*
 .yardoc
+
+# Some configs ignore these globally on machines, so make sure they're not
+# ignored.
+!devbox.lock
+!.envrc
+!/bin

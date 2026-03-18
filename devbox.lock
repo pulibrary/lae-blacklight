@@ -1,0 +1,378 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "chromedriver@latest": {
+      "last_modified": "2025-07-24T15:00:16Z",
+      "resolved": "github:NixOS/nixpkgs/b74a30dbc0a72e20df07d43109339f780b439291#chromedriver",
+      "source": "devbox-search",
+      "version": "138.0.7204.169",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/h3gv14kp1cm2ckzxk3l7kczi24d8frw3-chromedriver-138.0.7204.169",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/h3gv14kp1cm2ckzxk3l7kczi24d8frw3-chromedriver-138.0.7204.169"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i9qj06gcwwjh5z2yjv7hvfsgh31bjsn2-chromedriver-138.0.7204.169",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/i9qj06gcwwjh5z2yjv7hvfsgh31bjsn2-chromedriver-138.0.7204.169"
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-07-25T08:26:56Z",
+      "resolved": "github:NixOS/nixpkgs/6027c30c8e9810896b92429f0092f624f7b1aace?lastModified=1753432016&narHash=sha256-cnL5WWn%2FxkZoyH%2F03NNUS7QgW5vI7D1i74g48qplCvg%3D"
+    },
+    "libffi@latest": {
+      "last_modified": "2025-07-13T22:45:35Z",
+      "resolved": "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359#libffi",
+      "source": "devbox-search",
+      "version": "3.4.8",
+      "systems": {
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qvzkjwjq98lrc3rn66mh5anwwk3alpls-libffi-3.4.8",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/ca7nyrm835kcgzbxmd1ff26wn9g91wd3-libffi-3.4.8-man",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/jl9h7qcm8q1s0d3cshn110kwrwcil0gf-libffi-3.4.8-dev"
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/ks68pm3iiy65x1bimc5wfcydypmdks3q-libffi-3.4.8-info"
+            }
+          ],
+          "store_path": "/nix/store/qvzkjwjq98lrc3rn66mh5anwwk3alpls-libffi-3.4.8"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v4vqyvb5gq799b1v3qf5lyyij7pnjfiz-libffi-3.4.8",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/jclvh3zi2nidxmzvr67pn1srvdblar8n-libffi-3.4.8-man",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/vza8yi0m7chs2xysji30jqf7hqsylr19-libffi-3.4.8-dev"
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/5m8p3aibv33xfjvy788bzbgahs1l0pld-libffi-3.4.8-info"
+            }
+          ],
+          "store_path": "/nix/store/v4vqyvb5gq799b1v3qf5lyyij7pnjfiz-libffi-3.4.8"
+        }
+      }
+    },
+    "nodejs@22.10": {
+      "last_modified": "2024-12-03T12:40:06Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/566e53c2ad750c84f6d31f9ccb9d00f823165550#nodejs_22",
+      "source": "devbox-search",
+      "version": "22.10.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/y6piwcsias394n5kflisg8jhll9czk2x-nodejs-22.10.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/2qwjlhfyn2k3dixjgqxnwhsxxyn46rxl-nodejs-22.10.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/y6piwcsias394n5kflisg8jhll9czk2x-nodejs-22.10.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ayfg2m6gwh5047hapf316jrilxd8kk4k-nodejs-22.10.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/649q0xdwl617h2s8j50f7880df60w37a-nodejs-22.10.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/ayfg2m6gwh5047hapf316jrilxd8kk4k-nodejs-22.10.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4rmbk8pg2lvv22aqjk8b539pfspsm98m-nodejs-22.10.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/g1bmrm6lq74zdid30q8hh3102qxpk7p7-nodejs-22.10.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/4rmbk8pg2lvv22aqjk8b539pfspsm98m-nodejs-22.10.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hnkyz55vndmvwhg6nzpliv86gh6sxg7h-nodejs-22.10.0",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/j9kj5x00fh8sac4mfb6dxmfg1dk5af90-nodejs-22.10.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/hnkyz55vndmvwhg6nzpliv86gh6sxg7h-nodejs-22.10.0"
+        }
+      }
+    },
+    "postgresql@15.7": {
+      "last_modified": "2024-08-14T02:42:29Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/daf7bb95821b789db24fc1ac21f613db0c1bf2cb#postgresql",
+      "source": "devbox-search",
+      "version": "15.7",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j063gkab0kj312p0r5wlwh8hhs3ivmmv-postgresql-15.7",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/83zyb6qnvn85ilfb4g03yr8zjnc4kw5c-postgresql-15.7-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/w98l40gkbw15cxjajs9wr9aaz1zqq8pv-postgresql-15.7-doc"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/2lqmjj3nwingqsajwgwym4jjl1plqrxd-postgresql-15.7-lib"
+            }
+          ],
+          "store_path": "/nix/store/j063gkab0kj312p0r5wlwh8hhs3ivmmv-postgresql-15.7"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bm08f8k2gyndfq1mszvdm07jnmwr6nlf-postgresql-15.7",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/yd6qvs38zm55271230hfn4j0rd4029ca-postgresql-15.7-man",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/m8kdahlx418v1x8pvbjja5zbl8ix4hff-postgresql-15.7-debug"
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/nw2ng4sh1vzih1rrfzlivd2c7ifh9zm2-postgresql-15.7-doc"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/fvs07mhcygpwy41jhw34kq7ghlcnv4nf-postgresql-15.7-lib"
+            }
+          ],
+          "store_path": "/nix/store/bm08f8k2gyndfq1mszvdm07jnmwr6nlf-postgresql-15.7"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q4h9xjc0804xkcb0l7kxmp8rbqadlpg9-postgresql-15.7",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/22xrk7r5c4bh12wnmh4xssd1xk06b96l-postgresql-15.7-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/4ynkh5cclgi0jcg42868z764irl32dx3-postgresql-15.7-doc"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/4bqzgkyvzc7c7i955raibmaqabffsi4y-postgresql-15.7-lib"
+            }
+          ],
+          "store_path": "/nix/store/q4h9xjc0804xkcb0l7kxmp8rbqadlpg9-postgresql-15.7"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8gr5ybhmdkafii5idcg57p66nk1qd6sf-postgresql-15.7",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/0j6lskwq3imd8gdwy5rz9sjmn3c41qbc-postgresql-15.7-man",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/xw1fhj72fzrlkvapaf1spx19ixqm7394-postgresql-15.7-debug"
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/01snq9n6ka7zkb4dp7k639mbb5p0v5qi-postgresql-15.7-doc"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/9xj29q1wf5wazv63hn5dxlwsp8k3h5lc-postgresql-15.7-lib"
+            }
+          ],
+          "store_path": "/nix/store/8gr5ybhmdkafii5idcg57p66nk1qd6sf-postgresql-15.7"
+        }
+      }
+    },
+    "ruby@3.4.8": {
+      "last_modified": "2026-03-02T11:03:52Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/dc7513872406b53d2ff417a003895d6daffdff2f#ruby",
+      "source": "devbox-search",
+      "version": "3.4.8",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3lbysjs3r0k2y44h4x6f3pd3airbwq01-ruby-3.4.8",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/i7j9yj776rwl4y84cqcnlg812yr3jzg6-ruby-3.4.8-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/3lbysjs3r0k2y44h4x6f3pd3airbwq01-ruby-3.4.8"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hps1bncgp5vd7hldiyadffynqjw2xmm7-ruby-3.4.8",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/cr9a63sx31xzh029930d3zp82vyc0raj-ruby-3.4.8-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/hps1bncgp5vd7hldiyadffynqjw2xmm7-ruby-3.4.8"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3y9k47y8xm837v2853bnaqn8g1ls3fc5-ruby-3.4.8",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/nih9silg5ia4dwzmzjj35whapv3ki7rk-ruby-3.4.8-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/3y9k47y8xm837v2853bnaqn8g1ls3fc5-ruby-3.4.8"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lmwsrlh42jk9578yfhmw2kpvqvz2r5m6-ruby-3.4.8",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/i0hrwz972mg8n1gqp61nmwc7r4nl8ybx-ruby-3.4.8-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/lmwsrlh42jk9578yfhmw2kpvqvz2r5m6-ruby-3.4.8"
+        }
+      }
+    },
+    "yarn@1.22.22": {
+      "last_modified": "2025-07-13T22:45:35Z",
+      "resolved": "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359#yarn",
+      "source": "devbox-search",
+      "version": "1.22.22",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mgj28l56n5k8zp5l1vwzdjnqi188y5pk-yarn-1.22.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mgj28l56n5k8zp5l1vwzdjnqi188y5pk-yarn-1.22.22"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gknplr1q5gs5p4pkmyd0r7dcjhznpkl3-yarn-1.22.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gknplr1q5gs5p4pkmyd0r7dcjhznpkl3-yarn-1.22.22"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/613ndjla4irf3lj468igks11dyn7xpnx-yarn-1.22.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/613ndjla4irf3lj468igks11dyn7xpnx-yarn-1.22.22"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6mzbvyzh4dfgfab6lciclji7awp9w3c4-yarn-1.22.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6mzbvyzh4dfgfab6lciclji7awp9w3c4-yarn-1.22.22"
+        }
+      }
+    }
+  }
+}

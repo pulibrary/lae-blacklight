@@ -6,7 +6,7 @@ gem 'bixby', '~> 5.0'
 # Locked to Blacklight 7.24 as 7.25.1 currently breaks range limit
 gem 'blacklight', '~> 7.24'
 gem 'blacklight-gallery'
-gem 'blacklight_range_limit'
+gem 'blacklight_range_limit', '~> 8.0'
 gem 'bootstrap', '~> 4.0'
 gem 'bourbon', '~> 7.0'
 gem 'breakpoint'
@@ -15,7 +15,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 gem 'capistrano-rails'
 gem 'coffee-rails', '~> 5.0.0'
-gem "ddtrace", require: "ddtrace/auto_instrument"
+gem "datadog", require: "datadog/auto_instrument"
 gem "devise"
 gem "devise-guests"
 gem 'devise-i18n'
