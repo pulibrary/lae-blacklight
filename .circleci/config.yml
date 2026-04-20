@@ -54,7 +54,7 @@ jobs:
           name: Yarn Install
           command: |
             source ~/.nvm/nvm.sh
-            yarn install
+            yarn install --ignore-scripts
 
       - run:
           name: Wait for DB
