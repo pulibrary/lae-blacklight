@@ -13,4 +13,9 @@
     </section>
   <% end %>
 <% end %>
+<% content_for(:head) do %>
+  <% if Rails.env.production? %>
+    <%= render partial: 'shared/analytics' %>
+  <% end %>
+<% end %>
 <%= render template: "layouts/blacklight/base" %>
