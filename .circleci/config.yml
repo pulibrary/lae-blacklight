@@ -11,15 +11,15 @@ jobs:
           PGHOST: 127.0.0.1
           PGUSER: root
           RAILS_ENV: test
-          SOLR_URL: http://solr:SolrRocks@localhost:8888/solr/lae-core-test
+          SOLR_URL: http://solr:SolrRocks@localhost:8984/solr/lae-core-test
       # Service container image available at 'host: localhost'
       - image: postgres:15
         environment:
           POSTGRES_DB: lae_blacklight_test
           POSTGRES_USER: root
           POSTGRES_HOST_AUTH_METHOD: trust
-      - image: solr:7.7-alpine
-        command: bin/solr -cloud -noprompt -f -p 8888
+      - image: quay.io/pulibrary/ci-solr:9.9-v1.0.0
+        command: server/scripts/ci-start.sh
     working_directory: ~/lae-blacklight
     resource_class: large
     steps: &test_steps
@@ -64,8 +64,8 @@ jobs:
           command: |
             cd solr/conf
             zip -1 -r solr_config.zip ./*
-            curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://localhost:8888/solr/admin/configs?action=UPLOAD&name=lae"
-            curl -H 'Content-type: application/json' http://localhost:8888/api/collections/ -d '{create: {name: lae-core-test, config: lae, numShards: 1}}'
+            curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://localhost:8984/solr/admin/configs?action=UPLOAD&name=lae"
+            curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8984/api/collections/  -d '{"name": "lae-core-test", "config": "lae", "numShards": 1}'
       - run:
           name: Database setup
           command: bundle exec rake db:setup
